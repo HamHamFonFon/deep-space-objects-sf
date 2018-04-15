@@ -1,13 +1,41 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+{% block layout %}
+  {% spaceless %}
+    {% set pageLang = 'fr' %}
+    {% set pageTitle = pageTitle|default('') %}
+    {% set pageDesc = pageDesc|default('') %}
+    {% set pageUrl = app.request.uri %}
+    {% set pageUrlCanonical = app.request.getSchemeAndHttpHost ~ app.request.baseUrl ~ app.request.pathInfo %}
+  {% endspaceless %}
+  <!DOCTYPE html>
+  <html lang="{{ pageLang }}">
+      <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+
+          {% block meta %}
+            <title>{{ pageTitle }}</title>
+            {#Meta#}
+            <meta name="title" content="{{ pageTitle }}">
+            {% if pageDesc %}
+              <meta name="description" content="{{ pageDesc ~ '...' }}">
+            {% endif %}
+            <link rel="canonical" href="{{ pageUrlCanonical }}">
+            <link rel="icon" type="image/jpg" href="{{ favicon }}"/>
+
+            {# OpenGraph ? #}
+
+          {% endblock %}
+
+          {% block stylesheets %}{% endblock %}
+      </head>
+      <body>
+          {% block body %}
+            {% block header %}{% endblock %}
+            {% block content %}{% endblock %}
+            {% block footer %}{% endblock %}
+          {% endblock %}
+          {% block javascripts %}{% endblock %}
+      </body>
+  </html>
+{% endblock %}
