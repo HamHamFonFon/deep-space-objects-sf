@@ -10,5 +10,6 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: 7b207070292a969a62139845127e2f7b01665489
-    kuzzle_host: http://localhost:7512
+    kuzzle_host: http://localhost
     kuzzle_index: astronomy
+    kuzzle_port: 7512

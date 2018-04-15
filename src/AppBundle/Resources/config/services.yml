@@ -1,0 +1,8 @@
+services:
+
+  # Services
+  app.service.kuzzle:
+    class: AppBundle\Kuzzle\KuzzleService
+    arguments:
+      - %kuzzle_host%
+      - %kuzzle_index%
