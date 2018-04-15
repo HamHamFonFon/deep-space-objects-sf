@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Repository\MessierRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,6 +16,10 @@ use Symfony\Component\HttpFoundation\Response;
 class MessierController extends Controller
 {
 
+    const OFFSET = 0;
+
+    const LIMIT = 20;
+
     /**
      * @Route("/", name="homepage")
      *
@@ -23,6 +28,11 @@ class MessierController extends Controller
     public function indexAction()
     {
         $params = [];
+
+        /** @var MessierRepository $messierRepository */
+        $messierRepository = $this->container->get('app.repository.messier');
+
+        $params['messier_objects'] = $messierRepository->getList(self::OFFSET, self::LIMIT);
 
         /** @var Response $response */
         $response = new Response();

@@ -1,8 +1,15 @@
 services:
 
   # Services
-  app.service.kuzzle:
-    class: AppBundle\Kuzzle\KuzzleService
+  app.helper.kuzzle:
+    class: AppBundle\Kuzzle\KuzzleHelper
     arguments:
-      - %kuzzle_host%
-      - %kuzzle_index%
+      - "%kuzzle_host%"
+      - "%kuzzle_index%"
+      - "%kuzzle_port%"
+
+  # Repositories
+  app.repository.messier:
+    class: AppBundle\Repository\MessierRepository
+    arguments:
+      - "@app.helper.kuzzle"
