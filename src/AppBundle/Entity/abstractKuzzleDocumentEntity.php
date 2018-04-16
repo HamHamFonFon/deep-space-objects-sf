@@ -9,7 +9,10 @@
 namespace AppBundle\Entity;
 
 
-class abstractKuzzleDocumentEntity
+abstract class abstractKuzzleDocumentEntity
 {
 
+    public function __construct()
+    {
+    }
 }

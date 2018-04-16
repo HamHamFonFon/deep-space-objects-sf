@@ -10,9 +10,11 @@ namespace AppBundle\Repository;
 
 
 use AppBundle\Kuzzle\KuzzleHelper;
-use AppBundle\Kuzzle\KuzzleService;
-use Kuzzle\Collection;
 
+/**
+ * Class MessierRepository
+ * @package AppBundle\Repository
+ */
 class MessierRepository
 {
 
@@ -46,4 +48,14 @@ class MessierRepository
             }
         }
     }
+
+
+    /**
+     * @return string
+     */
+    protected function getEntityClassName()
+    {
+        return 'AppBundle\Entity\Messier';
+    }
+
 }

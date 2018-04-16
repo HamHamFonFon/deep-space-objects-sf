@@ -8,8 +8,19 @@
 
 namespace AppBundle\Entity;
 
-
+/**
+ * Class Messier
+ * @package AppBundle\Entity
+ */
 class Messier extends abstractKuzzleDocumentEntity
 {
+
+    /**
+     * Messier constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
 }
