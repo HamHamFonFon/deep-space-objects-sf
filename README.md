@@ -1,4 +1,5 @@
-DeepSpaceObjects-sf
-===================
+Deep Space Objects
+=====================
 
-A Symfony project created on April 15, 2018, 7:43 pm.
+"Deep space objects" is a Symfony 3.4 project who list messier's objects stored in Kuzzle.
+
