@@ -21,7 +21,7 @@ class MessierRepository
     const COLLECTION_NAME = 'messiers';
 
     /** @var KuzzleHelper  */
-    protected $kuzzleHelper;
+    public $kuzzleHelper;
 
 
     /**

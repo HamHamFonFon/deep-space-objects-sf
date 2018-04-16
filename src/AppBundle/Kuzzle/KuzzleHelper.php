@@ -36,9 +36,10 @@ class KuzzleHelper
         $this->index = $index;
         $this->port = $port;
 
+        /** @var Kuzzle kuzzleService */
         $this->kuzzleService = new Kuzzle($this->host, [
-            'defaultIndex' => $this->index,
-            'port' => $this->port
+                'defaultIndex' => $this->index,
+                'port' => $this->port
             ]
         );
     }
