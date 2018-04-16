@@ -9,6 +9,7 @@
 namespace AppBundle\Repository;
 
 
+use AppBundle\Entity\Messier;
 use AppBundle\Kuzzle\KuzzleHelper;
 
 /**
@@ -37,16 +38,23 @@ class MessierRepository
     /**
      * @param $start
      * @param $to
+     * @return array
      */
     public function getList($start, $to)
     {
+        $listMessiers = [];
         /** @var  $listItems */
         $listItems = $this->kuzzleHelper->listKuzzleDocuments(self::COLLECTION_NAME, $start, $to, null);
         if (!is_null($listItems)) {
             foreach ($listItems as $document) {
-                dump($document);
+//                $class = $this->getEntityClassName();
+//                $listMessiers[] = new $class($document);
+
+                $listMessiers[] = new Messier($document);
             }
         }
+
+        return $listMessiers;
     }
 
 

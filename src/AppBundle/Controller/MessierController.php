@@ -36,7 +36,10 @@ class MessierController extends Controller
 
         /** @var Response $response */
         $response = new Response();
-
+        $response->setPublic();
+        $response->headers->set(
+            $this->container->getParameter('http_ttl')
+        );
         return $this->render('pages/homepage.html.twig', $params, $response);
     }
 

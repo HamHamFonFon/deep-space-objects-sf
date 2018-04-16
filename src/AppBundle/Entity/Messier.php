@@ -7,6 +7,8 @@
  */
 
 namespace AppBundle\Entity;
+use AppBundle\Repository\MessierRepository;
+use Kuzzle\Document;
 
 /**
  * Class Messier
@@ -15,12 +17,23 @@ namespace AppBundle\Entity;
 class Messier extends abstractKuzzleDocumentEntity
 {
 
+
     /**
      * Messier constructor.
+     * @param Document $document
      */
-    public function __construct()
+    public function __construct(Document $document)
     {
-        parent::__construct();
+        parent::__construct($document);
+    }
+
+
+    /**
+     * @return string
+     */
+    public static function getCollectionName()
+    {
+        return MessierRepository::COLLECTION_NAME;
     }
 
 }
