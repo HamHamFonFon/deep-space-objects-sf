@@ -46,13 +46,15 @@ class KuzzleHelper
 
 
     /**
+     * TODO : remove this method, kuzzleHelper must only help build a query, see buildQuery()
+     * the search will go in repository
      * @param $collection
-     * @param $start
-     * @param $offset
+     * @param $from
+     * @param $size
      * @param $sort
      * @return \Kuzzle\Document[]|null
      */
-    public function listKuzzleDocuments($collection, $start, $offset, $sort)
+    public function listKuzzleDocuments($collection, $from, $size, $sort)
     {
         $listDocs = null;
 
@@ -60,8 +62,8 @@ class KuzzleHelper
         $kuzzleCollection = $this->kuzzleService->collection($collection);
 
         $options = [
-            'from' => $start,
-            'size' => $offset
+            'from' => $from,
+            'size' => $size
         ];
 
         $filterList = [
@@ -83,4 +85,17 @@ class KuzzleHelper
 
         return $listDocs;
     }
+
+
+    /**
+     * @param array $filter
+     * @param array $sort
+     * @param int $size
+     * @param $from
+     */
+    public function buildQuery($filter = [], $sort = [], $size = 1000, $from)
+    {
+
+    }
+
 }

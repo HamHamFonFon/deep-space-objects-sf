@@ -16,16 +16,22 @@ use Symfony\Component\HttpFoundation\Response;
 class MessierController extends Controller
 {
 
+    /**
+     *
+     */
     const OFFSET = 0;
 
+    /**
+     *
+     */
     const LIMIT = 20;
 
     /**
      * @Route("/", name="homepage")
-     *
+     * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $params = [];
 

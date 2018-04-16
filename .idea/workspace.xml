@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bb26e9-8fe6-44ef-9746-857377cc2bf9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Messier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Messier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/abstractKuzzleDocumentEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/abstractKuzzleDocumentEntity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Kuzzle/KuzzleHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Kuzzle/KuzzleHelper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Repository/MessierRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/MessierRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +20,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MessierController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="40" column="62" lean-forward="true" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
+              <folding>
+                <element signature="e#40#83#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="KuzzleHelper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Kuzzle/KuzzleHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+            <state relative-caret-position="339">
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
               <folding>
                 <element signature="e#119#141#0#PHP" expanded="true" />
               </folding>
@@ -53,11 +65,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MessierRepository.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/MessierRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+              <folding>
+                <element signature="e#124#153#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="abstractKuzzleDocumentEntity.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/abstractKuzzleDocumentEntity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+            <state relative-caret-position="-6">
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -67,18 +91,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessierRepository.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/MessierRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-              <folding>
-                <element signature="e#124#153#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -101,17 +113,17 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/MessierRepositoy.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Kuzzle/KuzzleService.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/translations/messages.fr.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/pages/homepage.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/NgcItem.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Planet.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/config/parameters_dev.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Kuzzle/KuzzleHelper.php" />
         <option value="$PROJECT_DIR$/vendor/kuzzleio/kuzzle-sdk/src/Kuzzle.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Messier.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/abstractKuzzleDocumentEntity.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Kuzzle/KuzzleHelper.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/MessierRepository.php" />
       </list>
     </option>
@@ -304,11 +316,6 @@
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="translations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -363,12 +370,12 @@
       <workItem from="1523816103145" duration="318000" />
       <workItem from="1523816443542" duration="465000" />
       <workItem from="1523816931029" duration="5987000" />
-      <workItem from="1523900473639" duration="4129000" />
+      <workItem from="1523900473639" duration="4798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11569000" />
+    <option name="totallyTimeSpent" value="12238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -506,6 +513,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="e#133#193#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -534,6 +544,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="34" column="77" selection-start-line="34" selection-start-column="77" selection-end-line="34" selection-end-column="77" />
+          <folding>
+            <element signature="e#133#192#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -569,16 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="40" selection-start-column="40" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="32" />
-          <folding>
-            <element signature="e#40#83#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -668,27 +671,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/abstractKuzzleDocumentEntity.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="354">
+          <caret line="40" column="62" lean-forward="true" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
+          <folding>
+            <element signature="e#40#83#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Kuzzle/KuzzleHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        <state relative-caret-position="339">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
           <folding>
             <element signature="e#119#141#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/abstractKuzzleDocumentEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/MessierRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="54">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
           <folding>
             <element signature="e#124#153#0#PHP" expanded="true" />
           </folding>

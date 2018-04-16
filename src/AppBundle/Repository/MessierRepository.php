@@ -16,7 +16,7 @@ use AppBundle\Kuzzle\KuzzleHelper;
  * Class MessierRepository
  * @package AppBundle\Repository
  */
-class MessierRepository
+class MessierRepository /** extends abstractKuzzleRepository */
 {
 
     const COLLECTION_NAME = 'messiers';
@@ -44,6 +44,7 @@ class MessierRepository
     {
         $listMessiers = [];
         /** @var  $listItems */
+        // TODO move request in abstractRepository
         $listItems = $this->kuzzleHelper->listKuzzleDocuments(self::COLLECTION_NAME, $start, $to, null);
         if (!is_null($listItems)) {
             foreach ($listItems as $document) {

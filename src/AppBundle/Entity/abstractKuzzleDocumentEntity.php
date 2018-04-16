@@ -57,4 +57,8 @@ abstract class abstractKuzzleDocumentEntity
     }
 
 
+    public function buildUrl()
+    {
+
+    }
 }
