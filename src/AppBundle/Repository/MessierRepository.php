@@ -16,7 +16,7 @@ use AppBundle\Kuzzle\KuzzleHelper;
  * Class MessierRepository
  * @package AppBundle\Repository
  */
-class MessierRepository /** extends abstractKuzzleRepository */
+class MessierRepository extends abstractKuzzleRepository
 {
 
     const COLLECTION_NAME = 'messiers';
@@ -24,14 +24,13 @@ class MessierRepository /** extends abstractKuzzleRepository */
     /** @var KuzzleHelper  */
     public $kuzzleHelper;
 
-
     /**
      * MessierRepository constructor.
      * @param KuzzleHelper $kuzzleHelper
      */
     public function __construct(KuzzleHelper $kuzzleHelper)
     {
-        $this->kuzzleHelper = $kuzzleHelper;
+        parent::__construct($kuzzleHelper);
     }
 
 
@@ -44,13 +43,11 @@ class MessierRepository /** extends abstractKuzzleRepository */
     {
         $listMessiers = [];
         /** @var  $listItems */
-        // TODO move request in abstractRepository
-        $listItems = $this->kuzzleHelper->listKuzzleDocuments(self::COLLECTION_NAME, $start, $to, null);
-        if (!is_null($listItems)) {
-            foreach ($listItems as $document) {
+        $listItems = $this->findAllByCollection(self::COLLECTION_NAME, $start, $to);
+        if (!is_null($listItems) && 0 < $listItems->getTotal()) {
+            foreach ($listItems->getDocuments() as $document) {
 //                $class = $this->getEntityClassName();
 //                $listMessiers[] = new $class($document);
-
                 $listMessiers[] = new Messier($document);
             }
         }

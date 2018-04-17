@@ -20,7 +20,7 @@ class KuzzleHelper
 {
 
     /** @var Kuzzle  */
-    protected $kuzzleService;
+    public $kuzzleService;
     private $host;
     private $index;
     private $port;
@@ -46,26 +46,19 @@ class KuzzleHelper
 
 
     /**
-     * TODO : remove this method, kuzzleHelper must only help build a query, see buildQuery()
-     * the search will go in repository
-     * @param $collection
+     * @param array $filter
+     * @param array $sort
+     * @param int $size
      * @param $from
-     * @param $size
-     * @param $sort
-     * @return \Kuzzle\Document[]|null
      */
-    public function listKuzzleDocuments($collection, $from, $size, $sort)
+    public function buildQuery($filter = [], $sort = [], $size = 1000, $from)
     {
-        $listDocs = null;
-
-        /** @var Collection $kuzzleCollection */
-        $kuzzleCollection = $this->kuzzleService->collection($collection);
-
         $options = [
             'from' => $from,
             'size' => $size
         ];
 
+        // TODO : remove
         $filterList = [
             'query' => [
                 'match_all' => []
@@ -77,25 +70,9 @@ class KuzzleHelper
             ]
         ];
 
-        /** @var SearchResult $result */
-        $result = $kuzzleCollection->search($filterList, $options);
-        if (0 < $result->getTotal()) {
-            $listDocs = $result->getDocuments();
-        }
-
-        return $listDocs;
+        return $filterList;
     }
 
 
-    /**
-     * @param array $filter
-     * @param array $sort
-     * @param int $size
-     * @param $from
-     */
-    public function buildQuery($filter = [], $sort = [], $size = 1000, $from)
-    {
-
-    }
 
 }
