@@ -20,6 +20,10 @@ abstract class abstractKuzzleDocumentEntity
     /** @var  */
     private $id;
 
+    /** @var  */
+    private $kuzzleId;
+
+
     /**
      * abstractKuzzleDocumentEntity constructor.
      * @param Document $document
@@ -28,12 +32,24 @@ abstract class abstractKuzzleDocumentEntity
     {
         $object = new static();
         if (isset($document['_id'])) {
-            $object->setId($document->getId());
+            $object->setKuzzleId($document->getId());
         }
 
         if (isset($document['body']) && !empty($document['body'])) {
+
+//            TODO
+//            $object->setId('TODO');
             foreach ($document['body'] as $key => $value) {
-                // TODO : setKey($value)
+                $method = 'set'.ucfirst($key);
+
+                if (true === method_exists($object, $method)) {
+                    $object->$method($value);
+                } else {
+                    $method = 'set' . str_replace(' ', '', ucwords(str_replace('_', ' ', $key)));
+                    if (true === method_exists($object, $method)) {
+                        $object->$method($value);
+                    }
+                }
             }
         }
 
@@ -48,17 +64,37 @@ abstract class abstractKuzzleDocumentEntity
         return $this->id;
     }
 
+
     /**
-     * @param mixed $id
+     * @param $id
+     * @return $this
      */
     public function setId($id)
     {
         $this->id = $id;
+        return $this;
     }
 
-
-    public function buildUrl()
+    /**
+     * @return mixed
+     */
+    public function getKuzzleId()
     {
-
+        return $this->kuzzleId;
     }
+
+
+    /**
+     * @param $kuzzleId
+     * @return $this
+     */
+    public function setKuzzleId($kuzzleId)
+    {
+        $this->kuzzleId = $kuzzleId;
+        return $this;
+    }
+
+
+
+
 }

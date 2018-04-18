@@ -9,7 +9,10 @@
 namespace AppBundle\Repository;
 
 
+use AppBundle\Entity\abstractKuzzleDocumentEntity;
 use AppBundle\Kuzzle\KuzzleHelper;
+use Kuzzle\Collection;
+use Kuzzle\Util\SearchResult;
 
 
 /**
@@ -36,15 +39,6 @@ abstract class abstractKuzzleRepository
 
 
     /**
-     * @param $id
-     */
-    public function findById($id)
-    {
-        $kuzzleDocument = $this->kuzzleService->query([]);
-    }
-
-
-    /**
      * Find a list of documents
      *
      * @param $collection
@@ -52,16 +46,43 @@ abstract class abstractKuzzleRepository
      * @param $to
      * @return \Kuzzle\Util\SearchResult
      */
-    public function findAllByCollection($collection, $from, $to)
+    public function findBy($from, $size)
     {
+        /** @var abstractKuzzleDocumentEntity $kuzzleEntity */
+        $kuzzleEntity = $this->getKuzzleEntity();
+        $collection = $kuzzleEntity::getCollectionName();
+
+        dump($collection);
+
+        /** @var Collection $kuzzleCollection */
         $kuzzleCollection = $this->kuzzleService->collection($collection);
 
+        // Build Query
         $filter = [];
-        $filters = $this->kuzzleHelper->buildQuery($filter, $from, $to);
-        $searchResult = $kuzzleCollection->search($filters);
+        $sort = [];
+        $options = [
+            'from' => $from,
+            'size' => $size
+        ];
+        $filters = $this->kuzzleHelper->buildQuery($filter, $sort);
+
+        /** @var SearchResult $searchResult */
+        $searchResult = $kuzzleCollection->search($filters, $options);
 
         return $searchResult;
     }
 
+    /**
+     * @param $id
+     */
+    public function findById($id)
+    {
+    }
 
+    public function findOneBy()
+    {
+
+    }
+
+    abstract protected function getKuzzleEntity();
 }

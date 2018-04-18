@@ -45,23 +45,19 @@ class KuzzleHelper
     }
 
 
+
     /**
      * @param array $filter
      * @param array $sort
-     * @param int $size
-     * @param $from
+     * @return array
      */
-    public function buildQuery($filter = [], $sort = [], $size = 1000, $from)
+    public function buildQuery($filter = [], $sort = [])
     {
-        $options = [
-            'from' => $from,
-            'size' => $size
-        ];
 
         // TODO : remove
         $filterList = [
             'query' => [
-                'match_all' => []
+                'match_all' => '*'
             ],
             'sort' => [
                 'order' => [

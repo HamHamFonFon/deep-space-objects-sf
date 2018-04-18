@@ -39,15 +39,14 @@ class MessierRepository extends abstractKuzzleRepository
      * @param $to
      * @return array
      */
-    public function getList($start, $to)
+    public function getList($from, $size)
     {
         $listMessiers = [];
         /** @var  $listItems */
-        $listItems = $this->findAllByCollection(self::COLLECTION_NAME, $start, $to);
+        $listItems = $this->findBy($from, $size);
         if (!is_null($listItems) && 0 < $listItems->getTotal()) {
             foreach ($listItems->getDocuments() as $document) {
-//                $class = $this->getEntityClassName();
-//                $listMessiers[] = new $class($document);
+//                $class = $this->getKuzzleEntity();
                 $listMessiers[] = new Messier($document);
             }
         }
@@ -59,9 +58,8 @@ class MessierRepository extends abstractKuzzleRepository
     /**
      * @return string
      */
-    protected function getEntityClassName()
+    protected function getKuzzleEntity()
     {
-        return 'AppBundle\Entity\Messier';
+        return '\AppBundle\Entity\Messier';
     }
-
 }
