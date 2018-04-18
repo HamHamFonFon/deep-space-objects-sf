@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: stephane
- * Date: 15/04/18
- * Time: 23:26
- */
 
 namespace AppBundle\Entity;
-
 
 use Kuzzle\Document;
 
@@ -36,12 +29,10 @@ abstract class abstractKuzzleDocumentEntity
         }
 
         if (isset($document['body']) && !empty($document['body'])) {
-
 //            TODO
 //            $object->setId('TODO');
             foreach ($document['body'] as $key => $value) {
                 $method = 'set'.ucfirst($key);
-
                 if (true === method_exists($object, $method)) {
                     $object->$method($value);
                 } else {
@@ -64,7 +55,6 @@ abstract class abstractKuzzleDocumentEntity
         return $this->id;
     }
 
-
     /**
      * @param $id
      * @return $this
@@ -83,7 +73,6 @@ abstract class abstractKuzzleDocumentEntity
         return $this->kuzzleId;
     }
 
-
     /**
      * @param $kuzzleId
      * @return $this
@@ -93,8 +82,5 @@ abstract class abstractKuzzleDocumentEntity
         $this->kuzzleId = $kuzzleId;
         return $this;
     }
-
-
-
 
 }
