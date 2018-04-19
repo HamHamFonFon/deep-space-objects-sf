@@ -20,3 +20,5 @@ parameters:
     kuzzle_host: ~
     kuzzle_index: ~
     kuzzle_port: ~
+    astrobin.key: ~
+    astrobin.secret: ~
