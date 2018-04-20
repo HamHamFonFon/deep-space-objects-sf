@@ -7,6 +7,7 @@
  */
 
 namespace AppBundle\Astrobin;
+use AppBundle\Astrobin\Exceptions\astroBinException;
 
 /**
  * Class AstrobinWebService
@@ -14,7 +15,7 @@ namespace AppBundle\Astrobin;
  */
 abstract class AstrobinWebService
 {
-    const ASTROBIN_URL = 'http://astrobin.com/api/v1/';
+    const ASTROBIN_URL = 'http://www.astrobin.com/api/v1/';
     const LIMIT_MAX = 24;
 
     const METHOD_GET = 'GET';
@@ -42,7 +43,8 @@ abstract class AstrobinWebService
      * @param $endPoint
      * @param $method
      * @param $data
-     * @return mixed
+     * @return mixed|null
+     * @throws astroBinException
      */
     protected function call($endPoint, $method, $data)
     {
@@ -51,19 +53,34 @@ abstract class AstrobinWebService
 
         if(!$resp = curl_exec($curl)) {
             // show problem, genere exception
-            curl_error($curl);
+            throw new astroBinException(curl_error($curl));
         }
+
+        // TODO make something with HTTP code...
+        $respHttpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
         curl_close($curl);
 
-        dump($resp);
-        if (is_string($resp)) {
-            // TODO 1 verification if start with { : not : log exception
+        if (empty($resp)) {
+            throw new astroBinException("Empty Json response from Astrobin");
+        }
 
-            $obj = json_decode($resp);
-            // Check ig json_decode fail
-            if (!$obj) {
+        if (is_string($resp)) {
+            if (false === strpos($resp, '{', 0)) {
+                // check if html
+                if (false !== strpos($resp, '<html', 0)) {
+                    throw new astroBinException(sprintf("Response from Astrobin is in HTML format :\n %s", $resp));
+                }
+                throw new astroBinException(sprintf("Response from Astrobin is not a JSON valid format :\n %s", $resp));
             }
-//            TODO : check return of WS
+            $obj = json_decode($resp);
+
+            if (JSON_ERROR_NONE != json_last_error()) {
+                throw new astroBinException(json_last_error());
+            }
+
+            // Verification of each field if return is a JSON correct
+        } else {
+            throw new astroBinException("Response from Astrobin is not a string, got ". gettype($resp) . " instead.");
         }
 
         return $obj;
@@ -79,14 +96,18 @@ abstract class AstrobinWebService
      */
     private function initCurl($endPoint, $method, $data)
     {
-        $curl = curl_init();
-
         // Build URL with params
         $url = self::ASTROBIN_URL . $endPoint;
-        if (is_array($data)) {
+
+        if (is_array($data) && 0 < count($data)) {
             $paramData = implode('&', array_map(function($k, $v) {
-                return sprintf("%s=%s", $k, $v);
+                $formatValue = "%s";
+                if (is_numeric($v)) {
+                    $formatValue = "%d";
+                }
+                return sprintf("%s=$formatValue", $k, $v);
             }, array_keys($data), $data));
+
             $url .= $paramData;
         } else {
             $url .= $data;
@@ -103,6 +124,8 @@ abstract class AstrobinWebService
             return sprintf("&%s=%s", $k, $v);
         }, array_keys($params), $params));
 
+        $curl = curl_init();
+
         // Options CURL
         $options = [
             CURLOPT_URL => $url,
@@ -114,12 +137,11 @@ abstract class AstrobinWebService
         // GET
         if ($method === self::METHOD_GET) {
             array_merge($options, [
-//                CURLOPT_CUSTOMREQUEST => self::METHOD_GET,
+                CURLOPT_CUSTOMREQUEST => self::METHOD_GET,
                 CURLOPT_HTTPGET => true,
             ]);
         }
 
-        dump($url); die();
         curl_setopt_array($curl, $options);
         return $curl;
     }

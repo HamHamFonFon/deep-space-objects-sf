@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bb26e9-8fe6-44ef-9746-857377cc2bf9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getImagesUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/AppBundle/Astrobin/AstrobinTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Astrobin/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/pages/homepage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/pages/homepage.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/pages/messier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/pages/messier.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/parameters_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters_dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getObject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getTodayImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getTodayImage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Astrobin/Exceptions/astroBinException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Astrobin/Exceptions/astroBinException.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,8 +38,8 @@
       <file leaf-file-name="getObject.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getObject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="174">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#131#172#0#PHP" expanded="true" />
               </folding>
@@ -51,65 +47,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getImagesUser.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getImagesUser.php">
+      <file leaf-file-name="MessierController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+            <state relative-caret-position="579">
+              <caret line="71" column="63" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
               <folding>
-                <element signature="e#131#172#0#PHP" expanded="true" />
+                <element signature="e#40#86#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="astrobinInterface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/astrobinInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AstrobinWebService.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AstrobinWebService.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parameters_dev.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/parameters_dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messier.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/pages/messier.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homepage.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/pages/homepage.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
+            <state relative-caret-position="324">
+              <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -129,7 +83,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/AppBundle/Kuzzle/Kuzzle.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DependencyInjection/Configuration.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/MessierRepositoy.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Kuzzle/KuzzleService.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/translations/messages.fr.yml" />
@@ -148,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/Services/astrobinCallApi.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/Response/AstroBinImage.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/astrobinCallApi.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/Exceptions/astroBinException.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/AppBundle/DependencyInjection/AppExtension.php" />
@@ -156,16 +108,19 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/tests/AppBundle/Astrobin/TestController.php" />
         <option value="$PROJECT_DIR$/tests/AppBundle/Astrobin/AstrobinTest.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/pages/homepage.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/pages/messier.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters_dev.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/astrobinInterface.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getTodayImage.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getObject.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getImagesUser.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getObject.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/README.md" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/Exceptions/astroBinException.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php" />
       </list>
     </option>
   </component>
@@ -249,12 +204,6 @@
               <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
               <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -296,6 +245,14 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Astrobin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Exceptions" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Astrobin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Services" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -304,6 +261,37 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="translations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
@@ -326,28 +314,28 @@
             <path>
               <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
               <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
               <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="kuzzleio" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
               <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="kuzzleio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="kuzzle-sdk" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
               <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="kuzzleio" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="kuzzle-sdk" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bundles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -363,6 +351,9 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/AppBundle/Resources/public/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/AppBundle/Astrobin" />
       <recent name="$PROJECT_DIR$/src/AppBundle" />
@@ -407,12 +398,12 @@
       <workItem from="1523987902378" duration="1106000" />
       <workItem from="1524070590442" duration="4813000" />
       <workItem from="1524159798431" duration="4931000" />
-      <workItem from="1524239038479" duration="8382000" />
+      <workItem from="1524239038479" duration="11926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31509000" />
+    <option name="totallyTimeSpent" value="35053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -447,27 +438,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/pages/homepage.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Messier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/NgcItem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/translations/messages.fr.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -666,31 +636,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/Exceptions/astroBinException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="55" lean-forward="true" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-531">
-          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -723,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/pages/homepage.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -750,16 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/pages/messier.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -767,29 +699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
-          <folding>
-            <element signature="e#40#86#0#PHP" expanded="true" />
-            <element signature="e#1416#1442#0#PHP" expanded="true" />
-            <element signature="e#2224#2249#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/astrobinInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -803,16 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getObject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#131#172#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getImagesUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -820,6 +723,90 @@
           <folding>
             <element signature="e#131#172#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MessierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="71" column="63" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
+          <folding>
+            <element signature="e#40#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/Services/getObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#131#172#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/pages/messier.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/app/images/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="55" lean-forward="true" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="105" selection-start-line="1" selection-start-column="105" selection-end-line="1" selection-end-column="105" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="258" column="6" selection-start-line="258" selection-start-column="6" selection-end-line="258" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/Exceptions/astroBinException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
         </state>
       </provider>
     </entry>
