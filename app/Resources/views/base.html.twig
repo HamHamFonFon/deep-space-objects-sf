@@ -5,6 +5,7 @@
     {% set pageDesc = pageDesc|default('') %}
     {% set pageUrl = app.request.uri %}
     {% set pageUrlCanonical = app.request.getSchemeAndHttpHost ~ app.request.baseUrl ~ app.request.pathInfo %}
+    {% set favicon = favicon|default('') %}
   {% endspaceless %}
   <!DOCTYPE html>
   <html lang="{{ pageLang }}">
