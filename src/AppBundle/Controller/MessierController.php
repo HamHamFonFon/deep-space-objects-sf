@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Astrobin\Services\getTodayImage;
 use AppBundle\Repository\MessierRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -37,6 +38,10 @@ class MessierController extends Controller
 
         /** @var MessierRepository $messierRepository */
         $messierRepository = $this->container->get('app.repository.messier');
+
+        /** @var getTodayImage $imageOfTheDayWS */
+        $imageOfTheDayWS = $this->container->get('astrobin.webservice.gettodayimage');
+        dump($imageOfTheDayWS->callWs());
 
         $params['messier_objects'] = $messierRepository->getList(self::OFFSET, self::LIMIT);
 

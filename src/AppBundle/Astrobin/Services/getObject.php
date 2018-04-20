@@ -8,15 +8,15 @@
 
 namespace AppBundle\Astrobin\Services;
 
-
 use AppBundle\Astrobin\astrobinInterface;
+use AppBundle\Astrobin\AstrobinWebService;
 use AppBundle\Astrobin\Response\AstroBinImage;
 
 /**
  * Class getObject
  * @package AppBundle\Astrobin\Services
  */
-class getObject extends astrobinWebService implements astrobinInterface
+class getObject extends AstrobinWebService implements astrobinInterface
 {
 
     /**

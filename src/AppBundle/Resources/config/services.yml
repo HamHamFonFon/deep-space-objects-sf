@@ -10,7 +10,7 @@ services:
 
   # WebServices
   astrobin.webservice:
-    class: AppBundle\Astrobin\Services\astrobinWebService
+    class: AppBundle\Astrobin\AstrobinWebService
     abstract: true
     arguments:
      - "%astrobin.key%"

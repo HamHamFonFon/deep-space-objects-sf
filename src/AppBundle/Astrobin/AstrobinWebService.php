@@ -1,14 +1,19 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: stephane
+ * Date: 20/04/18
+ * Time: 18:34
+ */
 
-namespace AppBundle\Astrobin\Services;
+namespace AppBundle\Astrobin;
 
 /**
- * Class astrobinWebService
- * @package AppBundle\Astrobin\Services
+ * Class AstrobinWebService
+ * @package AppBundle\Astrobin
  */
-abstract class astrobinWebService
+abstract class AstrobinWebService
 {
-
     const ASTROBIN_URL = 'http://astrobin.com/api/v1/';
 
     const METHOD_GET = 'GET';
@@ -17,8 +22,11 @@ abstract class astrobinWebService
     private $apiKey;
     private $apiSecret;
 
+
     /**
-     * astrobinCallApi constructor.
+     * AstrobinWebService constructor.
+     * @param $apiKey
+     * @param $apiSecret
      */
     public function __construct($apiKey, $apiSecret)
     {
@@ -28,7 +36,6 @@ abstract class astrobinWebService
 
 
     /**
-     * Call Astrobin Web Service and return API's response
      * @param $endPoint
      * @param $method
      * @param $data
@@ -38,25 +45,19 @@ abstract class astrobinWebService
     {
         $curl = $this->initCurl($endPoint, $method, $data);
 
-        $resp = curl_exec($curl);
-        if( ! $result = curl_exec($curl)) {
+        if(!$resp = curl_exec($curl)) {
             // show problem, genere exception
             curl_error($curl);
         }
 
-        $infoCurl = curl_getinfo($curl);
-
         curl_close($curl);
-
         if (is_string($resp)) {
             // TODO 1 verification if start with { : not : log exception
 
             $obj = json_decode($resp);
             // Check ig json_decode fail
             if (!$obj) {
-
             }
-
 //            TODO : check return of WS
         }
 
@@ -65,14 +66,13 @@ abstract class astrobinWebService
 
 
     /**
-     * Build cURL
-     *
+     * Build cURL URL
      * @param $endPoint
      * @param $method
      * @param $data
      * @return resource
      */
-    private function initCurl($endPoint, $method, $data)
+    public function initCurl($endPoint, $method, $data)
     {
         $curl = curl_init();
 
@@ -107,5 +107,4 @@ abstract class astrobinWebService
 
         return $curl;
     }
-
 }
