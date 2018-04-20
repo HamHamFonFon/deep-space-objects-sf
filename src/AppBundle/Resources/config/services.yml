@@ -8,6 +8,20 @@ services:
       - "%kuzzle_index%"
       - "%kuzzle_port%"
 
+  # WebServices
+  astrobin.webservice:
+    class: AppBundle\Astrobin\Services\astrobinWebService
+    abstract: true
+    arguments:
+     - "%astrobin.key%"
+     - "%astrobin.secret%"
+  astrobin.webservice.getobject:
+    class: AppBundle\Astrobin\Services\getObject
+    parent: astrobin.webservice
+  astrobin.webservice.gettodayimage:
+    class: AppBundle\Astrobin\Services\getTodayImage
+    parent: astrobin.webservice
+
   # Repositories
   app.repository.messier:
     class: AppBundle\Repository\MessierRepository

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: stephane
- * Date: 19/04/18
- * Time: 20:07
- */
 
 namespace AppBundle\Astrobin\Services;
 
@@ -33,8 +27,8 @@ abstract class astrobinWebService
     }
 
 
-
     /**
+     * Call Astrobin Web Service and return API's response
      * @param $endPoint
      * @param $method
      * @param $data
@@ -71,9 +65,14 @@ abstract class astrobinWebService
 
 
     /**
+     * Build cURL
      *
+     * @param $endPoint
+     * @param $method
+     * @param $data
+     * @return resource
      */
-    public function initCurl($endPoint, $method, $data)
+    private function initCurl($endPoint, $method, $data)
     {
         $curl = curl_init();
 
@@ -84,14 +83,25 @@ abstract class astrobinWebService
             $url .= $data;
         }
 
+        $params = [
+            'api_key' => $this->apiKey,
+            'api_scret' => $this->apiSecret,
+            'format' => 'json'
+        ];
+
+        $url .= implode('', array_map(function($v, $k) {
+            return sprintf("&%d=%d", $v, $k);
+        }, array_keys($params), $params));
+
+        dump($url);
+
         $options = [
-            'CURLOPT_URL' => $url . '&api_key=' . $this->apiKey . '&api_scret=' . $this->apiSecret . '&format=json',
+            'CURLOPT_URL' => $url,
             'CURLOPT_RETURNTRANSFER' => true,
             'CURLOPT_HEADER' => 0,
             'CURLOPT_TIMEOUT' => 4
 
         ];
-
 
         curl_setopt_array($curl, $options);
 

@@ -32,22 +32,13 @@ class AppExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
+//        $container->register('astrobin.webservice', 'AppBundle\Astrobin\Services\astrobinWebService')
+//            ->addArgument('%astrobin.key%')
+//            ->addArgument('%astrobin.secret%');
+
+
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yml');
-
-        // TEST
-        $this->loadServices($container);
-    }
-
-
-    /**
-     * @param ContainerBuilder $container
-     */
-    private function loadServices(ContainerBuilder $container)
-    {
-        $container->register('astrobin', 'astrobinWebService')
-            ->addArgument('%astrobin.key%')
-            ->addArgument('%astrobin.secret%');
     }
 
 }

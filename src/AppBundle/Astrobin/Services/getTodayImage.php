@@ -9,7 +9,13 @@
 namespace AppBundle\Astrobin\Services;
 
 
-class getTodayImage extends astrobinWebService
+use AppBundle\Astrobin\astrobinInterface;
+
+/**
+ * Class getTodayImage
+ * @package AppBundle\Astrobin\Services
+ */
+class getTodayImage extends astrobinWebService implements astrobinInterface
 {
 
 

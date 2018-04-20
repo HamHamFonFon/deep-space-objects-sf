@@ -9,20 +9,21 @@
 namespace AppBundle\Astrobin\Services;
 
 
+use AppBundle\Astrobin\astrobinInterface;
 use AppBundle\Astrobin\Response\AstroBinImage;
 
 /**
  * Class getObject
  * @package AppBundle\Astrobin\Services
  */
-class getObject extends astrobinWebService
+class getObject extends astrobinWebService implements astrobinInterface
 {
 
     /**
      * @param $id
      * @return AstroBinImage
      */
-    public function callWs($id)
+    public function callWs($id = null)
     {
         $rawResp = $this->call('image/?subjects', astrobinWebService::METHOD_GET, $id);
 
