@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bb26e9-8fe6-44ef-9746-857377cc2bf9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Astrobin/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/images/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Astrobin/Exceptions/astroBinException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Astrobin/Exceptions/astroBinException.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,8 +56,8 @@
       <file leaf-file-name="AstrobinWebService.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+            <state relative-caret-position="720">
+              <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -203,27 +197,6 @@
             <path>
               <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
               <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -246,6 +219,14 @@
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Astrobin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Exceptions" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepSpaceObjects-sf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Astrobin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Response" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="DeepSpaceObjects-sf" type="b2602c69:ProjectViewProjectNode" />
@@ -398,12 +379,12 @@
       <workItem from="1523987902378" duration="1106000" />
       <workItem from="1524070590442" duration="4813000" />
       <workItem from="1524159798431" duration="4931000" />
-      <workItem from="1524239038479" duration="11926000" />
+      <workItem from="1524239038479" duration="12683000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35053000" />
+    <option name="totallyTimeSpent" value="35810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -805,8 +786,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Astrobin/AstrobinWebService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+        <state relative-caret-position="720">
+          <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
         </state>
       </provider>
     </entry>

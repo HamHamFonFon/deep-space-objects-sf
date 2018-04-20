@@ -141,7 +141,7 @@ abstract class AstrobinWebService
                 CURLOPT_HTTPGET => true,
             ]);
         }
-
+        dump($url);
         curl_setopt_array($curl, $options);
         return $curl;
     }
