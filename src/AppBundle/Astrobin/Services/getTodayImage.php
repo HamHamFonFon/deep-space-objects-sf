@@ -20,14 +20,19 @@ use AppBundle\Astrobin\Response\AstroBinImage;
 class getTodayImage extends AstrobinWebService implements astrobinInterface
 {
 
+    public function getTodayImage()
+    {
+        return $this->callWs(['limit' => 1]);
+    }
+
     /**
      * @return AstroBinImage
      */
-    public function callWs()
+    public function callWs($params = [])
     {
         /** @var  $rawResp */
-        $rawResp = $this->call('imageoftheday/?limit=1', astrobinWebService::METHOD_GET, null);
-
+        $rawResp = $this->call('imageoftheday/?', parent::METHOD_GET, $params);
+//        dump($rawResp);
         $response = new AstroBinImage();
         $response->fromObj($rawResp);
 

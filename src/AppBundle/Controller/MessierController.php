@@ -37,19 +37,20 @@ class MessierController extends Controller
         $params = [];
 
         /** @var MessierRepository $messierRepository */
-        $messierRepository = $this->container->get('app.repository.messier');
+//        $messierRepository = $this->container->get('app.repository.messier');
 
         /** @var getTodayImage $imageOfTheDayWS */
         $imageOfTheDayWS = $this->container->get('astrobin.webservice.gettodayimage');
         dump($imageOfTheDayWS->callWs());
 
-        $params['messier_objects'] = $messierRepository->getList(self::OFFSET, self::LIMIT);
+//        $params['messier_objects'] = $messierRepository->getList(self::OFFSET, self::LIMIT);
 
         /** @var Response $response */
         $response = new Response();
         $response->setPublic();
+        $response->setSharedMaxAge($this->container->getParameter('http_ttl'));
         $response->headers->set(
-            $this->container->getParameter('http_ttl')
+            'X-Messier-Id', []
         );
         return $this->render('pages/homepage.html.twig', $params, $response);
     }
@@ -65,9 +66,19 @@ class MessierController extends Controller
     {
         $params = [];
 
+        $messierTest = 'm31';
+
+        $astrobinWs = $this->container->get('astrobin.webservice.getobject');
+        $astroMessier = $astrobinWs->getOneImage($messierTest);
+
         /** @var Response $response */
         $response = new Response();
+        $response->setPublic();
+        $response->setSharedMaxAge($this->container->getParameter('http_ttl'));
+        $response->headers->set(
+            'X-Messier-Id', [$objectId]
+        );
 
-        return $this->render(':pages:messier.html.twig', $params, $response);
+        return $this->render('pages/messier.html.twig', $params, $response);
     }
 }

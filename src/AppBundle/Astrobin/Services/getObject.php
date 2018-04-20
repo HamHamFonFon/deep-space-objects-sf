@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: stephane
- * Date: 19/04/18
- * Time: 20:09
- */
 
 namespace AppBundle\Astrobin\Services;
 
@@ -23,9 +17,35 @@ class getObject extends AstrobinWebService implements astrobinInterface
      * @param $id
      * @return AstroBinImage
      */
-    public function callWs($id = null)
+    public function getOneImage($id)
     {
-        $rawResp = $this->call('image/?subjects', astrobinWebService::METHOD_GET, $id);
+        $params = ['subjects' => $id, 'limit' => 1];
+        return $this->callWs($params);
+    }
+
+    /**
+     * @param $id
+     * @param $limit
+     * @return AstroBinImage
+     */
+    public function getManyImages($id, $limit)
+    {
+        if (parent::LIMIT_MAX < $limit) {
+            exit;
+        }
+
+        $params = ['subjects' => $id, 'limit' => $limit];
+        return $this->callWs($params);
+    }
+
+
+    /**
+     * @param array $params
+     * @return AstroBinImage
+     */
+    public function callWs($params = [])
+    {
+        $rawResp = $this->call('image/?', astrobinWebService::METHOD_GET, $params);
 
         $response = new AstroBinImage();
         $response->fromObj($rawResp);
