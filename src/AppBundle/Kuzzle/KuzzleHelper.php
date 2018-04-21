@@ -53,7 +53,7 @@ class KuzzleHelper
      * @param array $qSort
      * @return array $finalQuery
      */
-    public function buildQuery($query = [], $filters = [], $qSort = [], $aggregates = [])
+    public function buildQuery($query = [], $filters = [], $qSort = [], $aggregates = [], $from = 0, $size = 20)
     {
 
         $finalQuery = $queryClauses = $filterClauses = [];
@@ -131,6 +131,9 @@ class KuzzleHelper
         if (isset($aggregates) && 0 < count($aggregates)) {
 
         }
+
+        $finalQuery['from'] = $from;
+        $finalQuery['size'] = $size;
 
         return $finalQuery;
     }

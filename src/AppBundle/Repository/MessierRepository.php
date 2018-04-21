@@ -50,7 +50,7 @@ class MessierRepository extends abstractKuzzleRepository
         /** @var SearchResult $result */
         $result = $this->findById($id);
         if (0 < $result->getTotal()) {
-            $messier = new Messier($result->getDocuments());
+            $messier = new Messier($result->getDocuments()[0]);
         }
 
         return $messier;
@@ -65,7 +65,15 @@ class MessierRepository extends abstractKuzzleRepository
      */
     public function getMessiersByType($type, $const = null, $sort)
     {
+        $listMessiers = [];
         $results = $this->findBy(['properties.type' => $type], ['properties.const_id' => ucfirst($const)]);
+        if (0 < $results->getTotal()) {
+            foreach ($results->getDocuments() as $document) {
+                $listMessiers[] = new Messier($document);
+            }
+        }
+
+        return $listMessiers;
     }
 
     /**

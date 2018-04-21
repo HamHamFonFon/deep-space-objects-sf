@@ -56,16 +56,9 @@ abstract class abstractKuzzleRepository
         /** @var Collection $kuzzleCollection */
         $kuzzleCollection = $this->kuzzleService->collection($collection);
 
-        // Build Query
-        $options = [
-            'from' => $from,
-            'size' => $size
-        ];
-
         /** @var SearchResult $searchResult */
         $searchResult = $kuzzleCollection->search(
-            $this->kuzzleHelper->buildQuery($query, $filters, $sort, $aggregates),
-            $options
+            $this->kuzzleHelper->buildQuery($query, $filters, $sort, $aggregates, $from, $size)
         );
 
         return $searchResult;
