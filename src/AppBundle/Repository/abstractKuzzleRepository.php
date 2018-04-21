@@ -27,6 +27,7 @@ abstract class abstractKuzzleRepository
     /** @var \Kuzzle\Kuzzle  */
     protected $kuzzleService;
 
+
     /**
      * abstractKuzzleRepository constructor.
      * @param KuzzleHelper $kuzzleHelper
@@ -43,46 +44,44 @@ abstract class abstractKuzzleRepository
      *
      * @param $collection
      * @param $from
-     * @param $to
+     * @param $size
      * @return \Kuzzle\Util\SearchResult
      */
-    public function findBy($from, $size)
+    protected function findBy($query, $filters, $sort, $from, $size, $aggregates = [])
     {
         /** @var abstractKuzzleDocumentEntity $kuzzleEntity */
         $kuzzleEntity = $this->getKuzzleEntity();
         $collection = $kuzzleEntity::getCollectionName();
 
-        dump($collection);
-
         /** @var Collection $kuzzleCollection */
         $kuzzleCollection = $this->kuzzleService->collection($collection);
 
         // Build Query
-        $filter = [];
-        $sort = [];
         $options = [
             'from' => $from,
             'size' => $size
         ];
-        $filters = $this->kuzzleHelper->buildQuery($filter, $sort);
 
         /** @var SearchResult $searchResult */
-        $searchResult = $kuzzleCollection->search($filters, $options);
+        $searchResult = $kuzzleCollection->search(
+            $this->kuzzleHelper->buildQuery($query, $filters, $sort, $aggregates),
+            $options
+        );
 
         return $searchResult;
     }
 
+
     /**
+     * Search an object by his name/title
      * @param $id
+     * @return SearchResult
      */
-    public function findById($id)
+    protected function findById($id)
     {
+        return $this->findBy(['properties.name' => $id], [], [],0, 1);
     }
 
-    public function findOneBy()
-    {
-
-    }
 
     abstract protected function getKuzzleEntity();
 }

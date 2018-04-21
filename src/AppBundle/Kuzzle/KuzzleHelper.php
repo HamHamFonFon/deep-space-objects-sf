@@ -25,6 +25,8 @@ class KuzzleHelper
     private $index;
     private $port;
 
+    const LIST_ORDER = ['asc', 'desc'];
+
     /**
      * KuzzleService constructor.
      * @param $host
@@ -45,30 +47,91 @@ class KuzzleHelper
     }
 
 
-
     /**
-     * @param array $filter
-     * @param array $sort
-     * @return array
+     * Build a Elastic Search query
+     * @param array $filters
+     * @param array $qSort
+     * @return array $finalQuery
      */
-    public function buildQuery($filter = [], $sort = [])
+    public function buildQuery($query = [], $filters = [], $qSort = [], $aggregates = [])
     {
 
-        // TODO : remove
-        $filterList = [
-            'query' => [
-                'match_all' => '*'
-            ],
-            'sort' => [
-                'order' => [
-                    'messier_order' => 'asc'
+        $finalQuery = $queryClauses = $filterClauses = [];
+        // Query Concatenate fields
+        if (isset($query) and 0 < count($query)) {
+
+            // Test if "match_all"
+            if (1 == count($query) && 'match_all' == key($query)) {
+                $finalQuery['query'] = $query;
+
+            // Else; building query
+            } else {
+                foreach ($query as $field => $value) {
+                    $term = is_array($value) ? 'terms' : 'term';
+                    array_push($queryClauses, [
+                        $term => [
+                            $field => $value
+                        ]
+                    ]);
+                }
+
+                if (0 < count($queryClauses)) {
+                    $queryClauses = [
+                        'bool' => [
+                            'must' => $queryClauses
+                        ]
+                    ];
+                    $finalQuery['query'] = $queryClauses;
+                }
+            }
+        }
+
+        // Filters
+        if (isset($filters) && 0 < count($filters)) {
+            foreach ($filters as $field=>$value) {
+                $term = is_array($filters) ? 'terms' : 'term';
+                $filterClauses[] = [
+                    $term => [
+                        $field => $value
+                    ]
+                ];
+            }
+
+            if (0 < count($filterClauses)) {
+                $filterClauses = [
+                    'bool' => [
+                        'must' => $filterClauses
+                    ]
+                ];
+
+                $finalQuery = [
+                    'filter' => $filterClauses
+                ];
+            }
+        }
+
+        // Add sort
+        if (isset($sort) && 0 < count($sort)) {
+
+            foreach ($qSort as $field=>$type) {
+                $fieldSort = [];
+                if (in_array($type, self::LIST_ORDER)) {
+                    array_push($fieldSort, [$field => $type]);
+                }
+            }
+
+            $finalQuery = [
+                'sort' => [
+                    'order'=> $fieldSort
                 ]
-            ]
-        ];
+            ];
+        }
 
-        return $filterList;
+        // TODO Add agregates
+        if (isset($aggregates) && 0 < count($aggregates)) {
+
+        }
+
+        return $finalQuery;
     }
-
-
-
 }

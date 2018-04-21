@@ -11,6 +11,7 @@ namespace AppBundle\Repository;
 
 use AppBundle\Entity\Messier;
 use AppBundle\Kuzzle\KuzzleHelper;
+use Kuzzle\Util\SearchResult;
 
 /**
  * Class MessierRepository
@@ -33,6 +34,39 @@ class MessierRepository extends abstractKuzzleRepository
         parent::__construct($kuzzleHelper);
     }
 
+
+    /**
+     * Get Messier object in Kuzzle and return it
+     * @param $id
+     * @return Messier|null
+     */
+    public function getMessier($id)
+    {
+        $messier = null;
+        if (false === strpos(strtolower($id), 'm',0)) {
+            return null;
+        }
+
+        /** @var SearchResult $result */
+        $result = $this->findById($id);
+        if (0 < $result->getTotal()) {
+            $messier = new Messier($result->getDocuments());
+        }
+
+        return $messier;
+    }
+
+
+    /**
+     * Get objects messiers by type, filtered by constellation
+     * @param $type
+     * @param $filters
+     * @param $sort
+     */
+    public function getMessiersByType($type, $const = null, $sort)
+    {
+        $results = $this->findBy(['properties.type' => $type], ['properties.const_id' => ucfirst($const)]);
+    }
 
     /**
      * @param $start
