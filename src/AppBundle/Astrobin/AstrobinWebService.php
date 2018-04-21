@@ -15,7 +15,7 @@ use AppBundle\Astrobin\Exceptions\astroBinException;
  */
 abstract class AstrobinWebService
 {
-    const ASTROBIN_URL = 'http://www.astrobin.com/api/v1/';
+    const ASTROBIN_URL = 'http://astrobin.com/api/v1/';
     const LIMIT_MAX = 24;
 
     const METHOD_GET = 'GET';

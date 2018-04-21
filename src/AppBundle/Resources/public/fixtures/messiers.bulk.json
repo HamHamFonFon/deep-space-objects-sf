@@ -1,0 +1,2674 @@
+{
+"bulkData": [	
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m1" } },
+	{
+		"type": "Feature",
+		"messier_id": "M1",
+		"messier_order": 1,
+		"properties": {
+			"name": "M1",
+			"desig": "NGC 1952",
+			"alt": "Crab Nebula",
+			"alt_fr": "Nébuleuse du crabe",
+			"type": "snr",
+			"type_label": "Supernova Remnant",
+			"mag": 8.4,
+			"const_id": "TAU",
+			"dim": "6x4",
+			"cl": ""
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				83.625,
+				22.0167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m2" } },
+	{
+		"type": "Feature",
+		"messier_id": "M2",
+		"messier_order": 2,
+		"properties": {
+			"name": "M2",
+			"desig": "NGC 7089",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 6.5,
+			"const_id": "Aqr",
+			"dim": "13",
+			"cl": "II"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-36.625,
+				-0.8167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m3" } },
+	{
+		"type": "Feature",
+		"messier_id": "M3",
+		"messier_order": 3,
+		"properties": {
+			"name": "M3",
+			"desig": "NGC 5272",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 6.4,
+			"const_id": "CVn",
+			"dim": "16",
+			"cl": "VI"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-154.45,
+				28.3833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m4" } },
+	{
+		"type": "Feature",
+		"messier_id": "M4",
+		"messier_order": 4,
+		"properties": {
+			"name": "M4",
+			"desig": "NGC 6121",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 5.6,
+			"const_id": "Sco",
+			"dim": "26",
+			"cl": "IX"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-114.1,
+				-26.5333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m5" } },
+	{
+		"type": "Feature",
+		"messier_id": "M5",
+		"messier_order": 5,
+		"properties": {
+			"name": "M5",
+			"desig": "NGC 5904",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 5.6,
+			"const_id": "Ser",
+			"dim": "17",
+			"cl": "V"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-130.35,
+				2.0833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m6" } },
+	{
+		"type": "Feature",
+		"messier_id": "M6",
+		"messier_order": 6,
+		"properties": {
+			"name": "M6",
+			"desig": "NGC 6405",
+			"alt": "Butterfly Cluster",
+			"alt_fr": "Amas du papillion",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 4.2,
+			"const_id": "Sco",
+			"dim": "15",
+			"cl": "III2p"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-94.9751,
+				-32.2167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m7" } },
+	{
+		"type": "Feature",
+		"messier_id": "M7",
+		"messier_order": 7,
+		"properties": {
+			"name": "M7",
+			"desig": "NGC 6475",
+			"alt": "Ptolemy´s Cluster",
+			"alt_fr": "Amas de Ptolémée",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 4.1,
+			"const_id": "Sco",
+			"dim": "80",
+			"cl": "II2r"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-91.525,
+				-34.8167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m8" } },
+	{
+		"type": "Feature",
+		"messier_id": "M8",
+		"messier_order": 8,
+		"properties": {
+			"name": "M8",
+			"desig": "NGC 6523",
+			"alt": "Lagoon Nebula",
+			"alt_fr": "Nébuleuse de la lagune",
+			"type": "sfr",
+			"type_label": "Starforming Nebula (with open cluster)",
+			"mag": 6,
+			"const_id": "Sgr",
+			"dim": "90x40",
+			"cl": ""
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-89.05,
+				-24.3833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m9" } },
+	{
+		"type": "Feature",
+		"messier_id": "M9",
+		"messier_order": 9,
+		"properties": {
+			"name": "M9",
+			"desig": "NGC 6333",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.7,
+			"const_id": "Oph",
+			"dim": "9",
+			"cl": "VIII"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-100.2,
+				-18.5167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m10" } },
+	{
+		"type": "Feature",
+		"messier_id": "M10",
+		"messier_order": 10,
+		"properties": {
+			"name": "M10",
+			"desig": "NGC 6254",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 6.6,
+			"const_id": "Oph",
+			"dim": "15",
+			"cl": "VII"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-105.7249,
+				-4.1
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m11" } },
+	{
+		"type": "Feature",
+		"messier_id": "M11",
+		"messier_order": 11,
+		"properties": {
+			"name": "M11",
+			"desig": "NGC 6705",
+			"alt": "Wild Duck Cluster",
+			"alt_fr": "Amas du canard sauvage",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 6.3,
+			"const_id": "Sct",
+			"dim": "14",
+			"cl": "I2r"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-77.225,
+				-6.2667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m12" } },
+	{
+		"type": "Feature",
+		"messier_id": "M12",
+		"messier_order": 12,
+		"properties": {
+			"name": "M12",
+			"desig": "NGC 6218",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 6.7,
+			"const_id": "Oph",
+			"dim": "14",
+			"cl": "IX"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-108.1999,
+				-1.95
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m13" } },
+	{
+		"type": "Feature",
+		"messier_id": "M13",
+		"messier_order": 13,
+		"properties": {
+			"name": "M13",
+			"desig": "NGC 6205",
+			"alt": "Great Hercules Cluster",
+			"alt_fr": "Grand amas d'Hercule",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 5.8,
+			"const_id": "Her",
+			"dim": "17",
+			"cl": "V"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-109.575,
+				36.4667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m14" } },
+	{
+		"type": "Feature",
+		"messier_id": "M14",
+		"messier_order": 14,
+		"properties": {
+			"name": "M14",
+			"desig": "NGC 6402",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.6,
+			"const_id": "Oph",
+			"dim": "12",
+			"cl": "VIII"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-95.5999,
+				-3.25
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m15" } },
+	{
+		"type": "Feature",
+		"messier_id": "M15",
+		"messier_order": 15,
+		"properties": {
+			"name": "M15",
+			"desig": "NGC 7078",
+			"alt": "",
+			"alt_fr": "Nuage de Pégase",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 6.2,
+			"const_id": "Peg",
+			"dim": "12",
+			"cl": "IV"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-37.5,
+				12.1667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m16" } },
+	{
+		"type": "Feature",
+		"messier_id": "M16",
+		"messier_order": 16,
+		"properties": {
+			"name": "M16",
+			"desig": "NGC 6611",
+			"alt": "Eagle Nebula",
+			"alt_fr": "Nébuleuse de l'aigle",
+			"type": "sfr",
+			"type_label": "Starforming Nebula (with open cluster)",
+			"mag": 6.4,
+			"const_id": "Ser",
+			"dim": "7",
+			"cl": "II3mn"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-85.3,
+				-13.7833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m17" } },
+	{
+		"type": "Feature",
+		"messier_id": "M17",
+		"messier_order": 17,
+		"properties": {
+			"name": "M17",
+			"desig": "NGC 6618",
+			"alt": "Omega Nebula",
+			"alt_fr": "Nébuleuse Oméga",
+			"type": "sfr",
+			"type_label": "Starforming Nebula (with open cluster)",
+			"mag": 7,
+			"const_id": "Sgr",
+			"dim": "46x37",
+			"cl": ""
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-84.8,
+				-16.1833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m18" } },
+	{
+		"type": "Feature",
+		"messier_id": "M18",
+		"messier_order": 18,
+		"properties": {
+			"name": "M18",
+			"desig": "NGC 6613",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 7.5,
+			"const_id": "Sgr",
+			"dim": "9",
+			"cl": "II3pn"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-85.0249,
+				-17.1333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m19" } },
+	{
+		"type": "Feature",
+		"messier_id": "M19",
+		"messier_order": 19,
+		"properties": {
+			"name": "M19",
+			"desig": "NGC 6273",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 6.8,
+			"const_id": "Oph",
+			"dim": "14",
+			"cl": "VIII"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-104.35,
+				-26.2667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m20" } },
+	{
+		"type": "Feature",
+		"messier_id": "M20",
+		"messier_order": 20,
+		"properties": {
+			"name": "M20",
+			"desig": "NGC 6514",
+			"alt": "Trifid Nebula",
+			"alt_fr": "Nébuleuse Trifide",
+			"type": "sfr",
+			"type_label": "Starforming Nebula (with open cluster)",
+			"mag": 9,
+			"const_id": "Sgr",
+			"dim": "29x27",
+			"cl": ""
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-89.3501,
+				-23.0333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m21" } },
+	{
+		"type": "Feature",
+		"messier_id": "M21",
+		"messier_order": 21,
+		"properties": {
+			"name": "M21",
+			"desig": "NGC 6531",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 6.5,
+			"const_id": "Sgr",
+			"dim": "13",
+			"cl": "I3m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-88.8499,
+				-22.5
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m22" } },
+	{
+		"type": "Feature",
+		"messier_id": "M22",
+		"messier_order": 22,
+		"properties": {
+			"name": "M22",
+			"desig": "NGC 6656",
+			"alt": "Saggitarius cluster",
+			"alt_fr": "Amas du sagittaire",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 5.1,
+			"const_id": "Sgr",
+			"dim": "24",
+			"cl": "VII"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-80.8999,
+				-23.9
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m23" } },
+	{
+		"type": "Feature",
+		"messier_id": "M23",
+		"messier_order": 23,
+		"properties": {
+			"name": "M23",
+			"desig": "NGC 6494",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 6.9,
+			"const_id": "Sgr",
+			"dim": "27",
+			"cl": "III1m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-90.7999,
+				-19.0167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m24" } },
+	{
+		"type": "Feature",
+		"messier_id": "M24",
+		"messier_order": 25,
+		"properties": {
+			"name": "M24",
+			"desig": "",
+			"alt": "Milky Way patch",
+			"type": "pos",
+			"type_label": "Milky Way Patch",
+			"mag": 4.6,
+			"const_id": "Sgr",
+			"dim": "90",
+			"cl": ""
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-85.775,
+				-18.4833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m25" } },
+	{
+		"type": "Feature",
+		"messier_id": "M25",
+		"messier_order": 25,
+		"properties": {
+			"name": "M25",
+			"desig": "IC 4725",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 4.6,
+			"const_id": "Sgr",
+			"dim": "32",
+			"cl": "I2p"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-82.1,
+				-19.25
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m26" } },
+	{
+		"type": "Feature",
+		"messier_id": "M26",
+		"messier_order": 26,
+		"properties": {
+			"name": "M26",
+			"desig": "NGC 6694",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 8,
+			"const_id": "Sct",
+			"dim": "15",
+			"cl": "I1m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-78.7001,
+				-9.4
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m27" } },
+	{
+		"type": "Feature",
+		"messier_id": "M27",
+		"messier_order": 27,
+		"properties": {
+			"name": "M27",
+			"desig": "NGC 6853",
+			"alt": "Dumbbell Nebula",
+			"alt_fr": "Nébuleuse de l'haltère",				
+			"type": "pn",
+			"type_label": "Planetary Nebula",
+			"mag": 7.4,
+			"const_id": "Vul",
+			"dim": "8x4",
+			"cl": "IV(II)"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-60.1001,
+				22.7167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m28" } },
+	{
+		"type": "Feature",
+		"messier_id": "M28",
+		"messier_order": 28,
+		"properties": {
+			"name": "M28",
+			"desig": "NGC 6626",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 6.8,
+			"const_id": "Sgr",
+			"dim": "11",
+			"cl": "IV"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-83.875,
+				-24.8667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m29" } },
+	{
+		"type": "Feature",
+		"messier_id": "M29",
+		"messier_order": 29,
+		"properties": {
+			"name": "M29",
+			"desig": "NGC 6913",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 7.1,
+			"const_id": "Cyg",
+			"dim": "7",
+			"cl": "III3p"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-54.025,
+				38.5333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m30" } },
+	{
+		"type": "Feature",
+		"messier_id": "M30",
+		"messier_order": 30,
+		"properties": {
+			"name": "M30",
+			"desig": "NGC 7099",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.2,
+			"const_id": "Cap",
+			"dim": "11",
+			"cl": "V"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-34.9001,
+				-23.1833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m31" } },
+	{
+		"type": "Feature",
+		"messier_id": "M31",
+		"messier_order": 31,
+		"properties": {
+			"name": "M31",
+			"desig": "NGC 224",
+			"alt": "Andromeda",
+			"alt_fr": "Andromède",			
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 3.4,
+			"const_id": "And",
+			"dim": "190x60",
+			"cl": "SA(s)b LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				10.6751,
+				41.2667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m32" } },
+	{
+		"type": "Feature",
+		"messier_id": "M32",
+		"messier_order": 32,
+		"properties": {
+			"name": "M32",
+			"desig": "NGC 221",
+			"alt": "",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 8.2,
+			"const_id": "And",
+			"dim": "9x7",
+			"cl": "cE2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				10.6751,
+				40.8667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m33" } },
+	{
+		"type": "Feature",
+		"messier_id": "M33",
+		"messier_order": 33,
+		"properties": {
+			"name": "M33",
+			"desig": "NGC 598",
+			"alt": "Triangulum",
+			"alt_fr": "Triangle",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 5.7,
+			"const_id": "Tri",
+			"dim": "71x42",
+			"cl": "SA(s)cd"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				23.475,
+				30.65
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m34" } },
+	{
+		"type": "Feature",
+		"messier_id": "M34",
+		"messier_order": 34,
+		"properties": {
+			"name": "M34",
+			"desig": "NGC 1039",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 5.5,
+			"const_id": "Per",
+			"dim": "35",
+			"cl": "II3m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				40.5,
+				42.7833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m35" } },
+	{
+		"type": "Feature",
+		"messier_id": "M35",
+		"messier_order": 35,
+		"properties": {
+			"name": "M35",
+			"desig": "NGC 2168",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 5.3,
+			"const_id": "Gem",
+			"dim": "28",
+			"cl": "III2m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				92.2249,
+				24.3333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m36" } },
+	{
+		"type": "Feature",
+		"messier_id": "M36",
+		"messier_order": 36,
+		"properties": {
+			"name": "M36",
+			"desig": "NGC 1960",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 6.3,
+			"const_id": "Aur",
+			"dim": "12",
+			"cl": "II3m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				84.0251,
+				34.1333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m37" } },
+	{
+		"type": "Feature",
+		"messier_id": "M37",
+		"messier_order": 37,
+		"properties": {
+			"name": "M37",
+			"desig": "NGC 2099",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 6.2,
+			"const_id": "Aur",
+			"dim": "24",
+			"cl": "II1r"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				88.1,
+				32.55
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m38" } },
+	{
+		"type": "Feature",
+		"messier_id": "M38",
+		"messier_order": 38,
+		"properties": {
+			"name": "M38",
+			"desig": "NGC 1912",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 7.4,
+			"const_id": "Aur",
+			"dim": "21",
+			"cl": "III2m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				82.175,
+				35.8333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m39" } },
+	{
+		"type": "Feature",
+		"messier_id": "M39",
+		"messier_order": 39,
+		"properties": {
+			"name": "M39",
+			"desig": "NGC 7092",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 4.6,
+			"const_id": "Cyg",
+			"dim": "32",
+			"cl": "III2p"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-36.9499,
+				48.4333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m40" } },
+	{
+		"type": "Feature",
+		"messier_id": "M40",
+		"messier_order": 40,
+		"properties": {
+			"name": "M40",
+			"desig": "WN 4",
+			"alt": "",
+			"type": "pos",
+			"type_label": "Binary star",
+			"mag": 8.4,
+			"const_id": "UMa",
+			"dim": "",
+			"cl": ""
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-174.4001,
+				58.0833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m41" } },
+	{
+		"type": "Feature",
+		"messier_id": "M41",
+		"messier_order": 41,
+		"properties": {
+			"name": "M41",
+			"desig": "NGC 2287",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 4.6,
+			"const_id": "CMA",
+			"dim": "38",
+			"cl": "II3m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				101.75,
+				-20.7333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m42" } },
+	{
+		"type": "Feature",
+		"messier_id": "M42",
+		"messier_order": 42,
+		"properties": {
+			"name": "M42",
+			"desig": "NGC 1976",
+			"alt": "Orion Nebula",
+			"alt_fr": "Nébuleuse d'Orion",
+			"type": "sfr",
+			"type_label": "Starforming Nebula (with open cluster)",
+			"mag": 4,
+			"const_id": "ORI",
+			"dim": "66x60",
+			"cl": ""
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				83.85,
+				-5.45
+			]
+		}
+	},	
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m43" } },
+	{
+		"type": "Feature",
+		"messier_id": "M43",
+		"messier_order": 43,
+		"properties": {
+			"name": "M43",
+			"desig": "NGC 1982",
+			"alt": "",
+			"alt_fr": "Nébuleuse de Mairan",
+			"type": "sfr",
+			"type_label": "Starforming Nebula (with open cluster)",
+			"mag": 9,
+			"const_id": "ORI",
+			"dim": "20x15",
+			"cl": ""
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				83.9,
+				-5.2667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m44" } },
+	{
+		"type": "Feature",
+		"messier_id": "M44",
+		"messier_order": 44,
+		"properties": {
+			"name": "M44",
+			"desig": "NGC 2632",
+			"alt": "Praesepe",
+			"alt_fr": "Amas de la crèche",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 3.7,
+			"const_id": "Cnc",
+			"dim": "95",
+			"cl": "II2m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				130.025,
+				19.9833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m45" } },
+	{
+		"type": "Feature",
+		"messier_id": "M45",
+		"messier_order": 45,
+		"properties": {
+			"name": "M45",
+			"desig": "",
+			"alt": "Pleiades",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 1.6,
+			"const_id": "TAU",
+			"dim": "110",
+			"cl": "I3rn"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				56.75,
+				24.1167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m46" } },
+	{
+		"type": "Feature",
+		"messier_id": "M46",
+		"messier_order": 46,
+		"properties": {
+			"name": "M46",
+			"desig": "NGC 2437",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 6,
+			"const_id": "Pup",
+			"dim": "27",
+			"cl": "III2m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				115.4501,
+				-14.8167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m47" } },
+	{
+		"type": "Feature",
+		"messier_id": "M47",
+		"messier_order": 47,
+		"properties": {
+			"name": "M47",
+			"desig": "NGC 2422",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 5.2,
+			"const_id": "Pup",
+			"dim": "30",
+			"cl": "III2m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				114.15,
+				-14.5
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m48" } },
+	{
+		"type": "Feature",
+		"messier_id": "M48",
+		"messier_order": 48,
+		"properties": {
+			"name": "M48",
+			"desig": "NGC 2548",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 5.5,
+			"const_id": "Hya",
+			"dim": "54",
+			"cl": "I2m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				123.45,
+				-5.8
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m49" } },
+	{
+		"type": "Feature",
+		"messier_id": "M49",
+		"messier_order": 49,
+		"properties": {
+			"name": "M49",
+			"desig": "NGC 4472",
+			"alt": "",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 8.4,
+			"const_id": "Vir",
+			"dim": "10x8",
+			"cl": "E2 Sy2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-172.5499,
+				8
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m50" } },
+	{
+		"type": "Feature",
+		"messier_id": "M50",
+		"messier_order": 50,
+		"properties": {
+			"name": "M50",
+			"desig": "NGC 2323",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 6.3,
+			"const_id": "Mon",
+			"dim": "16",
+			"cl": "II3m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				105.8,
+				-8.3333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m51" } },
+	{
+		"type": "Feature",
+		"messier_id": "M51",
+		"messier_order": 51,
+		"properties": {
+			"name": "M51",
+			"desig": "NGC 5194/5",
+			"alt": "Whirlpool",
+			"alt_fr": "Tourbillon",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 8.4,
+			"const_id": "CVn",
+			"dim": "11x8",
+			"cl": "SA(s)bc pec"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-157.5251,
+				47.2
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m52" } },
+	{
+		"type": "Feature",
+		"messier_id": "M52",
+		"messier_order": 52,
+		"properties": {
+			"name": "M52",
+			"desig": "NGC 7654",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 7.3,
+			"const_id": "Cas",
+			"dim": "13",
+			"cl": "I2r"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-8.95,
+				61.5833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m53" } },
+	{
+		"type": "Feature",
+		"messier_id": "M53",
+		"messier_order": 53,
+		"properties": {
+			"name": "M53",
+			"desig": "NGC 5024",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.6,
+			"const_id": "Com",
+			"dim": "13",
+			"cl": "V"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-161.775,
+				18.1667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m54" } },
+	{
+		"type": "Feature",
+		"messier_id": "M54",
+		"messier_order": 54,
+		"properties": {
+			"name": "M54",
+			"desig": "NGC 6715",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.6,
+			"const_id": "Sgr",
+			"dim": "9",
+			"cl": "III"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-76.2251,
+				-30.4833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m55" } },
+	{
+		"type": "Feature",
+		"messier_id": "M55",
+		"messier_order": 55,
+		"properties": {
+			"name": "M55",
+			"desig": "NGC 6809",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 6.3,
+			"const_id": "Sgr",
+			"dim": "19",
+			"cl": "XI"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-65,
+				-30.9667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m56" } },
+	{
+		"type": "Feature",
+		"messier_id": "M56",
+		"messier_order": 56,
+		"properties": {
+			"name": "M56",
+			"desig": "NGC 6779",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 8.3,
+			"const_id": "LYR",
+			"dim": "7",
+			"cl": "X"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-70.85,
+				30.1833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m57" } },
+	{
+		"type": "Feature",
+		"messier_id": "M57",
+		"messier_order": 57,
+		"properties": {
+			"name": "M57",
+			"desig": "NGC 6720",
+			"alt": "Ring Nebula",
+			"alt_fr": "Nébuleuse de l'anneau",
+			"type": "pn",
+			"type_label": "Planetary Nebula",
+			"mag": 8.8,
+			"const_id": "LYR",
+			"dim": "1",
+			"cl": "IV(III)"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-76.6001,
+				33.0333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m58" } },
+	{
+		"type": "Feature",
+		"messier_id": "M58",
+		"messier_order": 58,
+		"properties": {
+			"name": "M58",
+			"desig": "NGC 4579",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.7,
+			"const_id": "Vir",
+			"dim": "6x5",
+			"cl": "SAB(rs)b Sy1.9"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-170.575,
+				11.8167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m59" } },
+	{
+		"type": "Feature",
+		"messier_id": "M59",
+		"messier_order": 59,
+		"properties": {
+			"name": "M59",
+			"desig": "NGC 4621",
+			"alt": "",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 9.6,
+			"const_id": "Vir",
+			"dim": "5x4",
+			"cl": "E5"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-169.5,
+				11.65
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m60" } },
+	{
+		"type": "Feature",
+		"messier_id": "M60",
+		"messier_order": 60,
+		"properties": {
+			"name": "M60",
+			"desig": "NGC 4649",
+			"alt": "",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 8.8,
+			"const_id": "Vir",
+			"dim": "7x6",
+			"cl": "E2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-169.075,
+				11.55
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m61" } },
+	{
+		"type": "Feature",
+		"messier_id": "M61",
+		"messier_order": 61,
+		"properties": {
+			"name": "M61",
+			"desig": "NGC 4303",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.7,
+			"const_id": "Vir",
+			"dim": "7x6",
+			"cl": "SAB(rs)bc Sy2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-174.525,
+				4.4667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m62" } },
+	{
+		"type": "Feature",
+		"messier_id": "M62",
+		"messier_order": 62,
+		"properties": {
+			"name": "M62",
+			"desig": "NGC 6266",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 6.5,
+			"const_id": "Oph",
+			"dim": "14",
+			"cl": "IV"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-104.7,
+				-30.1167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m63" } },
+	{
+		"type": "Feature",
+		"messier_id": "M63",
+		"messier_order": 63,
+		"properties": {
+			"name": "M63",
+			"desig": "NGC 5055",
+			"alt": "Sunflower Galaxy",
+			"alt_fr": "Galaxie du tournesol",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 8.6,
+			"const_id": "CVn",
+			"dim": "13x7",
+			"cl": "SA(rs)bc LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-161.05,
+				42.0333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m64" } },
+	{
+		"type": "Feature",
+		"messier_id": "M64",
+		"messier_order": 64,
+		"properties": {
+			"name": "M64",
+			"desig": "NGC 4826",
+			"alt": "Blackeye Galaxy",
+			"alt_fr": "Galaxie de l'oeil noir",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 8.5,
+			"const_id": "Com",
+			"dim": "10x5",
+			"cl": "(R)SA(rs)ab Sy2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-165.825,
+				21.6833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m65" } },
+	{
+		"type": "Feature",
+		"messier_id": "M65",
+		"messier_order": 65,
+		"properties": {
+			"name": "M65",
+			"desig": "NGC 3623",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.3,
+			"const_id": "Leo",
+			"dim": "10x3",
+			"cl": "SAB(rs)a LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				169.725,
+				13.0833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m66" } },
+	{
+		"type": "Feature",
+		"messier_id": "M66",
+		"messier_order": 66,
+		"properties": {
+			"name": "M66",
+			"desig": "NGC 3627",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 8.9,
+			"const_id": "Leo",
+			"dim": "9x4",
+			"cl": "SAB(s)b Sy2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				170.0501,
+				12.9833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m67" } },
+	{
+		"type": "Feature",
+		"messier_id": "M67",
+		"messier_order": 67,
+		"properties": {
+			"name": "M67",
+			"desig": "NGC 2682",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 6.1,
+			"const_id": "Cnc",
+			"dim": "30",
+			"cl": "II2m"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				132.6,
+				11.8167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m68" } },
+	{
+		"type": "Feature",
+		"messier_id": "M68",
+		"messier_order": 68,
+		"properties": {
+			"name": "M68",
+			"desig": "NGC 4590",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.8,
+			"const_id": "Hya",
+			"dim": "12",
+			"cl": "X"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-170.1251,
+				-26.75
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m69" } },
+	{
+		"type": "Feature",
+		"messier_id": "M69",
+		"messier_order": 69,
+		"properties": {
+			"name": "M69",
+			"desig": "NGC 6637",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.6,
+			"const_id": "Sgr",
+			"dim": "7",
+			"cl": "V"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-82.15,
+				-32.35
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m70" } },
+	{
+		"type": "Feature",
+		"messier_id": "M70",
+		"messier_order": 70,
+		"properties": {
+			"name": "M70",
+			"desig": "NGC 6681",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.9,
+			"const_id": "Sgr",
+			"dim": "8",
+			"cl": "V"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-79.2,
+				-32.3
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m71" } },
+	{
+		"type": "Feature",
+		"messier_id": "M71",
+		"messier_order": 71,
+		"properties": {
+			"name": "M71",
+			"desig": "NGC 6838",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 8.2,
+			"const_id": "Sge",
+			"dim": "7",
+			"cl": "X-XI"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-61.5499,
+				18.7833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m72" } },
+	{
+		"type": "Feature",
+		"messier_id": "M72",
+		"messier_order": 72,
+		"properties": {
+			"name": "M72",
+			"desig": "NGC 6981",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 9.3,
+			"const_id": "Aqr",
+			"dim": "6",
+			"cl": "IX"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-46.6249,
+				-12.5333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m73" } },
+	{
+		"type": "Feature",
+		"messier_id": "M73",
+		"messier_order": 73,
+		"properties": {
+			"name": "M73",
+			"desig": "NGC 6994",
+			"alt": "4 Star asterism",
+			"type": "pos",
+			"type_label": "Asterism",
+			"mag": 9,
+			"const_id": "Aqr",
+			"dim": "",
+			"cl": ""
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-45.2749,
+				-12.6333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m74" } },
+	{
+		"type": "Feature",
+		"messier_id": "M74",
+		"messier_order": 74,
+		"properties": {
+			"name": "M74",
+			"desig": "NGC 628",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.4,
+			"const_id": "Psc",
+			"dim": "11x10",
+			"cl": "SA(s)c"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				24.1751,
+				15.7833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m75" } },
+	{
+		"type": "Feature",
+		"messier_id": "M75",
+		"messier_order": 75,
+		"properties": {
+			"name": "M75",
+			"desig": "NGC 6864",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 8.5,
+			"const_id": "Sgr",
+			"dim": "6",
+			"cl": "I"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-58.475,
+				-21.9167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m76" } },
+	{
+		"type": "Feature",
+		"messier_id": "M76",
+		"messier_order": 76,
+		"properties": {
+			"name": "M76",
+			"desig": "NGC 650/1",
+			"alt": "Little Dumbbell Nebula",
+			"alt_fr": "Nébuleuse du petit haltère",
+			"type": "pn",
+			"type_label": "Planetary Nebula",
+			"mag": 10.1,
+			"const_id": "Per",
+			"dim": "2x1",
+			"cl": "III(VI)"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				25.6001,
+				51.5667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m77" } },
+	{
+		"type": "Feature",
+		"messier_id": "M77",
+		"messier_order": 77,
+		"properties": {
+			"name": "M77",
+			"desig": "NGC 1068",
+			"alt": "Cetus A",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 8.9,
+			"const_id": "Cet",
+			"dim": "7x6",
+			"cl": "(R)SA(rs)b pec Sy2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				40.6751,
+				-0.0167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m78" } },
+	{
+		"type": "Feature",
+		"messier_id": "M78",
+		"messier_order": 78,
+		"properties": {
+			"name": "M78",
+			"desig": "NGC 2068",
+			"alt": "",
+			"type": "rn",
+			"type_label": "Reflection nebula",
+			"mag": 8.3,
+			"const_id": "ORI",
+			"dim": "8x6",
+			"cl": ""
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				86.675,
+				0.05
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m79" } },
+	{
+		"type": "Feature",
+		"messier_id": "M79",
+		"messier_order": 79,
+		"properties": {
+			"name": "M79",
+			"desig": "NGC 1904",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.7,
+			"const_id": "Lep",
+			"dim": "9",
+			"cl": "V"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				81.125,
+				-24.55
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m80" } },
+	{
+		"type": "Feature",
+		"messier_id": "M80",
+		"messier_order": 80,
+		"properties": {
+			"name": "M80",
+			"desig": "NGC 6093",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.3,
+			"const_id": "Sco",
+			"dim": "9",
+			"cl": "II"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-115.7501,
+				-22.9833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m81" } },
+	{
+		"type": "Feature",
+		"messier_id": "M81",
+		"messier_order": 81,
+		"properties": {
+			"name": "M81",
+			"desig": "NGC 3031",
+			"alt": "Bode´s Galaxy",
+			"alt_fr": "Galaxie de Bode",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 6.9,
+			"const_id": "UMa",
+			"dim": "27x14",
+			"cl": "SA(s)ab Sy1.8"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				148.8996,
+				69.0667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m82" } },
+	{
+		"type": "Feature",
+		"messier_order": 82,
+		"messier_id": "M82",
+		"properties": {
+			"name": "M82",
+			"desig": "NGC 3034",
+			"alt": "Cigar Galaxy",
+			"alt_fr": "Galaxie du cigare",
+			"type": "i",
+			"type_label": "Irregular Galaxy",
+			"mag": 8.4,
+			"const_id": "UMa",
+			"dim": "11x4",
+			"cl": "I0 sbrst"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				148.9496,
+				69.6833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m83" } },
+	{
+		"type": "Feature",
+		"messier_id": "M83",
+		"messier_order": 83,
+		"properties": {
+			"name": "M83",
+			"desig": "NGC 5236",
+			"alt": "Southern Pinwheel",
+			"alt_fr": "Moulinet du sud",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 7.6,
+			"const_id": "Hya",
+			"dim": "13x12",
+			"cl": "SAB(s)c sbrst"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-155.75,
+				-29.8667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m84" } },
+	{
+		"type": "Feature",
+		"messier_id": "M84",
+		"messier_order": 84,
+		"properties": {
+			"name": "M84",
+			"desig": "NGC 4374",
+			"alt": "",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 9.1,
+			"const_id": "Vir",
+			"dim": "7x6",
+			"cl": "E1 Sy2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-173.725,
+				12.8833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m85" } },
+	{
+		"type": "Feature",
+		"messier_id": "M85",
+		"messier_order": 85,
+		"properties": {
+			"name": "M85",
+			"desig": "NGC 4382",
+			"alt": "",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 9.1,
+			"const_id": "Com",
+			"dim": "7x5",
+			"cl": "SA(s)0+ pec"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-173.65,
+				18.1833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m86" } },
+	{
+		"type": "Feature",
+		"messier_id": "M86",
+		"messier_order": 86,
+		"properties": {
+			"name": "M86",
+			"desig": "NGC 4406",
+			"alt": "",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 8.9,
+			"const_id": "Vir",
+			"dim": "9x6",
+			"cl": "S0(3)/E3"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-173.4499,
+				12.95
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m87" } },
+	{
+		"type": "Feature",
+		"messier_id": "M87",
+		"messier_order": 87,
+		"properties": {
+			"name": "M87",
+			"desig": "NGC 4486",
+			"alt": "Virgo A",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 8.6,
+			"const_id": "Vir",
+			"dim": "8x7",
+			"cl": "cD0-1 pec LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-172.3,
+				12.4
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m88" } },
+	{
+		"type": "Feature",
+		"messier_id": "M88",
+		"messier_order": 88,
+		"properties": {
+			"name": "M88",
+			"desig": "NGC 4501",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.6,
+			"const_id": "Com",
+			"dim": "7x4",
+			"cl": "SA(rs)b Sy2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-172.0001,
+				14.4167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m89" } },
+	{
+		"type": "Feature",
+		"messier_id": "M89",
+		"messier_order": 89,
+		"properties": {
+			"name": "M89",
+			"desig": "NGC 4552",
+			"alt": "",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 9.8,
+			"const_id": "Vir",
+			"dim": "5x5",
+			"cl": "E0-1 Sy2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-171.075,
+				12.55
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m90" } },
+	{
+		"type": "Feature",
+		"messier_id": "M90",
+		"messier_order": 90,
+		"properties": {
+			"name": "M90",
+			"desig": "NGC 4569",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.5,
+			"const_id": "Vir",
+			"dim": "10x5",
+			"cl": "SAB(rs)ab"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-170.8,
+				13.1667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m91" } },
+	{
+		"type": "Feature",
+		"messier_id": "M91",
+		"messier_order": 91,
+		"properties": {
+			"name": "M91",
+			"desig": "NGC 4548",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 10.2,
+			"const_id": "Com",
+			"dim": "5x4",
+			"cl": "SB(rs)b LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-171.15,
+				14.5
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m92" } },
+	{
+		"type": "Feature",
+		"messier_id": "M92",
+		"messier_order": 92,
+		"properties": {
+			"name": "M92",
+			"desig": "NGC 6341",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 6.4,
+			"const_id": "Her",
+			"dim": "11",
+			"cl": "IV"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-100.725,
+				43.1333
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m93" } },
+	{
+		"type": "Feature",
+		"messier_id": "M93",
+		"messier_order": 93,
+		"properties": {
+			"name": "M93",
+			"desig": "NGC 2447",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 6,
+			"const_id": "Pup",
+			"dim": "22",
+			"cl": "IV1p"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				116.15,
+				-23.8667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m94" } },
+	{
+		"type": "Feature",
+		"messier_id": "M94",
+		"messier_order": 94,
+		"properties": {
+			"name": "M94",
+			"desig": "NGC 4736",
+			"alt": "Cat’s Eye Galaxy",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 8.2,
+			"const_id": "CVn",
+			"dim": "11x9",
+			"cl": "(R)SA(r)ab Sy2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-167.275,
+				41.1167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m95" } },
+	{
+		"type": "Feature",
+		"messier_id": "M95",
+		"messier_order": 95,
+		"properties": {
+			"name": "M95",
+			"desig": "NGC 3351",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.7,
+			"const_id": "Leo",
+			"dim": "3x3",
+			"cl": "SB(r)b sbrst"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				161,
+				11.7
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m96" } },
+	{
+		"type": "Feature",
+		"messier_id": "M96",
+		"messier_order": 96,
+		"properties": {
+			"name": "M96",
+			"desig": "NGC 3368",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.2,
+			"const_id": "Leo",
+			"dim": "8x5",
+			"cl": "SAB(rs)ab LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				161.7,
+				11.8167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m97" } },
+	{
+		"type": "Feature",
+		"messier_id": "M97",
+		"messier_order": 97,
+		"properties": {
+			"name": "M97",
+			"desig": "NGC 3587",
+			"alt": "Owl Nebula",
+			"alt_fr": "Nébuleuse du hibou",
+			"type": "pn",
+			"type_label": "Planetary Nebula",
+			"mag": 9.9,
+			"const_id": "UMa",
+			"dim": "3",
+			"cl": "IIIa"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				168.7001,
+				55.0167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m98" } },
+	{
+		"type": "Feature",
+		"messier_id": "M98",
+		"messier_order": 98,
+		"properties": {
+			"name": "M98",
+			"desig": "NGC 4192",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 10.1,
+			"const_id": "Com",
+			"dim": "10x3",
+			"cl": "SAB(s)ab LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-176.55,
+				14.9
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m99" } },
+	{
+		"type": "Feature",
+		"messier_id": "M99",
+		"messier_order": 99,
+		"properties": {
+			"name": "M99",
+			"desig": "NGC 4254",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.9,
+			"const_id": "Com",
+			"dim": "5x5",
+			"cl": "SA(s)c LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-175.3,
+				14.4167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m100" } },
+	{
+		"type": "Feature",
+		"messier_id": "M100",
+		"messier_order": 100,
+		"properties": {
+			"name": "M100",
+			"desig": "NGC 4321",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.3,
+			"const_id": "Com",
+			"dim": "7x6",
+			"cl": "SAB(s)bc LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-174.2749,
+				15.8167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m101" } },
+	{
+		"type": "Feature",
+		"messier_id": "M101",
+		"messier_order": 101,
+		"properties": {
+			"name": "M101",
+			"desig": "NGC 5457",
+			"alt": "Pinwheel",
+			"alt_fr": "Galaxie du moulinet",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 7.9,
+			"const_id": "UMa",
+			"dim": "29x27",
+			"cl": "SAB(rs)cd"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-149.2,
+				54.35
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m102" } },
+	{
+		"type": "Feature",
+		"messier_id": "M102",
+		"messier_order": 102,
+		"properties": {
+			"name": "M102",
+			"desig": "NGC 5866",
+			"alt": "Spindle",
+			"alt_fr": "Galaxie du fuseau",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.9,
+			"const_id": "Dra",
+			"dim": "5x2",
+			"cl": "S0-a+ LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-133.3774,
+				55.76
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m103" } },
+	{
+		"type": "Feature",
+		"messier_id": "M103",
+		"messier_order": 103,
+		"properties": {
+			"name": "M103",
+			"desig": "NGC 581",
+			"alt": "",
+			"type": "oc",
+			"type_label": "Open Cluster",
+			"mag": 7.4,
+			"const_id": "Cas",
+			"dim": "6",
+			"cl": "III2p"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				23.3,
+				60.7
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m104" } },
+	{
+		"type": "Feature",
+		"messier_id": "M104",
+		"messier_order": 104,
+		"properties": {
+			"name": "M104",
+			"desig": "NGC 4594",
+			"alt": "Sombrero",
+			"alt_fr": "Galaxie du sombrero",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 8,
+			"const_id": "Vir",
+			"dim": "9x4",
+			"cl": "SA(s)a Sy1.9"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-170,
+				-11.6167
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m105" } },
+	{
+		"type": "Feature",
+		"messier_id": "M105",
+		"messier_order": 105,
+		"properties": {
+			"name": "M105",
+			"desig": "NGC 3379",
+			"alt": "",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 9.3,
+			"const_id": "Leo",
+			"dim": "5x5",
+			"cl": "E1 LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				161.9501,
+				12.5833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m106" } },
+	{
+		"type": "Feature",
+		"messier_id": "M106",
+		"messier_order": 106,
+		"properties": {
+			"name": "M106",
+			"desig": "NGC 4258",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 8.4,
+			"const_id": "CVn",
+			"dim": "19x7",
+			"cl": "SAB(s)bc Sy1.9"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-175.2499,
+				47.3
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m107" } },
+	{
+		"type": "Feature",
+		"messier_id": "M107",
+		"messier_order": 107,
+		"properties": {
+			"name": "M107",
+			"desig": "NGC 6171",
+			"alt": "",
+			"type": "gc",
+			"type_label": "Globular Cluster",
+			"mag": 7.9,
+			"const_id": "Oph",
+			"dim": "10",
+			"cl": "X"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				-111.875,
+				-13.05
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m108" } },
+	{
+		"type": "Feature",
+		"messier_id": "M108",
+		"messier_order": 108,
+		"properties": {
+			"name": "M108",
+			"desig": "NGC 3556",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 10,
+			"const_id": "UMa",
+			"dim": "9x2",
+			"cl": "SB(s)cd"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				167.8751,
+				55.6667
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m109" } },
+	{
+		"type": "Feature",
+		"messier_id": "M109",
+		"messier_order": 109,
+		"properties": {
+			"name": "M109",
+			"desig": "NGC 3992",
+			"alt": "",
+			"type": "s",
+			"type_label": "Spiral Galaxy",
+			"mag": 9.8,
+			"const_id": "UMa",
+			"dim": "8x5",
+			"cl": "SB(rs)bc LINER"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				179.4,
+				53.3833
+			]
+		}
+	},
+	{"create": {"_index": "astronomy", "_type": "messiers", "_id": "m110" } },
+	{
+		"type": "Feature",
+		"messier_id": "M110",
+		"messier_order": 110,
+		"properties": {
+			"name": "M110",
+			"desig": "NGC 205",
+			"alt": "",
+			"type": "e",
+			"type_label": "Elliptical Galaxy",
+			"mag": 8.5,
+			"const_id": "And",
+			"dim": "22x11",
+			"cl": "E5 pec"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [
+				10.1,
+				41.6833
+			]
+		}
+	}
+]
+}
+

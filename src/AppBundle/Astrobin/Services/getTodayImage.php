@@ -20,13 +20,20 @@ use AppBundle\Astrobin\Response\AstroBinImage;
 class getTodayImage extends AstrobinWebService implements astrobinInterface
 {
 
+    /**
+     * @return AstroBinImage
+     * @throws \AppBundle\Astrobin\Exceptions\astroBinException
+     */
     public function getTodayImage()
     {
         return $this->callWs(['limit' => 1]);
     }
 
+
     /**
+     * @param array $params
      * @return AstroBinImage
+     * @throws \AppBundle\Astrobin\Exceptions\astroBinException
      */
     public function callWs($params = [])
     {

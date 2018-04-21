@@ -13,9 +13,11 @@ use AppBundle\Astrobin\Response\AstroBinImage;
 class getObject extends AstrobinWebService implements astrobinInterface
 {
 
+
     /**
      * @param $id
      * @return AstroBinImage
+     * @throws \AppBundle\Astrobin\Exceptions\astroBinException
      */
     public function getOneImage($id)
     {
@@ -23,10 +25,12 @@ class getObject extends AstrobinWebService implements astrobinInterface
         return $this->callWs($params);
     }
 
+
     /**
      * @param $id
      * @param $limit
      * @return AstroBinImage
+     * @throws \AppBundle\Astrobin\Exceptions\astroBinException
      */
     public function getManyImages($id, $limit)
     {
@@ -39,9 +43,11 @@ class getObject extends AstrobinWebService implements astrobinInterface
     }
 
 
+
     /**
      * @param array $params
      * @return AstroBinImage
+     * @throws \AppBundle\Astrobin\Exceptions\astroBinException
      */
     public function callWs($params = [])
     {
