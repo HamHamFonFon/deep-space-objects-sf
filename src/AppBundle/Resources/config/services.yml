@@ -1,4 +1,9 @@
 services:
+  # Events
+  app.eventsubscriber.localesubscriber:
+    class: AppBundle\EventSubscriber\LocaleSubscriber
+    arguments: ['%kernel.default_locale%']
+    tags: [kernel.event_subscriber]
 
   # Services
   app.helper.kuzzle:

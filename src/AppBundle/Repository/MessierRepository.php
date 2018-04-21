@@ -57,16 +57,19 @@ class MessierRepository extends abstractKuzzleRepository
     }
 
 
+
     /**
      * Get objects messiers by type, filtered by constellation
+     *
      * @param $type
-     * @param $filters
+     * @param null $const
      * @param $sort
+     * @return array
      */
     public function getMessiersByType($type, $const = null, $sort)
     {
         $listMessiers = [];
-        $results = $this->findBy(['properties.type' => $type], ['properties.const_id' => ucfirst($const)]);
+        $results = $this->findBy(['properties.type' => $type], ['properties.const_id' => ucfirst($const)], [], 0, 20);
         if (0 < $results->getTotal()) {
             foreach ($results->getDocuments() as $document) {
                 $listMessiers[] = new Messier($document);
@@ -85,7 +88,7 @@ class MessierRepository extends abstractKuzzleRepository
     {
         $listMessiers = [];
         /** @var  $listItems */
-        $listItems = $this->findBy($from, $size);
+        $listItems = $this->findBy(['match_all' => '*'], [], ['messier_order' => 'asc'], $from, $size);
         if (!is_null($listItems) && 0 < $listItems->getTotal()) {
             foreach ($listItems->getDocuments() as $document) {
 //                $class = $this->getKuzzleEntity();

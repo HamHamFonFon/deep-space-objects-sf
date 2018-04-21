@@ -18,7 +18,7 @@ class MessierController extends Controller
 {
 
     /**
-     * @Route("/messier/{objectId}")
+     * @Route("/messier/{objectId}", name="messier_full")
      * @param Request $request
      * @param string $objectId
      * @return Response

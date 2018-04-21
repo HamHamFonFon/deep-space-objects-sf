@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Astrobin\Services\getTodayImage;
 use AppBundle\Repository\MessierRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -16,23 +17,16 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends Controller
 {
 
-
-    /**
-     *
-     */
     const OFFSET = 0;
 
-    /**
-     *
-     */
     const LIMIT = 20;
 
     /**
      * @Route("/", name="homepage")
-     * @param $name
+     * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAction($name)
+    public function indexAction(Request $request)
     {
         $params = [];
 
@@ -43,7 +37,7 @@ class HomeController extends Controller
 //        $imageOfTheDayWS = $this->container->get('astrobin.webservice.gettodayimage');
 //        dump($imageOfTheDayWS->getTodayImage());
 
-        $params['messier_objects'] = $messierRepository->getList(self::OFFSET, self::LIMIT);
+//        $params['messier_objects'] = $messierRepository->getList(self::OFFSET, self::LIMIT);
 
         /** @var Response $response */
         $response = new Response();
