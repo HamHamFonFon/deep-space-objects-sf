@@ -51,17 +51,18 @@ abstract class AstrobinWebService
     {
         $obj = null;
         $curl = $this->initCurl($endPoint, $method, $data);
-
         if(!$resp = curl_exec($curl)) {
             // show problem, genere exception
-            throw new AstrobinException(curl_error($curl));
+            throw new AstrobinException(
+                sprintf("HTTP Error (curl_exec) #%u: %s", curl_errno($curl), curl_error($curl))
+            );
         }
 
         // TODO make something with HTTP code...
         $respHttpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
         curl_close($curl);
 
-        if (empty($resp)) {
+        if (!$resp || empty($resp)) {
             throw new AstrobinException("Empty Json response from Astrobin");
         }
 
@@ -75,10 +76,15 @@ abstract class AstrobinWebService
             }
             $obj = json_decode($resp);
             if (JSON_ERROR_NONE != json_last_error()) {
-                throw new AstrobinException(json_last_error());
+                throw new AstrobinException(
+                    sprintf("Error JSON from Astrobin :\n%s", json_last_error())
+                );
             }
-
-            // Verification of each field if return is a JSON correct
+            if (array_key_exists('error', $obj)) {
+                throw new AstrobinException(
+                    sprintf("Error from Astrobin response : %s", $obj->error)
+                );
+            }
         } else {
             throw new AstrobinException("Response from Astrobin is not a string, got ". gettype($resp) . " instead.");
         }
@@ -98,7 +104,6 @@ abstract class AstrobinWebService
     {
         // Build URL with params
         $url = self::ASTROBIN_URL . $endPoint;
-
         if (is_array($data) && 0 < count($data)) {
             $paramData = implode('&', array_map(function($k, $v) {
                 $formatValue = "%s";
@@ -108,9 +113,10 @@ abstract class AstrobinWebService
                 return sprintf("%s=$formatValue", $k, $v);
             }, array_keys($data), $data));
 
-            $url .= $paramData;
+            $url .= '?' . $paramData;
         } else {
-            $url .= $data;
+            // TODO : test if $endPoint hasn't got "/" at the end
+            $url .= $data . '/';
         }
 
         // Add keys and format
@@ -125,7 +131,6 @@ abstract class AstrobinWebService
         }, array_keys($params), $params));
 
         // TODO : using http_build_query() ?
-
         $curl = curl_init($url);
 
         // Options CURL
@@ -147,6 +152,7 @@ abstract class AstrobinWebService
             ]);
         }
         curl_setopt_array($curl, $options);
+        dump($url);
         return $curl;
     }
 }

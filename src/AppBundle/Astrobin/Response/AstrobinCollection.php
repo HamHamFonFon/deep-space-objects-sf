@@ -12,10 +12,10 @@ namespace AppBundle\Astrobin\Response;
  * Class AstrobinCollection
  * @package AppBundle\Astrobin\Response
  */
-class AstrobinCollection extends AbstractAstrobinResponse
+class AstrobinCollection
 {
-    public $images;
 
+    public $images;
 
     /**
      * TODO : find equivalent of Doctrine ArrayCollection
@@ -27,7 +27,9 @@ class AstrobinCollection extends AbstractAstrobinResponse
     {
         $listImages = [];
         foreach ($images as $image) {
-            $listImages[] = $this->fromObj($image);
+            $astrobinImage = new AstrobinImage();
+            $astrobinImage->fromObj($image);
+            $listImages[] = $astrobinImage;
         }
         $this->images = $listImages;
     }

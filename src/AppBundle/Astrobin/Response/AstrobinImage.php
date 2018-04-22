@@ -15,6 +15,7 @@ namespace AppBundle\Astrobin\Response;
 class AstrobinImage extends AbstractAstrobinResponse
 {
     public $title;
+    public $subjects;
     public $description;
     public $url_gallery;
     public $url_thumb;

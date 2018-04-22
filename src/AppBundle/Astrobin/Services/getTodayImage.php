@@ -10,7 +10,9 @@ namespace AppBundle\Astrobin\Services;
 
 use AppBundle\Astrobin\AstrobinInterface;
 use AppBundle\Astrobin\AstrobinWebService;
+use AppBundle\Astrobin\Exceptions\AstrobinResponseExceptions;
 use AppBundle\Astrobin\Response\AstrobinImage;
+use AppBundle\Astrobin\Response\AstrobinToday;
 
 /**
  * Class getTodayImage
@@ -19,13 +21,34 @@ use AppBundle\Astrobin\Response\AstrobinImage;
 class getTodayImage extends AstrobinWebService implements AstrobinInterface
 {
 
+    const END_POINT = 'imageoftheday/';
+
+    const FORMAT_DATE_ASTROBIN = "Y-m-d";
+
+
     /**
-     * @return AstrobinImage
+     * @throws AstrobinResponseExceptions
      * @throws \AppBundle\Astrobin\Exceptions\astrobinException
+     * @throws \ReflectionException
      */
     public function getTodayImage()
     {
-        return $this->callWs(['limit' => 1]);
+        $rawResp = $this->callWs(['limit' => 1]);
+
+        $astrobinToday = new AstrobinToday();
+        $astrobinToday->fromObj($rawResp[0]);
+
+        $today = new \DateTime('now');
+        if ($today->format(self::FORMAT_DATE_ASTROBIN) == $astrobinToday->date) {
+            dump($astrobinToday->image);
+            if (preg_match('/\/([\d]+)/', $astrobinToday->image, $matches)) {
+                $imageId = $matches[1];
+                $sndRawCall = $this->call(GetImage::END_POINT, parent::METHOD_GET, $imageId);
+                dump($sndRawCall);
+            }
+        }
+
+        die();
     }
 
 
@@ -37,12 +60,21 @@ class getTodayImage extends AstrobinWebService implements AstrobinInterface
     public function callWs($params = [])
     {
         /** @var  $rawResp */
-        $rawResp = $this->call('imageoftheday/?', parent::METHOD_GET, $params);
-        dump($rawResp); die();
-//        dump($rawResp);
-        $response = new AstrobinImage();
-        $response->fromObj($rawResp);
+        $rawResp = $this->call(self::END_POINT, parent::METHOD_GET, $params);
+        if (!isset($rawResp->objects) || 0 == $rawResp->meta->total_count) {
+            throw new AstrobinResponseExceptions("Response from Astrobin is empty");
+        }
+        return $rawResp->objects;
+    }
 
-        return $response;
+
+    /**
+     * @param array $objects
+     * @return array
+     */
+    public function responseWs($objects = [])
+    {
+        $astrobinResponse = [];
+        return $astrobinResponse;
     }
 }

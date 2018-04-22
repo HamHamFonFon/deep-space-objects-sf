@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+  {% if data is defined %}
+    <pre>{{ dump(data) }}</pre>
+  {% endif %}
+{% endblock %}

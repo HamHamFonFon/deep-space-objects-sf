@@ -28,8 +28,9 @@ class MessierController extends Controller
         $params = [];
 
         /** @var AstrobinInterface $astrobinWs */
-        $astrobinWs = $this->container->get('astrobin.webservice.getobject');
+        $astrobinWs = $this->container->get('astrobin.webservice.getimage');
         $astrobinImage = $astrobinWs->getOneImage($objectId);
+
 
         /** @var MessierRepository $messierRepository */
         $messierRepository = $this->container->get('app.repository.messier');
@@ -47,9 +48,4 @@ class MessierController extends Controller
         return $this->render('pages/messier.html.twig', $params, $response);
     }
 
-
-    public function listAction()
-    {
-
-    }
 }

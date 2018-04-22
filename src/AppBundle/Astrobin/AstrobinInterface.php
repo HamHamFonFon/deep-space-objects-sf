@@ -15,4 +15,5 @@ namespace AppBundle\Astrobin;
 interface AstrobinInterface
 {
     public function callWs();
+    public function responseWs();
 }

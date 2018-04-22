@@ -21,10 +21,12 @@ class HomeController extends Controller
 
     const LIMIT = 20;
 
+
     /**
      * @Route("/", name="homepage")
      * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
+     * @throws \AppBundle\Astrobin\Exceptions\AstrobinException
      */
     public function indexAction(Request $request)
     {
@@ -34,8 +36,8 @@ class HomeController extends Controller
         $messierRepository = $this->container->get('app.repository.messier');
 
         /** @var getTodayImage $imageOfTheDayWS */
-        $imageOfTheDayWS = $this->container->get('astrobin.webservice.gettodayimage');
-        dump($imageOfTheDayWS->getTodayImage());
+//        $imageOfTheDayWS = $this->container->get('astrobin.webservice.gettodayimage');
+//        dump($imageOfTheDayWS->getTodayImage());
 
 //        $params['messier_objects'] = $messierRepository->getList(self::OFFSET, self::LIMIT);
 
@@ -48,4 +50,6 @@ class HomeController extends Controller
         );
         return $this->render('pages/homepage.html.twig', $params, $response);
     }
+
+
 }
