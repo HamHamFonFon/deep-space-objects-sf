@@ -9,7 +9,7 @@
 namespace AppBundle\Astrobin\Services;
 
 
-use AppBundle\Astrobin\astrobinInterface;
+use AppBundle\Astrobin\AstrobinInterface;
 use AppBundle\Astrobin\AstrobinWebService;
 
 
@@ -17,7 +17,7 @@ use AppBundle\Astrobin\AstrobinWebService;
  * Class getImagesUser
  * @package AppBundle\Astrobin\Services
  */
-class getImagesUser extends AstrobinWebService implements astrobinInterface
+class getImagesUser extends AstrobinWebService implements AstrobinInterface
 {
 
     /**

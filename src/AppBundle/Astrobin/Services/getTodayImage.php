@@ -8,21 +8,20 @@
 
 namespace AppBundle\Astrobin\Services;
 
-
-use AppBundle\Astrobin\astrobinInterface;
+use AppBundle\Astrobin\AstrobinInterface;
 use AppBundle\Astrobin\AstrobinWebService;
-use AppBundle\Astrobin\Response\AstroBinImage;
+use AppBundle\Astrobin\Response\AstrobinImage;
 
 /**
  * Class getTodayImage
  * @package AppBundle\Astrobin\Services
  */
-class getTodayImage extends AstrobinWebService implements astrobinInterface
+class getTodayImage extends AstrobinWebService implements AstrobinInterface
 {
 
     /**
-     * @return AstroBinImage
-     * @throws \AppBundle\Astrobin\Exceptions\astroBinException
+     * @return AstrobinImage
+     * @throws \AppBundle\Astrobin\Exceptions\astrobinException
      */
     public function getTodayImage()
     {
@@ -32,15 +31,16 @@ class getTodayImage extends AstrobinWebService implements astrobinInterface
 
     /**
      * @param array $params
-     * @return AstroBinImage
-     * @throws \AppBundle\Astrobin\Exceptions\astroBinException
+     * @return AstrobinImage
+     * @throws \AppBundle\Astrobin\Exceptions\astrobinException
      */
     public function callWs($params = [])
     {
         /** @var  $rawResp */
         $rawResp = $this->call('imageoftheday/?', parent::METHOD_GET, $params);
+        dump($rawResp); die();
 //        dump($rawResp);
-        $response = new AstroBinImage();
+        $response = new AstrobinImage();
         $response->fromObj($rawResp);
 
         return $response;

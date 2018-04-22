@@ -34,8 +34,8 @@ class HomeController extends Controller
         $messierRepository = $this->container->get('app.repository.messier');
 
         /** @var getTodayImage $imageOfTheDayWS */
-//        $imageOfTheDayWS = $this->container->get('astrobin.webservice.gettodayimage');
-//        dump($imageOfTheDayWS->getTodayImage());
+        $imageOfTheDayWS = $this->container->get('astrobin.webservice.gettodayimage');
+        dump($imageOfTheDayWS->getTodayImage());
 
 //        $params['messier_objects'] = $messierRepository->getList(self::OFFSET, self::LIMIT);
 

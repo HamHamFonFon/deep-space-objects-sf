@@ -2,7 +2,7 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Astrobin\astrobinInterface;
+use AppBundle\Astrobin\AstrobinInterface;
 use AppBundle\Repository\MessierRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -27,17 +27,14 @@ class MessierController extends Controller
     {
         $params = [];
 
-        $messierTest = 'm31';
-
-        /** @var astrobinInterface $astrobinWs */
+        /** @var AstrobinInterface $astrobinWs */
         $astrobinWs = $this->container->get('astrobin.webservice.getobject');
-//        $astroMessier = $astrobinWs->getOneImage($messierTest);
+        $astrobinImage = $astrobinWs->getOneImage($objectId);
 
         /** @var MessierRepository $messierRepository */
         $messierRepository = $this->container->get('app.repository.messier');
         $messier = $messierRepository->getMessier($objectId);
 
-        dump($messier);
 
         /** @var Response $response */
         $response = new Response();

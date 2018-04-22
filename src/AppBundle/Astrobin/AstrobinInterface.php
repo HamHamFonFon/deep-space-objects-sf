@@ -12,7 +12,7 @@ namespace AppBundle\Astrobin;
  * Interface astrobinInterface
  * @package AppBundle\Astrobin
  */
-interface astrobinInterface
+interface AstrobinInterface
 {
     public function callWs();
 }
