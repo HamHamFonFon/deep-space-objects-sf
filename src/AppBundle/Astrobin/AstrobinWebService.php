@@ -16,6 +16,7 @@ use AppBundle\Astrobin\Exceptions\AstrobinException;
 abstract class AstrobinWebService
 {
     const ASTROBIN_URL = 'https://www.astrobin.com/api/v1/';
+    const MAX_REDIRS = 10;
     const LIMIT_MAX = 24;
 
     const METHOD_GET = 'GET';
@@ -36,7 +37,7 @@ abstract class AstrobinWebService
     {
         $this->apiKey = $apiKey;
         $this->apiSecret = $apiSecret;
-        $this->timeout = 120;
+        $this->timeout = 30;
     }
 
 
@@ -52,6 +53,9 @@ abstract class AstrobinWebService
         $obj = null;
         $curl = $this->initCurl($endPoint, $method, $data);
         if(!$resp = curl_exec($curl)) {
+            if (empty($resp)) {
+                throw new AstrobinException("Empty Json response from Astrobin");
+            }
             // show problem, genere exception
             throw new AstrobinException(
                 sprintf("HTTP Error (curl_exec) #%u: %s", curl_errno($curl), curl_error($curl))
@@ -88,7 +92,6 @@ abstract class AstrobinWebService
         } else {
             throw new AstrobinException("Response from Astrobin is not a string, got ". gettype($resp) . " instead.");
         }
-
         return $obj;
     }
 
@@ -115,8 +118,10 @@ abstract class AstrobinWebService
 
             $url .= '?' . $paramData;
         } else {
-            // TODO : test if $endPoint hasn't got "/" at the end
-            $url .= $data . '/';
+            if ('/' !== substr($url, strlen($url)-1, strlen($url))) {
+                $url .= '/';
+            }
+            $url .= $data . '?';
         }
 
         // Add keys and format
@@ -137,8 +142,9 @@ abstract class AstrobinWebService
         $options = [
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_HEADER => false,
             CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => self::MAX_REDIRS,
+            CURLOPT_HEADER => false,
             CURLOPT_CONNECTTIMEOUT => $this->timeout,
             CURLOPT_TIMEOUT => $this->timeout,
             CURLOPT_SSL_VERIFYPEER => false
@@ -152,7 +158,6 @@ abstract class AstrobinWebService
             ]);
         }
         curl_setopt_array($curl, $options);
-        dump($url);
         return $curl;
     }
 }

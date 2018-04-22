@@ -37,15 +37,18 @@ class getTodayImage extends AstrobinWebService implements AstrobinInterface
 
         $astrobinToday = new AstrobinToday();
         $astrobinToday->fromObj($rawResp[0]);
-
         $today = new \DateTime('now');
         if ($today->format(self::FORMAT_DATE_ASTROBIN) == $astrobinToday->date) {
-            dump($astrobinToday->image);
-            if (preg_match('/\/([\d]+)/', $astrobinToday->image, $matches)) {
-                $imageId = $matches[1];
-                $sndRawCall = $this->call(GetImage::END_POINT, parent::METHOD_GET, $imageId);
-                dump($sndRawCall);
-            }
+
+            $urlTest = AstrobinWebService::ASTROBIN_URL . substr($astrobinToday->image, strrpos($astrobinToday->image, '/v1/')+strlen('/v1/'));
+            dump($urlTest);
+            dump(file_get_contents($urlTest));
+//            if (preg_match('/\/([\d]+)/', $astrobinToday->image, $matches)) {
+//                $imageId = $matches[1];
+//                dump(AstrobinWebService::ASTROBIN_URL . $astrobinToday->image);
+//                $sndRawCall = $this->call(GetImage::END_POINT, parent::METHOD_GET, $imageId);
+//                dump($sndRawCall);
+//            }
         }
 
         die();

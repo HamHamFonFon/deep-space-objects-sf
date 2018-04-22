@@ -136,7 +136,6 @@ class GetImage extends AstrobinWebService implements AstrobinInterface
             }
         }
 
-        dump($astrobinResponse);
         return $astrobinResponse;
     }
 }
