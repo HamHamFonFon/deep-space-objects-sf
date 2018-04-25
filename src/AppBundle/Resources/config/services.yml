@@ -15,16 +15,19 @@ services:
 
   # WebServices
   astrobin.webservice:
-    class: AppBundle\Astrobin\AstrobinWebService
+    class: HamhamFonfon\Astrobin\AbstractWebService
     abstract: true
     arguments:
      - "%astrobin.key%"
      - "%astrobin.secret%"
   astrobin.webservice.getimage:
-    class: AppBundle\Astrobin\Services\GetImage
+    class: HamhamFonfon\Astrobin\Services\GetImage
+    parent: astrobin.webservice
+  astrobin.webservice.getlocation:
+    class: HamhamFonfon\Astrobin\Services\GetLocation
     parent: astrobin.webservice
   astrobin.webservice.gettodayimage:
-    class: AppBundle\Astrobin\Services\getTodayImage
+    class: HamhamFonfon\Astrobin\Services\GetTodayImage
     parent: astrobin.webservice
 
   # Repositories
