@@ -15,19 +15,19 @@ services:
 
   # WebServices
   astrobin.webservice:
-    class: HamhamFonfon\Astrobin\AbstractWebService
+    class: Astrobin\AbstractWebService
     abstract: true
     arguments:
      - "%astrobin.key%"
      - "%astrobin.secret%"
   astrobin.webservice.getimage:
-    class: HamhamFonfon\Astrobin\Services\GetImage
+    class: Astrobin\Services\GetImage
     parent: astrobin.webservice
   astrobin.webservice.getlocation:
-    class: HamhamFonfon\Astrobin\Services\GetLocation
+    class: Astrobin\Services\GetLocation
     parent: astrobin.webservice
   astrobin.webservice.gettodayimage:
-    class: HamhamFonfon\Astrobin\Services\GetTodayImage
+    class: Astrobin\Services\GetTodayImage
     parent: astrobin.webservice
 
   # Repositories

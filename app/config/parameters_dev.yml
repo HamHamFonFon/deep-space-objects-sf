@@ -15,3 +15,4 @@ parameters:
     kuzzle_port: 7512
     astrobin.key: 3524e6ee81749ea19a1ed0f14c5390efb4ac578f
     astrobin.secret: 6f0a67f7aeb93cbce4addec000fca9991876df63
+    http_ttl: 86400

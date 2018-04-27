@@ -43,7 +43,7 @@
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/Hamhamfonfon/Astrobin" />
+      <path value="$PROJECT_DIR$/vendor/hamhamfonfon/astrobin" />
     </include_path>
   </component>
 </project>

@@ -43,7 +43,11 @@
             {% block content %}{% endblock %}
 
             {#Footer#}
-            {% block footer %}{% endblock %}
+            {% block footer %}
+              <div>
+                {{ 'astrobin.message'|trans }}
+              </div>
+            {% endblock %}
           {% endblock %}
 
           {#Javascript#}

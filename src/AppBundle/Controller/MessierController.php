@@ -2,8 +2,8 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Astrobin\AstrobinInterface;
 use AppBundle\Repository\MessierRepository;
+use Astrobin\Services\GetImage;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,19 +22,22 @@ class MessierController extends Controller
      * @param Request $request
      * @param string $objectId
      * @return Response
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \Astrobin\Exceptions\WsResponseException
+     * @throws \ReflectionException
      */
     public function fullAction(Request $request, $objectId)
     {
         $params = [];
 
-        /** @var AstrobinInterface $astrobinWs */
+        /** @var GetImage $astrobinWs */
         $astrobinWs = $this->container->get('astrobin.webservice.getimage');
-        $astrobinImage = $astrobinWs->getOneImage($objectId);
+        $astrobinImage = $astrobinWs->getImagesBySubject($objectId, 1);
 
 
         /** @var MessierRepository $messierRepository */
-        $messierRepository = $this->container->get('app.repository.messier');
-        $messier = $messierRepository->getMessier($objectId);
+//        $messierRepository = $this->container->get('app.repository.messier');
+//        $messier = $messierRepository->getMessier($objectId);
 
 
         /** @var Response $response */

@@ -22,3 +22,4 @@ parameters:
     kuzzle_port: ~
     astrobin.key: ~
     astrobin.secret: ~
+    http_ttl: 86400
