@@ -1,4 +1,5 @@
 imports:
+    - { resource: assetic.yml }
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
@@ -27,6 +28,8 @@ framework:
     fragments: ~
     http_method_override: true
     assets: ~
+    templating:
+        engines: ['twig']
     php_errors:
         log: true
 
@@ -35,7 +38,7 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     globals:
-      favicon: "/bundles/app/images/favicon.ico"
+      favicon: "/bundles/app/img/favicon.ico"
 
 # Doctrine Configuration
 doctrine:

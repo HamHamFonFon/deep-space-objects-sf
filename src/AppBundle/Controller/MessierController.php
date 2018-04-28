@@ -39,7 +39,7 @@ class MessierController extends Controller
         $response->setPublic();
         $response->setSharedMaxAge($this->container->getParameter('http_ttl'));
         $response->headers->set(
-            'X-Messier-Id', [$objectId]
+            'X-Kuzzle-Id', $params['messier']->getKuzzleId()
         );
 
         return $this->render('pages/messier.html.twig', $params, $response);
