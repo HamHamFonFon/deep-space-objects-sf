@@ -1,0 +1,9 @@
+<div class="row no-gutters">
+  <div class="col-lg-6 {% if index is divisible by(2) %}order-lg-2 {% endif %}text-white showcase-img" style="background-image: url('{{ imageDay.image.url_regular }}');"></div>
+  <div class="col-lg-6 {% if index is divisible by(2) %}order-lg-1 {% endif %}my-auto showcase-text">
+    <h2>{{ imageDay.image.title }}</h2>
+    <p class="lead mb-0">
+      {{ imageDay.image.user }} {{ imageDay.image.description }}
+    </p>
+  </div>
+</div>

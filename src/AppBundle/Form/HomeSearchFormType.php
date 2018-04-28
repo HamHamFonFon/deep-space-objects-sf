@@ -27,7 +27,7 @@ class HomeSearchFormType extends AbstractType
                 'label' => '',
                 'attr' => [
                     'placeholder' => 'home.search.placeholder',
-                    'class' => ''
+                    'class' => 'form-control form-control-lg'
                 ]
             ]
         );

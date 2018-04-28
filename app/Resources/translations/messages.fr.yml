@@ -1,5 +1,10 @@
 # Layout
+dso: Deep space objects
+menu.homepage: Accueil
+selectLang: Langues
 astrobin.message: This product uses the AstroBin API but is not endorsed or certified by AstroBin.
 # Homepage
+homepage.message: Découvrez les beautés et les mystères de l'univers
+home.search.placeholder: Rechercher dans le catalogue...
 dayImage: L'image du jour
 messierList: Liste des objets de Messier

@@ -40,25 +40,20 @@ class HomeController extends Controller
         /** @var Router $router */
         $router = $this->container->get('router');
 
-        /** @var MessierRepository $messierRepository */
-        $messierRepository = $this->container->get('app.repository.messier');
-
         /** @var GetTodayImage $astrobinWs */
         $astrobinWs = $this->container->get('astrobin.webservice.gettodayimage');
         /** @var Today $imageOfTheDay */
-        $imageOfTheDay = $astrobinWs->getTodayDayImage();
-        $params['image_day'] = $imageOfTheDay;
+        for ($i = 1; $i <= 3; $i++) {
+            $params['images_day'][] = $astrobinWs->getDayImage($i);
+        }
 
         // Form search
         $formOptions = [
             'method' => 'POST',
             'action' => $router->generate('homepage')
         ];
-
         $formSearch = $this->createForm(HomeSearchFormType::class, null, $formOptions);
-        $params['form_search'] = $formSearch->createView();
-
-        $params['messier_objects'] = $messierRepository->getList(self::OFFSET, self::LIMIT);
+        $params['form'] = $formSearch->createView();
 
         /** @var Response $response */
         $response = new Response();

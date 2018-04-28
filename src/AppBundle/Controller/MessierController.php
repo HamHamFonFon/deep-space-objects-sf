@@ -45,4 +45,23 @@ class MessierController extends Controller
         return $this->render('pages/messier.html.twig', $params, $response);
     }
 
+
+    /**
+     * @Route("/messier", name="messier_list")
+     * @param Request $request
+     * @return Response
+     */
+    public function listAction(Request $request)
+    {
+        $params = [];
+
+        /** @var Response $response */
+        $response = new Response();
+        $response->setPublic();
+        $response->setSharedMaxAge(
+            $this->container->getParameter('http_ttl')
+        );
+
+        return $this->render(':pages:list.html.twig', $params, $response);
+    }
 }

@@ -1,7 +1,7 @@
 {% block layout %}
   {% spaceless %}
     {% set pageLang = app.request.locale|default(app.request.defaultLocale) %}
-    {% set pageTitle = pageTitle|default('') %}
+    {% set pageTitle = 'dso'|trans ~ ' - ' ~ pageTitle|default('') %}
     {% set pageDesc = pageDesc|default('') %}
     {% set pageUrl = app.request.uri %}
     {% set pageUrlCanonical = app.request.getSchemeAndHttpHost ~ app.request.baseUrl ~ app.request.pathInfo %}
@@ -12,7 +12,7 @@
       <head>
           <meta charset="UTF-8">
           <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
           {% block meta %}
             <title>{{ pageTitle }}</title>
@@ -26,8 +26,13 @@
           {% endblock %}
 
           {% block stylesheets %}
+            {#<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">#}
+
             {% stylesheets
-               'css/bootstrap.css'
+                'css/bootstraptest.css'
+                'css/landing-page.css'
+                'css/font-awesome.css'
+                'css/simple-line-icons.css'
               filter='cssrewrite'
             %}
               <link rel="stylesheet" href="{{ asset_url }}" />
@@ -38,9 +43,7 @@
           {% block body %}
             {#Header#}
             {% block header %}
-              {#{% include "includes/layout:switchLang.html.twig" %}#}
-              <a href="{{ path('setlocale', {'language': 'fr'}) }}">FR</a>
-              <a href="{{ path('setlocale', {'language': 'en'}) }}">EN</a>
+              {% include ':includes/layout:header.html.twig' %}
             {% endblock %}
 
             {#Content#}

@@ -38,7 +38,8 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     globals:
-      favicon: "/bundles/app/img/favicon.ico"
+      favicon: "favicon.ico"
+      defaultTitle: "dso"
 
 # Doctrine Configuration
 doctrine:
