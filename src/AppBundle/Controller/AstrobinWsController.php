@@ -38,7 +38,7 @@ class AstrobinWsController extends Controller
 
 
     /**
-     * @Route("/astrobin/images/{messierId}/{limit}", name="astrobin_image_messier")
+     * @Route("/astrobin/img/{messierId}/{limit}", name="astrobin_image_messier")
      * @param Request $request
      * @param $messierId
      * @param int $limit

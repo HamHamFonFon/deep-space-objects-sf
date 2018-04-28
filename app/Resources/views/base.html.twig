@@ -23,12 +23,16 @@
             {% endif %}
             <link rel="canonical" href="{{ pageUrlCanonical }}">
             <link rel="icon" type="image/x-icon" href="{{ favicon }}"/>
-
-            {# OpenGraph ? #}
-
           {% endblock %}
 
-          {% block stylesheets %}{% endblock %}
+          {% block stylesheets %}
+            {% stylesheets
+               'css/bootstrap.css'
+              filter='cssrewrite'
+            %}
+              <link rel="stylesheet" href="{{ asset_url }}" />
+            {% endstylesheets %}
+          {% endblock %}
       </head>
       <body>
           {% block body %}
@@ -51,7 +55,15 @@
           {% endblock %}
 
           {#Javascript#}
-          {% block javascripts %}{% endblock %}
+          {% block javascripts %}
+            {#{% javascripts#}
+              {#'js/*.js'#}
+            {#%}#}
+              {#<script src="{{ asset_url }}"></script>#}
+            {#{% endjavascripts %}#}
+            <script src="{{ asset('js/jquery.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap.js') }}"></script>
+          {% endblock %}
       </body>
   </html>
 {% endblock %}

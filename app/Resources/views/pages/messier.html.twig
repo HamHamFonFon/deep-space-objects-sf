@@ -1,5 +1,10 @@
 {% extends 'base.html.twig' %}
 
+{% set pageTitle = messier.name|capitalize ~ ' : ' ~ messier.desig %}
+
 {% block content %}
-  <h1></h1>
+  <h1 class="h1">{{ messier.name }}</h1>
+
+
+  <pre>{{ dump(messier) }}</pre>
 {% endblock %}
