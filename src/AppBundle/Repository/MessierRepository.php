@@ -17,7 +17,7 @@ use Kuzzle\Util\SearchResult;
  * Class MessierRepository
  * @package AppBundle\Repository
  */
-class MessierRepository extends abstractKuzzleRepository
+class MessierRepository extends AbstractKuzzleRepository
 {
 
     const COLLECTION_NAME = 'messiers';
@@ -49,10 +49,15 @@ class MessierRepository extends abstractKuzzleRepository
 
         /** @var SearchResult $result */
         $result = $this->findById($id);
+
         if (0 < $result->getTotal()) {
-            $messier = new Messier($result->getDocuments()[0]);
+            $kuzzleDocument = $result->getDocuments()[0];
+            $messier = new Messier();
+            $messier->buildObject($kuzzleDocument)->setId($id);
         }
 
+        dump($messier);
+        die();
         return $messier;
     }
 
@@ -69,10 +74,13 @@ class MessierRepository extends abstractKuzzleRepository
     public function getMessiersByType($type, $const = null, $sort)
     {
         $listMessiers = [];
-        $results = $this->findBy(['properties.type' => $type], ['properties.const_id' => ucfirst($const)], [], 0, 20);
+        $results = $this->findBy('term', ['properties.type' => $type], ['properties.const_id' => ucfirst($const)], [], 0, 20);
         if (0 < $results->getTotal()) {
             foreach ($results->getDocuments() as $document) {
-                $listMessiers[] = new Messier($document);
+                $messier = new Messier();
+                $messier->buildObject($document);
+
+                dump($messier);
             }
         }
 
@@ -88,7 +96,7 @@ class MessierRepository extends abstractKuzzleRepository
     {
         $listMessiers = [];
         /** @var  $listItems */
-        $listItems = $this->findBy(['match_all' => '{}'], [], ['messier_order' => 'asc'], $from, $size);
+        $listItems = $this->findBy('match_all', [], [], ['messier_order' => 'asc'], $from, $size);
         if (!is_null($listItems) && 0 < $listItems->getTotal()) {
             foreach ($listItems->getDocuments() as $document) {
 //                $class = $this->getKuzzleEntity();

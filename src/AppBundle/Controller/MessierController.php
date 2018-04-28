@@ -30,15 +30,14 @@ class MessierController extends Controller
     {
         $params = [];
 
-        /** @var GetImage $astrobinWs */
-        $astrobinWs = $this->container->get('astrobin.webservice.getimage');
-        $astrobinImage = $astrobinWs->getImagesBySubject($objectId, 1);
-
-
         /** @var MessierRepository $messierRepository */
-//        $messierRepository = $this->container->get('app.repository.messier');
-//        $messier = $messierRepository->getMessier($objectId);
+        $messierRepository = $this->container->get('app.repository.messier');
+        $messier = $messierRepository->getMessier($objectId);
 
+        /** @var GetImage $astrobinWs */
+//        $astrobinWs = $this->container->get('astrobin.webservice.getimage');
+//        $astrobinImage = $astrobinWs->getImagesBySubject($objectId, 1);
+//        dump($astrobinImage);
 
         /** @var Response $response */
         $response = new Response();

@@ -52,7 +52,7 @@ class HomeController extends Controller
         // Form search
         $formOptions = [
             'method' => 'POST',
-//            'action' => $router->generate('search');
+            'action' => $router->generate('homepage')
         ];
 
         $formSearch = $this->createForm(HomeSearchFormType::class, null, $formOptions);

@@ -19,7 +19,7 @@ use Kuzzle\Util\SearchResult;
  * Class abstractKuzzleRepository
  * @package AppBundle\Repository
  */
-abstract class abstractKuzzleRepository
+abstract class AbstractKuzzleRepository
 {
     /** @var KuzzleHelper  */
     protected $kuzzleHelper;
@@ -42,12 +42,15 @@ abstract class abstractKuzzleRepository
     /**
      * Find a list of documents
      *
-     * @param $collection
+     * @param $query
+     * @param $filters
+     * @param $sort
      * @param $from
      * @param $size
+     * @param array $aggregates
      * @return \Kuzzle\Util\SearchResult
      */
-    protected function findBy($query, $filters, $sort, $from, $size, $aggregates = [])
+    protected function findBy($typeQuery, $query, $filters, $sort, $from, $size, $aggregates = [])
     {
         /** @var abstractKuzzleDocumentEntity $kuzzleEntity */
         $kuzzleEntity = $this->getKuzzleEntity();
@@ -56,11 +59,11 @@ abstract class abstractKuzzleRepository
         /** @var Collection $kuzzleCollection */
         $kuzzleCollection = $this->kuzzleService->collection($collection);
 
+
+//        dump(json_encode($this->kuzzleHelper->buildQuery($typeQuery, $query, $filters, $sort, $aggregates, $from, $size)));
         /** @var SearchResult $searchResult */
-        print_r(json_encode($this->kuzzleHelper->buildQuery($query, $filters, $sort, $aggregates, $from, $size)));
-// die();
         $searchResult = $kuzzleCollection->search(
-            $this->kuzzleHelper->buildQuery($query, $filters, $sort, $aggregates, $from, $size)
+            $this->kuzzleHelper->buildQuery($typeQuery, $query, $filters, $sort, $aggregates, $from, $size)
         );
 
         return $searchResult;
@@ -74,7 +77,7 @@ abstract class abstractKuzzleRepository
      */
     protected function findById($id)
     {
-        return $this->findBy(['properties.name' => $id], [], [],0, 1);
+        return $this->findBy('term', ['properties.name' => $id], [], [],0, 1);
     }
 
 

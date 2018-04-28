@@ -22,7 +22,7 @@ class HomeSearchFormType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('search', TextType::class, [
+        $builder->add('terms', TextType::class,
             [
                 'label' => '',
                 'attr' => [
@@ -30,7 +30,7 @@ class HomeSearchFormType extends AbstractType
                     'class' => ''
                 ]
             ]
-        ]);
+        );
 
         $builder->add('honeypot', HiddenType::class, [
             'constraints' => [
@@ -39,11 +39,29 @@ class HomeSearchFormType extends AbstractType
         ]);
     }
 
+
+    /**
+     * @param OptionsResolver $resolver
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
-
+        $resolver->setDefaults([
+            'csrf_protection' => true
+        ]);
     }
 
+
+    /**
+     * @return null|string
+     */
+    public function getName()
+    {
+        return $this->getBlockPrefix();
+    }
+
+    /**
+     * @return null|string
+     */
     public function getBlockPrefix()
     {
         return 'home_search';

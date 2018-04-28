@@ -53,26 +53,38 @@ class KuzzleHelper
      * @param array $qSort
      * @return array $finalQuery
      */
-    public function buildQuery($query = [], $filters = [], $qSort = [], $aggregates = [], $from = 0, $size = 20)
+    public function buildQuery($typeQuery, $query = [], $filters = [], $qSort = [], $aggregates = [], $from = 0, $size = 20)
     {
+        if (!in_array($typeQuery, ['term', 'match', 'match_all'])) {
+            return null;
+        }
 
         $finalQuery = $queryClauses = $filterClauses = [];
-        // Query Concatenate fields
-        if (isset($query) and 0 < count($query)) {
+        if (isset($typeQuery) && 'match_all' == $typeQuery) {
+            $finalQuery['query'] = [$typeQuery => (object)$query];
 
-            // Test if "match_all"
-            if (1 == count($query) && 'match_all' == key($query)) {
-                $finalQuery['query'] = $query;
+        } else {
+            if (isset($query) && 0 < count($query)) {
 
-            // Else; building query
-            } else {
-                foreach ($query as $field => $value) {
-                    $term = is_array($value) ? 'terms' : 'term';
-                    array_push($queryClauses, [
-                        $term => [
-                            $field => $value
-                        ]
-                    ]);
+                // 1 field
+                if (1 == count($query)) {
+                    $queryClauses[$typeQuery] = $query;
+                } else {
+                    /**
+                     * 2 cases :
+                     * field: [value1, value 2]
+                     * => terms: [field: [$value1, $value 2]
+                     *
+                     * [field:value1, field2: value 2]
+                     * => [term :[field:value], term: [field2: value2]...]
+                     */
+                    foreach ($query as $field => $value) {
+                        if (is_array($value)) {
+                            array_push($queryClauses, ['terms' => [$field=>$value]]);
+                        } else {
+                            $queryClauses[][$typeQuery] = [$field=>$value];
+                        }
+                    }
                 }
 
                 if (0 < count($queryClauses)) {

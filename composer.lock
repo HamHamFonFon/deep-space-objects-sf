@@ -909,12 +909,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/HamHamFonFon/Astrobin-API-PHP.git",
-                "reference": "8f98cb306f5eeb06efa38cb5f993d3ef79a3ed2c"
+                "reference": "81212bcede33f1c77480b043414f5e30cff17a7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HamHamFonFon/Astrobin-API-PHP/zipball/8f98cb306f5eeb06efa38cb5f993d3ef79a3ed2c",
-                "reference": "8f98cb306f5eeb06efa38cb5f993d3ef79a3ed2c",
+                "url": "https://api.github.com/repos/HamHamFonFon/Astrobin-API-PHP/zipball/81212bcede33f1c77480b043414f5e30cff17a7c",
+                "reference": "81212bcede33f1c77480b043414f5e30cff17a7c",
                 "shasum": ""
             },
             "require": {
@@ -954,7 +954,7 @@
                 "issues": "https://github.com/HamHamFonFon/Astrobin-API-PHP/issues",
                 "source": "https://github.com/HamHamFonFon/Astrobin-API-PHP/tree/master"
             },
-            "time": "2018-04-27T22:45:39+00:00"
+            "time": "2018-04-28T10:57:03+00:00"
         },
         {
             "name": "incenteev/composer-parameter-handler",
