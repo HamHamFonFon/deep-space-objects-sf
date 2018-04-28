@@ -11,6 +11,7 @@ namespace AppBundle\Repository;
 
 use AppBundle\Entity\Messier;
 use AppBundle\Kuzzle\KuzzleHelper;
+use Astrobin\Services\GetImage;
 use Kuzzle\Util\SearchResult;
 
 /**
@@ -25,13 +26,19 @@ class MessierRepository extends AbstractKuzzleRepository
     /** @var KuzzleHelper  */
     public $kuzzleHelper;
 
+    /** @var GetImage */
+    public $wsGetImage;
+
+
     /**
      * MessierRepository constructor.
      * @param KuzzleHelper $kuzzleHelper
+     * @param GetImage $wsGetImage
      */
-    public function __construct(KuzzleHelper $kuzzleHelper)
+    public function __construct(KuzzleHelper $kuzzleHelper, GetImage $wsGetImage)
     {
         parent::__construct($kuzzleHelper);
+        $this->wsGetImage = $wsGetImage;
     }
 
 
@@ -54,10 +61,15 @@ class MessierRepository extends AbstractKuzzleRepository
             $kuzzleDocument = $result->getDocuments()[0];
             $messier = new Messier();
             $messier->buildObject($kuzzleDocument)->setId($id);
+
+            try {
+                $astrobinImage = $this->wsGetImage->getImagesBySubject($id, 6);
+                $messier->addImages($astrobinImage);
+            } catch (\Exception $e) {
+                dump($e->getMessage());
+            }
         }
 
-        dump($messier);
-        die();
         return $messier;
     }
 

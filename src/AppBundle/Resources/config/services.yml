@@ -35,3 +35,4 @@ services:
     class: AppBundle\Repository\MessierRepository
     arguments:
       - "@app.helper.kuzzle"
+      - "@astrobin.webservice.getimage"
