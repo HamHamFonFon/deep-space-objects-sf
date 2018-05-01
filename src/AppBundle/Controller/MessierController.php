@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 
 /**
@@ -22,9 +23,6 @@ class MessierController extends Controller
      * @param Request $request
      * @param string $objectId
      * @return Response
-     * @throws \Astrobin\Exceptions\WsException
-     * @throws \Astrobin\Exceptions\WsResponseException
-     * @throws \ReflectionException
      */
     public function fullAction(Request $request, $objectId)
     {
@@ -34,13 +32,18 @@ class MessierController extends Controller
         $messierRepository = $this->container->get('app.repository.messier');
         $params['messier'] = $messierRepository->getMessier($objectId);
 
+        if (is_null($params['messier'])) {
+            throw new NotFoundHttpException();
+        }
         /** @var Response $response */
         $response = new Response();
         $response->setPublic();
         $response->setSharedMaxAge($this->container->getParameter('http_ttl'));
-        $response->headers->set(
-            'X-Kuzzle-Id', $params['messier']->getKuzzleId()
-        );
+        if (array_key_exists('messier', $params) && isset($params['messier'])) {
+            $response->headers->set(
+                'X-Kuzzle-Id', $params['messier']->getKuzzleId()
+            );
+        }
 
         return $this->render('pages/messier.html.twig', $params, $response);
     }

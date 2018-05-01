@@ -2,6 +2,8 @@
 
 namespace AppBundle\Controller;
 
+use Astrobin\Exceptions\WsException;
+use Astrobin\Services\GetCollection;
 use Astrobin\Services\GetImage;
 use Astrobin\Services\GetTodayImage;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -18,11 +20,11 @@ class AstrobinWsController extends Controller
 {
 
     /**
-     * @Route("/astrobin/id/{id}", name="astrobin_image_id")
+     * @Route("/astrobin/images/id/{id}", name="astrobin_image_id")
      * @param Request $request
      * @param $id
      * @return Response
-     * @throws \Astrobin\Exceptions\WsException
+     * @throws WsException
      * @throws \Astrobin\Exceptions\WsResponseException
      * @throws \ReflectionException
      */
@@ -38,12 +40,12 @@ class AstrobinWsController extends Controller
 
 
     /**
-     * @Route("/astrobin/img/{messierId}/{limit}", name="astrobin_image_messier")
+     * @Route("/astrobin/images/subjects/{messierId}/{limit}", name="astrobin_image_messier")
      * @param Request $request
      * @param $messierId
      * @param int $limit
      * @return Response
-     * @throws \Astrobin\Exceptions\WsException
+     * @throws WsException
      * @throws \Astrobin\Exceptions\WsResponseException
      * @throws \ReflectionException
      */
@@ -59,12 +61,12 @@ class AstrobinWsController extends Controller
 
 
     /**
-     * @Route("/astrobin/user/{username}/{limit}", name="astrobin_image_user")
+     * @Route("/astrobin/images/user/{username}/{limit}", name="astrobin_image_user")
      * @param Request $request
      * @param $username
      * @param $limit
      * @return Response
-     * @throws \Astrobin\Exceptions\WsException
+     * @throws WsException
      * @throws \Astrobin\Exceptions\WsResponseException
      * @throws \ReflectionException
      */
@@ -81,11 +83,11 @@ class AstrobinWsController extends Controller
 
 
     /**
-     * @Route("/astrobin/search/{desc}", name="astrobin_search")
+     * @Route("/astrobin/images/desc/{desc}", name="astrobin_search")
      * @param Request $request
      * @param string $desc
      * @return Response
-     * @throws \Astrobin\Exceptions\WsException
+     * @throws WsException
      * @throws \Astrobin\Exceptions\WsResponseException
      * @throws \ReflectionException
      */
@@ -104,11 +106,11 @@ class AstrobinWsController extends Controller
      * @Route("/astrobin/today", name="astrobin_image_of_day")
      * @param Request $request
      * @return Response
-     * @throws \Astrobin\Exceptions\WsException
+     * @throws WsException
      * @throws \Astrobin\Exceptions\WsResponseException
      * @throws \ReflectionException
      */
-    public function getImageOfTheDay(Request $request)
+    public function getImageOfTheDayAction(Request $request)
     {
         /** @var GetTodayImage $astrobinWs */
         $astrobinWs = $this->container->get('astrobin.webservice.gettodayimage');
@@ -116,6 +118,54 @@ class AstrobinWsController extends Controller
         dump($data);
         /** @var Response $response */
         $response = new Response();
+        return $this->render('pages/astrobin.html.twig', ['data' => $data], $response);
+    }
+
+
+    /**
+     * @Route("/astrobin/collection/id/{id}", name="astrobin_collection_id")
+     * @param $request
+     * @param $id
+     * @return Response
+     * @throws WsException
+     * @throws \Astrobin\Exceptions\WsResponseException
+     * @throws \ReflectionException
+     */
+    public function getCollectionByIdAction(Request $request, $id)
+    {
+        /** @var GetCollection $astrobinWs */
+        $astrobinWs = $this->container->get('astrobin.webservice.getcollection');
+        $data = $astrobinWs->getCollectionById($id);
+
+        /** @var Response $response */
+        $response = new Response();
+
+        return $this->render('pages/astrobin.html.twig', ['data' => $data], $response);
+    }
+
+
+    /**
+     * @Route("/astrobin/collection/user/{user}/{limit}", name="astrobin_collection_user")
+     * @param Request $request
+     * @param $user
+     * @param $limit
+     * @return Response
+     * @throws WsException
+     * @throws \Astrobin\Exceptions\WsResponseException
+     * @throws \ReflectionException
+     */
+    public function getCollectionByUserAction(Request $request, $user, $limit = null)
+    {
+        if (empty($limit) || is_null($limit)) {
+            $limit = 10;
+        }
+        /** @var GetCollection $astrobinWs */
+        $astrobinWs = $this->container->get('astrobin.webservice.getcollection');
+        $data = $astrobinWs->getListCollectionByUser($user, $limit);
+
+        /** @var Response $response */
+        $response = new Response();
+
         return $this->render('pages/astrobin.html.twig', ['data' => $data], $response);
     }
 }

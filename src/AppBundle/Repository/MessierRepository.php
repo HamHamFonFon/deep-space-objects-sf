@@ -56,7 +56,6 @@ class MessierRepository extends AbstractKuzzleRepository
 
         /** @var SearchResult $result */
         $result = $this->findById($id);
-
         if (0 < $result->getTotal()) {
             $kuzzleDocument = $result->getDocuments()[0];
             $messier = new Messier();

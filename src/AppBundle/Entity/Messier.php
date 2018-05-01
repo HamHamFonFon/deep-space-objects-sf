@@ -17,6 +17,7 @@ class Messier extends AbstractKuzzleDocumentEntity
     protected $messierOrder;
     protected $geometry;
     protected $images = [];
+
     protected $name;
     protected $desig;
     protected $alt;
@@ -25,6 +26,8 @@ class Messier extends AbstractKuzzleDocumentEntity
     protected $typeLabel;
     protected $mag;
     protected $constId;
+    protected $dim;
+    protected $cl;
 
     /**
      * @return string
@@ -259,6 +262,37 @@ class Messier extends AbstractKuzzleDocumentEntity
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getDim()
+    {
+        return $this->dim;
+    }
+
+    /**
+     * @param mixed $dim
+     */
+    public function setDim($dim)
+    {
+        $this->dim = $dim;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCl()
+    {
+        return $this->cl;
+    }
+
+    /**
+     * @param mixed $cl
+     */
+    public function setCl($cl)
+    {
+        $this->cl = $cl;
+    }
 
 
 }
