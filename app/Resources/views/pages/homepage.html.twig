@@ -59,7 +59,8 @@
     <section class="showcase">
       <div class="container-fluid p-0">
         {% for imageDay in images_day %}
-          {% include ':includes/home:image_day.html.twig' with {imageDay: imageDay, index: loop.index } %}
+          {% set image = imageDay.listImages.0 %}
+          {% include ':includes/home:image_day.html.twig' with {imageDay: image, index: loop.index } %}
         {% endfor %}
       </div>
     </section>

@@ -23,6 +23,9 @@ services:
   astrobin.webservice.getimage:
     class: Astrobin\Services\GetImage
     parent: astrobin.webservice
+  astrobin.webservice.getcollection:
+    class: Astrobin\Services\GetLocation
+    parent: astrobin.webservice
   astrobin.webservice.getlocation:
     class: Astrobin\Services\GetLocation
     parent: astrobin.webservice
