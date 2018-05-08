@@ -35,22 +35,23 @@ class ExceptionListener
      */
     public function onKernelException(GetResponseForExceptionEvent $event)
     {
-        $exception = $event->getException();
+        if ('prod' == $this->kernel->getEnvironment()) {
+            $exception = $event->getException();
 
-        /** @var Response $response */
-        $response = new Response();
-        $response->setContent(
-            $this->templateEngine->render('exceptions/exceptions.html.twig', ['exception' => $exception])
-        );
+            /** @var Response $response */
+            $response = new Response();
+            $response->setContent(
+                $this->templateEngine->render('exceptions/exceptions.html.twig', ['exception' => $exception])
+            );
 
-        if ($exception instanceof HttpExceptionInterface) {
-            $response->setStatusCode($exception->getStatusCode());
-            $response->headers->replace($exception->getHeaders());
-        } else {
-            $response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+            if ($exception instanceof HttpExceptionInterface) {
+                $response->setStatusCode($exception->getStatusCode());
+                $response->headers->replace($exception->getHeaders());
+            } else {
+                $response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+            }
+
+            $event->setResponse($response);
         }
-
-        $event->setResponse($response);
     }
-
 }
