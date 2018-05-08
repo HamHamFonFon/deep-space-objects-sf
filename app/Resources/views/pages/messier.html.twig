@@ -18,8 +18,8 @@
       <!-- /.col-lg-8 -->
       <div class="col-lg-4">
         <h1>{{ messier.name }}</h1>
-        <h2>{{ messier.desig }} - {{ messier.alt|trans }}</h2>
-
+        {% set subtitle = [messier.desig, messier.alt|trans]|join(' - ') %}
+        <h2>{{ subtitle }}</h2>
 
         <ul class="list-group">
           <li class="list-group-item active">{{ 'info'|trans }}</li>
@@ -42,9 +42,14 @@
       <!-- /.col-md-4 -->
     </div>
 
-    <h3>{{ 'constImgGall'|trans }} :</h3>
-    <div class="row">
-    </div>
+    {% if messiers_const is defined and 0 < messiers_const|length %}
+      <h3>{{ 'constImgGall'|trans }} :</h3>
+      <div class="row">
+        {% for messier in messiers_const %}
+          {% include ':includes/messier:block.html.twig' with {messier: messier} %}
+        {% endfor %}
+      </div>
+    {% endif %}
 
     {% include 'includes/layout/astrobin_message.html.twig' %}
     <h3>{{ 'imagesGall'|trans }} :</h3>

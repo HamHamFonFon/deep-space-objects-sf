@@ -1,0 +1,22 @@
+{% set img = null %}
+  {% if messier.images is defined and 0 < messier.images.count %}
+    {% set img = messier.images.listImages.0.url_regular %}
+  {% endif %}
+<div class="col-md-4 mb-4">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ img }}" alt="{{ messier.name }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ messier.name }} - {{ messier.desig }}</h5>
+      {#<p class="card-text">#}
+        {#Some quick example text to build on the card title and make up the bulk of the card's content.#}
+      {#</p>#}
+    </div>
+    <ul class="list-group list-group-flush">
+      {% if messier.alt is defined and 0 < messier.alt|length %}<li class="list-group-item">{{ messier.alt|trans }}</li>{% endif %}
+      {% if messier.mag is defined and 0 < messier.mag|length %}<li class="list-group-item">{{ 'magnitude'|trans }} : {{ messier.mag }}</li>{% endif %}
+    </ul>
+    <div class="card-footer">
+      <a href="{{ messier.full_url }}" class="btn btn-primary">{{ messier.name }}</a>
+    </div>
+  </div>
+</div>

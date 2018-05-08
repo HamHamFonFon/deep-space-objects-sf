@@ -18,18 +18,26 @@ dimExp: Angular dimensions in arcminutes
 dist: Distance
 imagesGall: Images gallery
 constImgGall: In the same constellation
-# Type DSO
 mag: Magnitude
-gc: Globular Cluster
-s: Spyral galaxy
+# Type DSO
+gg: Galaxy cluster
+g:  Generic galaxy
+s:  Spiral galaxy
+s0: Lenticular galaxy
+sd: Dwarf galaxy
+e:  Elliptical galaxy
+i:  Irregular galaxy
 oc: Open cluster
-e: Elliptical Galaxy
+gc: Globular cluster
+en: Emission nebula
+bn: Generic bright nebula
 sfr: Starforming Nebula (with open cluster)
-pn: Planetary Nebula
-pos: Astérism
-i: Binary star
-rn: Irregular Galaxy
-snr: Supernova Remnant
+rn: Reflection nebula
+pn: Planetary nebula
+snr: Supernova remnant
+dn:  Dark nebula grey
+pos: Asterism
+sc: Star clusters
 # Constellations
 and: Andromeda
 aqr: Aquarius
@@ -45,3 +53,4 @@ sgr: Sagittarius
 tau: Taurus
 uma: Ursa Major
 vir: Virgo
+# Messier name (no translation for english):

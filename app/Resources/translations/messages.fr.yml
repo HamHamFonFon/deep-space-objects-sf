@@ -18,18 +18,26 @@ dimExp: Dimension angulaire en minutes d'arcs
 dist: Distance
 imagesGall: Gallerie d'images
 constImgGall: Dans la même constellation
-# Type DSO
 mag: Magnitude
-gc: Amas globulaire
-s: Galaxie en spirale
+# Type DSO
+gg: Amas de galaxies
+g: Generic galaxy
+s: Galaxie en spiral
+s0: Galaxie lenticculaire
+sd: Galaxie naine
+e: Galaxie elliptique
+i: Galaxie irrégulière
 oc: Amas ouvert
-e: Galaxy élliptique
-sfr: Starforming Nebula (with open cluster)
+gc: Amas globulaire
+en: Nébuleuse en émission
+bn: Generic bright nebula
+sfr: Nébuleuse diffuse
+rn: Nébuleuse par réflexion
 pn: Nébuleuse planétaire
-pos: Astérism
-i: Étoile binaire
-rn: Galaxie irrégulière
-snr: Rémanant de Supernova
+snr: Rémanant de supernova
+dn: Nébuleuse sombre
+pos: Asterism
+sc: Amas stellaires
 # Constellations
 and: Andromède
 aqr: Verseau
@@ -46,4 +54,33 @@ tau: Taureau
 uma: Grande Ourse
 vir: Vièrge
 # Messier name (from english traduction):
-Crab Nebula: Nébuleuse du crabe
+Crab Nebula: Nébuleuse du crabe #m1
+Butterfly Cluster: Amas du papillion #m6
+Ptolemy´s Cluster: Amas de Ptolémée # m7
+Lagoon Nebula: Nébuleuse de la lagune # m8
+Wild Duck Cluster: Amas du canard sauvage # m11
+Great Hercules Cluster: Grand amas d'Hercule # m13
+Nuage de Pégase: Nuage de Pégase # m15
+Eagle Nebula: Nébuleuse de l'aigle # m16
+Omega Nebula: Nébuleuse Oméga # m17
+Trifid Nebula : Nébuleuse Trifide # m20
+Saggitarius cluster: Amas du sagittaire # m22
+Dumbbell Nebula: Nébuleuse de l'haltère # m27
+Andromeda: Galaxie d'Andromède # m31
+Triangulum: Galaxie du Triangle # m33
+Orion Nebula: Nébuleuse d'Orion #m42
+Mairan nebula: Nébuleuse de Mairan # m43
+Praesepe: Amas de la crèche # m44
+Pleiades: Amas des Pleiades # m45
+Whirlpool: Galaxie du Tourbillon # m51
+Ring Nebula: Nébuleuse de l'anneau # m57
+Sunflower Galaxy: Galaxie du tournesol # m63
+Blackeye Galaxy: Galaxie de l'oeil noir #m64
+Little Dumbbell Nebula: Nébuleuse du petit haltère # m76
+Bode´s Galaxy: Galaxie de Bode # m81
+Cigar Galaxy: Galaxie du cigare # m82
+Southern Pinwheel: Moulinet du sud #m83
+Owl Nebula: Nébuleuse du hibou # m97
+Pinwheel: Galaxie du moulinet # m101
+Spindle: Galaxie du fuseau #m102
+Sombrero: Galaxie du sombrero #m104

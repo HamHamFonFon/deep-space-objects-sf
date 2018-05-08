@@ -4,7 +4,6 @@ namespace AppBundle\Helper;
 
 use AppBundle\Entity\AbstractKuzzleDocumentEntity;
 use AppBundle\Entity\Messier;
-use AppBundle\Repository\AbstractKuzzleRepository;
 use AppBundle\Repository\MessierRepository;
 use Symfony\Component\Routing\RouterInterface;
 
@@ -31,7 +30,7 @@ class GenerateUrlHelper
      * @param $absoluteUrl
      * @return AbstractKuzzleDocumentEntity|Messier
      */
-    public function generateUrl($entity, $absoluteUrl = true)
+    public function generateUrl($entity, $absoluteUrl = false)
     {
         $url = null;
         if ($entity) {
@@ -46,7 +45,7 @@ class GenerateUrlHelper
                     $url = $this->router->generate('homepage');
             }
 
-            $entity->furl_url = $url;
+            $entity->full_url = $url;
         }
         return $entity;
     }
