@@ -59,8 +59,6 @@ abstract class AbstractKuzzleRepository
         /** @var Collection $kuzzleCollection */
         $kuzzleCollection = $this->kuzzleService->collection($collection);
 
-
-//        dump(json_encode($this->kuzzleHelper->buildQuery($typeQuery, $query, $filters, $sort, $aggregates, $from, $size)));
         /** @var SearchResult $searchResult */
         $searchResult = $kuzzleCollection->search(
             $this->kuzzleHelper->buildQuery($typeQuery, $query, $filters, $sort, $aggregates, $from, $size)

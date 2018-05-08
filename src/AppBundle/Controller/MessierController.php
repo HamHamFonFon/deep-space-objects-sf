@@ -30,7 +30,11 @@ class MessierController extends Controller
 
         /** @var MessierRepository $messierRepository */
         $messierRepository = $this->container->get('app.repository.messier');
-        $params['messier'] = $messierRepository->getMessier($objectId);
+        $params['messier'] = $messier = $messierRepository->getMessier($objectId);
+
+        dump($messier);
+
+        // TODO : get others item from same constellation
 
         if (is_null($params['messier'])) {
             throw new NotFoundHttpException();

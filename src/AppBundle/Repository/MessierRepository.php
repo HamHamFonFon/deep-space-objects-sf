@@ -1,18 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: stephane
- * Date: 15/04/18
- * Time: 22:47
- */
 
 namespace AppBundle\Repository;
 
-
 use AppBundle\Entity\Messier;
+use AppBundle\Helper\GenerateUrlHelper;
 use AppBundle\Kuzzle\KuzzleHelper;
 use Astrobin\Services\GetImage;
 use Kuzzle\Util\SearchResult;
+use Symfony\Component\Routing\RouterInterface;
 
 /**
  * Class MessierRepository
@@ -29,16 +24,20 @@ class MessierRepository extends AbstractKuzzleRepository
     /** @var GetImage */
     public $wsGetImage;
 
+    /** @var GenerateUrlHelper */
+    public $urlHelper;
 
     /**
      * MessierRepository constructor.
      * @param KuzzleHelper $kuzzleHelper
      * @param GetImage $wsGetImage
+     * @param RouterInterface $router
      */
-    public function __construct(KuzzleHelper $kuzzleHelper, GetImage $wsGetImage)
+    public function __construct(KuzzleHelper $kuzzleHelper, GetImage $wsGetImage, GenerateUrlHelper $urlHelper)
     {
         parent::__construct($kuzzleHelper);
         $this->wsGetImage = $wsGetImage;
+        $this->urlHelper = $urlHelper;
     }
 
 
@@ -60,6 +59,7 @@ class MessierRepository extends AbstractKuzzleRepository
             $kuzzleDocument = $result->getDocuments()[0];
             $messier = new Messier();
             $messier->buildObject($kuzzleDocument)->setId($id);
+            $this->urlHelper->generateUrl($messier);
 
             try {
                 $astrobinImage = $this->wsGetImage->getImagesBySubject($id, 6);
@@ -71,8 +71,6 @@ class MessierRepository extends AbstractKuzzleRepository
 
         return $messier;
     }
-
-
 
     /**
      * Get objects messiers by type, filtered by constellation
@@ -117,7 +115,6 @@ class MessierRepository extends AbstractKuzzleRepository
 
         return $listMessiers;
     }
-
 
     /**
      * @return string

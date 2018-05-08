@@ -3,8 +3,60 @@
 {% set pageTitle = messier.name|capitalize ~ ' : ' ~ messier.desig %}
 
 {% block content %}
-  <h1 class="h1">{{ messier.name }}</h1>
+
+  {% set img = null %}
+  {% if messier.images is defined and 0 < messier.images.count %}
+    {% set img = messier.images.listImages.0.url_hd %}
+  {% endif %}
+
+  <div class="container">
+
+    <div class="row my-4">
+      <div class="col-lg-8">
+        <img class="img-fluid rounded" src="{{ img }}" alt="{{ messier.name }}">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-4">
+        <h1>{{ messier.name }}</h1>
+        <h2>{{ messier.desig }} - {{ messier.alt|trans }}</h2>
 
 
-  <pre>{{ dump(messier) }}</pre>
+        <ul class="list-group">
+          <li class="list-group-item active">{{ 'info'|trans }}</li>
+          <li class="list-group-item">{{ messier.type|trans }}</li>
+          <li class="list-group-item">{{ 'magnitude'|trans }} : {{ messier.mag }}</li>
+          <li class="list-group-item">{{ 'const'|trans }} : {{ messier.constId|lower|trans }}</li>
+          <li class="list-group-item">{{ 'dim'|trans }} <sub>(1)</sub> : {{ messier.dim }}</li>
+          <li class="list-group-item">{{ 'dist'|trans }} <sub>(2)</sub> : </li>
+        </ul>
+
+        <p>
+          1: {{ 'dimExp'|trans }}
+        </p>
+        <p>
+          2: {{ 'destExp'|trans }}
+        </p>
+
+        <a class="btn btn-primary btn-lg" href="#">Call to Action!</a>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+
+    <h3>{{ 'constImgGall'|trans }} :</h3>
+    <div class="row">
+    </div>
+
+    {% include 'includes/layout/astrobin_message.html.twig' %}
+    <h3>{{ 'imagesGall'|trans }} :</h3>
+    <div class="row">
+      {% for img in messier.images.listImages|slice(1, messier.images.count) %}
+        {% include 'includes/astrobin/image.html.twig' with {image: img} %}
+      {% endfor %}
+    </div>
+
+
+
+  </div>
+
+
 {% endblock %}

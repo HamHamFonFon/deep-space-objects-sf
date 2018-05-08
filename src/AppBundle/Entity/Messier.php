@@ -16,7 +16,7 @@ class Messier extends AbstractKuzzleDocumentEntity
     protected $messierId;
     protected $messierOrder;
     protected $geometry;
-    protected $images = [];
+    public $images = [];
 
     protected $name;
     protected $desig;
@@ -29,6 +29,8 @@ class Messier extends AbstractKuzzleDocumentEntity
     protected $dim;
     protected $cl;
 
+    const ENTITY_TYPE = 'messier';
+
     /**
      * @return string
      */
@@ -38,7 +40,6 @@ class Messier extends AbstractKuzzleDocumentEntity
     }
 
     /**
-     * TODO : ameliorer
      * @param Image|Collection $astrobinImage
      */
     public function addImages($astrobinImage)
@@ -293,6 +294,4 @@ class Messier extends AbstractKuzzleDocumentEntity
     {
         $this->cl = $cl;
     }
-
-
 }

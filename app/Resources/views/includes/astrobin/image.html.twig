@@ -1,0 +1,21 @@
+<div class="col-md-4 mb-4">
+  <div class="card h-100">
+    <div class="card-body">
+      <h2 class="card-title">{{ image.subjects|join(' - ') }}</h2>
+
+      <div class="card-text">
+        <picture>
+          <img src="{{ image.url_gallery }}" class=" img-fluid rounded float-left" alt="{{ image.user }}">
+        </picture>
+        {% if image.description is not empty %}
+          <p>
+            {{ image.description }}
+          </p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="btn btn-primary">More Info</a>
+    </div>
+  </div>
+</div>

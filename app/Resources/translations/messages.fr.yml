@@ -9,3 +9,41 @@ homepage.message: Découvrez les beautés et les mystères de l'univers
 home.search.placeholder: Rechercher dans le catalogue...
 dayImage: L'image du jour
 messierList: Liste des objets de Messier
+# View full
+info: Informations
+magnitude: Magnitude apparente
+const: Constellation
+dim: Dimension
+dimExp: Dimension angulaire en minutes d'arcs
+dist: Distance
+imagesGall: Gallerie d'images
+constImgGall: Dans la même constellation
+# Type DSO
+mag: Magnitude
+gc: Amas globulaire
+s: Galaxie en spirale
+oc: Amas ouvert
+e: Galaxy élliptique
+sfr: Starforming Nebula (with open cluster)
+pn: Nébuleuse planétaire
+pos: Astérism
+i: Étoile binaire
+rn: Galaxie irrégulière
+snr: Rémanant de Supernova
+# Constellations
+and: Andromède
+aqr: Verseau
+com: Chevelure de Bérénice
+cvn: Chiens de chasse
+dra: Dragon
+leo: Le lyon
+lyr: Lyre
+oph: Ophiuchus
+ori: Orion
+sco: Scorpion
+sgr: Sagittaire
+tau: Taureau
+uma: Grande Ourse
+vir: Vièrge
+# Messier name (from english traduction):
+Crab Nebula: Nébuleuse du crabe

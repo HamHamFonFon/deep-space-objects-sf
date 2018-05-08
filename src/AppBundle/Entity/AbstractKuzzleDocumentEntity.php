@@ -16,7 +16,6 @@ abstract class AbstractKuzzleDocumentEntity
     /** @var  */
     private $kuzzleId;
 
-
     /**
      * @param Document $document
      * @return $this
@@ -86,5 +85,4 @@ abstract class AbstractKuzzleDocumentEntity
         $this->kuzzleId = $kuzzleId;
         return $this;
     }
-
 }

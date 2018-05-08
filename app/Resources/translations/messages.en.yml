@@ -9,3 +9,39 @@ homepage.message: Discover beauties and mysteries of the universe
 home.search.placeholder: Research in the catalog...
 dayImage: Image of the day
 messierList:  Messiers's object list
+# View full
+info: Informations
+magnitude: Apparent magnitude
+const: Constellation
+dim: Size
+dimExp: Angular dimensions in arcminutes
+dist: Distance
+imagesGall: Images gallery
+constImgGall: In the same constellation
+# Type DSO
+mag: Magnitude
+gc: Globular Cluster
+s: Spyral galaxy
+oc: Open cluster
+e: Elliptical Galaxy
+sfr: Starforming Nebula (with open cluster)
+pn: Planetary Nebula
+pos: Astérism
+i: Binary star
+rn: Irregular Galaxy
+snr: Supernova Remnant
+# Constellations
+and: Andromeda
+aqr: Aquarius
+com: Coma Berenice
+cvn: Canes Venatici
+dra: Drago
+leo: Leo
+lyr: Lyra
+oph: Ophiuchus
+ori: Orion
+sco: Scorpius
+sgr: Sagittarius
+tau: Taurus
+uma: Ursa Major
+vir: Virgo

@@ -40,8 +40,20 @@ services:
     parent: astrobin.webservice
 
   # Repositories
-  app.repository.messier:
-    class: AppBundle\Repository\MessierRepository
+  app.repository.abstractobject:
+    class: AppBundle\Repository\AbstractKuzzleRepository
+    abstract: true
     arguments:
       - "@app.helper.kuzzle"
+  app.repository.messier:
+    class: AppBundle\Repository\MessierRepository
+    parent: app.repository.abstractobject
+    arguments:
       - "@astrobin.webservice.getimage"
+      - '@app.helper.urlgenerator'
+
+
+  # Helper
+  app.helper.urlgenerator:
+    class: AppBundle\Helper\GenerateUrlHelper
+    arguments: ['@router']
