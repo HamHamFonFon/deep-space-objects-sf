@@ -3,6 +3,7 @@ dso: Deep space objects
 menu.homepage: Accueil
 selectLang: Langues
 astrobin.message: This product uses the AstroBin API but is not endorsed or certified by AstroBin.
+error.message: Erreur %error%, peut-être êtes-vous tombé dans un trou noir :) ?
 # Homepage
 homepage.message: Découvrez les beautés et les mystères de l'univers
 home.search.placeholder: Rechercher dans le catalogue...

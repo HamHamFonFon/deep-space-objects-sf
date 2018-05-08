@@ -5,6 +5,12 @@ services:
     arguments: ['%kernel.default_locale%']
     tags: [kernel.event_subscriber]
 
+  app.eventlistener.exceptionlistener:
+    class: AppBundle\EventListener\ExceptionListener
+    arguments: ["@templating","@kernel"]
+    tags:
+      - { name: kernel.event_listener, event: kernel.exception }
+
   # Services
   app.helper.kuzzle:
     class: AppBundle\Kuzzle\KuzzleHelper

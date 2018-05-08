@@ -32,7 +32,9 @@ class AstrobinWsController extends Controller
     {
         $astrobinWS = $this->container->get('astrobin.webservice.getimage');
         $data = $astrobinWS->getImageById($id);
-        dump($data);
+
+        dump($data->getUploaded());
+        dump($data->uploaded); die();
 
         $response = new Response();
         return $this->render('pages/astrobin.html.twig', ['data' => $data], $response);
@@ -101,6 +103,23 @@ class AstrobinWsController extends Controller
         return $this->render('pages/astrobin.html.twig', ['data' => $data], $response);
     }
 
+    /**
+     * @Route("/astrobin/images/date_range", name="astrobin_range_date")
+     * @throws WsException
+     * @throws \Astrobin\Exceptions\WsResponseException
+     * @throws \ReflectionException
+     */
+    public function getImagesByRangeDate()
+    {
+        $astrobinWs = $this->container->get('astrobin.webservice.getimage');
+        $dateFrmStr = '18-04-01' ;
+
+        $data = $astrobinWs->getImagesByRangeDate($dateFrmStr);
+        dump($data);
+
+        $response = new Response();
+        return $this->render('pages/astrobin.html.twig', ['data' => $data], $response);
+    }
 
     /**
      * @Route("/astrobin/today", name="astrobin_image_of_day")

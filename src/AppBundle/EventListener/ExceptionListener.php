@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: stephane
- * Date: 01/05/18
- * Time: 20:32
- */
 
 namespace AppBundle\EventListener;
 
@@ -46,7 +40,7 @@ class ExceptionListener
         /** @var Response $response */
         $response = new Response();
         $response->setContent(
-            $this->templateEngine->render('', ['exception' => $exception])
+            $this->templateEngine->render('exceptions/exceptions.html.twig', ['exception' => $exception])
         );
 
         if ($exception instanceof HttpExceptionInterface) {
