@@ -56,14 +56,18 @@
 
           {#Javascript#}
           {% block javascripts %}
-            {#{% javascripts#}
-              {#'js/*.js'#}
-            {#%}#}
-              {#<script src="{{ asset_url }}"></script>#}
-            {#{% endjavascripts %}#}
-            <script src="{{ asset('js/jquery.min.js') }}"></script>
-            <script src="{{ asset('js/bootstrap.js') }}"></script>
+            {% javascripts
+              'bundles/fosjsrouting/js/router.min.js'
+              'js/*'
+            %}
+              <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
           {% endblock %}
       </body>
   </html>
 {% endblock %}
+
+{#'js/fos_js_routes.js'#}
+              {#'js/jquery.min.js'#}
+              {#'js/bootstrap.js'#}
+              {#'js/typehead.min.js'#}

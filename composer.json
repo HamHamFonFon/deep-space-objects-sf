@@ -28,6 +28,7 @@
         "components/jquery": "^3.1",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
+        "friendsofsymfony/jsrouting-bundle": "^2.2",
         "hamhamfonfon/astrobin": "dev-master",
         "incenteev/composer-parameter-handler": "^2.0",
         "kuzzleio/kuzzle-sdk": "^3.0",

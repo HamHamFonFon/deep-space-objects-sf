@@ -5,8 +5,10 @@
 {% block content %}
 
   {% set img = null %}
-  {% if messier.images is defined and 0 < messier.images.count %}
-    {% set img = messier.images.listImages.0.url_hd %}
+  {% if messier.images is defined %}
+    {% if messier.images.count is defined and 0 < messier.images.count %}
+      {% set img = messier.images.listImages.0.url_hd %}
+    {% endif %}
   {% endif %}
 
   <div class="container">
@@ -63,14 +65,15 @@
       </div>
     {% endif %}
 
-
-    {% include 'includes/layout/astrobin_message.html.twig' %}
-    <h3>{{ 'imagesGall'|trans }} :</h3>
-    <div class="row">
-      {% for img in messier.images.listImages|slice(1, messier.images.count) %}
-        {% include 'includes/astrobin/image.html.twig' with {image: img} %}
-      {% endfor %}
-    </div>
+    {% if messier.images is defined and 0 < messier.images|length %}
+      {% include 'includes/layout/astrobin_message.html.twig' %}
+      <h3>{{ 'imagesGall'|trans }} :</h3>
+      <div class="row">
+        {% for img in messier.images.listImages|slice(1, messier.images.count) %}
+          {% include 'includes/astrobin/image.html.twig' with {image: img} %}
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 
 {% endblock %}

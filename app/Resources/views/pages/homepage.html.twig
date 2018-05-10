@@ -65,25 +65,13 @@
       </div>
     </section>
   {% endif %}
+{% endblock %}
 
-  {% if image_day is defined %}
-    <h2>{{ 'dayImage'|trans }}</h2>
-    {% set imageDay = image_day.image %}
-    <div>
-      <img
-          src="{{ imageDay.url_regular }}"
-          data-author="{{ imageDay.user }}"
-          alt="{{ imageDay.title }}"
-          title="{{ imageDay.title }}"
-      >
-    </div>
-  {% endif %}
-
-  <h2>{{ 'messierList'|trans }}</h2>
-
-  {% if messier_objects is defined %}
-    {% for messier in messier_objects if 0 < messier_objects|length %}
-      {#{% include ':includes/messier:block.html.twig' with {messier: messier} %}#}
-    {% endfor %}
-  {% endif %}
+{% block javascripts %}
+  {{ parent() }}
+  {% javascripts
+    '@AppBundle/Resources/public/js/search_autocomplete.js'
+  %}
+    <script src="{{ asset_url }}"></script>
+  {% endjavascripts %}
 {% endblock %}
