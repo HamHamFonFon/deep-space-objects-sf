@@ -114,19 +114,18 @@ class MessierRepository extends AbstractKuzzleRepository
      * @param $to
      * @return array
      */
-    public function getList($from, $size)
+    public function getList($from, $size, $order, $nbImages = 1)
     {
         $listMessiers = [];
         /** @var  $listItems */
-        $listItems = $this->findBy('match_all', [], [], ['messier_order' => 'asc'], $from, $size);
+        $listItems = $this->findBy('match_all', [], [], $order, $from, $size);
         if (!is_null($listItems) && 0 < $listItems->getTotal()) {
             foreach ($listItems->getDocuments() as $document) {
-//                $class = $this->getKuzzleEntity();
-                $listMessiers[] = new Messier($document);
+                $listMessiers[] = $this->buildEntityByDocument($document, $nbImages);
             }
         }
 
-        return $listMessiers;
+        return [$listItems->getTotal(), $listMessiers];
     }
 
 

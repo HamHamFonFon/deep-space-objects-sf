@@ -1,4 +1,55 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+
+  <div class="container">
+    <header class="jumbotron my-4">
+      <h1 class="display-3">{{ 'messier.list'|trans }}</h1>
+
+      <p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.
+      </p>
+      <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+    </header>
+
+
+    <div class="row">
+      <div class="col-4">
+        {% include 'forms/listorder.html.twig' %}
+      </div>
+      <div class="col-2"></div>
+      <div class="col-6 right">
+        {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
+      </div>
+    </div>
+
+    <div class="row text-center">
+      {% if list is defined and 0 < list|length %}
+        {% for messier in list %}
+          {% include ':includes/messier:block.html.twig' %}
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="row center-block">
+      {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
+    </div>
+
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  <script type="text/javascript">
+    (function($) {
+      let FORM = 'form[name="list_order"]';
+      let SELECT = 'select#list_order_order';
+
+      $(document).ready(function() {
+        $(SELECT).on('change', function(e) {
+          $(FORM).submit();
+        })
+      });
+    })(jQuery);
+  </script>
 {% endblock %}

@@ -21,6 +21,14 @@ imagesGall: Images gallery
 constImgGall: In the same constellation
 typeImgGall: Objects of type "%type%"
 mag: Magnitude
+ra: Right ascension
+dec: Declination
+# Vue list
+messier.list: List of Messier objects
+messierOrderAsc: Order ascendant
+messierOrderDesc: Order descendant
+messierMagnitudeAsc: Lowest magnitude
+messierMagnitudeDesc: Highest magnitude
 # Type DSO
 gg: Galaxy cluster
 g:  Generic galaxy
@@ -88,3 +96,8 @@ m97.label: Owl Nebula
 m101.label: Pinwheel
 m102.label: Spindle
 m104..label: Sombrero
+# Form
+select:
+  order:
+    label: Ordering by
+    placeholder: Choose your option

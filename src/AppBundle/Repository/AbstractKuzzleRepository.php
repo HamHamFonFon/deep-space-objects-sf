@@ -27,6 +27,14 @@ abstract class AbstractKuzzleRepository
     /** @var \Kuzzle\Kuzzle  */
     protected $kuzzleService;
 
+    const DEFAULT_SORT = 'messier_order_asc';
+
+    private static $listOrder = [
+        'messier_order_asc' => ['messier_order' => 'asc'],
+        'messier_order_desc' => ['messier_order' => 'desc'],
+        'messier_mag_asc' => ['properties.mag' => 'asc'],
+        'messier_mag_desc' => ['properties.mag' => 'desc']
+    ];
 
     /**
      * abstractKuzzleRepository constructor.
@@ -59,9 +67,16 @@ abstract class AbstractKuzzleRepository
         /** @var Collection $kuzzleCollection */
         $kuzzleCollection = $this->kuzzleService->collection($collection);
 
+        if (!in_array($sort, array_keys(self::$listOrder))) {
+            $qSort = self::$listOrder[self::DEFAULT_SORT];
+        }else {
+            $qSort = self::$listOrder[$sort];
+        }
+
+
         /** @var SearchResult $searchResult */
         $searchResult = $kuzzleCollection->search(
-            $this->kuzzleHelper->buildQuery($typeQuery, $query, $filters, $sort, $aggregates, $from, $size)
+            $this->kuzzleHelper->buildQuery($typeQuery, $query, $filters, $qSort, $aggregates, $from, $size)
         );
 
         return $searchResult;

@@ -21,6 +21,15 @@ imagesGall: Gallerie d'images
 constImgGall: Dans la même constellation
 typeImgGall: Objects de type "%type%"
 mag: Magnitude
+ra: Ascension droite
+dec: Déclinaison
+# Vue list
+
+messier.list: Liste des objects de Messier
+messierOrderAsc: Ordre ascendant
+messierOrderDesc: Ordre descendant
+messierMagnitudeAsc: Magnitude la plus faible
+messierMagnitudeDesc: Magnitude la plus haute
 # Type DSO
 gg: Amas de galaxies
 g: Generic galaxy
@@ -88,3 +97,8 @@ m97.label: Nébuleuse du hibou # m97
 m101.label: Galaxie du moulinet # m101
 m102.label: Galaxie du fuseau #m102
 m104.label: Galaxie du sombrero #m104
+# Form
+select:
+  order:
+    label: Trier par
+    placeholder: Sélectionnez votre option

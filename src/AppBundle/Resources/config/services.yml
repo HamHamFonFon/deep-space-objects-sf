@@ -52,7 +52,12 @@ services:
       - "@astrobin.webservice.getimage"
       - '@app.helper.urlgenerator'
 
-
+  # Form
+  app.form.list_order:
+    class: AppBundle\Form\ListOrderFormType
+    arguments: ['%list.messier.order%']
+    tags:
+        - { name: form.type, alias: 'list_order' }
   # Helper
   app.helper.urlgenerator:
     class: AppBundle\Helper\GenerateUrlHelper

@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Messier;
+use AppBundle\Form\ListOrderFormType;
 use AppBundle\Repository\MessierRepository;
 use Astrobin\Services\GetImage;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -52,11 +53,13 @@ class MessierController extends Controller
         $response = new Response();
         $response->setPublic();
         $response->setSharedMaxAge($this->container->getParameter('http_ttl'));
-        if (array_key_exists('messier', $params) && isset($params['messier'])) {
-            $response->headers->set(
-                'X-Kuzzle-Id', $listKuzzleId
-            );
-        }
+        $response->setMaxAge($this->container->getParameter('http_ttl'));
+//        For Varnish
+//        if (array_key_exists('messier', $params) && isset($params['messier'])) {
+//            $response->headers->set(
+//                'X-Kuzzle-Id', $listKuzzleId
+//            );
+//        }
         return $this->render('pages/messier.html.twig', $params, $response);
     }
 
@@ -69,6 +72,42 @@ class MessierController extends Controller
     public function listAction(Request $request)
     {
         $params = [];
+
+        $from = 0;
+        $size = 12;
+        $page = $firstPage = 1;
+        $sort = MessierRepository::DEFAULT_SORT;
+
+        if ($request->query->has('page')) {
+            $page = $request->query->get('page');
+            $from = ($page-1)*$size;
+        }
+    dump($request->query);
+        $optionsForm = [
+            'method' => 'GET',
+            'selectedOrder' => ''
+        ];
+        $formOrder = $this->createForm(ListOrderFormType::class, null, $optionsForm);
+        $formOrder->handleRequest($request);
+        if ($formOrder->isValid() && $formOrder->isSubmitted()) {
+            $data = $formOrder->getData();
+            $sort = $data['order'];
+        }
+
+        /** @var MessierRepository $messierRepository */
+        $messierRepository = $this->container->get('app.repository.messier');
+        list($params['total'], $params['list']) = $messierRepository->getList($from, $size, $sort, 1);
+
+
+        $lastPage = ceil($params['total']/$size);
+
+        $params['pagination'] = [
+            'first_page' => $firstPage,
+            'last_page' => $lastPage,
+            'current_page' => $page
+        ];
+
+        $params['form'] = $formOrder->createView();
 
         /** @var Response $response */
         $response = new Response();

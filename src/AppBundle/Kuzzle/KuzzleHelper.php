@@ -26,7 +26,6 @@ class KuzzleHelper
     private $port;
 
     const LIST_ORDER = ['asc', 'desc'];
-
     /**
      * KuzzleService constructor.
      * @param $host
@@ -123,20 +122,16 @@ class KuzzleHelper
         }
 
         // Add sort
-        if (isset($sort) && 0 < count($sort)) {
+        if (isset($qSort) && 0 < count($qSort)) {
 
+            dump($qSort);
             foreach ($qSort as $field=>$type) {
-                $fieldSort = [];
+                $fieldSort[$field] = [];
                 if (in_array($type, self::LIST_ORDER)) {
-                    array_push($fieldSort, [$field => $type]);
+                    array_push($fieldSort[$field], ['order' => $type]);
                 }
             }
-
-            $finalQuery = [
-                'sort' => [
-                    'order'=> $fieldSort
-                ]
-            ];
+            $finalQuery['sort'] = $fieldSort;
         }
 
         // TODO Add agregates

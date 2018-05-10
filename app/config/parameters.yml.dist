@@ -23,3 +23,4 @@ parameters:
     astrobin.key: ~
     astrobin.secret: ~
     http_ttl: 86400
+    list.messier.order: ~
