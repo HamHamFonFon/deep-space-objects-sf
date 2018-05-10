@@ -59,7 +59,7 @@ services:
     arguments: ['@router']
 
   # Twig
-#  app.twig.twig_extension:
-#    class: AppBundle\Twig\TwigExtension
+#  app.twig.dso_twig_extension:
+#    class: AppBundle\Twig\DsoTwigExtension
 #    tags:
 #      - { name: twig.extension }

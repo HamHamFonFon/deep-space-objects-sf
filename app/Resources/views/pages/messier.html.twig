@@ -18,7 +18,8 @@
       <!-- /.col-lg-8 -->
       <div class="col-lg-4">
         <h1>{{ messier.name }}</h1>
-        {% set subtitle = [messier.desig, messier.alt|trans]|join(' - ') %}
+        {% set transKey = messier.id ~ 'label' %}
+        {% set subtitle = [messier.desig, messier.alt|trans|default(transKey|trans)]|join(' - ') %}
         <h2>{{ subtitle }}</h2>
 
         <ul class="list-group">
@@ -27,8 +28,11 @@
           <li class="list-group-item">{{ 'magnitude'|trans }} : {{ messier.mag }}</li>
           <li class="list-group-item">{{ 'const'|trans }} : {{ messier.constId|lower|trans }}</li>
           <li class="list-group-item">{{ 'dim'|trans }} <sub>(1)</sub> : {{ messier.dim }}</li>
-          <li class="list-group-item">{{ 'distAl'|trans }} : {{ messier.distAl|number_format }}</li>
-          <li class="list-group-item">{{ 'distPc'|trans }} : {{ messier.distAl|convert_al_pc|number_format }}</li>
+          {% set distLY = messier.distAl %}
+          <li class="list-group-item">{{ 'distAl'|trans }} : {{ distLY|number_format_by_locale }}</li>
+          <li class="list-group-item">{{ 'distPc'|trans }} : {{ distLY|convert_al_pc }}</li>
+          <li class="list-group-item">{{ 'ra'|trans }} : {{ messier.ra}}</li>
+          <li class="list-group-item">{{ 'dec'|trans }} : {{ messier.dec }}</li>
         </ul>
 
         <p>
@@ -49,6 +53,16 @@
         {% endfor %}
       </div>
     {% endif %}
+
+    {% if messiers_type is defined and 0 < messiers_type|length %}
+      <h3>{{ 'typeImgGall'|trans({'%type%': messier.type|trans}) }} :</h3>
+      <div class="row">
+        {% for messier in messiers_type %}
+          {% include ':includes/messier:block.html.twig' with {messier: messier} %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
 
     {% include 'includes/layout/astrobin_message.html.twig' %}
     <h3>{{ 'imagesGall'|trans }} :</h3>

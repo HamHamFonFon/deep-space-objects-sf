@@ -1,7 +1,13 @@
+{# @var Astrobin\Response\ListImages listImageClass #}
 {% set img = null %}
-  {% if messier.images is defined and 0 < messier.images.count %}
-    {% set img = messier.images.listImages.0.url_regular %}
-  {% endif %}
+
+{% if messier.images is defined and true == messier.images|is_instance_of('\\Astrobin\\Response\\ListImages') and 0 < messier.images.count %}
+  {% set img = messier.images.listImages.0.url_regular %}
+
+{% elseif messier.images is defined and true == messier.images|is_instance_of('\\Astrobin\\Response\\Image') %}
+  {% set img = messier.images.url_regular %}
+{% endif %}
+
 <div class="col-md-4 mb-4">
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="{{ img }}" alt="{{ messier.name }}">

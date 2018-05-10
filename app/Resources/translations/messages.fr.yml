@@ -19,6 +19,7 @@ distAl: Distance (années-lumière)
 distPc: Distance (parsec)
 imagesGall: Gallerie d'images
 constImgGall: Dans la même constellation
+typeImgGall: Objects de type "%type%"
 mag: Magnitude
 # Type DSO
 gg: Amas de galaxies

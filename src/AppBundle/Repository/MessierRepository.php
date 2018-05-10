@@ -32,7 +32,7 @@ class MessierRepository extends AbstractKuzzleRepository
      * MessierRepository constructor.
      * @param KuzzleHelper $kuzzleHelper
      * @param GetImage $wsGetImage
-     * @param RouterInterface $router
+     * @param GenerateUrlHelper $urlHelper
      */
     public function __construct(KuzzleHelper $kuzzleHelper, GetImage $wsGetImage, GenerateUrlHelper $urlHelper)
     {
@@ -57,7 +57,7 @@ class MessierRepository extends AbstractKuzzleRepository
         /** @var SearchResult $result */
         $result = $this->findById($id);
         if (0 < $result->getTotal()) {
-            $messier = $this->buildEntityByDocument($result->getDocuments()[0]);
+            $messier = $this->buildEntityByDocument($result->getDocuments()[0], 6);
 
         }
 
@@ -68,15 +68,17 @@ class MessierRepository extends AbstractKuzzleRepository
     /**
      * @param $constId
      * @param $excludedMessier
+     * @param $limit
+     * @param $limitImages
      * @return array
      */
-    public function getMessiersByConst($constId, $excludedMessier)
+    public function getMessiersByConst($constId, $excludedMessier, $limit = 10, $limitImages = 1)
     {
         $listMessiers = [];
-        $results = $this->findBy('term', ['properties.const_id' => $constId], [], ['properties.magnitude' => 'ASC'],0,10);
+        $results = $this->findBy('term', ['properties.const_id' => $constId], [], ['properties.magnitude' => 'ASC'],0, $limit);
         if (0 < $results->getTotal()) {
             foreach ($results->getDocuments() as $document) {
-                $listMessiers[] = $this->buildEntityByDocument($document);
+                $listMessiers[] = $this->buildEntityByDocument($document, $limitImages);
             }
         }
         $listMessiers = array_filter($listMessiers, function (Messier $messier) use ($excludedMessier) {
@@ -90,17 +92,17 @@ class MessierRepository extends AbstractKuzzleRepository
      * Get objects messiers by type, filtered by constellation
      *
      * @param $type
-     * @param null $const
-     * @param $sort
+     * @param $limit
+     * @param $limitImages
      * @return array
      */
-    public function getMessiersByType($type)
+    public function getMessiersByType($type, $limit = 10, $limitImages = 1)
     {
         $listMessiers = [];
-        $results = $this->findBy('term', ['properties.type' => $type], [], [], 0 ,20);
+        $results = $this->findBy('term', ['properties.type' => $type], [], [], 0 ,$limit);
         if (0 < $results->getTotal()) {
             foreach ($results->getDocuments() as $document) {
-                $listMessiers[] = $this->buildEntityByDocument($document);
+                $listMessiers[] = $this->buildEntityByDocument($document, $limitImages);
             }
         }
 
@@ -132,9 +134,10 @@ class MessierRepository extends AbstractKuzzleRepository
      * TODO : make a factory pattern
      *
      * @param Document $kuzzleDocument
+     * @param $limitImages
      * @return Messier
      */
-    private function buildEntityByDocument(Document $kuzzleDocument)
+    private function buildEntityByDocument(Document $kuzzleDocument, $limitImages = 1)
     {
         $kuzzleEntity = $this->getKuzzleEntity();
         /** @var Messier $messier */
@@ -145,7 +148,7 @@ class MessierRepository extends AbstractKuzzleRepository
         $this->urlHelper->generateUrl($messier);
 
         try {
-            $astrobinImage = $this->wsGetImage->getImagesBySubject($id, 6);
+            $astrobinImage = $this->wsGetImage->getImagesBySubject($id, $limitImages);
             $messier->addImages($astrobinImage);
         } catch (\Exception $e) {
             dump($e->getMessage());

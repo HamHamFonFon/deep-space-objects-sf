@@ -267,7 +267,7 @@ class Messier extends AbstractKuzzleDocumentEntity
      */
     public function getDistAl()
     {
-        $this->distAl = $this->distAl*1000;
+        $this->distAl = 1000*$this->distAl;
         return $this->distAl;
     }
 
