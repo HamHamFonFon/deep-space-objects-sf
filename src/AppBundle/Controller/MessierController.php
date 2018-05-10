@@ -33,10 +33,10 @@ class MessierController extends Controller
         $params['messier'] = $messier = $messierRepository->getMessier($objectId);
 
         // Get Messiers objects from same type
-//        $params['messiers_type'] = $messierRepository->getMessiersByType($messier->getType());
+        $params['messiers_type'] = $messierRepository->getMessiersByType($messier->getType());
 
         // Get Messiers objects from same constellation
-        $params['messiers_const'] = $messierRepository->getMessiersByConst(strtolower($messier->getConstId()), $messier->getId());
+//        $params['messiers_const'] = $messierRepository->getMessiersByConst(strtolower($messier->getConstId()), $messier->getId());
 
         if (is_null($params['messier'])) {
             throw new NotFoundHttpException();

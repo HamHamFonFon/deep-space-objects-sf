@@ -21,13 +21,14 @@ class Messier extends AbstractKuzzleDocumentEntity
     protected $name;
     protected $desig;
     protected $alt;
-    protected $altFr;
     protected $type;
-    protected $typeLabel;
     protected $mag;
     protected $constId;
     protected $dim;
     protected $cl;
+    protected $distAl;
+    protected $ra;
+    protected $dec;
 
     const ENTITY_TYPE = 'messier';
 
@@ -173,23 +174,6 @@ class Messier extends AbstractKuzzleDocumentEntity
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getAltFr()
-    {
-        return $this->altFr;
-    }
-
-    /**
-     * @param mixed $altFr
-     * @return Messier
-     */
-    public function setAltFr($altFr)
-    {
-        $this->altFr = $altFr;
-        return $this;
-    }
 
     /**
      * @return mixed
@@ -209,23 +193,6 @@ class Messier extends AbstractKuzzleDocumentEntity
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getTypeLabel()
-    {
-        return $this->typeLabel;
-    }
-
-    /**
-     * @param mixed $typeLabel
-     * @return Messier
-     */
-    public function setTypeLabel($typeLabel)
-    {
-        $this->typeLabel = $typeLabel;
-        return $this;
-    }
 
     /**
      * @return mixed
@@ -294,4 +261,55 @@ class Messier extends AbstractKuzzleDocumentEntity
     {
         $this->cl = $cl;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDistAl()
+    {
+        $this->distAl = $this->distAl*1000;
+        return $this->distAl;
+    }
+
+    /**
+     * @param mixed $distAl
+     */
+    public function setDistAl($distAl)
+    {
+        $this->distAl = $distAl;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRa()
+    {
+        return $this->ra;
+    }
+
+    /**
+     * @param mixed $ra
+     */
+    public function setRa($ra)
+    {
+        $this->ra = $ra;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDec()
+    {
+        return $this->dec;
+    }
+
+    /**
+     * @param mixed $dec
+     */
+    public function setDec($dec)
+    {
+        $this->dec = $dec;
+    }
+
+
 }
