@@ -15,7 +15,8 @@ magnitude: Apparent magnitude
 const: Constellation
 dim: Size
 dimExp: Angular dimensions in arcminutes
-dist: Distance
+distAl: Distance (year-light)
+distPc: Distance (parsec)
 imagesGall: Images gallery
 constImgGall: In the same constellation
 mag: Magnitude
@@ -54,3 +55,35 @@ tau: Taurus
 uma: Ursa Major
 vir: Virgo
 # Messier name (no translation for english):
+m1.label: Crab Nebula
+m4.label: Cat's eye
+m6.label: Butterfly Cluster
+m7.label: Ptolemy´s Cluster
+m8.label: Nébuleuse de la lagune
+m11.label: Wild Duck Cluster
+m13.label: Great Hercules Cluster
+m15.label: Nuage de Pégase # m15
+m16.label: Eagle Nebula
+m17.label: Omega Nebula
+m18.label: Black swan
+m20.label: Trifid Nebula
+m22.label: Saggitarius cluster # m22
+m27.label: Dumbbell Nebula
+m31.label: Andromeda
+m33.label: Galaxie du Triangle # m33
+m42.label: Orion Nebula #m42
+m43.label: Mairan nebula
+m44.label: Praesepe
+m45.label: Pleiades
+m51.label: Whirlpool
+m57.label: Ring nebula # m57
+m63.label: Sunflower Galaxy
+m64.label: Blackeye Galaxy
+m76.label: Little Dumbbell Nebula
+m81.label: Bode´s Galaxy
+m82.label: Cigar Galaxy
+m83.label: Southern Pinwheel
+m97.label: Owl Nebula
+m101.label: Pinwheel
+m102.label: Spindle
+m104..label: Sombrero

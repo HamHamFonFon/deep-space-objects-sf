@@ -15,7 +15,8 @@ magnitude: Magnitude apparente
 const: Constellation
 dim: Dimension
 dimExp: Dimension angulaire en minutes d'arcs
-dist: Distance
+distAl: Distance (années-lumière)
+distPc: Distance (parsec)
 imagesGall: Gallerie d'images
 constImgGall: Dans la même constellation
 mag: Magnitude
@@ -54,33 +55,35 @@ tau: Taureau
 uma: Grande Ourse
 vir: Vièrge
 # Messier name (from english traduction):
-Crab Nebula: Nébuleuse du crabe #m1
-Butterfly Cluster: Amas du papillion #m6
-Ptolemy´s Cluster: Amas de Ptolémée # m7
-Lagoon Nebula: Nébuleuse de la lagune # m8
-Wild Duck Cluster: Amas du canard sauvage # m11
-Great Hercules Cluster: Grand amas d'Hercule # m13
-Nuage de Pégase: Nuage de Pégase # m15
-Eagle Nebula: Nébuleuse de l'aigle # m16
-Omega Nebula: Nébuleuse Oméga # m17
-Trifid Nebula : Nébuleuse Trifide # m20
-Saggitarius cluster: Amas du sagittaire # m22
-Dumbbell Nebula: Nébuleuse de l'haltère # m27
-Andromeda: Galaxie d'Andromède # m31
-Triangulum: Galaxie du Triangle # m33
-Orion Nebula: Nébuleuse d'Orion #m42
-Mairan nebula: Nébuleuse de Mairan # m43
-Praesepe: Amas de la crèche # m44
-Pleiades: Amas des Pleiades # m45
-Whirlpool: Galaxie du Tourbillon # m51
-Ring Nebula: Nébuleuse de l'anneau # m57
-Sunflower Galaxy: Galaxie du tournesol # m63
-Blackeye Galaxy: Galaxie de l'oeil noir #m64
-Little Dumbbell Nebula: Nébuleuse du petit haltère # m76
-Bode´s Galaxy: Galaxie de Bode # m81
-Cigar Galaxy: Galaxie du cigare # m82
-Southern Pinwheel: Moulinet du sud #m83
-Owl Nebula: Nébuleuse du hibou # m97
-Pinwheel: Galaxie du moulinet # m101
-Spindle: Galaxie du fuseau #m102
-Sombrero: Galaxie du sombrero #m104
+m1.label: Nébuleuse du crabe #m1
+m4.label: Oeil du chat
+m6.label: Amas du papillon #m6
+m7.label: Amas de Ptolémée # m7
+m8.label: Nébuleuse de la lagune # m8
+m11.label: Amas du canard sauvage # m11
+m13.label: Grand amas d'Hercule # m13
+m15.label: Nuage de Pégase # m15
+m16.label: Nébuleuse de l'aigle # m16
+m17.label: Nébuleuse Oméga # m17
+m18.label: Le cygne noir
+m20.label: Nébuleuse Trifide
+m22.label: Amas du sagittaire
+m27.label: Nébuleuse de l'haltère # m27
+m31.label: Galaxie d'Andromède # m31
+m33.label: Galaxie du Triangle # m33
+m42.label: Nébuleuse d'Orion #m42
+m43.label: Nébuleuse de Mairan # m43
+m44.label: Amas de la crèche # m44
+m45.label: Amas des Pleiades # m45
+m51.label: Galaxie du Tourbillon # m51
+m57.label: Nébuleuse de l'anneau # m57
+m63.label: Galaxie du tournesol # m63
+m64.label: Galaxie de l'oeil noir #m64
+m76.label: Nébuleuse du petit haltère # m76
+m81.label: Galaxie de Bode # m81
+m82.label: Galaxie du cigare # m82
+m83.label: Moulinet du sud #m83
+m97.label: Nébuleuse du hibou # m97
+m101.label: Galaxie du moulinet # m101
+m102.label: Galaxie du fuseau #m102
+m104.label: Galaxie du sombrero #m104
