@@ -57,3 +57,9 @@ services:
   app.helper.urlgenerator:
     class: AppBundle\Helper\GenerateUrlHelper
     arguments: ['@router']
+
+  # Twig
+#  app.twig.twig_extension:
+#    class: AppBundle\Twig\TwigExtension
+#    tags:
+#      - { name: twig.extension }

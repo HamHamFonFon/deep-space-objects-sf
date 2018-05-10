@@ -27,15 +27,14 @@
           <li class="list-group-item">{{ 'magnitude'|trans }} : {{ messier.mag }}</li>
           <li class="list-group-item">{{ 'const'|trans }} : {{ messier.constId|lower|trans }}</li>
           <li class="list-group-item">{{ 'dim'|trans }} <sub>(1)</sub> : {{ messier.dim }}</li>
-          <li class="list-group-item">{{ 'dist'|trans }} <sub>(2)</sub> : </li>
+          <li class="list-group-item">{{ 'distAl'|trans }} : {{ messier.distAl|number_format }}</li>
+          <li class="list-group-item">{{ 'distPc'|trans }} : {{ messier.distAl|convert_al_pc|number_format }}</li>
         </ul>
 
         <p>
           1: {{ 'dimExp'|trans }}
         </p>
-        <p>
-          2: {{ 'destExp'|trans }}
-        </p>
+
 
         <a class="btn btn-primary btn-lg" href="#">Call to Action!</a>
       </div>
