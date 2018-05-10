@@ -1,7 +1,11 @@
+<var id="result-container" class="result-container"></var>
+
 {{ form_start(form) }}
-  <div class="form-row">
-    <div class="col-12 col-md-12 mb-2 mb-md-0">
-      {{ form_widget(form.terms, {'attr': {'data-provide': 'typehead'}}) }}
+  <div class="typeahead__container">
+    <div class="typeahead__field">
+      <span class="typeahead__query">
+        {{ form_widget(form.terms, {'attr': {'data-provide': 'typehead'}}) }}
+      </span>
     </div>
   </div>
 {{ form_end(form) }}

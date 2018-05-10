@@ -1,0 +1,21 @@
+{
+  "name": "deep-space-objects-sf",
+  "version": "1.0.0",
+  "main": "index.json",
+  "scripts": {
+    "build": "./node_modules/.bin/encore dev"
+  },
+  "author": "Stephane MEAUDRE",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:HamHamFonFon/deep-space-objects-sf.git"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.19.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-typeahead": "^2.10.4",
+    "webpack-notifier": "^1.6.0"
+  }
+}
