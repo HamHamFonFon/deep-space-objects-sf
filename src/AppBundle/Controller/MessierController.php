@@ -35,7 +35,7 @@ class MessierController extends Controller
         $params['messier'] = $messier = $messierRepository->getMessier($objectId);
 
         // Get Messiers objects from same type
-        $params['messiers_type'] = $messierRepository->getMessiersByType($messier->getType(), 3, 1);
+        $params['messiers_type'] = $messierRepository->getMessiersByType($messier->getType(), $messier->getId(), 3, 1);
 
         // Get Messiers objects from same constellation
         $params['messiers_const'] = $messierRepository->getMessiersByConst(strtolower($messier->getConstId()), $messier->getId(), 3, 1);
@@ -71,7 +71,7 @@ class MessierController extends Controller
      */
     public function listAction(Request $request)
     {
-        $params = [];
+        $params = $data = [];
 
         $from = 0;
         $size = 12;
@@ -82,10 +82,14 @@ class MessierController extends Controller
             $page = $request->query->get('page');
             $from = ($page-1)*$size;
         }
-    dump($request->query);
+
+        if ($request->query->has('order')) {
+            $sort = $request->query->get('order');
+        }
+
         $optionsForm = [
             'method' => 'GET',
-            'selectedOrder' => ''
+            'selectedOrder' => $sort
         ];
         $formOrder = $this->createForm(ListOrderFormType::class, null, $optionsForm);
         $formOrder->handleRequest($request);
@@ -104,7 +108,9 @@ class MessierController extends Controller
         $params['pagination'] = [
             'first_page' => $firstPage,
             'last_page' => $lastPage,
-            'current_page' => $page
+            'current_page' => $page,
+            'route' => 'messier_list',
+            'paramsRoute' => $data
         ];
 
         $params['form'] = $formOrder->createView();

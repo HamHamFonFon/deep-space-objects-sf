@@ -18,8 +18,8 @@
       <!-- /.col-lg-8 -->
       <div class="col-lg-4">
         <h1>{{ messier.name }}</h1>
-        {% set transKey = messier.id ~ 'label' %}
-        {% set subtitle = [messier.desig, messier.alt|trans|default(transKey|trans)]|join(' - ') %}
+        {% set transKey = messier.id ~ '.label' %}
+        {% set subtitle = [messier.desig, transKey|trans|default(messier.alt)]|join(' - ') %}
         <h2>{{ subtitle }}</h2>
 
         <ul class="list-group">

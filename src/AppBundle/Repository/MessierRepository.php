@@ -96,7 +96,7 @@ class MessierRepository extends AbstractKuzzleRepository
      * @param $limitImages
      * @return array
      */
-    public function getMessiersByType($type, $limit = 10, $limitImages = 1)
+    public function getMessiersByType($type, $excludedMessier, $limit = 10, $limitImages = 1)
     {
         $listMessiers = [];
         $results = $this->findBy('term', ['properties.type' => $type], [], [], 0 ,$limit);
@@ -105,6 +105,9 @@ class MessierRepository extends AbstractKuzzleRepository
                 $listMessiers[] = $this->buildEntityByDocument($document, $limitImages);
             }
         }
+        $listMessiers = array_filter($listMessiers, function (Messier $messier) use ($excludedMessier) {
+            return $messier->getId() !== $excludedMessier;
+        });
 
         return $listMessiers;
     }

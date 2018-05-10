@@ -123,8 +123,6 @@ class KuzzleHelper
 
         // Add sort
         if (isset($qSort) && 0 < count($qSort)) {
-
-            dump($qSort);
             foreach ($qSort as $field=>$type) {
                 $fieldSort[$field] = [];
                 if (in_array($type, self::LIST_ORDER)) {

@@ -4,6 +4,7 @@ menu.homepage: Accueil
 selectLang: Langues
 astrobin.message: This product uses the AstroBin API but is not endorsed or certified by AstroBin.
 error.message: Erreur %error%, peut-être êtes-vous tombé dans un trou noir :) ?
+more: Plus d'informations
 # Homepage
 homepage.message: Découvrez les beautés et les mystères de l'univers
 home.search.placeholder: Rechercher dans le catalogue...
@@ -24,7 +25,8 @@ mag: Magnitude
 ra: Ascension droite
 dec: Déclinaison
 # Vue list
-
+whatIsListMessier: Les objets de Messier sont une liste d'objets astronomiques catalogués par l'astronome français Charles Messier dans son Catalogue des Nébuleuses et des Amas d'Étoiles, publiée en 1771.
+filteringListMessier: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
 messier.list: Liste des objects de Messier
 messierOrderAsc: Ordre ascendant
 messierOrderDesc: Ordre descendant
@@ -52,18 +54,38 @@ sc: Amas stellaires
 # Constellations
 and: Andromède
 aqr: Verseau
+aur: Le Cocher
+cap: Le Capricorne
+cas: Cassiopée
+cet: La Baleine
+cma: Le Grand Chien
 com: Chevelure de Bérénice
+cnc: Cancer
 cvn: Chiens de chasse
+cyg: Cygne
 dra: Dragon
-leo: Le lyon
+gem: Les Gemeaux
+her: Hercule
+hya: L'Hydre
+leo: Le Lion
+lep: Le Lièvre
 lyr: Lyre
+mon: La Licorne
+per: Persée
+psc: Les Poissons
+pup: Petit Chien
 oph: Ophiuchus
 ori: Orion
+ser: Le Serpent
 sco: Scorpion
+sct: Écu de Sobieski
+sge: La Flèche
 sgr: Sagittaire
 tau: Taureau
+tri: Le Triangle
 uma: Grande Ourse
 vir: Vièrge
+vul: Le Petit Renard
 # Messier name (from english traduction):
 m1.label: Nébuleuse du crabe #m1
 m4.label: Oeil du chat
