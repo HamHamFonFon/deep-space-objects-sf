@@ -1,46 +1,56 @@
 {
-  "geometry": {
-    "coordinates": "float",
-    "type": "point"
-  },
-  "messier_id": "text",
-  "messier_order": "long",
   "properties": {
-    "alt": {
+    "messier_id": {
+      "type": "text"
+    },
+    "messier_order": {
+      "type": "text"
+    },
+    "geometry": {
+      "type": "geo_shape"
+    },
+    "properties": {
       "properties": {
-        "alt" :{
-          "type": "string",
-          "fields": {
-            "en": {
-              "type": "string",
-              "analyser": "english"
-            },
-            "fr": {
-              "type": "string",
-              "analyser": "french"
-            },
-            "es": {
-              "type": "string",
-              "analyser": "spanish"
-            },
-            "de": {
-              "type": "string",
-              "analyser": "german"
+        "name": {
+          "type": "text"
+        },
+        "desig": {
+          "type": "text"
+        },
+        "alt": {
+          "properties": {
+            "alt" :{
+              "type": "text",
+              "fields": {
+                "en": {
+                  "type": "text",
+                  "analyzer": "english"
+                },
+                "fr": {
+                  "type": "text",
+                  "analyzer": "french"
+                },
+                "es": {
+                  "type": "text",
+                  "analyzer": "spanish"
+                },
+                "de": {
+                  "type": "text",
+                  "analyzer": "german"
+                }
+              }
             }
           }
-        }
+        },
+        "type": {},
+        "mag": {},
+        "const_id": {},
+        "dim": {},
+        "cl": {},
+        "dist_al": {},
+        "ra": {},
+        "dec": {}
       }
-    },
-    "cl": "text",
-    "const_id": "text",
-    "dec": "text",
-    "desig": "text",
-    "dim": "text",
-    "dist_al": "long",
-    "mag": "float",
-    "name": "text",
-    "ra": "text",
-    "type": "text"
-  },
-  "type": "text"
+    }
+  }
 }
