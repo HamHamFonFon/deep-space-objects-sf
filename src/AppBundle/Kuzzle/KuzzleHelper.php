@@ -48,12 +48,21 @@ class KuzzleHelper
 
     /**
      * Build a Elastic Search query
+     * @param string $typeSearch
+     * @param $typeQuery
+     * @param array $query
      * @param array $filters
      * @param array $qSort
-     * @return array $finalQuery
+     * @param array $aggregates
+     * @param int $from
+     * @param int $size
+     * @return array|null
      */
-    public function buildQuery($typeQuery, $query = [], $filters = [], $qSort = [], $aggregates = [], $from = 0, $size = 20)
+    public function buildQuery($typeSearch = 'must', $typeQuery, $query = [], $filters = [], $qSort = [], $aggregates = [], $from = 0, $size = 20)
     {
+        if (!in_array($typeSearch, ['must', 'should', 'should_not'])) {
+            return null;
+        }
         if (!in_array($typeQuery, ['term', 'match', 'match_all'])) {
             return null;
         }
@@ -89,7 +98,7 @@ class KuzzleHelper
                 if (0 < count($queryClauses)) {
                     $queryClauses = [
                         'bool' => [
-                            'must' => $queryClauses
+                            $typeSearch => $queryClauses
                         ]
                     ];
                     $finalQuery['query'] = $queryClauses;
@@ -99,26 +108,32 @@ class KuzzleHelper
 
         // Filters
         if (isset($filters) && 0 < count($filters)) {
-            foreach ($filters as $field=>$value) {
-                $term = is_array($filters) ? 'terms' : 'term';
-                $filterClauses[] = [
-                    $term => [
-                        $field => $value
-                    ]
-                ];
-            }
-
-            if (0 < count($filterClauses)) {
-                $filterClauses = [
-                    'bool' => [
-                        'must' => $filterClauses
-                    ]
-                ];
-
-                $finalQuery = [
-                    'filter' => $filterClauses
-                ];
-            }
+//            foreach ($filters as $field=>$value) {
+//                $term = is_array($filters) ? 'terms' : 'term';
+//                $filterClauses[] = [
+//                    $term => [
+//                        $field => $value
+//                    ]
+//                ];
+//            }
+//
+//            if (0 < count($filterClauses)) {
+//                $filterClauses = [
+//                    'bool' => [
+//                        'must' => $filterClauses
+//                    ]
+//                ];
+//
+//                $finalQuery = [
+//                    'filter' => $filterClauses
+//                ];
+//            }
+            $filtersQuery = [];
+            $finalQuery['query'] = [
+                'bool' => [
+                    'filter' => $filtersQuery
+                ]
+            ];
         }
 
         // Add sort

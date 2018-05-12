@@ -76,7 +76,7 @@ abstract class AbstractKuzzleRepository
 
         /** @var SearchResult $searchResult */
         $searchResult = $kuzzleCollection->search(
-            $this->kuzzleHelper->buildQuery($typeQuery, $query, $filters, $qSort, $aggregates, $from, $size)
+            $this->kuzzleHelper->buildQuery('must', $typeQuery, $query, $filters, $qSort, $aggregates, $from, $size)
         );
 
         return $searchResult;

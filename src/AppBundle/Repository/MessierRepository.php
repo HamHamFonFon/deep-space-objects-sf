@@ -159,10 +159,11 @@ class MessierRepository extends AbstractKuzzleRepository
         return $messier;
     }
 
+
     /**
      * @return string
      */
-    protected function getKuzzleEntity()
+    public function getKuzzleEntity()
     {
         return '\AppBundle\Entity\Messier';
     }

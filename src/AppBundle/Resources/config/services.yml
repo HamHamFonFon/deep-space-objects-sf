@@ -40,6 +40,11 @@ services:
     parent: astrobin.webservice
 
   # Repositories
+  app.repository.search:
+    class: AppBundle\Repository\SearchRepository
+    arguments:
+        - "@app.helper.kuzzle"
+        - "@translator.default"
   app.repository.abstractobject:
     class: AppBundle\Repository\AbstractKuzzleRepository
     abstract: true

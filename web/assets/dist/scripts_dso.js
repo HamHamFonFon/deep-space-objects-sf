@@ -10649,16 +10649,17 @@ DSO.Search = function ($, ns, r) {
       input: ns.INPUT_SEARCH,
       minLength: 2,
       dynamic: true,
+      filter: false,
+      dynamicFilter: null,
       maxItem: 20,
       maxItemPerGroup: 5,
       hint: true,
       group: {
         template: "{{group}}"
       },
-      debug: true,
-      template: "{{value}} <small style='color:#999;'>{{id}}</small>",
+      template: "{{value}} <small style='color:#999;'>{{info}}</small>",
       emptyTemplate: "No results for {{query}}",
-      display: ["id", "value"],
+      display: ["*"],
       source: {
         messiers: {
           ajax: {
