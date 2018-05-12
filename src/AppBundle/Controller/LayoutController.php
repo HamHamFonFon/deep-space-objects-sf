@@ -18,20 +18,15 @@ class LayoutController extends Controller
 
     /**
      * Set language to locale
-     * @Route("/setlocale/{language}", name="setlocale")
+     * @Route("/_switchlang/{language}", options={"expose"=true}, name="switchlang")
      *
+     * @source http://www.benjaminschied.fr/changer-la-langue-dans-symfony-2/ adapted to Symfony 3.4
      * @param Request $request
      * @param $language
      * @return RedirectResponse
      */
     public function switchLanguageAction(Request $request, $language)
     {
-
-        /**
-         * Source :
-         * http://www.benjaminschied.fr/changer-la-langue-dans-symfony-2/ adapted to Symfony 3.4
-         */
-
         if (!is_null($language)) {
             $this->get('session')->set('_locale', $language);
         }

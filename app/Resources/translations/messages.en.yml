@@ -5,6 +5,9 @@ selectLang: Languages
 astrobin.message: This product uses the AstroBin API but is not endorsed or certified by AstroBin.
 error.message: Error %error%, maybe you fall in a black hole :) ?
 more: More informations
+# Lang:
+fr: French
+en: English (UK)
 # Homepage
 homepage.message: Discover beauties and mysteries of the universe
 home.search.placeholder: Research in the catalog...

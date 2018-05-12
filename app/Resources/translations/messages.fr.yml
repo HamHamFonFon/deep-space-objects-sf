@@ -5,6 +5,9 @@ selectLang: Langues
 astrobin.message: This product uses the AstroBin API but is not endorsed or certified by AstroBin.
 error.message: Erreur %error%, peut-être êtes-vous tombé dans un trou noir :) ?
 more: Plus d'informations
+# Lang:
+fr: Français
+en: Anglais (UK)
 # Homepage
 homepage.message: Découvrez les beautés et les mystères de l'univers
 home.search.placeholder: Rechercher dans le catalogue...

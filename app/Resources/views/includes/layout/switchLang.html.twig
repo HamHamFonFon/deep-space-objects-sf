@@ -1,10 +1,16 @@
+{#http://usrz.github.io/bootstrap-languages/#}
+{% set listLang = ['en', 'fr'] %}
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    {{ 'selectLang'|trans }}
+    {{ 'selectLang'|trans }} <span class="caret"></span>
   </button>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <a href="{{ path('setlocale', {'language': 'fr'}) }}" class="dropdown-item">FR</a>
-    <a href="{{ path('setlocale', {'language': 'en'}) }}" class="dropdown-item">EN</a>
-  </div>
+  <ul class="dropdown-menu selectLang" aria-labelledby="navbarDropdown">
+    {% for lang in listLang %}
+      <li>
+        {#<a href="{{ path('switchlang', {'language': lang }) }}" class="dropdown-item lang-sm lang-lbl-full" lang="{{ lang }}">{{ lang|trans }}</a>#}
+        <a href="#" class="dropdown-item lang-sm lang-lbl-full" lang="{{ lang }}">{{ lang|trans }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
 

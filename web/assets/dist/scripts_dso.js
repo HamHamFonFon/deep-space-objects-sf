@@ -10475,19 +10475,107 @@ return jQuery;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scripts_routing_js__ = __webpack_require__(/*! ./scripts/routing.js */ "./src/AppBundle/Resources/public/js/scripts/routing.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scripts_routing_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scripts_routing_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_init_js__ = __webpack_require__(/*! ./scripts/init.js */ "./src/AppBundle/Resources/public/js/scripts/init.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_init_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__scripts_init_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_search_autocomplete_js__ = __webpack_require__(/*! ./scripts/search_autocomplete.js */ "./src/AppBundle/Resources/public/js/scripts/search_autocomplete.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_search_autocomplete_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__scripts_search_autocomplete_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scripts_init_js__ = __webpack_require__(/*! ./scripts/init.js */ "./src/AppBundle/Resources/public/js/scripts/init.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scripts_init_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scripts_init_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_search_autocomplete_js__ = __webpack_require__(/*! ./scripts/search_autocomplete.js */ "./src/AppBundle/Resources/public/js/scripts/search_autocomplete.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_search_autocomplete_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__scripts_search_autocomplete_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_switchLang_js__ = __webpack_require__(/*! ./scripts/switchLang.js */ "./src/AppBundle/Resources/public/js/scripts/switchLang.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_switchLang_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__scripts_switchLang_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js__ = __webpack_require__(/*! ./scripts/cookieLang.js */ "./src/AppBundle/Resources/public/js/scripts/cookieLang.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js__);
 // ==================================================
 // Import JS libraries files and project files here
 // ==================================================
 
+// import "./scripts/routing.js"
 
 
 
+
+
+/***/ }),
+
+/***/ "./src/AppBundle/Resources/public/js/scripts/cookieLang.js":
+/*!*****************************************************************!*\
+  !*** ./src/AppBundle/Resources/public/js/scripts/cookieLang.js ***!
+  \*****************************************************************/
+/*! dynamic exports provided */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(jQuery) {window.DSO = window.DSO || {};
+/**
+ * Set a cookie after swithing lang
+ */
+DSO.cookieLang = function ($, ns, r) {
+
+  ns.listLanguages = ['en', 'fr'];
+
+  ns.maxDays = 3;
+
+  ns.currentLang = $('main').data('lang');
+
+  ns.init = function () {
+    var selectedLang = ns.checkCookie();
+    if (-1 !== ns.listLanguages.indexOf(selectedLang) && selectedLang !== ns.currentLang) {
+      var routeSwitch = r.generate('switchlang', { 'language': selectedLang });
+      window.location.assign(routeSwitch);
+    }
+  };
+
+  /**
+   *
+   * @param langSelected
+   * @param exdays
+   * @returns {*}
+   */
+  ns.setCookie = function (langSelected, exdays) {
+
+    if (undefined === exdays || ns.maxDays < exdays) {
+      exdays = ns.maxDays;
+    }
+
+    var d = new Date();
+    d.setTime(d.getTime() + exdays * 24 / 60 * 80 * 1000);
+    var expires = "expires=" + d.toUTCString();
+
+    if (-1 !== ns.listLanguages.indexOf(langSelected)) {
+      document.cookie = "dso_lang=" + langSelected + ";" + expires + ";path=/";
+    }
+
+    return langSelected;
+  };
+
+  /**
+   *
+   * @returns {string}
+   */
+  ns.getCookie = function () {
+    var name = "dso_lang=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  };
+
+  ns.checkCookie = function () {
+    var lang = ns.getCookie();
+    if (undefined === lang) {
+      // set default cookie
+      lang = ns.setCookie('en', ns.maxDays);
+    }
+    return lang;
+  };
+
+  return ns;
+}(jQuery, {}, Routing);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -10508,21 +10596,6 @@ $(function () {
   }
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
-/***/ "./src/AppBundle/Resources/public/js/scripts/routing.js":
-/*!**************************************************************!*\
-  !*** ./src/AppBundle/Resources/public/js/scripts/routing.js ***!
-  \**************************************************************/
-/*! dynamic exports provided */
-/***/ (function(module, exports) {
-
-// const routes = require('./web/js/fos_js_routes.json');
-// // import Routing from '/vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.min.js';
-// import Routing from './web/bundles/fosjsrouting/js/router.min.js';
-//
-// Routing.setRoutingData(routes);
 
 /***/ }),
 
@@ -10575,8 +10648,48 @@ DSO.Search = function ($, ns, r) {
           console.log(event);
 
           console.log('onClick function triggered');
-          window.location.href = item.url;
+          window.location.href = r.generate('messier_full', { objectId: item.id });
         }
+      }
+    });
+  };
+
+  return ns;
+}(jQuery, {}, Routing);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/AppBundle/Resources/public/js/scripts/switchLang.js":
+/*!*****************************************************************!*\
+  !*** ./src/AppBundle/Resources/public/js/scripts/switchLang.js ***!
+  \*****************************************************************/
+/*! dynamic exports provided */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(jQuery) {window.DSO = window.DSO || {};
+
+DSO.switchLang = function ($, ns, r) {
+
+  ns.linkLang = 'li > a.lang-lbl-full';
+
+  ns.init = function () {
+    if (0 < $(ns.linkLang).length) {
+      ns.switchLang();
+    }
+  };
+
+  ns.switchLang = function () {
+    $(ns.linkLang).on('click', function () {
+
+      var $this = $(this);
+      var selectedLang = $this.attr('lang');
+      var currentLang = $('main').data('lang');
+
+      if (currentLang !== selectedLang && selectedLang !== undefined) {
+        DSO.cookieLang.setCookie(selectedLang, 3);
+        var routeSwitch = r.generate('switchlang', { 'language': selectedLang });
+        window.location.assign(routeSwitch);
       }
     });
   };
