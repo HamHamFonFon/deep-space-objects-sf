@@ -36,8 +36,9 @@
               filter='cssrewrite'
             %}
               <link rel="stylesheet" href="{{ asset_url }}" />
-              {#<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" />#}
             {% endstylesheets %}
+            <link rel="stylesheet" href="{{ asset('assets/dist/scripts_dso.css') }}">
+            {#<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" />#}
           {% endblock %}
       </head>
       <body>

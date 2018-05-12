@@ -1,0 +1,32 @@
+.home_search .typeahead__list {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.typeahead__list li a {
+    position: relative;
+}
+
+.result-container {
+    position: absolute;
+    color: #777;
+    top: -1.5em;
+}
+
+.typeahead-search li a .flag-chart {
+    position: absolute;
+    right: 16px;
+    top: 10px;
+}
+
+.typeahead__field input {
+    padding: 8px 12px;
+    font-size: 24px;
+    line-height: 30px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    outline: none;
+}

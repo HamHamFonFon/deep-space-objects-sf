@@ -65,6 +65,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/jquery-typeahead/dist/jquery.typeahead.min.css":
+/*!*********************************************************************!*\
+  !*** ./node_modules/jquery-typeahead/dist/jquery.typeahead.min.css ***!
+  \*********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./node_modules/jquery-typeahead/dist/jquery.typeahead.min.js":
 /*!********************************************************************!*\
   !*** ./node_modules/jquery-typeahead/dist/jquery.typeahead.min.js ***!
@@ -10486,6 +10498,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // ==================================================
 // Import JS libraries files and project files here
 // ==================================================
+__webpack_require__(/*! ./../.././../../../node_modules/jquery-typeahead/dist/jquery.typeahead.min.css */ "./node_modules/jquery-typeahead/dist/jquery.typeahead.min.css");
+__webpack_require__(/*! ../styles/typehead.css */ "./src/AppBundle/Resources/public/styles/typehead.css");
 
 // import "./scripts/routing.js"
 
@@ -10613,41 +10627,64 @@ $(function () {
  */
 var typeahead = __webpack_require__(/*! jquery-typeahead */ "./node_modules/jquery-typeahead/dist/jquery.typeahead.min.js");
 
+/**
+ *
+ */
 DSO.Search = function ($, ns, r) {
 
   ns.INPUT_SEARCH = '.typeahead';
 
   ns.init = function () {
-    ns.launchAutoComplete();
+    if (0 < $(ns.INPUT_SEARCH).length) {
+      ns.launchAutoComplete();
+    }
   };
 
+  /**
+   *
+   */
   ns.launchAutoComplete = function () {
 
-    var searchTerm = 'test';
     $.typeahead({
       input: ns.INPUT_SEARCH,
-      minLength: 3,
+      minLength: 2,
+      dynamic: true,
       maxItem: 20,
-      template: "{{display}} <small style='color:#999;'>{{group}}</small>",
+      maxItemPerGroup: 5,
+      hint: true,
+      group: {
+        template: "{{group}}"
+      },
+      debug: true,
+      template: "{{value}} <small style='color:#999;'>{{id}}</small>",
+      emptyTemplate: "No results for {{query}}",
+      display: ["id", "value"],
       source: {
-        dso: {
+        messiers: {
           ajax: {
+            type: "POST",
             url: r.generate('search_autocomplete'),
-            data: { search: '{{query}}' }
+            path: "data.astronomy.messiers",
+            data: {
+              search: '{{query}}'
+            }
+          }
+        },
+        constellations: {
+          ajax: {
+            type: "POST",
+            url: r.generate('search_autocomplete'),
+            path: "data.astronomy.constellations",
+            data: {
+              search: '{{query}}'
+            }
           }
         }
       },
       callback: {
-        onInit: function onInit(node) {
-          console.log('Typeahead Initiated on ' + node.selector);
-        },
+        onInit: function onInit(node) {},
+        onResult: function onResult(node, query, result, resultCount, resultCountPerGroup) {},
         onClick: function onClick(node, a, item, event) {
-          console.log(node);
-          console.log(a);
-          console.log(item);
-          console.log(event);
-
-          console.log('onClick function triggered');
           window.location.href = r.generate('messier_full', { objectId: item.id });
         }
       }
@@ -10697,6 +10734,18 @@ DSO.switchLang = function ($, ns, r) {
   return ns;
 }(jQuery, {}, Routing);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/AppBundle/Resources/public/styles/typehead.css":
+/*!************************************************************!*\
+  !*** ./src/AppBundle/Resources/public/styles/typehead.css ***!
+  \************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 

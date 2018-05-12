@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.json",
   "scripts": {
+    "watch": "./node_modules/.bin/encore dev && ./node_modules/.bin/encore dev --watch",
     "build": "./node_modules/.bin/encore dev"
   },
   "author": "Stephane MEAUDRE",
