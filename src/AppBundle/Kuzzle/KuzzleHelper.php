@@ -63,7 +63,7 @@ class KuzzleHelper
         if (!in_array($typeSearch, ['must', 'should', 'should_not'])) {
             return null;
         }
-        if (!in_array($typeQuery, ['term', 'match', 'match_all'])) {
+        if (!in_array($typeQuery, ['term', 'match', 'match_all', 'prefix'])) {
             return null;
         }
 

@@ -32,7 +32,8 @@ class SearchRepository
             'properties.name',
             'properties.desig',
             'properties.alt',
-            'properties.const_id'
+            'properties.const_id',
+            'properties.type'
         ]
     ];
 
@@ -63,7 +64,7 @@ class SearchRepository
             $kuzzleCollection = $this->kuzzleService->collection($collection);
 
             $typeSearch = 'should';
-            $typeQuery = 'match';
+            $typeQuery = 'prefix';
             $query = $this->buildQuery($searchTerms, self::$listFields[$collection]);
             $searchResult = $kuzzleCollection->search(
                 $this->kuzzleHelper->buildQuery($typeSearch, $typeQuery, $query, [], [], [], self::SEARCH_FROM, self::SEARCH_SIZE)
@@ -73,9 +74,10 @@ class SearchRepository
                 foreach ($searchResult->getDocuments() as $document) {
                     $documentContent = $document->getContent();
                     $label = (!empty($documentContent['properties']['alt'])) ? $this->translator->trans($document->getId().'.label') : $documentContent['properties']['alt'];
+
                     $result[] = [
                         'id' => $document->getId(),
-                        'value' => (!empty($label)) ? implode(' - ', [$label,  strtoupper($document->getId())]) : $document->getId(),
+                        'value' => (!empty($label)) ? implode(' - ', [$label,  strtoupper($document->getId())]) : strtoupper($document->getId()),
                         'info' => $documentContent['properties']['desig']
                     ];
                 }

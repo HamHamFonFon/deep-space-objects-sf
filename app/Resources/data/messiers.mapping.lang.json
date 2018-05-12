@@ -1,0 +1,46 @@
+{
+  "geometry": {
+    "coordinates": "float",
+    "type": "point"
+  },
+  "messier_id": "text",
+  "messier_order": "long",
+  "properties": {
+    "alt": {
+      "properties": {
+        "alt" :{
+          "type": "string",
+          "fields": {
+            "en": {
+              "type": "string",
+              "analyser": "english"
+            },
+            "fr": {
+              "type": "string",
+              "analyser": "french"
+            },
+            "es": {
+              "type": "string",
+              "analyser": "spanish"
+            },
+            "de": {
+              "type": "string",
+              "analyser": "german"
+            }
+          }
+        }
+      }
+    },
+    "cl": "text",
+    "const_id": "text",
+    "dec": "text",
+    "desig": "text",
+    "dim": "text",
+    "dist_al": "long",
+    "mag": "float",
+    "name": "text",
+    "ra": "text",
+    "type": "text"
+  },
+  "type": "text"
+}

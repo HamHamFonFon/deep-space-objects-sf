@@ -28,7 +28,7 @@ class SearchController extends Controller
      */
     public function searchAction(Request $request)
     {
-        $searchTerms = 'm42';
+        $searchTerms = '';
         /** @var SearchRepository $searchRepository */
         $searchRepository = $this->container->get('app.repository.search');
         if ($request->request->has('search')) {
@@ -38,7 +38,6 @@ class SearchController extends Controller
         $collectionMessier = MessierRepository::COLLECTION_NAME;
 
         $result[$collectionMessier] = $searchRepository->buildSearch($searchTerms, $collectionMessier);
-
         $data = [
             "status" => true,
             "error" => null,
