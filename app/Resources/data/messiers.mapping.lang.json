@@ -4,12 +4,12 @@
       "type": "text"
     },
     "messier_order": {
-      "type": "text"
+      "type": "integer"
     },
     "geometry": {
       "type": "geo_shape"
     },
-    "properties": {
+    "data": {
       "properties": {
         "name": {
           "type": "text"
@@ -37,19 +37,43 @@
                 "de": {
                   "type": "text",
                   "analyzer": "german"
+                },
+                "pt": {
+                  "type": "text",
+                  "analyzer": "portuguese"
+                },
+                "it": {
+                  "type": "text",
+                  "analyzer": "italian"
                 }
               }
             }
           }
         },
-        "type": {},
-        "mag": {},
-        "const_id": {},
-        "dim": {},
-        "cl": {},
-        "dist_al": {},
-        "ra": {},
-        "dec": {}
+        "type": {
+          "type": "text"
+        },
+        "mag": {
+          "type": "float"
+        },
+        "const_id": {
+          "type": "text"
+        },
+        "dim": {
+          "type": "text"
+        },
+        "cl": {
+          "type": "text"
+        },
+        "dist_al": {
+          "type": "float"
+        },
+        "ra": {
+          "type": "text"
+        },
+        "dec": {
+          "type": "text"
+        }
       }
     }
   }
