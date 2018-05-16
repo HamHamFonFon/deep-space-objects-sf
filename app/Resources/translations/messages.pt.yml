@@ -1,0 +1,131 @@
+# Layout
+dso: Objetos do céu profundo
+menu.homepage: Página incial
+selectLang: Línguas
+astrobin.message: Esse produto utilisa o API AstroBin mas não é apoiado ou certificado por AstroBin
+error.message: Erro %error%, talvez você caiu num buraco negro
+more: Mais informações
+# Lang:
+fr: Francês
+en: Inglês (UK)
+pt: Português
+pt_BR: Português (BR)
+# Homepage
+homepage.message: Descobre belezas e mistérios do universo
+home.search.placeholder: Procurar no catálogo
+dayImage: Imagem do dia
+messierList: Lista dos objetos de Messier
+# View full
+info: Informações
+magnitude: Magnitude aparente
+const: Constelação
+dim: Tamanha
+dimExp: Dimensão angular em arcominutos
+distAl: Distância (ano-luz)
+distPc: Distância (parsec)
+imagesGall: Galeria de imagens
+constImgGall: Na mesma constelação
+typeImgGall: Objetos do tipo "%type%"
+mag: Magnitude
+ra: Ascencão reta
+dec: Declinação
+# Vue list
+whatIsListMessier: Les objets de Messier sont une liste d'objets astronomiques catalogués par l'astronome français Charles Messier dans son Catalogue des Nébuleuses et des Amas d'Étoiles, publiée en 1771.
+filteringListMessier: Filtrar lista de itens por constelação, tipo e magnitude... e descobrir os mais lindos objetos celestes.
+messier.list: Lista dos objetos de Messier
+messierOrderAsc: Ordem crescente
+messierOrderDesc: Ordem decrescente
+messierMagnitudeAsc: Magnitude miníma
+messierMagnitudeDesc: Magnitude maxíma
+# Type DSO
+gg: Aglomerado de galáxias
+g: Galáxia genérica
+s: Galáxia espiral
+s0: Galáxia lenticular
+sd: Galáxia anã
+e: Galáxia elíptica
+i: Galáxia irregular
+oc: Aglomerado aberto
+gc: Aglomerado globular
+en: Nebulosa de emissão
+bn: Nebulosa brilhante genérica
+sfr: Nebulosa difusa
+rn: Nebulosa de reflexão
+pn: Nebulosa planetária
+snr: Remanescente de supernova
+dn: Nebulosa escura
+pos: Asterismo
+sc: Aglomerado estelar
+# Constellations
+and: Andrômeda
+aqr: Aquário
+aur: Auriga
+cap: Capricórnio
+cas: Cassiopeia
+cet: Baleia
+cma: Cão Maior
+com: Coma Berenice
+cnc: Câncer
+cvn: Canes Venatici
+cyg: Cygnus
+dra: Draco
+gem: Gêmeos
+her: Hércules
+hya: Hydra
+leo: Leo
+lep: Lebre
+lyr: Lyra
+mon: Unicórnio
+per: Perseu
+psc: Peixes
+pup: Cão Menor
+oph: Serpentário
+ori: Orion
+ser: Serpente
+sco: Escorpião
+sct: Scutum
+sge: Flecha
+sgr: Sagitário
+tau: Touro
+tri: Triângulo
+uma: Ursa Maior
+vir: Virgem
+vul: Raposa
+# Messier name (from english traduction):
+m1.label: Nebulosa do Caranguejo
+m4.label: Nebulosa do Olho de gato
+m6.label: Aglomerado da Borboleta
+m7.label: Aglomerado de Ptolomeu
+m8.label: Nebulosa Laguna
+m11.label: Aglomerado do Pato Selvagem
+m13.label: Grande Aglomerado Globular de Hércules
+m15.label: Aglomerado globular de Pégaso
+m16.label: Nebulosa da Águia
+m17.label: Nebulosa Ômega
+m18.label:
+m20.label: Nebulosa Trífida
+m22.label: Nuvem Estelar de Sagitário
+m27.label: Nebulosa do Haltere
+m31.label: Galáxia de Andrômeda
+m33.label: Galáxia do Triângulo
+m42.label: Nebulosa de Órion
+m43.label: Nebulosa De Mairan
+m44.label: Presépio
+m45.label: Plêiades
+m51.label: Galáxia do Rodamoinho
+m57.label:
+m63.label:
+m64.label:
+m76.label:
+m81.label:
+m82.label:
+m83.label:
+m97.label:
+m101.label:
+m102.label:
+m104.label:
+# Form
+select:
+  order:
+    label: Ordenar por
+    placeholder: Escolha sua opção

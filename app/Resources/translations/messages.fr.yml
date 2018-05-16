@@ -8,6 +8,8 @@ more: Plus d'informations
 # Lang:
 fr: Français
 en: Anglais (UK)
+pt: Portugais
+pt_br: Portugais (Brésil)
 # Homepage
 homepage.message: Découvrez les beautés et les mystères de l'univers
 home.search.placeholder: Rechercher dans le catalogue...
@@ -31,8 +33,8 @@ dec: Déclinaison
 whatIsListMessier: Les objets de Messier sont une liste d'objets astronomiques catalogués par l'astronome français Charles Messier dans son Catalogue des Nébuleuses et des Amas d'Étoiles, publiée en 1771.
 filteringListMessier: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
 messier.list: Liste des objects de Messier
-messierOrderAsc: Ordre ascendant
-messierOrderDesc: Ordre descendant
+messierOrderAsc: Tri ascendant
+messierOrderDesc: Tri descendant
 messierMagnitudeAsc: Magnitude la plus faible
 messierMagnitudeDesc: Magnitude la plus haute
 # Type DSO
@@ -90,38 +92,38 @@ uma: Grande Ourse
 vir: Vièrge
 vul: Le Petit Renard
 # Messier name (from english traduction):
-m1.label: Nébuleuse du crabe #m1
+m1.label: Nébuleuse du crabe
 m4.label: Oeil du chat
-m6.label: Amas du papillon #m6
-m7.label: Amas de Ptolémée # m7
-m8.label: Nébuleuse de la lagune # m8
-m11.label: Amas du canard sauvage # m11
-m13.label: Grand amas d'Hercule # m13
-m15.label: Nuage de Pégase # m15
-m16.label: Nébuleuse de l'aigle # m16
-m17.label: Nébuleuse Oméga # m17
+m6.label: Amas du papillon
+m7.label: Amas de Ptolémée
+m8.label: Nébuleuse de la lagune
+m11.label: Amas du canard sauvage
+m13.label: Grand amas d'Hercule
+m15.label: Nuage de Pégase
+m16.label: Nébuleuse de l'aigle
+m17.label: Nébuleuse Oméga
 m18.label: Le cygne noir
 m20.label: Nébuleuse Trifide
 m22.label: Amas du sagittaire
-m27.label: Nébuleuse de l'haltère # m27
-m31.label: Galaxie d'Andromède # m31
-m33.label: Galaxie du Triangle # m33
-m42.label: Nébuleuse d'Orion #m42
-m43.label: Nébuleuse de Mairan # m43
-m44.label: Amas de la crèche # m44
-m45.label: Amas des Pleiades # m45
-m51.label: Galaxie du Tourbillon # m51
-m57.label: Nébuleuse de l'anneau # m57
-m63.label: Galaxie du tournesol # m63
-m64.label: Galaxie de l'oeil noir #m64
-m76.label: Nébuleuse du petit haltère # m76
-m81.label: Galaxie de Bode # m81
-m82.label: Galaxie du cigare # m82
-m83.label: Moulinet du sud #m83
-m97.label: Nébuleuse du hibou # m97
-m101.label: Galaxie du moulinet # m101
-m102.label: Galaxie du fuseau #m102
-m104.label: Galaxie du sombrero #m104
+m27.label: Nébuleuse de l'haltère
+m31.label: Galaxie d'Andromède
+m33.label: Galaxie du Triangle
+m42.label: Nébuleuse d'Orion
+m43.label: Nébuleuse de Mairan
+m44.label: Amas de la crèche
+m45.label: Amas des Pleiades
+m51.label: Galaxie du Tourbillon
+m57.label: Nébuleuse de l'anneau
+m63.label: Galaxie du tournesol
+m64.label: Galaxie de l'oeil noir
+m76.label: Nébuleuse du petit haltère
+m81.label: Galaxie de Bode
+m82.label: Galaxie du cigare
+m83.label: Moulinet du sud
+m97.label: Nébuleuse du hibou
+m101.label: Galaxie du moulinet
+m102.label: Galaxie du fuseau
+m104.label: Galaxie du sombrero
 # Form
 select:
   order:

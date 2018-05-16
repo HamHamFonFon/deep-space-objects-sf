@@ -40,6 +40,7 @@ twig:
     globals:
       favicon: "favicon.ico"
       defaultTitle: "dso"
+      listLocale: "%list_locale%"
 
 # Doctrine Configuration
 doctrine:

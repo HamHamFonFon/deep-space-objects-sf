@@ -8,6 +8,8 @@ more: More informations
 # Lang:
 fr: French
 en: English (UK)
+pt: Portuguese
+pt_BR: Portuguese (Brazil)
 # Homepage
 homepage.message: Discover beauties and mysteries of the universe
 home.search.placeholder: Research in the catalog...
@@ -31,8 +33,8 @@ dec: Declination
 whatIsListMessier: The Messier objects are a set of 110 astronomical objects catalogued by the French astronomer Charles Messier in his "Catalogue des Nébuleuses et des Amas d'Étoiles" ("Catalogue of Nebulae and Star Clusters").
 filteringListMessier: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
 messier.list: List of Messier objects
-messierOrderAsc: Order ascendant
-messierOrderDesc: Order descendant
+messierOrderAsc: Sort ascendant
+messierOrderDesc: Sort descendant
 messierMagnitudeAsc: Lowest magnitude
 messierMagnitudeDesc: Highest magnitude
 # Type DSO
@@ -97,21 +99,21 @@ m7.label: Ptolemy´s Cluster
 m8.label: Nébuleuse de la lagune
 m11.label: Wild Duck Cluster
 m13.label: Great Hercules Cluster
-m15.label: Nuage de Pégase # m15
+m15.label: Nuage de Pégase
 m16.label: Eagle Nebula
 m17.label: Omega Nebula
 m18.label: Black swan
 m20.label: Trifid Nebula
-m22.label: Saggitarius cluster # m22
+m22.label: Saggitarius cluster
 m27.label: Dumbbell Nebula
 m31.label: Andromeda
-m33.label: Galaxie du Triangle # m33
-m42.label: Orion Nebula #m42
+m33.label: Galaxie du Triangle
+m42.label: Orion Nebula
 m43.label: Mairan nebula
 m44.label: Praesepe
 m45.label: Pleiades
 m51.label: Whirlpool
-m57.label: Ring nebula # m57
+m57.label: Ring nebula
 m63.label: Sunflower Galaxy
 m64.label: Blackeye Galaxy
 m76.label: Little Dumbbell Nebula
