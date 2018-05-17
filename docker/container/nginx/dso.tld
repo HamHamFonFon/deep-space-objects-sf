@@ -1,0 +1,24 @@
+server {
+        server_name dso.tld;
+	access_log /var/log/nginx/dso.access.log;
+	root /home/stephane/www/DeepSpaceObjects-sf/web;
+	
+	## Default location
+	location / {
+		try_files $uri /app.php$is_args$args;
+	}
+	
+	# DEV
+	location ~ ^/(app_dev|config)\.php(/|$) {
+		fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+		fastcgi_split_path_info ^(.+\.php)(/.*)$;
+		include /etc/nginx/fastcgi_params;
+		
+		fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+		fastcgi_param DOCUMENT_ROOT $realpath_root;
+	}
+	
+	location ~ \.php {
+		return 404;
+	}
+}

@@ -1,0 +1,58 @@
+version: "2.3"
+
+services:
+  # REDIS
+  redis:
+    image: redis:alpine
+    hostname: redis
+    container_name: redis_dos
+    ports:
+      - 6379:6379
+    cap_add:
+        - SYS_PTRACE
+    networks:
+      - dso_stack
+  # PHP
+  php:
+    build: # TODO
+      context: ./docker/container/php
+    hostname: php
+    container_name: php_dso
+    ports:
+      - 9000:9000
+    links:
+      - redis
+    volumes:
+     - "/home/stephane/www/DeepSpaceObjects-sf:/var/www/dso:rw"
+    cap_add:
+        - SYS_PTRACE
+    networks:
+      - dso_stack
+  # NGINX
+  nginx:
+    build:
+      context: ./docker/container/nginx
+    hostname: nginx
+    container_name: nginx_dso
+    ports:
+     - 80:80
+    links:
+      - php
+    volumes_from:
+      - php
+    cap_add:
+        - SYS_PTRACE
+    networks:
+      - dso_stack
+
+
+networks:
+    dso_stack:
+        ipam:
+          driver: default
+          config:
+          -
+            subnet: 192.168.1.50/24
+
+
+
