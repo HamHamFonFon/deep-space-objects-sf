@@ -38,19 +38,3 @@
 
   </div>
 {% endblock %}
-
-{% block javascripts %}
-  {{ parent() }}
-  <script type="text/javascript">
-    (function($) {
-      let FORM = 'form[name="list_order"]';
-      let SELECT = 'select#list_order_order';
-
-      $(document).ready(function() {
-        $(SELECT).on('change', function(e) {
-          $(FORM).submit();
-        })
-      });
-    })(jQuery);
-  </script>
-{% endblock %}

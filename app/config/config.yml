@@ -25,13 +25,16 @@ framework:
         # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
         handler_id: session.handler.native_file
         save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
-    fragments: ~
+    fragments:
+      enabled: true
+      path: /_fragment
     http_method_override: true
     assets: ~
     templating:
         engines: ['twig']
     php_errors:
         log: true
+
 
 # Twig Configuration
 twig:

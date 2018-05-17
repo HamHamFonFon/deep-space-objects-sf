@@ -10495,6 +10495,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_switchLang_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__scripts_switchLang_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js__ = __webpack_require__(/*! ./scripts/cookieLang.js */ "./src/AppBundle/Resources/public/js/scripts/cookieLang.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js__ = __webpack_require__(/*! ./scripts/sortList.js */ "./src/AppBundle/Resources/public/js/scripts/sortList.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js__);
 // ==================================================
 // Import JS libraries files and project files here
 // ==================================================
@@ -10502,6 +10504,7 @@ __webpack_require__(/*! ./../.././../../../node_modules/jquery-typeahead/dist/jq
 __webpack_require__(/*! ../styles/typehead.css */ "./src/AppBundle/Resources/public/styles/typehead.css");
 
 // import "./scripts/routing.js"
+
 
 
 
@@ -10694,6 +10697,33 @@ DSO.Search = function ($, ns, r) {
 
   return ns;
 }(jQuery, {}, Routing);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/AppBundle/Resources/public/js/scripts/sortList.js":
+/*!***************************************************************!*\
+  !*** ./src/AppBundle/Resources/public/js/scripts/sortList.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(jQuery) {window.DSO = window.DSO || {};
+
+DSO.sortList = function ($, ns) {
+
+  ns.FORM = 'form[name="list_order"]';
+  ns.SELECT = 'select#list_order_order';
+
+  ns.init = function () {
+
+    $(ns.SELECT).on('change', function (e) {
+      $(ns.FORM).submit();
+    });
+  };
+
+  return ns;
+}(jQuery, {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
