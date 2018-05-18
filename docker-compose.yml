@@ -14,8 +14,10 @@ services:
       - dso_stack
   # PHP
   php:
-    build: # TODO
+    build:
       context: ./docker/container/php
+      args:
+        TIMEZONE: ${TIMEZONE}
     hostname: php
     container_name: php_dso
     ports:
@@ -53,6 +55,3 @@ networks:
           config:
           -
             subnet: 192.168.1.50/24
-
-
-
