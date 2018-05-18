@@ -17,7 +17,7 @@ services:
     build:
       context: ./docker/container/php
       args:
-        TIMEZONE: ${TIMEZONE}
+        TIMEZONE: Europe/Paris
     hostname: php
     container_name: php_dso
     ports:
