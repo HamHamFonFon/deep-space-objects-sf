@@ -77,15 +77,15 @@ swiftmailer:
     password: '%mailer_password%'
     spool: { type: memory }
 
-fos_http_cache:
-    cache_control:
-        defaults:
-            overwrite: true
-        rules:
-            -
-                match:
-                    path: ^/
-                headers:
-                    overwrite: false
-                    cache_control: { public: true, max_age: 15, s_maxage: "%http_ttl%" }
-                    etag: "strong"
+#fos_http_cache:
+#    cache_control:
+#        defaults:
+#            overwrite: true
+#        rules:
+#            -
+#                match:
+#                    path: ^/
+#                headers:
+#                    overwrite: false
+#                    cache_control: { public: true, max_age: 15, s_maxage: "%http_ttl%" }
+#                    etag: "strong"
