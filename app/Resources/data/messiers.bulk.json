@@ -103,11 +103,11 @@
         "messier_id": "M4",
         "desig": "NGC 6121",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Cat's eye",
+          "alt_fr": "Oeil du chat",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nebulosa do Olho de gato",
           "alt_it": ""
         },
         "type": "gc",
@@ -168,10 +168,10 @@
         "desig": "NGC 6405",
         "alt": {
           "alt": "Butterfly Cluster",
-          "alt_fr": "",
+          "alt_fr": "Amas du papillon",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Aglomerado da Borboleta",
           "alt_it": ""
         },
         "type": "oc",
@@ -198,13 +198,12 @@
       "data": {
         "messier_id": "M7",
         "desig": "NGC 6475",
-        "alt": "Ptolemy´s Cluster",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Ptolemy´s Cluster",
+          "alt_fr": "Amas de Ptolémée",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Aglomerado de Ptolomeu",
           "alt_it": ""
         },
         "type": "oc",
@@ -231,13 +230,12 @@
       "data": {
         "messier_id": "M8",
         "desig": "NGC 6523",
-        "alt": "Lagoon Nebula",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Lagoon Nebula",
+          "alt_fr": "Nébuleuse de la lagune",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nebulosa Laguna",
           "alt_it": ""
         },
         "type": "sfr",
@@ -328,13 +326,12 @@
       "data": {
         "messier_id": "M11",
         "desig": "NGC 6705",
-        "alt": "Wild Duck Cluster",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Wild Duck Cluster",
+          "alt_fr": "Amas du canard sauvage",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Aglomerado do Pato Selvagem",
           "alt_it": ""
         },
         "type": "oc",
@@ -393,13 +390,12 @@
       "data": {
         "messier_id": "M13",
         "desig": "NGC 6205",
-        "alt": "Great Hercules Cluster",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Great Hercules Cluster",
+          "alt_fr": "Grand amas d'Hercule",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Grande Aglomerado Globular de Hércules",
           "alt_it": ""
         },
         "type": "gc",
@@ -460,10 +456,10 @@
         "desig": "NGC 7078",
         "alt": {
           "alt": "",
-          "alt_fr": "",
+          "alt_fr": "Nuage de Pégase",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Aglomerado globular de Pégaso",
           "alt_it": ""
         },
         "type": "gc",
@@ -490,13 +486,12 @@
       "data": {
         "messier_id": "M16",
         "desig": "NGC 6611",
-        "alt": "Eagle Nebula",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Eagle Nebula",
+          "alt_fr": "Nébuleuse de l'aigle",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nebulosa da Águia",
           "alt_it": ""
         },
         "type": "sfr",
@@ -523,13 +518,12 @@
       "data": {
         "messier_id": "M17",
         "desig": "NGC 6618",
-        "alt": "Omega Nebula",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Omega Nebula",
+          "alt_fr": "Nébuleuse Oméga",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nebulosa Ômega",
           "alt_it": ""
         },
         "type": "sfr",
@@ -557,11 +551,11 @@
         "messier_id": "M18",
         "desig": "NGC 6613",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Black swan",
+          "alt_fr": "Le cygne noir",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Cisne Negro",
           "alt_it": ""
         },
         "type": "oc",
@@ -620,13 +614,12 @@
       "data": {
         "messier_id": "M20",
         "desig": "NGC 6514",
-        "alt": "Trifid Nebula",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Trifid Nebula",
+          "alt_fr": "Nébuleuse Trifide",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nebulosa Trífida",
           "alt_it": ""
         },
         "type": "sfr",
@@ -685,13 +678,12 @@
       "data": {
         "messier_id": "M22",
         "desig": "NGC 6656",
-        "alt": "Saggitarius cluster",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Saggitarius cluster",
+          "alt_fr": "Amas du sagittaire",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nuvem Estelar de Sagitário",
           "alt_it": ""
         },
         "type": "gc",
@@ -750,9 +742,8 @@
       "data": {
         "messier_id": "M24",
         "desig": "",
-        "alt": "Milky Way patch",
         "alt": {
-          "alt": "",
+          "alt": "Milky Way patch",
           "alt_fr": "",
           "alt_es": "",
           "alt_de": "",
@@ -847,13 +838,12 @@
       "data": {
         "messier_id": "M27",
         "desig": "NGC 6853",
-        "alt": "Dumbbell Nebula",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Dumbbell Nebula",
+          "alt_fr": "Nébuleuse de l'haltère",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nebulosa do Haltere",
           "alt_it": ""
         },
         "type": "pn",
@@ -976,13 +966,12 @@
       "data": {
         "messier_id": "M31",
         "desig": "NGC 224",
-        "alt": "Andromeda",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Andromeda",
+          "alt_fr": "Galaxie d'Andromède",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia de Andrômeda ",
           "alt_it": ""
         },
         "type": "s",
@@ -1041,13 +1030,12 @@
       "data": {
         "messier_id": "M33",
         "desig": "NGC 598",
-        "alt": "Triangulum",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Triangulum",
+          "alt_fr": "Galaxie du Triangle",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia do Triângulo",
           "alt_it": ""
         },
         "type": "s",
@@ -1330,13 +1318,12 @@
       "data": {
         "messier_id": "M42",
         "desig": "NGC 1976",
-        "alt": "Orion Nebula",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Orion Nebula",
+          "alt_fr": "Nébuleuse d'Orion",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nebulosa de Órion",
           "alt_it": ""
         },
         "type": "sfr",
@@ -1363,13 +1350,12 @@
       "data": {
         "messier_id": "M43",
         "desig": "NGC 1982",
-        "alt": "Mairan nebula",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Mairan nebula",
+          "alt_fr": "Nébuleuse de Mairan",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nebulosa De Mairan",
           "alt_it": ""
         },
         "type": "sfr",
@@ -1396,13 +1382,12 @@
       "data": {
         "messier_id": "M44",
         "desig": "NGC 2632",
-        "alt": "Praesepe",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Praesepe",
+          "alt_fr": "Amas de la crèche",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Presépio",
           "alt_it": ""
         },
         "type": "oc",
@@ -1429,13 +1414,12 @@
       "data": {
         "messier_id": "M45",
         "desig": "",
-        "alt": "Pleiades",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Pleiades",
+          "alt_fr": "Amas des Pleiades",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Plêiades",
           "alt_it": ""
         },
         "type": "oc",
@@ -1622,13 +1606,12 @@
       "data": {
         "messier_id": "M51",
         "desig": "NGC 5194/5",
-        "alt": "Whirlpool",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Whirlpool",
+          "alt_fr": "Galaxie du Tourbillon",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia do Rodamoinho",
           "alt_it": ""
         },
         "type": "s",
@@ -1815,13 +1798,12 @@
       "data": {
         "messier_id": "M57",
         "desig": "NGC 6720",
-        "alt": "Ring Nebula",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Ring Nebula",
+          "alt_fr": "Nébuleuse de l'anneau",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nebulosa do Anel",
           "alt_it": ""
         },
         "type": "pn",
@@ -2008,13 +1990,12 @@
       "data": {
         "messier_id": "M63",
         "desig": "NGC 5055",
-        "alt": "Sunflower Galaxy",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Sunflower Galaxy",
+          "alt_fr": " Galaxie du tournesol",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia do Girassol",
           "alt_it": ""
         },
         "type": "s",
@@ -2041,13 +2022,12 @@
       "data": {
         "messier_id": "M64",
         "desig": "NGC 4826",
-        "alt": "Blackeye Galaxy",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Blackeye Galaxy",
+          "alt_fr": "Galaxie de l'oeil noir",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia Olho Negro",
           "alt_it": ""
         },
         "type": "s",
@@ -2330,9 +2310,8 @@
       "data": {
         "messier_id": "M73",
         "desig": "NGC 6994",
-        "alt": "4 Star asterism",
         "alt": {
-          "alt": "",
+          "alt": "4 Star asterism",
           "alt_fr": "",
           "alt_es": "",
           "alt_de": "",
@@ -2427,13 +2406,12 @@
       "data": {
         "messier_id": "M76",
         "desig": "NGC 650/1",
-        "alt": "Little Dumbbell Nebula",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Little Dumbbell Nebula",
+          "alt_fr": "Nébuleuse du petit haltère",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Pequena Nebulosa do Haltere",
           "alt_it": ""
         },
         "type": "pn",
@@ -2460,9 +2438,8 @@
       "data": {
         "messier_id": "M77",
         "desig": "NGC 1068",
-        "alt": "Cetus A",
         "alt": {
-          "alt": "",
+          "alt": "Cetus A",
           "alt_fr": "",
           "alt_es": "",
           "alt_de": "",
@@ -2589,13 +2566,12 @@
       "data": {
         "messier_id": "M81",
         "desig": "NGC 3031",
-        "alt": "Bode´s Galaxy",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Bode´s Galaxy",
+          "alt_fr": "Galaxie de Bode",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia de Bode",
           "alt_it": ""
         },
         "type": "s",
@@ -2622,13 +2598,12 @@
       "data": {
         "messier_id": "M82",
         "desig": "NGC 3034",
-        "alt": "Cigar Galaxy",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Cigar Galaxy",
+          "alt_fr": "Galaxie du cigare",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia do Charuto",
           "alt_it": ""
         },
         "type": "i",
@@ -2655,13 +2630,12 @@
       "data": {
         "messier_id": "M83",
         "desig": "NGC 5236",
-        "alt": "Southern Pinwheel",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Southern Pinwheel",
+          "alt_fr": "Moulinet du sud",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia Cata-vento do Sul",
           "alt_it": ""
         },
         "type": "s",
@@ -2784,9 +2758,8 @@
       "data": {
         "messier_id": "M87",
         "desig": "NGC 4486",
-        "alt": "Virgo A",
         "alt": {
-          "alt": "",
+          "alt": "Virgo A",
           "alt_fr": "",
           "alt_es": "",
           "alt_de": "",
@@ -3105,13 +3078,12 @@
       "data": {
         "messier_id": "M97",
         "desig": "NGC 3587",
-        "alt": "Owl Nebula",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Owl Nebula",
+          "alt_fr": "Nébuleuse du hibou",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Nebulosa da Coruja",
           "alt_it": ""
         },
         "type": "pn",
@@ -3234,13 +3206,12 @@
       "data": {
         "messier_id": "M101",
         "desig": "NGC 5457",
-        "alt": "Pinwheel",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Pinwheel",
+          "alt_fr": "Galaxie du moulinet",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia Cata-vento",
           "alt_it": ""
         },
         "type": "s",
@@ -3267,13 +3238,12 @@
       "data": {
         "messier_id": "M102",
         "desig": "NGC 5866",
-        "alt": "Spindle",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Spindle",
+          "alt_fr": "Galaxie du fuseau",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia do Fuso",
           "alt_it": ""
         },
         "type": "s",
@@ -3332,13 +3302,12 @@
       "data": {
         "messier_id": "M104",
         "desig": "NGC 4594",
-        "alt": "Sombrero",
         "alt": {
-          "alt": "",
-          "alt_fr": "",
+          "alt": "Sombrero",
+          "alt_fr": "Galaxie du sombrero",
           "alt_es": "",
           "alt_de": "",
-          "alt_pt": "",
+          "alt_pt": "Galáxia do Sombreiro",
           "alt_it": ""
         },
         "type": "s",
