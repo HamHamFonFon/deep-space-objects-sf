@@ -1,29 +1,39 @@
 version: "2"
 
 services:
-  # REDIS
-  redis:
-    image: redis:alpine
-    container_name: redis_dso
+  # NGINX / Front
+  nginx:
+    image: nginx:1.11.10
+    container_name: nginx_dso
     ports:
-      - 6379:6379
-  # PHP
+      - "81:80"
+    links:
+      - "php:php"
+    volumes:
+      - "${SYMFONY_APP_PATH}:/var/www/dso:ro"
+      - "./docker/nginx/dso.conf:/etc/nginx/conf.d/default.conf:ro"
+
+  # PHP / Engine
   php:
-    build:
-      context: ./docker/container/php
-      args:
-        TIMEZONE: ${TIMEZONE}
+    build: docker/php
     container_name: php_dso
     links:
       - redis
     volumes:
      - ${SYMFONY_APP_PATH}:/var/www/dso:rw
-  # NGINX
-  nginx:
-    build:
-      context: ./docker/container/nginx
-    container_name: nginx_dso
+     - "./docker/php/php.ini:/usr/local/etc/php/conf.d/custom.ini:ro"
+    working_dir: "/var/wwww/dso"
+
+  # REDIS
+  redis:
+    image: redis:alpine
+    container_name: redis_dso
     ports:
-     - 80:80
-    volumes_from:
-      - php
+      - 6379:6380
+
+
+
+# https://github.com/maxpou/docker-symfony
+# http://www.laurent-masforne.com/memo/configurer-un-environnement-pour-symfony-3-avec-php-7-1-0fpm-mysql-8-nginx-1-11-sous-docker
+
+# https://www.baptiste-donaux.fr/tutoriel-docker-symfony-docker-compose/
