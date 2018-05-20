@@ -75,7 +75,7 @@ class MessierRepository extends AbstractKuzzleRepository
     public function getMessiersByConst($constId, $excludedMessier, $limit = 10, $limitImages = 1)
     {
         $listMessiers = [];
-        $results = $this->findBy('term', ['properties.const_id' => $constId], [], ['properties.magnitude' => 'ASC'],0, $limit);
+        $results = $this->findBy('term', ['data.const_id' => $constId], [], ['data.magnitude' => 'ASC'],0, $limit);
         if (0 < $results->getTotal()) {
             foreach ($results->getDocuments() as $document) {
                 $listMessiers[] = $this->buildEntityByDocument($document, $limitImages);
@@ -99,7 +99,7 @@ class MessierRepository extends AbstractKuzzleRepository
     public function getMessiersByType($type, $excludedMessier, $limit = 10, $limitImages = 1)
     {
         $listMessiers = [];
-        $results = $this->findBy('term', ['properties.type' => $type], [], [], 0 ,$limit);
+        $results = $this->findBy('term', ['data.type' => $type], [], [], 0 ,$limit);
         if (0 < $results->getTotal()) {
             foreach ($results->getDocuments() as $document) {
                 $listMessiers[] = $this->buildEntityByDocument($document, $limitImages);

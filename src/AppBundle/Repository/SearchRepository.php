@@ -28,12 +28,12 @@ class SearchRepository
 
     public static $listFields = [
         'messiers' => [
-            'messier_id',
-            'properties.name',
-            'properties.desig',
-            'properties.alt',
-            'properties.const_id',
-            'properties.type'
+            'data.messier_id',
+            'data.name',
+            'data.desig',
+            'data.alt.alt', // todo : add language
+            'data.const_id',
+            'data.type'
         ]
     ];
 
@@ -73,12 +73,12 @@ class SearchRepository
             if (0 < $searchResult->getTotal()) {
                 foreach ($searchResult->getDocuments() as $document) {
                     $documentContent = $document->getContent();
-                    $label = (!empty($documentContent['properties']['alt'])) ? $this->translator->trans($document->getId().'.label') : $documentContent['properties']['alt'];
+                    $label = (!empty($documentContent['data']['alt'])) ? $this->translator->trans($document->getId().'.label') : $documentContent['data']['alt'];
 
                     $result[] = [
                         'id' => $document->getId(),
                         'value' => (!empty($label)) ? implode(' - ', [$label,  strtoupper($document->getId())]) : strtoupper($document->getId()),
-                        'info' => $documentContent['properties']['desig']
+                        'info' => $documentContent['data']['desig']
                     ];
                 }
             }

@@ -30,10 +30,10 @@ abstract class AbstractKuzzleRepository
     const DEFAULT_SORT = 'messier_order_asc';
 
     private static $listOrder = [
-        'messier_order_asc' => ['messier_order' => 'asc'],
-        'messier_order_desc' => ['messier_order' => 'desc'],
-        'messier_mag_asc' => ['properties.mag' => 'asc'],
-        'messier_mag_desc' => ['properties.mag' => 'desc']
+        'messier_order_asc' => ['order' => 'asc'],
+        'messier_order_desc' => ['order' => 'desc'],
+        'messier_mag_asc' => ['data.mag' => 'asc'],
+        'messier_mag_desc' => ['data.mag' => 'desc']
     ];
 
     /**
@@ -90,7 +90,7 @@ abstract class AbstractKuzzleRepository
      */
     protected function findById($id)
     {
-        return $this->findBy('term', ['properties.name' => $id], [], [],0, 1);
+        return $this->findBy('term', ['data.messier_id' => $id], [], [],0, 1);
     }
 
 
