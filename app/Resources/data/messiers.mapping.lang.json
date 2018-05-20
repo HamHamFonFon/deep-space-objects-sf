@@ -1,9 +1,6 @@
 {
   "properties": {
-    "messier_id": {
-      "type": "text"
-    },
-    "messier_order": {
+    "order": {
       "type": "integer"
     },
     "geometry": {
@@ -11,7 +8,7 @@
     },
     "data": {
       "properties": {
-        "name": {
+        "messier_id": {
           "type": "text"
         },
         "desig": {
@@ -73,6 +70,9 @@
         },
         "dec": {
           "type": "text"
+        },
+        "astrobin_id": {
+          "type": "integer"
         }
       }
     }

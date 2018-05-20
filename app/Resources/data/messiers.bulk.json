@@ -2,13 +2,25 @@
   "bulkData": [
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m1" } },
     {
-      "type": "Feature",
-      "messier_id": "M1",
-      "messier_order": 1,
-      "properties": {
-        "name": "M1",
+      "order": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.625,
+          22.0167
+        ]
+      },
+      "data": {
+        "messier_id": "M1",
         "desig": "NGC 1952",
-        "alt": "Crab Nebula",
+        "alt": {
+          "alt": "Crab Nebula",
+          "alt_fr": "Nebuleuse du crabe",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa do Caranguejo",
+          "alt_it": ""
+        },
         "type": "snr",
         "mag": 8.4,
         "const_id": "TAU",
@@ -16,25 +28,24 @@
         "cl": "",
         "dist_al": 4.9,
         "ra": "05h 34m 31.94s",
-        "dec": "+22° 00′ 52.2″"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          83.625,
-          22.0167
-        ]
+        "dec": "+22° 00′ 52.2″",
+        "astrobin_id": null
       }
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m2" } },
     {
-      "type": "Feature",
-      "messier_id": "M2",
-      "messier_order": 2,
-      "properties": {
-        "name": "M2",
+      "order": 2,
+      "data": {
+        "messier_id": "M2",
         "desig": "NGC 7089",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 6.5,
         "const_id": "Aqr",
@@ -42,7 +53,8 @@
         "cl": "II",
         "dist_al": 33.0,
         "ra": "21h 33m 27.02s",
-        "dec": "–00° 49′ 23.7″"
+        "dec": "–00° 49′ 23.7″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -54,13 +66,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m3" } },
     {
-      "type": "Feature",
-      "messier_id": "M3",
-      "messier_order": 3,
-      "properties": {
-        "name": "M3",
+      "order": 3,
+      "data": {
+        "messier_id": "M3",
         "desig": "NGC 5272",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 6.4,
         "const_id": "CVn",
@@ -68,7 +85,8 @@
         "cl": "VI",
         "dist_al": 33.9,
         "ra": "13h 42m 11.62s",
-        "dec": "+28° 22′ 38.2″"
+        "dec": "+28° 22′ 38.2″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -80,13 +98,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m4" } },
     {
-      "type": "Feature",
-      "messier_id": "M4",
-      "messier_order": 4,
-      "properties": {
-        "name": "M4",
+      "order": 4,
+      "data": {
+        "messier_id": "M4",
         "desig": "NGC 6121",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 5.6,
         "const_id": "Sco",
@@ -94,7 +117,8 @@
         "cl": "IX",
         "dist_al": 7.2,
         "ra": "16h 23m 35.22s",
-        "dec": "–26° 31′ 32.7″"
+        "dec": "–26° 31′ 32.7″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -106,13 +130,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m5" } },
     {
-      "type": "Feature",
-      "messier_id": "M5",
-      "messier_order": 5,
-      "properties": {
-        "name": "M5",
+      "order": 5,
+      "data": {
+        "messier_id": "M5",
         "desig": "NGC 5904",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 5.6,
         "const_id": "Ser",
@@ -120,7 +149,8 @@
         "cl": "V",
         "dist_al": 24.5,
         "ra": "15h 18m 33.22s",
-        "dec": "+02° 04′ 51.7″"
+        "dec": "+02° 04′ 51.7″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -132,13 +162,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m6" } },
     {
-      "type": "Feature",
-      "messier_id": "M6",
-      "messier_order": 6,
-      "properties": {
-        "name": "M6",
+      "order": 6,
+      "data": {
+        "messier_id": "M6",
         "desig": "NGC 6405",
-        "alt": "Butterfly Cluster",
+        "alt": {
+          "alt": "Butterfly Cluster",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 4.2,
         "const_id": "Sco",
@@ -146,7 +181,8 @@
         "cl": "III2p",
         "dist_al": 1.6,
         "ra": "17h 40.1m",
-        "dec": "−32° 13′"
+        "dec": "−32° 13′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -158,13 +194,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m7" } },
     {
-      "type": "Feature",
-      "messier_id": "M7",
-      "messier_order": 7,
-      "properties": {
-        "name": "M7",
+      "order": 7,
+      "data": {
+        "messier_id": "M7",
         "desig": "NGC 6475",
         "alt": "Ptolemy´s Cluster",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 4.1,
         "const_id": "Sco",
@@ -172,7 +214,8 @@
         "cl": "II2r",
         "dist_al": 0.65,
         "ra": "17h 53m 51.2s",
-        "dec": "–34° 47′ 34″"
+        "dec": "–34° 47′ 34″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -184,13 +227,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m8" } },
     {
-      "type": "Feature",
-      "messier_id": "M8",
-      "messier_order": 8,
-      "properties": {
-        "name": "M8",
+      "order": 8,
+      "data": {
+        "messier_id": "M8",
         "desig": "NGC 6523",
         "alt": "Lagoon Nebula",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "sfr",
         "mag": 6,
         "const_id": "Sgr",
@@ -198,7 +247,8 @@
         "cl": "",
         "dist_al": 4.1,
         "ra": "18h 03m 37s",
-        "dec": "−24° 23′ 12″"
+        "dec": "−24° 23′ 12″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -210,13 +260,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m9" } },
     {
-      "type": "Feature",
-      "messier_id": "M9",
-      "messier_order": 9,
-      "properties": {
-        "name": "M9",
+      "order": 9,
+      "data": {
+        "messier_id": "M9",
         "desig": "NGC 6333",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.7,
         "const_id": "Oph",
@@ -224,7 +279,8 @@
         "cl": "VIII",
         "dist_al": 25.8,
         "ra": "17h 19m 11.78s",
-        "dec": "–18° 30′ 58.5″"
+        "dec": "–18° 30′ 58.5″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -236,13 +292,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m10" } },
     {
-      "type": "Feature",
-      "messier_id": "M10",
-      "messier_order": 10,
-      "properties": {
-        "name": "M10",
+      "order": 10,
+      "data": {
+        "messier_id": "M10",
         "desig": "NGC 6254",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 6.6,
         "const_id": "Oph",
@@ -250,7 +311,8 @@
         "cl": "VII",
         "dist_al": 14.3,
         "ra": "16h 57m 8.92s",
-        "dec": "−04° 05′ 58.07″"
+        "dec": "−04° 05′ 58.07″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -262,13 +324,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m11" } },
     {
-      "type": "Feature",
-      "messier_id": "M11",
-      "messier_order": 11,
-      "properties": {
-        "name": "M11",
+      "order": 11,
+      "data": {
+        "messier_id": "M11",
         "desig": "NGC 6705",
         "alt": "Wild Duck Cluster",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 6.3,
         "const_id": "Sct",
@@ -276,7 +344,8 @@
         "cl": "I2r",
         "dist_al": 6.2,
         "ra": "18h 51.1m",
-        "dec": "−06° 16′"
+        "dec": "−06° 16′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -288,13 +357,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m12" } },
     {
-      "type": "Feature",
-      "messier_id": "M12",
-      "messier_order": 12,
-      "properties": {
-        "name": "M12",
+      "order": 12,
+      "data": {
+        "messier_id": "M12",
         "desig": "NGC 6218",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 6.7,
         "const_id": "Oph",
@@ -302,7 +376,8 @@
         "cl": "IX",
         "dist_al": 15.7,
         "ra": "16h 47m 14.18s",
-        "dec": "–01° 56′ 54.7″"
+        "dec": "–01° 56′ 54.7″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -314,13 +389,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m13" } },
     {
-      "type": "Feature",
-      "messier_id": "M13",
-      "messier_order": 13,
-      "properties": {
-        "name": "M13",
+      "order": 13,
+      "data": {
+        "messier_id": "M13",
         "desig": "NGC 6205",
         "alt": "Great Hercules Cluster",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 5.8,
         "const_id": "Her",
@@ -328,7 +409,8 @@
         "cl": "V",
         "dist_al": 22.2,
         "ra": "16h 41m 41.24s",
-        "dec": "+36° 27′ 35.5″"
+        "dec": "+36° 27′ 35.5″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -340,13 +422,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m14" } },
     {
-      "type": "Feature",
-      "messier_id": "M14",
-      "messier_order": 14,
-      "properties": {
-        "name": "M14",
+      "order": 14,
+      "data": {
+        "messier_id": "M14",
         "desig": "NGC 6402",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.6,
         "const_id": "Oph",
@@ -354,7 +441,8 @@
         "cl": "VIII",
         "dist_al": 30.3,
         "ra": "17h 37m 36.15s",
-        "dec": "–03° 14′ 45.3″"
+        "dec": "–03° 14′ 45.3″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -366,13 +454,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m15" } },
     {
-      "type": "Feature",
-      "messier_id": "M15",
-      "messier_order": 15,
-      "properties": {
-        "name": "M15",
+      "order": 15,
+      "data": {
+        "messier_id": "M15",
         "desig": "NGC 7078",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 6.2,
         "const_id": "Peg",
@@ -380,7 +473,8 @@
         "cl": "IV",
         "dist_al": 33.6,
         "ra": "21h 29m 58.33s",
-        "dec": "+12° 10′ 01.2″"
+        "dec": "+12° 10′ 01.2″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -392,13 +486,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m16" } },
     {
-      "type": "Feature",
-      "messier_id": "M16",
-      "messier_order": 16,
-      "properties": {
-        "name": "M16",
+      "order": 16,
+      "data": {
+        "messier_id": "M16",
         "desig": "NGC 6611",
         "alt": "Eagle Nebula",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "sfr",
         "mag": 6.4,
         "const_id": "Ser",
@@ -406,7 +506,8 @@
         "cl": "II3mn",
         "dist_al": 7.0,
         "ra": "18h 18m 48s",
-        "dec": "−13° 49′"
+        "dec": "−13° 49′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -418,13 +519,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m17" } },
     {
-      "type": "Feature",
-      "messier_id": "M17",
-      "messier_order": 17,
-      "properties": {
-        "name": "M17",
+      "order": 17,
+      "data": {
+        "messier_id": "M17",
         "desig": "NGC 6618",
         "alt": "Omega Nebula",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "sfr",
         "mag": 7,
         "const_id": "Sgr",
@@ -432,7 +539,8 @@
         "cl": "",
         "dist_al": 5.0,
         "ra": "18h 20m 26s",
-        "dec": "−16° 10′ 36″"
+        "dec": "−16° 10′ 36″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -444,13 +552,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m18" } },
     {
-      "type": "Feature",
-      "messier_id": "M18",
-      "messier_order": 18,
-      "properties": {
-        "name": "M18",
+      "order": 18,
+      "data": {
+        "messier_id": "M18",
         "desig": "NGC 6613",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 7.5,
         "const_id": "Sgr",
@@ -458,7 +571,8 @@
         "cl": "II3pn",
         "dist_al": 4.9,
         "ra": "18h 19.9m",
-        "dec": "−17° 08′"
+        "dec": "−17° 08′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -470,13 +584,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m19" } },
     {
-      "type": "Feature",
-      "messier_id": "M19",
-      "messier_order": 19,
-      "properties": {
-        "name": "M19",
+      "order": 19,
+      "data": {
+        "messier_id": "M19",
         "desig": "NGC 6273",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 6.8,
         "const_id": "Oph",
@@ -484,7 +603,8 @@
         "cl": "VIII",
         "dist_al": 28.7,
         "ra": "17h 02m 37.69s",
-        "dec": "−26° 16′ 04.6″"
+        "dec": "−26° 16′ 04.6″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -496,13 +616,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m20" } },
     {
-      "type": "Feature",
-      "messier_id": "M20",
-      "messier_order": 20,
-      "properties": {
-        "name": "M20",
+      "order": 20,
+      "data": {
+        "messier_id": "M20",
         "desig": "NGC 6514",
         "alt": "Trifid Nebula",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "sfr",
         "mag": 9,
         "const_id": "Sgr",
@@ -510,7 +636,8 @@
         "cl": "",
         "dist_al": 5.2,
         "ra": "18h 02m 23s",
-        "dec": "−23° 01′ 48″"
+        "dec": "−23° 01′ 48″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -522,13 +649,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m21" } },
     {
-      "type": "Feature",
-      "messier_id": "M21",
-      "messier_order": 21,
-      "properties": {
-        "name": "M21",
+      "order": 21,
+      "data": {
+        "messier_id": "M21",
         "desig": "NGC 6531",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 6.5,
         "const_id": "Sgr",
@@ -536,7 +668,8 @@
         "cl": "I3m",
         "dist_al": 4.25,
         "ra": "18h 04.6m",
-        "dec": "−22° 30′"
+        "dec": "−22° 30′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -548,13 +681,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m22" } },
     {
-      "type": "Feature",
-      "messier_id": "M22",
-      "messier_order": 22,
-      "properties": {
-        "name": "M22",
+      "order": 22,
+      "data": {
+        "messier_id": "M22",
         "desig": "NGC 6656",
         "alt": "Saggitarius cluster",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 5.1,
         "const_id": "Sgr",
@@ -562,7 +701,8 @@
         "cl": "VII",
         "dist_al": 9.6,
         "ra": "18h 36m 23.94s",
-        "dec": "–23° 54′ 17.1″"
+        "dec": "–23° 54′ 17.1″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -574,13 +714,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m23" } },
     {
-      "type": "Feature",
-      "messier_id": "M23",
-      "messier_order": 23,
-      "properties": {
-        "name": "M23",
+      "order": 23,
+      "data": {
+        "messier_id": "M23",
         "desig": "NGC 6494",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 6.9,
         "const_id": "Sgr",
@@ -588,7 +733,8 @@
         "cl": "III1m",
         "dist_al": 2.15,
         "ra": "17h 56.8m",
-        "dec": "−19° 01′"
+        "dec": "−19° 01′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -600,13 +746,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m24" } },
     {
-      "type": "Feature",
-      "messier_id": "M24",
-      "messier_order": 25,
-      "properties": {
-        "name": "M24",
+      "order": 25,
+      "data": {
+        "messier_id": "M24",
         "desig": "",
         "alt": "Milky Way patch",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "pos",
         "mag": 4.6,
         "const_id": "Sgr",
@@ -614,7 +766,8 @@
         "cl": "",
         "dist_al":10.0,
         "ra": "18h 17m",
-        "dec": "−18° 29′"
+        "dec": "−18° 29′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -626,13 +779,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m25" } },
     {
-      "type": "Feature",
-      "messier_id": "M25",
-      "messier_order": 25,
-      "properties": {
-        "name": "M25",
+      "order": 25,
+      "data": {
+        "messier_id": "M25",
         "desig": "IC 4725",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 4.6,
         "const_id": "Sgr",
@@ -640,7 +798,8 @@
         "cl": "I2p",
         "dist_al": 2.0,
         "ra": "18h 31.6m",
-        "dec": "−19° 15′"
+        "dec": "−19° 15′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -652,13 +811,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m26" } },
     {
-      "type": "Feature",
-      "messier_id": "M26",
-      "messier_order": 26,
-      "properties": {
-        "name": "M26",
+      "order": 26,
+      "data": {
+        "messier_id": "M26",
         "desig": "NGC 6694",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 8,
         "const_id": "Sct",
@@ -666,7 +830,8 @@
         "cl": "I1m",
         "dist_al": 5.0,
         "ra": "18h 45.2m",
-        "dec": "−09° 24′"
+        "dec": "−09° 24′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -678,13 +843,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m27" } },
     {
-      "type": "Feature",
-      "messier_id": "M27",
-      "messier_order": 27,
-      "properties": {
-        "name": "M27",
+      "order": 27,
+      "data": {
+        "messier_id": "M27",
         "desig": "NGC 6853",
         "alt": "Dumbbell Nebula",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "pn",
         "mag": 7.4,
         "const_id": "Vul",
@@ -692,7 +863,8 @@
         "cl": "IV(II)",
         "dist_al": 1.148,
         "ra": "19h 59m 36.340s",
-        "dec": "+22° 43′ 16.09″"
+        "dec": "+22° 43′ 16.09″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -704,13 +876,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m28" } },
     {
-      "type": "Feature",
-      "messier_id": "M28",
-      "messier_order": 28,
-      "properties": {
-        "name": "M28",
+      "order": 28,
+      "data": {
+        "messier_id": "M28",
         "desig": "NGC 6626",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 6.8,
         "const_id": "Sgr",
@@ -718,7 +895,8 @@
         "cl": "IV",
         "dist_al": 17.9,
         "ra": "18h 24m 32.89s",
-        "dec": "–24° 52′ 11.4″"
+        "dec": "–24° 52′ 11.4″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -730,13 +908,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m29" } },
     {
-      "type": "Feature",
-      "messier_id": "M29",
-      "messier_order": 29,
-      "properties": {
-        "name": "M29",
+      "order": 29,
+      "data": {
+        "messier_id": "M29",
         "desig": "NGC 6913",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 7.1,
         "const_id": "Cyg",
@@ -744,7 +927,8 @@
         "cl": "III3p",
         "dist_al": 7.2,
         "ra": "20h 23m 56s",
-        "dec": "+38° 31.4′"
+        "dec": "+38° 31.4′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -756,13 +940,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m30" } },
     {
-      "type": "Feature",
-      "messier_id": "M30",
-      "messier_order": 30,
-      "properties": {
-        "name": "M30",
+      "order": 30,
+      "data": {
+        "messier_id": "M30",
         "desig": "NGC 7099",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.2,
         "const_id": "Cap",
@@ -770,7 +959,8 @@
         "cl": "V",
         "dist_al": 27.8,
         "ra": "21h 40m 22.12",
-        "dec": "–23° 10′ 47.5″"
+        "dec": "–23° 10′ 47.5″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -782,13 +972,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m31" } },
     {
-      "type": "Feature",
-      "messier_id": "M31",
-      "messier_order": 31,
-      "properties": {
-        "name": "M31",
+      "order": 31,
+      "data": {
+        "messier_id": "M31",
         "desig": "NGC 224",
         "alt": "Andromeda",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 3.4,
         "const_id": "And",
@@ -796,7 +992,8 @@
         "cl": "SA(s)b LINER",
         "dist_al": 2430,
         "ra": "00h 42m 44.3s",
-        "dec": "+41° 16′ 9″"
+        "dec": "+41° 16′ 9″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -808,13 +1005,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m32" } },
     {
-      "type": "Feature",
-      "messier_id": "M32",
-      "messier_order": 32,
-      "properties": {
-        "name": "M32",
+      "order": 32,
+      "data": {
+        "messier_id": "M32",
         "desig": "NGC 221",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 8.2,
         "const_id": "And",
@@ -822,7 +1024,8 @@
         "cl": "cE2",
         "dist_al": 2410,
         "ra": "00h 42m 41.8s",
-        "dec": "+40° 51′ 55″"
+        "dec": "+40° 51′ 55″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -834,13 +1037,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m33" } },
     {
-      "type": "Feature",
-      "messier_id": "M33",
-      "messier_order": 33,
-      "properties": {
-        "name": "M33",
+      "order": 33,
+      "data": {
+        "messier_id": "M33",
         "desig": "NGC 598",
         "alt": "Triangulum",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 5.7,
         "const_id": "Tri",
@@ -848,7 +1057,8 @@
         "cl": "SA(s)cd",
         "dist_al": 2380,
         "ra": "01h 33m 50.02s",
-        "dec": "+30° 39′ 36.7″"
+        "dec": "+30° 39′ 36.7″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -860,13 +1070,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m34" } },
     {
-      "type": "Feature",
-      "messier_id": "M34",
-      "messier_order": 34,
-      "properties": {
-        "name": "M34",
+      "order": 34,
+      "data": {
+        "messier_id": "M34",
         "desig": "NGC 1039",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 5.5,
         "const_id": "Per",
@@ -874,7 +1089,8 @@
         "cl": "II3m",
         "dist_al": 1.5,
         "ra": "02h 42.1m",
-        "dec": "+42° 46′"
+        "dec": "+42° 46′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -886,13 +1102,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m35" } },
     {
-      "type": "Feature",
-      "messier_id": "M35",
-      "messier_order": 35,
-      "properties": {
-        "name": "M35",
+      "order": 35,
+      "data": {
+        "messier_id": "M35",
         "desig": "NGC 2168",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 5.3,
         "const_id": "Gem",
@@ -900,7 +1121,8 @@
         "cl": "III2m",
         "dist_al": 2.8,
         "ra": "06h 09.1m",
-        "dec": "+24° 21′"
+        "dec": "+24° 21′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -912,13 +1134,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m36" } },
     {
-      "type": "Feature",
-      "messier_id": "M36",
-      "messier_order": 36,
-      "properties": {
-        "name": "M36",
+      "order": 36,
+      "data": {
+        "messier_id": "M36",
         "desig": "NGC 1960",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 6.3,
         "const_id": "Aur",
@@ -926,7 +1153,8 @@
         "cl": "II3m",
         "dist_al": 4.1,
         "ra": "05h 36m 12s",
-        "dec": "+34° 08′ 4″"
+        "dec": "+34° 08′ 4″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -938,13 +1166,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m37" } },
     {
-      "type": "Feature",
-      "messier_id": "M37",
-      "messier_order": 37,
-      "properties": {
-        "name": "M37",
+      "order": 37,
+      "data": {
+        "messier_id": "M37",
         "desig": "NGC 2099",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 6.2,
         "const_id": "Aur",
@@ -952,7 +1185,8 @@
         "cl": "II1r",
         "dist_al": 4.511,
         "ra": "05h 52m 18s",
-        "dec": "+32° 33′ 02″"
+        "dec": "+32° 33′ 02″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -964,13 +1198,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m38" } },
     {
-      "type": "Feature",
-      "messier_id": "M38",
-      "messier_order": 38,
-      "properties": {
-        "name": "M38",
+      "order": 38,
+      "data": {
+        "messier_id": "M38",
         "desig": "NGC 1912",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 7.4,
         "const_id": "Aur",
@@ -978,7 +1217,8 @@
         "cl": "III2m",
         "dist_al": 4.2,
         "ra": "05h 28m 42s",
-        "dec": "+35° 51′ 18″"
+        "dec": "+35° 51′ 18″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -990,13 +1230,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m39" } },
     {
-      "type": "Feature",
-      "messier_id": "M39",
-      "messier_order": 39,
-      "properties": {
-        "name": "M39",
+      "order": 39,
+      "data": {
+        "messier_id": "M39",
         "desig": "NGC 7092",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 4.6,
         "const_id": "Cyg",
@@ -1004,7 +1249,8 @@
         "cl": "III2p",
         "dist_al": 0.8244,
         "ra": "21h 31m 42s",
-        "dec": "+48° 25′"
+        "dec": "+48° 25′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1016,13 +1262,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m40" } },
     {
-      "type": "Feature",
-      "messier_id": "M40",
-      "messier_order": 40,
-      "properties": {
-        "name": "M40",
+      "order": 40,
+      "data": {
+        "messier_id": "M40",
         "desig": "WN 4",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "pos",
         "mag": 8.4,
         "const_id": "UMa",
@@ -1030,7 +1281,8 @@
         "cl": "",
         "dist_al": 0.51,
         "ra": "12h 22m 12.5s",
-        "dec": "+58° 4' 59"
+        "dec": "+58° 4' 59",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1042,13 +1294,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m41" } },
     {
-      "type": "Feature",
-      "messier_id": "M41",
-      "messier_order": 41,
-      "properties": {
-        "name": "M41",
+      "order": 41,
+      "data": {
+        "messier_id": "M41",
         "desig": "NGC 2287",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 4.6,
         "const_id": "CMA",
@@ -1056,7 +1313,8 @@
         "cl": "II3m",
         "dist_al": 2.3,
         "ra": "06h 46.0m",
-        "dec": "−20° 46′"
+        "dec": "−20° 46′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1068,13 +1326,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m42" } },
     {
-      "type": "Feature",
-      "messier_id": "M42",
-      "messier_order": 42,
-      "properties": {
-        "name": "M42",
+      "order": 42,
+      "data": {
+        "messier_id": "M42",
         "desig": "NGC 1976",
         "alt": "Orion Nebula",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "sfr",
         "mag": 4,
         "const_id": "ORI",
@@ -1082,7 +1346,8 @@
         "cl": "",
         "dist_al": 1.324,
         "ra": "05h 35m 17.3",
-        "dec": "−05° 23′ 28″"
+        "dec": "−05° 23′ 28″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1094,13 +1359,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m43" } },
     {
-      "type": "Feature",
-      "messier_id": "M43",
-      "messier_order": 43,
-      "properties": {
-        "name": "M43",
+      "order": 43,
+      "data": {
+        "messier_id": "M43",
         "desig": "NGC 1982",
         "alt": "Mairan nebula",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "sfr",
         "mag": 9,
         "const_id": "ORI",
@@ -1108,7 +1379,8 @@
         "cl": "",
         "dist_al": 1.6,
         "ra": "05h 35.6m",
-        "dec": "−05° 16′"
+        "dec": "−05° 16′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1120,13 +1392,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m44" } },
     {
-      "type": "Feature",
-      "messier_id": "M44",
-      "messier_order": 44,
-      "properties": {
-        "name": "M44",
+      "order": 44,
+      "data": {
+        "messier_id": "M44",
         "desig": "NGC 2632",
         "alt": "Praesepe",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 3.7,
         "const_id": "Cnc",
@@ -1134,7 +1412,8 @@
         "cl": "II2m",
         "dist_al": 0.577,
         "ra": "08h 40.4m",
-        "dec": "19° 59′"
+        "dec": "19° 59′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1146,13 +1425,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m45" } },
     {
-      "type": "Feature",
-      "messier_id": "M45",
-      "messier_order": 45,
-      "properties": {
-        "name": "M45",
+      "order": 45,
+      "data": {
+        "messier_id": "M45",
         "desig": "",
         "alt": "Pleiades",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 1.6,
         "const_id": "TAU",
@@ -1160,7 +1445,8 @@
         "cl": "I3rn",
         "dist_al": 0.39,
         "ra": "03h 47m 24s",
-        "dec": "+24° 07′ 00″"
+        "dec": "+24° 07′ 00″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1172,13 +1458,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m46" } },
     {
-      "type": "Feature",
-      "messier_id": "M46",
-      "messier_order": 46,
-      "properties": {
-        "name": "M46",
+      "order": 46,
+      "data": {
+        "messier_id": "M46",
         "desig": "NGC 2437",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 6,
         "const_id": "Pup",
@@ -1186,7 +1477,8 @@
         "cl": "III2m",
         "dist_al": 5.4,
         "ra": "07h 41.8m",
-        "dec": "−14° 49"
+        "dec": "−14° 49",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1198,13 +1490,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m47" } },
     {
-      "type": "Feature",
-      "messier_id": "M47",
-      "messier_order": 47,
-      "properties": {
-        "name": "M47",
+      "order": 47,
+      "data": {
+        "messier_id": "M47",
         "desig": "NGC 2422",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 5.2,
         "const_id": "Pup",
@@ -1212,7 +1509,8 @@
         "cl": "III2m",
         "dist_al": 1.6,
         "ra": "07h 36.6m",
-        "dec": "-14° 30′"
+        "dec": "-14° 30′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1224,13 +1522,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m48" } },
     {
-      "type": "Feature",
-      "messier_id": "M48",
-      "messier_order": 48,
-      "properties": {
-        "name": "M48",
+      "order": 48,
+      "data": {
+        "messier_id": "M48",
         "desig": "NGC 2548",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 5.5,
         "const_id": "Hya",
@@ -1238,7 +1541,8 @@
         "cl": "I2m",
         "dist_al": 1.5,
         "ra": "08h 13.7m",
-        "dec": "-05° 45′"
+        "dec": "-05° 45′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1250,13 +1554,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m49" } },
     {
-      "type": "Feature",
-      "messier_id": "M49",
-      "messier_order": 49,
-      "properties": {
-        "name": "M49",
+      "order": 49,
+      "data": {
+        "messier_id": "M49",
         "desig": "NGC 4472",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 8.4,
         "const_id": "Vir",
@@ -1264,7 +1573,8 @@
         "cl": "E2 Sy2",
         "dist_al": 53600,
         "ra": "12h 29m 46.7s",
-        "dec": "+08° 00′ 02″"
+        "dec": "+08° 00′ 02″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1276,13 +1586,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m50" } },
     {
-      "type": "Feature",
-      "messier_id": "M50",
-      "messier_order": 50,
-      "properties": {
-        "name": "M50",
+      "order": 50,
+      "data": {
+        "messier_id": "M50",
         "desig": "NGC 2323",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 6.3,
         "const_id": "Mon",
@@ -1290,7 +1605,8 @@
         "cl": "II3m",
         "dist_al": 3.2,
         "ra": "07h 03.2m",
-        "dec": "−08° 20′"
+        "dec": "−08° 20′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1302,13 +1618,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m51" } },
     {
-      "type": "Feature",
-      "messier_id": "M51",
-      "messier_order": 51,
-      "properties": {
-        "name": "M51",
+      "order": 51,
+      "data": {
+        "messier_id": "M51",
         "desig": "NGC 5194/5",
         "alt": "Whirlpool",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 8.4,
         "const_id": "CVn",
@@ -1316,7 +1638,8 @@
         "cl": "SA(s)bc pec",
         "dist_al": 19000,
         "ra": "13h 29m 52.7s",
-        "dec": "+47° 11′ 43″"
+        "dec": "+47° 11′ 43″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1328,13 +1651,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m52" } },
     {
-      "type": "Feature",
-      "messier_id": "M52",
-      "messier_order": 52,
-      "properties": {
-        "name": "M52",
+      "order": 52,
+      "data": {
+        "messier_id": "M52",
         "desig": "NGC 7654",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 7.3,
         "const_id": "Cas",
@@ -1342,7 +1670,8 @@
         "cl": "I2r",
         "dist_al": 5.0,
         "ra": "23h 24.2m",
-        "dec": "+61° 35′"
+        "dec": "+61° 35′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1354,13 +1683,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m53" } },
     {
-      "type": "Feature",
-      "messier_id": "M53",
-      "messier_order": 53,
-      "properties": {
-        "name": "M53",
+      "order": 53,
+      "data": {
+        "messier_id": "M53",
         "desig": "NGC 5024",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.6,
         "const_id": "Com",
@@ -1368,7 +1702,8 @@
         "cl": "V",
         "dist_al": 58.0,
         "ra": "13h 12m 55.25s",
-        "dec": "+18° 10′ 05.4″"
+        "dec": "+18° 10′ 05.4″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1380,13 +1715,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m54" } },
     {
-      "type": "Feature",
-      "messier_id": "M54",
-      "messier_order": 54,
-      "properties": {
-        "name": "M54",
+      "order": 54,
+      "data": {
+        "messier_id": "M54",
         "desig": "NGC 6715",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.6,
         "const_id": "Sgr",
@@ -1394,7 +1734,8 @@
         "cl": "III",
         "dist_al": 87.4,
         "ra": "18h 55m 03.33s",
-        "dec": "−30° 28′ 47.5″"
+        "dec": "−30° 28′ 47.5″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1406,13 +1747,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m55" } },
     {
-      "type": "Feature",
-      "messier_id": "M55",
-      "messier_order": 55,
-      "properties": {
-        "name": "M55",
+      "order": 55,
+      "data": {
+        "messier_id": "M55",
         "desig": "NGC 6809",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 6.3,
         "const_id": "Sgr",
@@ -1420,7 +1766,8 @@
         "cl": "XI",
         "dist_al": 17.6,
         "ra": "19h 39m 59.71s",
-        "dec": "−30° 57′ 53.1″"
+        "dec": "−30° 57′ 53.1″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1432,13 +1779,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m56" } },
     {
-      "type": "Feature",
-      "messier_id": "M56",
-      "messier_order": 56,
-      "properties": {
-        "name": "M56",
+      "order": 56,
+      "data": {
+        "messier_id": "M56",
         "desig": "NGC 6779",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 8.3,
         "const_id": "LYR",
@@ -1446,7 +1798,8 @@
         "cl": "X",
         "dist_al": 32.9,
         "ra": "19h 16m 35.57s",
-        "dec": "+30° 11′ 00.5″"
+        "dec": "+30° 11′ 00.5″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1458,13 +1811,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m57" } },
     {
-      "type": "Feature",
-      "messier_id": "M57",
-      "messier_order": 57,
-      "properties": {
-        "name": "M57",
+      "order": 57,
+      "data": {
+        "messier_id": "M57",
         "desig": "NGC 6720",
         "alt": "Ring Nebula",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "pn",
         "mag": 8.8,
         "const_id": "LYR",
@@ -1472,7 +1831,8 @@
         "cl": "IV(III)",
         "dist_al": 1.6,
         "ra": "18h 53m 35.079s",
-        "dec": "+33° 01′ 45.03″"
+        "dec": "+33° 01′ 45.03″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1484,13 +1844,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m58" } },
     {
-      "type": "Feature",
-      "messier_id": "M58",
-      "messier_order": 58,
-      "properties": {
-        "name": "M58",
+      "order": 58,
+      "data": {
+        "messier_id": "M58",
         "desig": "NGC 4579",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.7,
         "const_id": "Vir",
@@ -1498,7 +1863,8 @@
         "cl": "SAB(rs)b Sy1.9",
         "dist_al": 63000,
         "ra": "12h 37m 43.5s",
-        "dec": "+11° 49′ 05″"
+        "dec": "+11° 49′ 05″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1510,13 +1876,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m59" } },
     {
-      "type": "Feature",
-      "messier_id": "M59",
-      "messier_order": 59,
-      "properties": {
-        "name": "M59",
+      "order": 59,
+      "data": {
+        "messier_id": "M59",
         "desig": "NGC 4621",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 9.6,
         "const_id": "Vir",
@@ -1524,7 +1895,8 @@
         "cl": "E5",
         "dist_al": 55000,
         "ra": "12h 42m 02.3s",
-        "dec": "+11° 38′ 49″"
+        "dec": "+11° 38′ 49″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1536,13 +1908,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m60" } },
     {
-      "type": "Feature",
-      "messier_id": "M60",
-      "messier_order": 60,
-      "properties": {
-        "name": "M60",
+      "order": 60,
+      "data": {
+        "messier_id": "M60",
         "desig": "NGC 4649",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 8.8,
         "const_id": "Vir",
@@ -1550,7 +1927,8 @@
         "cl": "E2",
         "dist_al": 51000,
         "ra": "12h 43m 39.6s",
-        "dec": "+11° 33′ 09″"
+        "dec": "+11° 33′ 09″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1562,13 +1940,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m61" } },
     {
-      "type": "Feature",
-      "messier_id": "M61",
-      "messier_order": 61,
-      "properties": {
-        "name": "M61",
+      "order": 61,
+      "data": {
+        "messier_id": "M61",
         "desig": "NGC 4303",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.7,
         "const_id": "Vir",
@@ -1576,7 +1959,8 @@
         "cl": "SAB(rs)bc Sy2",
         "dist_al": 50200,
         "ra": "12h 21m 54.9s",
-        "dec": "+04° 28′ 25″"
+        "dec": "+04° 28′ 25″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1588,13 +1972,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m62" } },
     {
-      "type": "Feature",
-      "messier_id": "M62",
-      "messier_order": 62,
-      "properties": {
-        "name": "M62",
+      "order": 62,
+      "data": {
+        "messier_id": "M62",
         "desig": "NGC 6266",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 6.5,
         "const_id": "Oph",
@@ -1602,7 +1991,8 @@
         "cl": "IV",
         "dist_al": 22.2,
         "ra": "17h 01m 12.60s",
-        "dec": "–30° 06′ 44.5″"
+        "dec": "–30° 06′ 44.5″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1614,13 +2004,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m63" } },
     {
-      "type": "Feature",
-      "messier_id": "M63",
-      "messier_order": 63,
-      "properties": {
-        "name": "M63",
+      "order": 63,
+      "data": {
+        "messier_id": "M63",
         "desig": "NGC 5055",
         "alt": "Sunflower Galaxy",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 8.6,
         "const_id": "CVn",
@@ -1628,7 +2024,8 @@
         "cl": "SA(rs)bc LINER",
         "dist_al": 37000,
         "ra": "13h 15m 49.3s",
-        "dec": "+42° 01′ 45″"
+        "dec": "+42° 01′ 45″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1640,13 +2037,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m64" } },
     {
-      "type": "Feature",
-      "messier_id": "M64",
-      "messier_order": 64,
-      "properties": {
-        "name": "M64",
+      "order": 64,
+      "data": {
+        "messier_id": "M64",
         "desig": "NGC 4826",
         "alt": "Blackeye Galaxy",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 8.5,
         "const_id": "Com",
@@ -1654,7 +2057,8 @@
         "cl": "(R)SA(rs)ab Sy2",
         "dist_al": 22000,
         "ra": "12h 56m 43.7s",
-        "dec": "+21° 40′ 58″"
+        "dec": "+21° 40′ 58″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1666,13 +2070,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m65" } },
     {
-      "type": "Feature",
-      "messier_id": "M65",
-      "messier_order": 65,
-      "properties": {
-        "name": "M65",
+      "order": 65,
+      "data": {
+        "messier_id": "M65",
         "desig": "NGC 3623",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.3,
         "const_id": "Leo",
@@ -1680,7 +2089,8 @@
         "cl": "SAB(rs)a LINER",
         "dist_al": 37000,
         "ra": "11h 18m 55.9s",
-        "dec": "+13° 05′ 32″"
+        "dec": "+13° 05′ 32″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1692,13 +2102,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m66" } },
     {
-      "type": "Feature",
-      "messier_id": "M66",
-      "messier_order": 66,
-      "properties": {
-        "name": "M66",
+      "order": 66,
+      "data": {
+        "messier_id": "M66",
         "desig": "NGC 3627",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 8.9,
         "const_id": "Leo",
@@ -1706,7 +2121,8 @@
         "cl": "SAB(s)b Sy2",
         "dist_al": 31000,
         "ra": "11h 20m 15.0s",
-        "dec": "+12° 59′ 30″"
+        "dec": "+12° 59′ 30″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1718,13 +2134,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m67" } },
     {
-      "type": "Feature",
-      "messier_id": "M67",
-      "messier_order": 67,
-      "properties": {
-        "name": "M67",
+      "order": 67,
+      "data": {
+        "messier_id": "M67",
         "desig": "NGC 2682",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 6.1,
         "const_id": "Cnc",
@@ -1732,7 +2153,8 @@
         "cl": "II2m",
         "dist_al": 2.61,
         "ra": "08h 51.3m",
-        "dec": "+11° 49′"
+        "dec": "+11° 49′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1744,13 +2166,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m68" } },
     {
-      "type": "Feature",
-      "messier_id": "M68",
-      "messier_order": 68,
-      "properties": {
-        "name": "M68",
+      "order": 68,
+      "data": {
+        "messier_id": "M68",
         "desig": "NGC 4590",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.8,
         "const_id": "Hya",
@@ -1758,7 +2185,8 @@
         "cl": "X",
         "dist_al": 33.6,
         "ra": "12h 39m 27.98s",
-        "dec": "–26° 44′ 38.6″"
+        "dec": "–26° 44′ 38.6″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1770,13 +2198,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m69" } },
     {
-      "type": "Feature",
-      "messier_id": "M69",
-      "messier_order": 69,
-      "properties": {
-        "name": "M69",
+      "order": 69,
+      "data": {
+        "messier_id": "M69",
         "desig": "NGC 6637",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.6,
         "const_id": "Sgr",
@@ -1784,7 +2217,8 @@
         "cl": "V",
         "dist_al": 29.7,
         "ra": "18h 31m 23.10s",
-        "dec": "−32° 20′ 53.1″"
+        "dec": "−32° 20′ 53.1″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1796,13 +2230,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m70" } },
     {
-      "type": "Feature",
-      "messier_id": "M70",
-      "messier_order": 70,
-      "properties": {
-        "name": "M70",
+      "order": 70,
+      "data": {
+        "messier_id": "M70",
         "desig": "NGC 6681",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.9,
         "const_id": "Sgr",
@@ -1810,7 +2249,8 @@
         "cl": "V",
         "dist_al": 29.4,
         "ra": "18h 43m 12.76s",
-        "dec": "–32° 17′ 31.6″"
+        "dec": "–32° 17′ 31.6″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1822,13 +2262,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m71" } },
     {
-      "type": "Feature",
-      "messier_id": "M71",
-      "messier_order": 71,
-      "properties": {
-        "name": "M71",
+      "order": 71,
+      "data": {
+        "messier_id": "M71",
         "desig": "NGC 6838",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 8.2,
         "const_id": "Sge",
@@ -1836,7 +2281,8 @@
         "cl": "X-XI",
         "dist_al": 13.0,
         "ra": "19h 53m 46.49s",
-        "dec": "+18° 46′ 45.1″"
+        "dec": "+18° 46′ 45.1″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1848,13 +2294,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m72" } },
     {
-      "type": "Feature",
-      "messier_id": "M72",
-      "messier_order": 72,
-      "properties": {
-        "name": "M72",
+      "order": 72,
+      "data": {
+        "messier_id": "M72",
         "desig": "NGC 6981",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 9.3,
         "const_id": "Aqr",
@@ -1862,7 +2313,8 @@
         "cl": "IX",
         "dist_al": 53.4,
         "ra": "20h 53m 27.70s",
-        "dec": "–12° 32′ 14.3″"
+        "dec": "–12° 32′ 14.3″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1874,13 +2326,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m73" } },
     {
-      "type": "Feature",
-      "messier_id": "M73",
-      "messier_order": 73,
-      "properties": {
-        "name": "M73",
+      "order": 73,
+      "data": {
+        "messier_id": "M73",
         "desig": "NGC 6994",
         "alt": "4 Star asterism",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "pos",
         "mag": 9,
         "const_id": "Aqr",
@@ -1888,7 +2346,8 @@
         "cl": "",
         "dist_al": 2.5,
         "ra": "20h 58m 54s",
-        "dec": "−12° 38′"
+        "dec": "−12° 38′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1900,13 +2359,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m74" } },
     {
-      "type": "Feature",
-      "messier_id": "M74",
-      "messier_order": 74,
-      "properties": {
-        "name": "M74",
+      "order": 74,
+      "data": {
+        "messier_id": "M74",
         "desig": "NGC 628",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.4,
         "const_id": "Psc",
@@ -1914,7 +2378,8 @@
         "cl": "SA(s)c",
         "dist_al": 24000,
         "ra": "01h 36m 41.8s",
-        "dec": "+15° 47′ 01″"
+        "dec": "+15° 47′ 01″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1926,13 +2391,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m75" } },
     {
-      "type": "Feature",
-      "messier_id": "M75",
-      "messier_order": 75,
-      "properties": {
-        "name": "M75",
+      "order": 75,
+      "data": {
+        "messier_id": "M75",
         "desig": "NGC 6864",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 8.5,
         "const_id": "Sgr",
@@ -1940,7 +2410,8 @@
         "cl": "I",
         "dist_al": 67.5,
         "ra": "20h 06m 04.75s",
-        "dec": "−21° 55′ 16.2″"
+        "dec": "−21° 55′ 16.2″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1952,13 +2423,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m76" } },
     {
-      "type": "Feature",
-      "messier_id": "M76",
-      "messier_order": 76,
-      "properties": {
-        "name": "M76",
+      "order": 76,
+      "data": {
+        "messier_id": "M76",
         "desig": "NGC 650/1",
         "alt": "Little Dumbbell Nebula",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "pn",
         "mag": 10.1,
         "const_id": "Per",
@@ -1966,7 +2443,8 @@
         "cl": "III(VI)",
         "dist_al": 2.5,
         "ra": "01h 42.4m",
-        "dec": "+51° 34′ 31″"
+        "dec": "+51° 34′ 31″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -1978,13 +2456,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m77" } },
     {
-      "type": "Feature",
-      "messier_id": "M77",
-      "messier_order": 77,
-      "properties": {
-        "name": "M77",
+      "order": 77,
+      "data": {
+        "messier_id": "M77",
         "desig": "NGC 1068",
         "alt": "Cetus A",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 8.9,
         "const_id": "Cet",
@@ -1992,7 +2476,8 @@
         "cl": "(R)SA(rs)b pec Sy2",
         "dist_al": 47000,
         "ra": "02h 42m 40.7s",
-        "dec": "−00° 00′ 48″"
+        "dec": "−00° 00′ 48″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2004,13 +2489,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m78" } },
     {
-      "type": "Feature",
-      "messier_id": "M78",
-      "messier_order": 78,
-      "properties": {
-        "name": "M78",
+      "order": 78,
+      "data": {
+        "messier_id": "M78",
         "desig": "NGC 2068",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "rn",
         "mag": 8.3,
         "const_id": "ORI",
@@ -2018,7 +2508,8 @@
         "cl": "",
         "dist_al": 1.6,
         "ra": "05h 46m 46.7s",
-        "dec": "+00° 00′ 50″"
+        "dec": "+00° 00′ 50″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2030,13 +2521,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m79" } },
     {
-      "type": "Feature",
-      "messier_id": "M79",
-      "messier_order": 79,
-      "properties": {
-        "name": "M79",
+      "order": 79,
+      "data": {
+        "messier_id": "M79",
         "desig": "NGC 1904",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.7,
         "const_id": "Lep",
@@ -2044,7 +2540,8 @@
         "cl": "V",
         "dist_al": 41,
         "ra": "05h 24m 10.59s",
-        "dec": "−24° 31′ 27.3″"
+        "dec": "−24° 31′ 27.3″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2056,13 +2553,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m80" } },
     {
-      "type": "Feature",
-      "messier_id": "M80",
-      "messier_order": 80,
-      "properties": {
-        "name": "M80",
+      "order": 80,
+      "data": {
+        "messier_id": "M80",
         "desig": "NGC 6093",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.3,
         "const_id": "Sco",
@@ -2070,7 +2572,8 @@
         "cl": "II",
         "dist_al": 32.6,
         "ra": "16h 17m 02.41s",
-        "dec": "–22° 58′ 33.9″"
+        "dec": "–22° 58′ 33.9″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2082,13 +2585,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m81" } },
     {
-      "type": "Feature",
-      "messier_id": "M81",
-      "messier_order": 81,
-      "properties": {
-        "name": "M81",
+      "order": 81,
+      "data": {
+        "messier_id": "M81",
         "desig": "NGC 3031",
         "alt": "Bode´s Galaxy",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 6.9,
         "const_id": "UMa",
@@ -2096,7 +2605,8 @@
         "cl": "SA(s)ab Sy1.8",
         "dist_al": 11400,
         "ra": "09h 55m 33.2s",
-        "dec": "+69° 3′ 55″"
+        "dec": "+69° 3′ 55″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2108,13 +2618,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m82" } },
     {
-      "type": "Feature",
-      "messier_order": 82,
-      "messier_id": "M82",
-      "properties": {
-        "name": "M82",
+      "order": 82,
+      "data": {
+        "messier_id": "M82",
         "desig": "NGC 3034",
         "alt": "Cigar Galaxy",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "i",
         "mag": 8.4,
         "const_id": "UMa",
@@ -2122,7 +2638,8 @@
         "cl": "I0 sbrst",
         "dist_al": 10700,
         "ra": "09h 55m 52.2s",
-        "dec": "+69° 40′ 47″"
+        "dec": "+69° 40′ 47″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2134,13 +2651,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m83" } },
     {
-      "type": "Feature",
-      "messier_id": "M83",
-      "messier_order": 83,
-      "properties": {
-        "name": "M83",
+      "order": 83,
+      "data": {
+        "messier_id": "M83",
         "desig": "NGC 5236",
         "alt": "Southern Pinwheel",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 7.6,
         "const_id": "Hya",
@@ -2148,7 +2671,8 @@
         "cl": "SAB(s)c sbrst",
         "dist_al": 14700,
         "ra": "13h 37m 00.9s",
-        "dec": "−29° 51′ 57″"
+        "dec": "−29° 51′ 57″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2160,13 +2684,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m84" } },
     {
-      "type": "Feature",
-      "messier_id": "M84",
-      "messier_order": 84,
-      "properties": {
-        "name": "M84",
+      "order": 84,
+      "data": {
+        "messier_id": "M84",
         "desig": "NGC 4374",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 9.1,
         "const_id": "Vir",
@@ -2174,7 +2703,8 @@
         "cl": "E1 Sy2",
         "dist_al": 57000,
         "ra": "12h 25m 03.7s",
-        "dec": "+12° 53′ 13″"
+        "dec": "+12° 53′ 13″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2186,13 +2716,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m85" } },
     {
-      "type": "Feature",
-      "messier_id": "M85",
-      "messier_order": 85,
-      "properties": {
-        "name": "M85",
+      "order": 85,
+      "data": {
+        "messier_id": "M85",
         "desig": "NGC 4382",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 9.1,
         "const_id": "Com",
@@ -2200,7 +2735,8 @@
         "cl": "SA(s)0+ pec",
         "dist_al": 56000,
         "ra": "12h 25m 24.0s",
-        "dec": "+18° 11′ 28″"
+        "dec": "+18° 11′ 28″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2212,13 +2748,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m86" } },
     {
-      "type": "Feature",
-      "messier_id": "M86",
-      "messier_order": 86,
-      "properties": {
-        "name": "M86",
+      "order": 86,
+      "data": {
+        "messier_id": "M86",
         "desig": "NGC 4406",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 8.9,
         "const_id": "Vir",
@@ -2226,7 +2767,8 @@
         "cl": "S0(3)/E3",
         "dist_al": 49000,
         "ra": "12h 26m 11.7s",
-        "dec": "+12° 56′ 46″"
+        "dec": "+12° 56′ 46″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2238,13 +2780,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m87" } },
     {
-      "type": "Feature",
-      "messier_id": "M87",
-      "messier_order": 87,
-      "properties": {
-        "name": "M87",
+      "order": 87,
+      "data": {
+        "messier_id": "M87",
         "desig": "NGC 4486",
         "alt": "Virgo A",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 8.6,
         "const_id": "Vir",
@@ -2252,7 +2800,8 @@
         "cl": "cD0-1 pec LINER",
         "dist_al": 51870,
         "ra": "12h 30m 49.42338s",
-        "dec": "+12° 23′ 28.0439″"
+        "dec": "+12° 23′ 28.0439″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2264,13 +2813,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m88" } },
     {
-      "type": "Feature",
-      "messier_id": "M88",
-      "messier_order": 88,
-      "properties": {
-        "name": "M88",
+      "order": 88,
+      "data": {
+        "messier_id": "M88",
         "desig": "NGC 4501",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.6,
         "const_id": "Com",
@@ -2278,7 +2832,8 @@
         "cl": "SA(rs)b Sy2",
         "dist_al": 39000,
         "ra": "12h 31m 59.2s",
-        "dec": "+14° 25′ 14″"
+        "dec": "+14° 25′ 14″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2290,13 +2845,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m89" } },
     {
-      "type": "Feature",
-      "messier_id": "M89",
-      "messier_order": 89,
-      "properties": {
-        "name": "M89",
+      "order": 89,
+      "data": {
+        "messier_id": "M89",
         "desig": "NGC 4552",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 9.8,
         "const_id": "Vir",
@@ -2304,7 +2864,8 @@
         "cl": "E0-1 Sy2",
         "dist_al": 47000,
         "ra": "12h 35m 39.8s",
-        "dec": "+12° 33′ 23″"
+        "dec": "+12° 33′ 23″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2316,13 +2877,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m90" } },
     {
-      "type": "Feature",
-      "messier_id": "M90",
-      "messier_order": 90,
-      "properties": {
-        "name": "M90",
+      "order": 90,
+      "data": {
+        "messier_id": "M90",
         "desig": "NGC 4569",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.5,
         "const_id": "Vir",
@@ -2330,7 +2896,8 @@
         "cl": "SAB(rs)ab",
         "dist_al": 55900,
         "ra": "12h 36m 49.8s",
-        "dec": "+13° 09′ 46″"
+        "dec": "+13° 09′ 46″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2342,13 +2909,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m91" } },
     {
-      "type": "Feature",
-      "messier_id": "M91",
-      "messier_order": 91,
-      "properties": {
-        "name": "M91",
+      "order": 91,
+      "data": {
+        "messier_id": "M91",
         "desig": "NGC 4548",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 10.2,
         "const_id": "Com",
@@ -2356,7 +2928,8 @@
         "cl": "SB(rs)b LINER",
         "dist_al": 47000,
         "ra": "12h 35m 26.4s",
-        "dec": "+14° 29′ 47″"
+        "dec": "+14° 29′ 47″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2368,13 +2941,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m92" } },
     {
-      "type": "Feature",
-      "messier_id": "M92",
-      "messier_order": 92,
-      "properties": {
-        "name": "M92",
+      "order": 92,
+      "data": {
+        "messier_id": "M92",
         "desig": "NGC 6341",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 6.4,
         "const_id": "Her",
@@ -2382,7 +2960,8 @@
         "cl": "IV",
         "dist_al": 26.7,
         "ra": "17h 17m 07.39s",
-        "dec": "+43° 08′ 09.4″"
+        "dec": "+43° 08′ 09.4″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2394,13 +2973,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m93" } },
     {
-      "type": "Feature",
-      "messier_id": "M93",
-      "messier_order": 93,
-      "properties": {
-        "name": "M93",
+      "order": 93,
+      "data": {
+        "messier_id": "M93",
         "desig": "NGC 2447",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 6,
         "const_id": "Pup",
@@ -2408,7 +2992,8 @@
         "cl": "IV1p",
         "dist_al": 3.6,
         "ra": "07h 44.6m",
-        "dec": "−23° 52′"
+        "dec": "−23° 52′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2420,13 +3005,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m94" } },
     {
-      "type": "Feature",
-      "messier_id": "M94",
-      "messier_order": 94,
-      "properties": {
-        "name": "M94",
+      "order": 94,
+      "data": {
+        "messier_id": "M94",
         "desig": "NGC 4736",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 8.2,
         "const_id": "CVn",
@@ -2434,7 +3024,8 @@
         "cl": "(R)SA(r)ab Sy2",
         "dist_al": 14700,
         "ra": "12h 50m 53.1s",
-        "dec": "+41° 07′ 14″"
+        "dec": "+41° 07′ 14″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2446,13 +3037,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m95" } },
     {
-      "type": "Feature",
-      "messier_id": "M95",
-      "messier_order": 95,
-      "properties": {
-        "name": "M95",
+      "order": 95,
+      "data": {
+        "messier_id": "M95",
         "desig": "NGC 3351",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.7,
         "const_id": "Leo",
@@ -2460,7 +3056,8 @@
         "cl": "SB(r)b sbrst",
         "dist_al": 31200,
         "ra": "10h 43m 57.7s",
-        "dec": "+11° 42′ 14″"
+        "dec": "+11° 42′ 14″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2472,13 +3069,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m96" } },
     {
-      "type": "Feature",
-      "messier_id": "M96",
-      "messier_order": 96,
-      "properties": {
-        "name": "M96",
+      "order": 96,
+      "data": {
+        "messier_id": "M96",
         "desig": "NGC 3368",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.2,
         "const_id": "Leo",
@@ -2486,7 +3088,8 @@
         "cl": "SAB(rs)ab LINER",
         "dist_al": 28000,
         "ra": "10h 46m 45.7s",
-        "dec": "+11° 49′ 12″"
+        "dec": "+11° 49′ 12″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2498,13 +3101,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m97" } },
     {
-      "type": "Feature",
-      "messier_id": "M97",
-      "messier_order": 97,
-      "properties": {
-        "name": "M97",
+      "order": 97,
+      "data": {
+        "messier_id": "M97",
         "desig": "NGC 3587",
         "alt": "Owl Nebula",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "pn",
         "mag": 9.9,
         "const_id": "UMa",
@@ -2512,7 +3121,8 @@
         "cl": "IIIa",
         "dist_al": 2.03,
         "ra": "11h 14m 47.734s",
-        "dec": "+55° 01′ 08.50″"
+        "dec": "+55° 01′ 08.50″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2524,13 +3134,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m98" } },
     {
-      "type": "Feature",
-      "messier_id": "M98",
-      "messier_order": 98,
-      "properties": {
-        "name": "M98",
+      "order": 98,
+      "data": {
+        "messier_id": "M98",
         "desig": "NGC 4192",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 10.1,
         "const_id": "Com",
@@ -2538,7 +3153,8 @@
         "cl": "SAB(s)ab LINER",
         "dist_al": 44400,
         "ra": "12h 13m 48.292s",
-        "dec": "+14° 54′ 01.69″"
+        "dec": "+14° 54′ 01.69″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2550,13 +3166,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m99" } },
     {
-      "type": "Feature",
-      "messier_id": "M99",
-      "messier_order": 99,
-      "properties": {
-        "name": "M99",
+      "order": 99,
+      "data": {
+        "messier_id": "M99",
         "desig": "NGC 4254",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.9,
         "const_id": "Com",
@@ -2564,7 +3185,8 @@
         "cl": "SA(s)c LINER",
         "dist_al": 44700,
         "ra": "12h 18m 49.6s",
-        "dec": "+14° 24′ 59″"
+        "dec": "+14° 24′ 59″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2576,13 +3198,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m100" } },
     {
-      "type": "Feature",
-      "messier_id": "M100",
-      "messier_order": 100,
-      "properties": {
-        "name": "M100",
+      "order": 100,
+      "data": {
+        "messier_id": "M100",
         "desig": "NGC 4321",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.3,
         "const_id": "Com",
@@ -2590,7 +3217,8 @@
         "cl": "SAB(s)bc LINER",
         "dist_al": 55000,
         "ra": "12h 22m 54.9s",
-        "dec": "+15° 49′ 21″"
+        "dec": "+15° 49′ 21″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2602,13 +3230,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m101" } },
     {
-      "type": "Feature",
-      "messier_id": "M101",
-      "messier_order": 101,
-      "properties": {
-        "name": "M101",
+      "order": 101,
+      "data": {
+        "messier_id": "M101",
         "desig": "NGC 5457",
         "alt": "Pinwheel",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 7.9,
         "const_id": "UMa",
@@ -2616,7 +3250,8 @@
         "cl": "SAB(rs)cd",
         "dist_al": 19100,
         "ra": "14h 03m 12.6s",
-        "dec": "+54° 20′ 57″"
+        "dec": "+54° 20′ 57″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2628,13 +3263,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m102" } },
     {
-      "type": "Feature",
-      "messier_id": "M102",
-      "messier_order": 102,
-      "properties": {
-        "name": "M102",
+      "order": 102,
+      "data": {
+        "messier_id": "M102",
         "desig": "NGC 5866",
         "alt": "Spindle",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.9,
         "const_id": "Dra",
@@ -2642,7 +3283,8 @@
         "cl": "S0-a+ LINER",
         "dist_al": 50000,
         "ra": "15h 06m 29.5s",
-        "dec": "+55° 45′ 48″"
+        "dec": "+55° 45′ 48″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2654,13 +3296,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m103" } },
     {
-      "type": "Feature",
-      "messier_id": "M103",
-      "messier_order": 103,
-      "properties": {
-        "name": "M103",
+      "order": 103,
+      "data": {
+        "messier_id": "M103",
         "desig": "NGC 581",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "oc",
         "mag": 7.4,
         "const_id": "Cas",
@@ -2668,7 +3315,8 @@
         "cl": "III2p",
         "dist_al": 10,
         "ra": "01h 33.2m",
-        "dec": "+60° 42′"
+        "dec": "+60° 42′",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2680,13 +3328,19 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m104" } },
     {
-      "type": "Feature",
-      "messier_id": "M104",
-      "messier_order": 104,
-      "properties": {
-        "name": "M104",
+      "order": 104,
+      "data": {
+        "messier_id": "M104",
         "desig": "NGC 4594",
         "alt": "Sombrero",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 8,
         "const_id": "Vir",
@@ -2694,7 +3348,8 @@
         "cl": "SA(s)a Sy1.9",
         "dist_al": 28700,
         "ra": "12h 39m 59.4s",
-        "dec": "−11° 37′ 23″"
+        "dec": "−11° 37′ 23″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2706,13 +3361,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m105" } },
     {
-      "type": "Feature",
-      "messier_id": "M105",
-      "messier_order": 105,
-      "properties": {
-        "name": "M105",
+      "order": 105,
+      "data": {
+        "messier_id": "M105",
         "desig": "NGC 3379",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 9.3,
         "const_id": "Leo",
@@ -2720,7 +3380,8 @@
         "cl": "E1 LINER",
         "dist_al": 30400,
         "ra": "10h 47m 49.6s",
-        "dec": "+12° 34′ 54″"
+        "dec": "+12° 34′ 54″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2732,13 +3393,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m106" } },
     {
-      "type": "Feature",
-      "messier_id": "M106",
-      "messier_order": 106,
-      "properties": {
-        "name": "M106",
+      "order": 106,
+      "data": {
+        "messier_id": "M106",
         "desig": "NGC 4258",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 8.4,
         "const_id": "CVn",
@@ -2746,7 +3412,8 @@
         "cl": "SAB(s)bc Sy1.9",
         "dist_al": 22200,
         "ra": "12h 18m 57.5s",
-        "dec": "+47° 18′ 14″"
+        "dec": "+47° 18′ 14″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2758,13 +3425,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m107" } },
     {
-      "type": "Feature",
-      "messier_id": "M107",
-      "messier_order": 107,
-      "properties": {
-        "name": "M107",
+      "order": 107,
+      "data": {
+        "messier_id": "M107",
         "desig": "NGC 6171",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "gc",
         "mag": 7.9,
         "const_id": "Oph",
@@ -2772,7 +3444,8 @@
         "cl": "X",
         "dist_al": 20.9,
         "ra": "16h 32m 31.86s",
-        "dec": "–13° 03′ 13.6″"
+        "dec": "–13° 03′ 13.6″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2784,13 +3457,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m108" } },
     {
-      "type": "Feature",
-      "messier_id": "M108",
-      "messier_order": 108,
-      "properties": {
-        "name": "M108",
+      "order": 108,
+      "data": {
+        "messier_id": "M108",
         "desig": "NGC 3556",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 10,
         "const_id": "UMa",
@@ -2798,7 +3476,8 @@
         "cl": "SB(s)cd",
         "dist_al": 46000,
         "ra": "11h 11m 31.0s",
-        "dec": "+55° 40′ 27″"
+        "dec": "+55° 40′ 27″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2810,13 +3489,18 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m109" } },
     {
-      "type": "Feature",
-      "messier_id": "M109",
-      "messier_order": 109,
-      "properties": {
-        "name": "M109",
+      "order": 109,
+      "data": {
+        "messier_id": "M109",
         "desig": "NGC 3992",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "s",
         "mag": 9.8,
         "const_id": "UMa",
@@ -2824,7 +3508,8 @@
         "cl": "SB(rs)bc LINER",
         "dist_al": 59500,
         "ra": "11h 57m 36.0s",
-        "dec": "+53° 22′ 28″"
+        "dec": "+53° 22′ 28″",
+        "astrobin_id": null
       },
       "geometry": {
         "type": "Point",
@@ -2836,13 +3521,25 @@
     },
     {"create": {"_index": "astronomy", "_type": "messiers", "_id": "m110" } },
     {
-      "type": "Feature",
-      "messier_id": "M110",
-      "messier_order": 110,
-      "properties": {
-        "name": "M110",
+      "order": 110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.1,
+          41.6833
+        ]
+      },
+      "data": {
+        "messier_id": "M110",
         "desig": "NGC 205",
-        "alt": "",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "type": "e",
         "mag": 8.5,
         "const_id": "And",
@@ -2850,15 +3547,10 @@
         "cl": "E5 pec",
         "dist_al": 2600,
         "ra": "00h 40m 22.1s",
-        "dec": "+41° 41′ 07″"
+        "dec": "+41° 41′ 07″",
+        "astrobin_id": null
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.1,
-          41.6833
-        ]
-      }
+
     }
   ]
 }
