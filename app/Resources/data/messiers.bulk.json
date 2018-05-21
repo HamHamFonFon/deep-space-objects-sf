@@ -2,6 +2,7 @@
   "bulkData": [
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m1" } },
     {
+      "messier_id": "M1",
       "order": 1,
       "geometry": {
         "type": "Point",
@@ -11,7 +12,6 @@
         ]
       },
       "data": {
-        "messier_id": "M1",
         "desig": "NGC 1952",
         "alt": {
           "alt": "Crab Nebula",
@@ -34,9 +34,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m2" } },
     {
+      "messier_id": "M2",
       "order": 2,
       "data": {
-        "messier_id": "M2",
         "desig": "NGC 7089",
         "alt": {
           "alt": "",
@@ -66,9 +66,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m3" } },
     {
+      "messier_id": "M3",
       "order": 3,
       "data": {
-        "messier_id": "M3",
         "desig": "NGC 5272",
         "alt": {
           "alt": "",
@@ -98,9 +98,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m4" } },
     {
+      "messier_id": "M4",
       "order": 4,
       "data": {
-        "messier_id": "M4",
         "desig": "NGC 6121",
         "alt": {
           "alt": "Cat's eye",
@@ -130,9 +130,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m5" } },
     {
+      "messier_id": "M5",
       "order": 5,
       "data": {
-        "messier_id": "M5",
         "desig": "NGC 5904",
         "alt": {
           "alt": "",
@@ -162,9 +162,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m6" } },
     {
+      "messier_id": "M6",
       "order": 6,
       "data": {
-        "messier_id": "M6",
         "desig": "NGC 6405",
         "alt": {
           "alt": "Butterfly Cluster",
@@ -194,9 +194,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m7" } },
     {
+      "messier_id": "M7",
       "order": 7,
       "data": {
-        "messier_id": "M7",
         "desig": "NGC 6475",
         "alt": {
           "alt": "Ptolemy´s Cluster",
@@ -226,9 +226,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m8" } },
     {
+      "messier_id": "M8",
       "order": 8,
       "data": {
-        "messier_id": "M8",
         "desig": "NGC 6523",
         "alt": {
           "alt": "Lagoon Nebula",
@@ -258,9 +258,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m9" } },
     {
+      "messier_id": "M9",
       "order": 9,
       "data": {
-        "messier_id": "M9",
         "desig": "NGC 6333",
         "alt": {
           "alt": "",
@@ -290,9 +290,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m10" } },
     {
+      "messier_id": "M10",
       "order": 10,
       "data": {
-        "messier_id": "M10",
         "desig": "NGC 6254",
         "alt": {
           "alt": "",
@@ -322,9 +322,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m11" } },
     {
+      "messier_id": "M11",
       "order": 11,
       "data": {
-        "messier_id": "M11",
         "desig": "NGC 6705",
         "alt": {
           "alt": "Wild Duck Cluster",
@@ -354,9 +354,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m12" } },
     {
+      "messier_id": "M12",
       "order": 12,
       "data": {
-        "messier_id": "M12",
         "desig": "NGC 6218",
         "alt": {
           "alt": "",
@@ -386,9 +386,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m13" } },
     {
+      "messier_id": "M13",
       "order": 13,
       "data": {
-        "messier_id": "M13",
         "desig": "NGC 6205",
         "alt": {
           "alt": "Great Hercules Cluster",
@@ -418,9 +418,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m14" } },
     {
+      "messier_id": "M14",
       "order": 14,
       "data": {
-        "messier_id": "M14",
         "desig": "NGC 6402",
         "alt": {
           "alt": "",
@@ -450,9 +450,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m15" } },
     {
+      "messier_id": "M15",
       "order": 15,
       "data": {
-        "messier_id": "M15",
         "desig": "NGC 7078",
         "alt": {
           "alt": "",
@@ -482,9 +482,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m16" } },
     {
+      "messier_id": "M16",
       "order": 16,
       "data": {
-        "messier_id": "M16",
         "desig": "NGC 6611",
         "alt": {
           "alt": "Eagle Nebula",
@@ -514,9 +514,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m17" } },
     {
+      "messier_id": "M17",
       "order": 17,
       "data": {
-        "messier_id": "M17",
         "desig": "NGC 6618",
         "alt": {
           "alt": "Omega Nebula",
@@ -546,9 +546,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m18" } },
     {
+      "messier_id": "M18",
       "order": 18,
       "data": {
-        "messier_id": "M18",
         "desig": "NGC 6613",
         "alt": {
           "alt": "Black swan",
@@ -578,9 +578,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m19" } },
     {
+      "messier_id": "M19",
       "order": 19,
       "data": {
-        "messier_id": "M19",
         "desig": "NGC 6273",
         "alt": {
           "alt": "",
@@ -610,9 +610,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m20" } },
     {
+      "messier_id": "M20",
       "order": 20,
       "data": {
-        "messier_id": "M20",
         "desig": "NGC 6514",
         "alt": {
           "alt": "Trifid Nebula",
@@ -642,9 +642,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m21" } },
     {
+      "messier_id": "M21",
       "order": 21,
       "data": {
-        "messier_id": "M21",
         "desig": "NGC 6531",
         "alt": {
           "alt": "",
@@ -674,9 +674,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m22" } },
     {
+      "messier_id": "M22",
       "order": 22,
       "data": {
-        "messier_id": "M22",
         "desig": "NGC 6656",
         "alt": {
           "alt": "Saggitarius cluster",
@@ -706,9 +706,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m23" } },
     {
+      "messier_id": "M23",
       "order": 23,
       "data": {
-        "messier_id": "M23",
         "desig": "NGC 6494",
         "alt": {
           "alt": "",
@@ -738,9 +738,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m24" } },
     {
+      "messier_id": "M24",
       "order": 25,
       "data": {
-        "messier_id": "M24",
         "desig": "",
         "alt": {
           "alt": "Milky Way patch",
@@ -770,9 +770,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m25" } },
     {
+      "messier_id": "M25",
       "order": 25,
       "data": {
-        "messier_id": "M25",
         "desig": "IC 4725",
         "alt": {
           "alt": "",
@@ -802,9 +802,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m26" } },
     {
+      "messier_id": "M26",
       "order": 26,
       "data": {
-        "messier_id": "M26",
         "desig": "NGC 6694",
         "alt": {
           "alt": "",
@@ -834,9 +834,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m27" } },
     {
+      "messier_id": "M27",
       "order": 27,
       "data": {
-        "messier_id": "M27",
         "desig": "NGC 6853",
         "alt": {
           "alt": "Dumbbell Nebula",
@@ -866,9 +866,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m28" } },
     {
+      "messier_id": "M28",
       "order": 28,
       "data": {
-        "messier_id": "M28",
         "desig": "NGC 6626",
         "alt": {
           "alt": "",
@@ -898,9 +898,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m29" } },
     {
+      "messier_id": "M29",
       "order": 29,
       "data": {
-        "messier_id": "M29",
         "desig": "NGC 6913",
         "alt": {
           "alt": "",
@@ -930,9 +930,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m30" } },
     {
+      "messier_id": "M30",
       "order": 30,
       "data": {
-        "messier_id": "M30",
         "desig": "NGC 7099",
         "alt": {
           "alt": "",
@@ -962,9 +962,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m31" } },
     {
+      "messier_id": "M31",
       "order": 31,
       "data": {
-        "messier_id": "M31",
         "desig": "NGC 224",
         "alt": {
           "alt": "Andromeda",
@@ -994,9 +994,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m32" } },
     {
+      "messier_id": "M32",
       "order": 32,
       "data": {
-        "messier_id": "M32",
         "desig": "NGC 221",
         "alt": {
           "alt": "",
@@ -1026,9 +1026,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m33" } },
     {
+      "messier_id": "M33",
       "order": 33,
       "data": {
-        "messier_id": "M33",
         "desig": "NGC 598",
         "alt": {
           "alt": "Triangulum",
@@ -1058,9 +1058,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m34" } },
     {
+      "messier_id": "M34",
       "order": 34,
       "data": {
-        "messier_id": "M34",
         "desig": "NGC 1039",
         "alt": {
           "alt": "",
@@ -1090,9 +1090,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m35" } },
     {
+      "messier_id": "M35",
       "order": 35,
       "data": {
-        "messier_id": "M35",
         "desig": "NGC 2168",
         "alt": {
           "alt": "",
@@ -1122,9 +1122,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m36" } },
     {
+      "messier_id": "M36",
       "order": 36,
       "data": {
-        "messier_id": "M36",
         "desig": "NGC 1960",
         "alt": {
           "alt": "",
@@ -1154,9 +1154,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m37" } },
     {
+      "messier_id": "M37",
       "order": 37,
       "data": {
-        "messier_id": "M37",
         "desig": "NGC 2099",
         "alt": {
           "alt": "",
@@ -1186,9 +1186,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m38" } },
     {
+      "messier_id": "M38",
       "order": 38,
       "data": {
-        "messier_id": "M38",
         "desig": "NGC 1912",
         "alt": {
           "alt": "",
@@ -1218,9 +1218,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m39" } },
     {
+      "messier_id": "M39",
       "order": 39,
       "data": {
-        "messier_id": "M39",
         "desig": "NGC 7092",
         "alt": {
           "alt": "",
@@ -1250,9 +1250,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m40" } },
     {
+      "messier_id": "M40",
       "order": 40,
       "data": {
-        "messier_id": "M40",
         "desig": "WN 4",
         "alt": {
           "alt": "",
@@ -1282,9 +1282,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m41" } },
     {
+      "messier_id": "M41",
       "order": 41,
       "data": {
-        "messier_id": "M41",
         "desig": "NGC 2287",
         "alt": {
           "alt": "",
@@ -1314,9 +1314,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m42" } },
     {
+      "messier_id": "M42",
       "order": 42,
       "data": {
-        "messier_id": "M42",
         "desig": "NGC 1976",
         "alt": {
           "alt": "Orion Nebula",
@@ -1346,9 +1346,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m43" } },
     {
+      "messier_id": "M43",
       "order": 43,
       "data": {
-        "messier_id": "M43",
         "desig": "NGC 1982",
         "alt": {
           "alt": "Mairan nebula",
@@ -1378,9 +1378,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m44" } },
     {
+      "messier_id": "M44",
       "order": 44,
       "data": {
-        "messier_id": "M44",
         "desig": "NGC 2632",
         "alt": {
           "alt": "Praesepe",
@@ -1410,9 +1410,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m45" } },
     {
+      "messier_id": "M45",
       "order": 45,
       "data": {
-        "messier_id": "M45",
         "desig": "",
         "alt": {
           "alt": "Pleiades",
@@ -1442,9 +1442,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m46" } },
     {
+      "messier_id": "M46",
       "order": 46,
       "data": {
-        "messier_id": "M46",
         "desig": "NGC 2437",
         "alt": {
           "alt": "",
@@ -1474,9 +1474,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m47" } },
     {
+      "messier_id": "M47",
       "order": 47,
       "data": {
-        "messier_id": "M47",
         "desig": "NGC 2422",
         "alt": {
           "alt": "",
@@ -1506,9 +1506,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m48" } },
     {
+      "messier_id": "M48",
       "order": 48,
       "data": {
-        "messier_id": "M48",
         "desig": "NGC 2548",
         "alt": {
           "alt": "",
@@ -1538,9 +1538,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m49" } },
     {
+      "messier_id": "M49",
       "order": 49,
       "data": {
-        "messier_id": "M49",
         "desig": "NGC 4472",
         "alt": {
           "alt": "",
@@ -1570,9 +1570,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m50" } },
     {
+      "messier_id": "M50",
       "order": 50,
       "data": {
-        "messier_id": "M50",
         "desig": "NGC 2323",
         "alt": {
           "alt": "",
@@ -1602,9 +1602,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m51" } },
     {
+      "messier_id": "M51",
       "order": 51,
       "data": {
-        "messier_id": "M51",
         "desig": "NGC 5194/5",
         "alt": {
           "alt": "Whirlpool",
@@ -1634,9 +1634,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m52" } },
     {
+      "messier_id": "M52",
       "order": 52,
       "data": {
-        "messier_id": "M52",
         "desig": "NGC 7654",
         "alt": {
           "alt": "",
@@ -1666,9 +1666,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m53" } },
     {
+      "messier_id": "M53",
       "order": 53,
       "data": {
-        "messier_id": "M53",
         "desig": "NGC 5024",
         "alt": {
           "alt": "",
@@ -1698,9 +1698,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m54" } },
     {
+      "messier_id": "M54",
       "order": 54,
       "data": {
-        "messier_id": "M54",
         "desig": "NGC 6715",
         "alt": {
           "alt": "",
@@ -1730,9 +1730,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m55" } },
     {
+      "messier_id": "M55",
       "order": 55,
       "data": {
-        "messier_id": "M55",
         "desig": "NGC 6809",
         "alt": {
           "alt": "",
@@ -1762,9 +1762,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m56" } },
     {
+      "messier_id": "M56",
       "order": 56,
       "data": {
-        "messier_id": "M56",
         "desig": "NGC 6779",
         "alt": {
           "alt": "",
@@ -1794,9 +1794,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m57" } },
     {
+      "messier_id": "M57",
       "order": 57,
       "data": {
-        "messier_id": "M57",
         "desig": "NGC 6720",
         "alt": {
           "alt": "Ring Nebula",
@@ -1826,9 +1826,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m58" } },
     {
+      "messier_id": "M58",
       "order": 58,
       "data": {
-        "messier_id": "M58",
         "desig": "NGC 4579",
         "alt": {
           "alt": "",
@@ -1858,9 +1858,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m59" } },
     {
+      "messier_id": "M59",
       "order": 59,
       "data": {
-        "messier_id": "M59",
         "desig": "NGC 4621",
         "alt": {
           "alt": "",
@@ -1890,9 +1890,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m60" } },
     {
+      "messier_id": "M60",
       "order": 60,
       "data": {
-        "messier_id": "M60",
         "desig": "NGC 4649",
         "alt": {
           "alt": "",
@@ -1922,9 +1922,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m61" } },
     {
+      "messier_id": "M61",
       "order": 61,
       "data": {
-        "messier_id": "M61",
         "desig": "NGC 4303",
         "alt": {
           "alt": "",
@@ -1954,9 +1954,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m62" } },
     {
+      "messier_id": "M62",
       "order": 62,
       "data": {
-        "messier_id": "M62",
         "desig": "NGC 6266",
         "alt": {
           "alt": "",
@@ -1986,9 +1986,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m63" } },
     {
+      "messier_id": "M63",
       "order": 63,
       "data": {
-        "messier_id": "M63",
         "desig": "NGC 5055",
         "alt": {
           "alt": "Sunflower Galaxy",
@@ -2018,9 +2018,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m64" } },
     {
+      "messier_id": "M64",
       "order": 64,
       "data": {
-        "messier_id": "M64",
         "desig": "NGC 4826",
         "alt": {
           "alt": "Blackeye Galaxy",
@@ -2082,9 +2082,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m66" } },
     {
+      "messier_id": "M66",
       "order": 66,
       "data": {
-        "messier_id": "M66",
         "desig": "NGC 3627",
         "alt": {
           "alt": "",
@@ -2114,9 +2114,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m67" } },
     {
+      "messier_id": "M67",
       "order": 67,
       "data": {
-        "messier_id": "M67",
         "desig": "NGC 2682",
         "alt": {
           "alt": "",
@@ -2146,9 +2146,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m68" } },
     {
+      "messier_id": "M68",
       "order": 68,
       "data": {
-        "messier_id": "M68",
         "desig": "NGC 4590",
         "alt": {
           "alt": "",
@@ -2178,9 +2178,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m69" } },
     {
+      "messier_id": "M69",
       "order": 69,
       "data": {
-        "messier_id": "M69",
         "desig": "NGC 6637",
         "alt": {
           "alt": "",
@@ -2210,9 +2210,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m70" } },
     {
+      "messier_id": "M70",
       "order": 70,
       "data": {
-        "messier_id": "M70",
         "desig": "NGC 6681",
         "alt": {
           "alt": "",
@@ -2242,9 +2242,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m71" } },
     {
+      "messier_id": "M71",
       "order": 71,
       "data": {
-        "messier_id": "M71",
         "desig": "NGC 6838",
         "alt": {
           "alt": "",
@@ -2274,9 +2274,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m72" } },
     {
+      "messier_id": "M72",
       "order": 72,
       "data": {
-        "messier_id": "M72",
         "desig": "NGC 6981",
         "alt": {
           "alt": "",
@@ -2306,9 +2306,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m73" } },
     {
+      "messier_id": "M73",
       "order": 73,
       "data": {
-        "messier_id": "M73",
         "desig": "NGC 6994",
         "alt": {
           "alt": "4 Star asterism",
@@ -2338,9 +2338,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m74" } },
     {
+      "messier_id": "M74",
       "order": 74,
       "data": {
-        "messier_id": "M74",
         "desig": "NGC 628",
         "alt": {
           "alt": "",
@@ -2370,9 +2370,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m75" } },
     {
+      "messier_id": "M75",
       "order": 75,
       "data": {
-        "messier_id": "M75",
         "desig": "NGC 6864",
         "alt": {
           "alt": "",
@@ -2402,9 +2402,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m76" } },
     {
+      "messier_id": "M76",
       "order": 76,
       "data": {
-        "messier_id": "M76",
         "desig": "NGC 650/1",
         "alt": {
           "alt": "Little Dumbbell Nebula",
@@ -2434,9 +2434,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m77" } },
     {
+      "messier_id": "M77",
       "order": 77,
       "data": {
-        "messier_id": "M77",
         "desig": "NGC 1068",
         "alt": {
           "alt": "Cetus A",
@@ -2466,9 +2466,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m78" } },
     {
+      "messier_id": "M78",
       "order": 78,
       "data": {
-        "messier_id": "M78",
         "desig": "NGC 2068",
         "alt": {
           "alt": "",
@@ -2498,9 +2498,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m79" } },
     {
+      "messier_id": "M79",
       "order": 79,
       "data": {
-        "messier_id": "M79",
         "desig": "NGC 1904",
         "alt": {
           "alt": "",
@@ -2530,9 +2530,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m80" } },
     {
+      "messier_id": "M80",
       "order": 80,
       "data": {
-        "messier_id": "M80",
         "desig": "NGC 6093",
         "alt": {
           "alt": "",
@@ -2562,9 +2562,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m81" } },
     {
+      "messier_id": "M81",
       "order": 81,
       "data": {
-        "messier_id": "M81",
         "desig": "NGC 3031",
         "alt": {
           "alt": "Bode´s Galaxy",
@@ -2594,9 +2594,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m82" } },
     {
+      "messier_id": "M82",
       "order": 82,
       "data": {
-        "messier_id": "M82",
         "desig": "NGC 3034",
         "alt": {
           "alt": "Cigar Galaxy",
@@ -2626,9 +2626,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m83" } },
     {
+      "messier_id": "M83",
       "order": 83,
       "data": {
-        "messier_id": "M83",
         "desig": "NGC 5236",
         "alt": {
           "alt": "Southern Pinwheel",
@@ -2658,9 +2658,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m84" } },
     {
+      "messier_id": "M84",
       "order": 84,
       "data": {
-        "messier_id": "M84",
         "desig": "NGC 4374",
         "alt": {
           "alt": "",
@@ -2690,9 +2690,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m85" } },
     {
+      "messier_id": "M85",
       "order": 85,
       "data": {
-        "messier_id": "M85",
         "desig": "NGC 4382",
         "alt": {
           "alt": "",
@@ -2722,9 +2722,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m86" } },
     {
+      "messier_id": "M86",
       "order": 86,
       "data": {
-        "messier_id": "M86",
         "desig": "NGC 4406",
         "alt": {
           "alt": "",
@@ -2754,9 +2754,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m87" } },
     {
+      "messier_id": "M87",
       "order": 87,
       "data": {
-        "messier_id": "M87",
         "desig": "NGC 4486",
         "alt": {
           "alt": "Virgo A",
@@ -2786,9 +2786,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m88" } },
     {
+      "messier_id": "M88",
       "order": 88,
       "data": {
-        "messier_id": "M88",
         "desig": "NGC 4501",
         "alt": {
           "alt": "",
@@ -2818,9 +2818,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m89" } },
     {
+      "messier_id": "M89",
       "order": 89,
       "data": {
-        "messier_id": "M89",
         "desig": "NGC 4552",
         "alt": {
           "alt": "",
@@ -2850,9 +2850,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m90" } },
     {
+      "messier_id": "M90",
       "order": 90,
       "data": {
-        "messier_id": "M90",
         "desig": "NGC 4569",
         "alt": {
           "alt": "",
@@ -2882,9 +2882,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m91" } },
     {
+      "messier_id": "M91",
       "order": 91,
       "data": {
-        "messier_id": "M91",
         "desig": "NGC 4548",
         "alt": {
           "alt": "",
@@ -2914,9 +2914,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m92" } },
     {
+      "messier_id": "M92",
       "order": 92,
       "data": {
-        "messier_id": "M92",
         "desig": "NGC 6341",
         "alt": {
           "alt": "",
@@ -2946,9 +2946,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m93" } },
     {
+      "messier_id": "M93",
       "order": 93,
       "data": {
-        "messier_id": "M93",
         "desig": "NGC 2447",
         "alt": {
           "alt": "",
@@ -2978,10 +2978,10 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m94" } },
     {
+      "desig": "NGC 4736",
       "order": 94,
       "data": {
         "messier_id": "M94",
-        "desig": "NGC 4736",
         "alt": {
           "alt": "",
           "alt_fr": "",
@@ -3010,9 +3010,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m95" } },
     {
+      "messier_id": "M95",
       "order": 95,
       "data": {
-        "messier_id": "M95",
         "desig": "NGC 3351",
         "alt": {
           "alt": "",
@@ -3042,9 +3042,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m96" } },
     {
+      "messier_id": "M96",
       "order": 96,
       "data": {
-        "messier_id": "M96",
         "desig": "NGC 3368",
         "alt": {
           "alt": "",
@@ -3074,9 +3074,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m97" } },
     {
+      "messier_id": "M97",
       "order": 97,
       "data": {
-        "messier_id": "M97",
         "desig": "NGC 3587",
         "alt": {
           "alt": "Owl Nebula",
@@ -3106,9 +3106,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m98" } },
     {
+      "messier_id": "M98",
       "order": 98,
       "data": {
-        "messier_id": "M98",
         "desig": "NGC 4192",
         "alt": {
           "alt": "",
@@ -3138,9 +3138,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m99" } },
     {
+      "messier_id": "M99",
       "order": 99,
       "data": {
-        "messier_id": "M99",
         "desig": "NGC 4254",
         "alt": {
           "alt": "",
@@ -3170,9 +3170,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m100" } },
     {
+      "messier_id": "M100",
       "order": 100,
       "data": {
-        "messier_id": "M100",
         "desig": "NGC 4321",
         "alt": {
           "alt": "",
@@ -3202,9 +3202,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m101" } },
     {
+      "messier_id": "M101",
       "order": 101,
       "data": {
-        "messier_id": "M101",
         "desig": "NGC 5457",
         "alt": {
           "alt": "Pinwheel",
@@ -3234,9 +3234,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m102" } },
     {
+      "messier_id": "M102",
       "order": 102,
       "data": {
-        "messier_id": "M102",
         "desig": "NGC 5866",
         "alt": {
           "alt": "Spindle",
@@ -3266,9 +3266,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m103" } },
     {
+      "messier_id": "M103",
       "order": 103,
       "data": {
-        "messier_id": "M103",
         "desig": "NGC 581",
         "alt": {
           "alt": "",
@@ -3298,9 +3298,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m104" } },
     {
+      "messier_id": "M104",
       "order": 104,
       "data": {
-        "messier_id": "M104",
         "desig": "NGC 4594",
         "alt": {
           "alt": "Sombrero",
@@ -3330,9 +3330,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m105" } },
     {
+      "messier_id": "M105",
       "order": 105,
       "data": {
-        "messier_id": "M105",
         "desig": "NGC 3379",
         "alt": {
           "alt": "",
@@ -3362,9 +3362,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m106" } },
     {
+      "messier_id": "M106",
       "order": 106,
       "data": {
-        "messier_id": "M106",
         "desig": "NGC 4258",
         "alt": {
           "alt": "",
@@ -3394,9 +3394,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m107" } },
     {
+      "messier_id": "M107",
       "order": 107,
       "data": {
-        "messier_id": "M107",
         "desig": "NGC 6171",
         "alt": {
           "alt": "",
@@ -3426,9 +3426,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m108" } },
     {
+      "messier_id": "M108",
       "order": 108,
       "data": {
-        "messier_id": "M108",
         "desig": "NGC 3556",
         "alt": {
           "alt": "",
@@ -3458,9 +3458,9 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m109" } },
     {
+      "messier_id": "M109",
       "order": 109,
       "data": {
-        "messier_id": "M109",
         "desig": "NGC 3992",
         "alt": {
           "alt": "",
@@ -3490,6 +3490,7 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "messiers", "_id": "m110" } },
     {
+      "messier_id": "M110",
       "order": 110,
       "geometry": {
         "type": "Point",
@@ -3499,7 +3500,6 @@
         ]
       },
       "data": {
-        "messier_id": "M110",
         "desig": "NGC 205",
         "alt": {
           "alt": "",

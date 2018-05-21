@@ -1,5 +1,8 @@
 {
   "properties": {
+    "messier_id": {
+      "type": "text"
+    },
     "order": {
       "type": "integer"
     },
@@ -8,9 +11,6 @@
     },
     "data": {
       "properties": {
-        "messier_id": {
-          "type": "text"
-        },
         "desig": {
           "type": "text"
         },
