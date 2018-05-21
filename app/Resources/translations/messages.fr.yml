@@ -5,6 +5,8 @@ selectLang: Langues
 astrobin.message: This product uses the AstroBin API but is not endorsed or certified by AstroBin.
 error.message: Erreur %error%, peut-être êtes-vous tombé dans un trou noir :) ?
 more: Plus d'informations
+hem.no: Hémisphère nord
+hem.su: Hémisphère sud
 # Lang:
 fr: Français
 en: Anglais (UK)
@@ -18,7 +20,7 @@ messierList: Liste des objets de Messier
 # View full
 info: Informations
 magnitude: Magnitude apparente
-const: Constellation
+const: Constellation|Constellations
 dim: Dimension
 dimExp: Dimension angulaire en minutes d'arcs
 distAl: Distance (années-lumière)

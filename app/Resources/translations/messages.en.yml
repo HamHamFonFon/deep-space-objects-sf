@@ -5,6 +5,8 @@ selectLang: Languages
 astrobin.message: This product uses the AstroBin API but is not endorsed or certified by AstroBin.
 error.message: Error %error%, maybe you fall in a black hole :) ?
 more: More informations
+hem.no: Northern hemisphere
+hem.su: Southern hemisphere
 # Lang:
 fr: French
 en: English (UK)
@@ -18,7 +20,7 @@ messierList:  Messiers's object list
 # View full
 info: Informations
 magnitude: Apparent magnitude
-const: Constellation
+const: Constellation|Constellations
 dim: Size
 dimExp: Angular dimensions in arcminutes
 distAl: Distance (year-light)

@@ -10,10 +10,22 @@
         <a class="nav-link" href="{{ path('messier_list') }}">Messier</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">NGC</a>
+        <a class="nav-link disabled" href="#">NGC</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownConst" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'const'|transchoice(2) }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownConst">
+          <a class="dropdown-item" href="">{{ 'hem.no'|trans }}</a>
+          <a class="dropdown-item" href="">{{ 'hem.su'|trans }}</a>
+        </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Constellations</a>
+        <a class="nav-link disabled" href="#">Planets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Map</a>
       </li>
     </ul>
   </div>
