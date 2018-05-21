@@ -2696,148 +2696,493 @@
         ]
       }
     },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "her" } },
+    {
+      "const_id": "Her",
+      "data": {
+        "gen": "Herculis",
+        "alt": {
+          "alt": "Hercules",
+          "alt_fr": "Hercule",
+          "alt_es": "Hércules",
+          "alt_de": "Herkules",
+          "alt_pt": "Hércules",
+          "alt_it": ""
+        },
+        "rank": "2",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.5,
+          35
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -114.5199,
+              19.1531
+            ],
+            [
+              -112.445,
+              21.4896
+            ],
+            [
+              -109.6785,
+              31.6027
+            ],
+            [
+              -109.276,
+              38.9223
+            ],
+            [
+              -111.4742,
+              42.437
+            ],
+            [
+              -115.0648,
+              46.3134
+            ],
+            [
+              -117.8076,
+              44.9349
+            ],
+            [
+              -121.8311,
+              42.4515
+            ]
+          ],
+          [
+            [
+              -109.6785,
+              31.6027
+            ],
+            [
+              -104.9276,
+              30.9264
+            ]
+          ],
+          [
+            [
+              -109.276,
+              38.9223
+            ],
+            [
+              -101.2382,
+              36.8092
+            ]
+          ],
+          [
+            [
+              -90.9367,
+              37.2505
+            ],
+            [
+              -99.0794,
+              37.1459
+            ],
+            [
+              -101.2382,
+              36.8092
+            ],
+            [
+              -104.9276,
+              30.9264
+            ],
+            [
+              -101.242,
+              24.8392
+            ],
+            [
+              -93.3853,
+              27.7207
+            ],
+            [
+              -90.5588,
+              29.2479
+            ],
+            [
+              -88.1144,
+              28.7625
+            ]
+          ],
+          [
+            [
+              -101.3381,
+              14.3903
+            ],
+            [
+              -112.445,
+              21.4896
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "hor" } },
+    {
+      "const_id": "Hor",
+      "data": {
+        "gen": "Horologii",
+        "alt": {
+          "alt": "Horologium",
+          "alt_fr": "Horloge",
+          "alt_es": "Reloj",
+          "alt_de": "Pendeluhr",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          51,
+          -52
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              63.5005,
+              -42.2944
+            ],
+            [
+              40.6394,
+              -50.8003
+            ],
+            [
+              39.3516,
+              -52.5431
+            ],
+            [
+              40.1651,
+              -54.5499
+            ],
+            [
+              45.9034,
+              -59.7378
+            ],
+            [
+              44.6992,
+              -64.0713
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "hya" } },
+    {
+      "const_id": "Hya",
+      "data": {
+        "gen": "Hydrae",
+        "alt": {
+          "alt": "Hydra",
+          "alt_fr": "Hydre",
+          "alt_es": "Hidra",
+          "alt_de": "Wasserschlange",
+          "alt_pt": "Hydra",
+          "alt_it": ""
+        },
+
+        "rank": "2",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150,
+          -22
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              131.6938,
+              6.4188
+            ],
+            [
+              132.1082,
+              5.8378
+            ],
+            [
+              130.8061,
+              3.3987
+            ],
+            [
+              129.6893,
+              3.3414
+            ],
+            [
+              129.414,
+              5.7038
+            ],
+            [
+              131.6938,
+              6.4188
+            ],
+            [
+              133.8484,
+              5.9456
+            ],
+            [
+              138.5911,
+              2.3143
+            ],
+            [
+              144.964,
+              -1.1428
+            ],
+            [
+              141.8968,
+              -8.6586
+            ],
+            [
+              147.8696,
+              -14.8466
+            ],
+            [
+              152.647,
+              -12.3541
+            ],
+            [
+              156.5226,
+              -16.8363
+            ],
+            [
+              162.4062,
+              -16.1936
+            ],
+            [
+              173.2505,
+              -31.8576
+            ],
+            [
+              178.2272,
+              -33.9081
+            ],
+            [
+              -160.2696,
+              -23.1715
+            ],
+            [
+              -148.4071,
+              -26.6824
+            ],
+            [
+              -137.4279,
+              -27.9604
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "hyi" } },
+    {
+      "const_id": "Hyi",
+      "data": {
+        "gen": "Hydri",
+        "alt": {
+          "alt": "Hydrus",
+          "alt_fr": "Hydre mâle",
+          "alt_es": "Hidra Austral",
+          "alt_de": "Kl. Wasserschlange",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.5,
+          -72
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.4378,
+              -77.2542
+            ],
+            [
+              56.8098,
+              -74.239
+            ],
+            [
+              39.8973,
+              -68.2669
+            ],
+            [
+              35.4373,
+              -68.6594
+            ],
+            [
+              28.7339,
+              -67.6473
+            ],
+            [
+              29.6925,
+              -61.5699
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "ind" } },
+    {
+      "const_id": "Ind",
+      "data": {
+        "gen": "Indi",
+        "alt": {
+          "alt": "Indus",
+          "alt_fr": "Indien",
+          "alt_es": "Indio",
+          "alt_de": "Inder",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -42,
+          -55.5
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -50.6082,
+              -47.2915
+            ],
+            [
+              -48.9903,
+              -51.921
+            ],
+            [
+              -46.2975,
+              -58.4542
+            ],
+            [
+              -30.5205,
+              -54.9926
+            ],
+            [
+              -40.0334,
+              -53.4494
+            ],
+            [
+              -50.6082,
+              -47.2915
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "lac" } },
+    {
+      "const_id": "Lac",
+      "data": {
+        "gen": "Lacertae",
+        "alt": {
+          "alt": "Lacerta",
+          "alt_fr": "Lézard",
+          "alt_es": "Lagarto",
+          "alt_de": "Eidechse",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -18,
+          47
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -24.1099,
+              52.229
+            ],
+            [
+              -22.1771,
+              50.2825
+            ],
+            [
+              -22.6174,
+              47.7069
+            ],
+            [
+              -24.7436,
+              46.5366
+            ],
+            [
+              -22.3781,
+              43.1234
+            ],
+            [
+              -19.8714,
+              44.2763
+            ],
+            [
+              -22.6174,
+              47.7069
+            ],
+            [
+              -23.8709,
+              49.4764
+            ],
+            [
+              -24.1099,
+              52.229
+            ]
+          ],
+          [
+            [
+              -22.3781,
+              43.1234
+            ],
+            [
+              -26.5303,
+              39.7149
+            ],
+            [
+              -26.0076,
+              37.7487
+            ]
+          ]
+        ]
+      }
+    },
+
+
+
   ]
 }
 
-
-{
-  "const_id": "Her",
-  "data": {
-    "name": "Hercules",
-    "es": "Hércules",
-    "de": "Herkules",
-
-    "gen": "Herculis",
-    "rank": "2",
-    "hem": [
-      -99.2096,
-      27.9989,
-      3.5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -106.5,
-      35
-    ]
-  }
-},
-{
-  "const_id": "Hor",
-  "data": {
-    "name": "Horologium",
-    "es": "Reloj",
-    "de": "Pendeluhr",
-
-    "gen": "Horologii",
-    "rank": "3",
-    "hem": [
-      49.1394,
-      -53.3363,
-      6
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      51,
-      -52
-    ]
-  }
-},
-{
-  "const_id": "Hya",
-  "data": {
-    "name": "Hydra",
-    "es": "Hconst_idra",
-    "de": "Wasserschlange",
-
-    "gen": "Hydrae",
-    "rank": "2",
-    "hem": [
-      174.1825,
-      -14.5318,
-      3
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      150,
-      -22
-    ]
-  }
-},
-{
-  "const_id": "Hyi",
-  "data": {
-    "name": "Hydrus",
-    "es": "Hconst_idra Austral",
-    "de": "Kl. Wasserschlange",
-
-    "gen": "Hydri",
-    "rank": "3",
-    "hem": [
-      35.1637,
-      -70.5564,
-      6.5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      34.5,
-      -72
-    ]
-  }
-},
-{
-  "const_id": "Ind",
-  "data": {
-    "name": "Indus",
-    "es": "Indio",
-    "de": "Inder",
-
-    "gen": "Indi",
-    "rank": "3",
-    "hem": [
-      -30.4164,
-      -60.3067,
-      5.5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -42,
-      -55.5
-    ]
-  }
-},
-{
-  "const_id": "Lac",
-  "data": {
-    "name": "Lacerta",
-    "es": "Lagarto",
-    "de": "Econst_idechse",
-
-    "gen": "Lacertae",
-    "rank": "3",
-    "hem": [
-      -23.079,
-      46.5418,
-      7
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -18,
-      47
-    ]
-  }
-},
 {
   "const_id": "Leo",
   "data": {
