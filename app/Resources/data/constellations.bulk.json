@@ -4008,7 +4008,7 @@
           "alt_fr": "Ophiuchus",
           "alt_es": "Ofiuco",
           "alt_de": "Schlangenträger",
-          "alt_pt": "",
+          "alt_pt": "Serpentário",
           "alt_it": ""
         },
         "rank": "2",
@@ -4112,677 +4112,2260 @@
           ]
         ]
       }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "ori" } },
+    {
+      "const_id": "Ori",
+      "data": {
+        "gen": "Orionis",
+        "alt": {
+          "alt": "Orion",
+          "alt_fr": "Orion",
+          "alt_es": "Orión",
+          "alt_de": "Orion",
+          "alt_pt": "Órion",
+          "alt_it": ""
+        },
+        "rank": "1",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84,
+          13
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              91.893,
+              14.7685
+            ],
+            [
+              88.5958,
+              20.2762
+            ],
+            [
+              90.9799,
+              20.1385
+            ],
+            [
+              92.985,
+              14.2088
+            ],
+            [
+              90.5958,
+              9.6473
+            ],
+            [
+              88.7929,
+              7.4071
+            ],
+            [
+              81.2828,
+              6.3497
+            ],
+            [
+              73.7239,
+              10.1508
+            ]
+          ],
+          [
+            [
+              74.6371,
+              1.714
+            ],
+            [
+              73.5629,
+              2.4407
+            ],
+            [
+              72.8015,
+              5.6051
+            ],
+            [
+              72.46,
+              6.9613
+            ],
+            [
+              72.653,
+              8.9002
+            ],
+            [
+              73.7239,
+              10.1508
+            ],
+            [
+              74.0928,
+              13.5145
+            ],
+            [
+              76.1423,
+              15.4041
+            ],
+            [
+              77.4248,
+              15.5972
+            ]
+          ],
+          [
+            [
+              78.6345,
+              -8.2016
+            ],
+            [
+              81.1192,
+              -2.3971
+            ],
+            [
+              83.0017,
+              -0.2991
+            ],
+            [
+              81.2828,
+              6.3497
+            ],
+            [
+              83.7845,
+              9.9342
+            ],
+            [
+              88.7929,
+              7.4071
+            ],
+            [
+              85.1897,
+              -1.9426
+            ],
+            [
+              86.9391,
+              -9.6696
+            ]
+          ],
+          [
+            [
+              85.1897,
+              -1.9426
+            ],
+            [
+              84.0534,
+              -1.2019
+            ],
+            [
+              83.0017,
+              -0.2991
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "pav" } },
+    {
+      "const_id": "Pav",
+      "data": {
+        "gen": "Pavonis",
+        "alt": {
+          "alt": "Pavo",
+          "alt_fr": "Paon",
+          "alt_es": "Pavo",
+          "alt_de": "Pfau",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "2",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63,
+          -62
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -53.5881,
+              -56.7351
+            ],
+            [
+              -48.7604,
+              -66.2032
+            ],
+            [
+              -57.8183,
+              -66.1821
+            ],
+            [
+              -76.9457,
+              -62.1876
+            ],
+            [
+              -84.1932,
+              -61.4939
+            ],
+            [
+              -87.8549,
+              -63.6686
+            ],
+            [
+              -93.5667,
+              -64.7239
+            ],
+            [
+              -79.2411,
+              -71.4281
+            ],
+            [
+              -59.8519,
+              -72.9105
+            ],
+            [
+              -48.7604,
+              -66.2032
+            ],
+            [
+              -38.3891,
+              -65.3662
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "peg" } },
+    {
+      "const_id": "Peg",
+      "data": {
+        "gen": "Pegasi",
+        "alt": {
+          "alt": "Pegasus",
+          "alt_fr": "Pégase",
+          "alt_es": "Pegaso",
+          "alt_de": "Pegasus",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "1",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -25.5,
+          16
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -27.5032,
+              33.1782
+            ],
+            [
+              -19.2494,
+              30.2212
+            ],
+            [
+              -14.0564,
+              28.0828
+            ],
+            [
+              2.0969,
+              29.0904
+            ],
+            [
+              3.309,
+              15.1836
+            ],
+            [
+              -13.8098,
+              15.2053
+            ],
+            [
+              -18.3267,
+              12.1729
+            ],
+            [
+              -19.6345,
+              10.8314
+            ],
+            [
+              -27.4501,
+              6.1979
+            ],
+            [
+              -33.9535,
+              9.875
+            ]
+          ],
+          [
+            [
+              -13.8098,
+              15.2053
+            ],
+            [
+              -14.0564,
+              28.0828
+            ],
+            [
+              -17.4992,
+              24.6016
+            ],
+            [
+              -18.3672,
+              23.5657
+            ],
+            [
+              -28.2472,
+              25.3451
+            ],
+            [
+              -33.8386,
+              25.645
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "per" } },
+    {
+      "const_id": "Per",
+      "data": {
+        "gen": "Persei",
+        "alt": {
+          "alt": "Perseus",
+          "alt_fr": "Persée",
+          "alt_es": "Perseo",
+          "alt_de": "Perseus",
+          "alt_pt": "Perseu",
+          "alt_it": ""
+        },
+        "rank": "1",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66,
+          45
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              56.0797,
+              32.2882
+            ],
+            [
+              58.533,
+              31.8836
+            ],
+            [
+              59.7413,
+              35.791
+            ],
+            [
+              59.4635,
+              40.0102
+            ],
+            [
+              56.2985,
+              42.5786
+            ],
+            [
+              55.7313,
+              47.7875
+            ],
+            [
+              54.1224,
+              48.1926
+            ],
+            [
+              51.0807,
+              49.8612
+            ],
+            [
+              46.1991,
+              53.5064
+            ],
+            [
+              42.6742,
+              55.8955
+            ],
+            [
+              43.5644,
+              52.7625
+            ],
+            [
+              47.2667,
+              49.6133
+            ],
+            [
+              47.374,
+              44.8575
+            ],
+            [
+              47.0422,
+              40.9556
+            ],
+            [
+              47.8224,
+              39.6116
+            ],
+            [
+              46.2941,
+              38.8403
+            ],
+            [
+              44.6903,
+              39.6627
+            ],
+            [
+              44.9162,
+              41.0329
+            ],
+            [
+              47.0422,
+              40.9556
+            ]
+          ],
+          [
+            [
+              61.646,
+              50.3513
+            ],
+            [
+              63.7244,
+              48.4093
+            ],
+            [
+              62.1654,
+              47.7125
+            ],
+            [
+              55.7313,
+              47.7875
+            ]
+          ],
+          [
+            [
+              47.2667,
+              49.6133
+            ],
+            [
+              41.0499,
+              49.2284
+            ],
+            [
+              25.9152,
+              50.6887
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "phe" } },
+    {
+      "const_id": "Phe",
+      "data": {
+        "gen": "Phoenicis",
+        "alt": {
+          "alt": "Phoenix",
+          "alt_fr": "Phénix",
+          "alt_es": "Fénix",
+          "alt_de": "Phönix",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "2",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5,
+          -43
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.571,
+              -42.306
+            ],
+            [
+              16.521,
+              -46.7184
+            ],
+            [
+              22.0914,
+              -43.3182
+            ],
+            [
+              22.8129,
+              -49.0727
+            ],
+            [
+              17.0962,
+              -55.2458
+            ],
+            [
+              16.521,
+              -46.7184
+            ],
+            [
+              2.3527,
+              -45.7474
+            ],
+            [
+              6.571,
+              -42.306
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "pic" } },
+    {
+      "const_id": "Pic",
+      "data": {
+        "gen": "Pictoris",
+        "alt": {
+          "alt": "Pictor",
+          "alt_fr": "Peintre",
+          "alt_es": "Pintor",
+          "alt_de": "Maler",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.5,
+          -50
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              102.0477,
+              -61.9414
+            ],
+            [
+              87.4569,
+              -56.1667
+            ],
+            [
+              86.8212,
+              -51.0665
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "psa" } },
+    {
+      "const_id": "PsA",
+      "data": {
+        "gen": "Piscis Austrini",
+        "alt": {
+          "alt": "Piscis Austrinus",
+          "alt_fr": "Poisson austral",
+          "alt_es": "Pez Austral",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "2",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -27,
+          -29
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -19.8361,
+              -27.0436
+            ],
+            [
+              -15.5873,
+              -29.6222
+            ],
+            [
+              -16.0129,
+              -32.5396
+            ],
+            [
+              -16.8686,
+              -32.8755
+            ],
+            [
+              -22.1236,
+              -32.3461
+            ],
+            [
+              -27.9041,
+              -32.9885
+            ],
+            [
+              -33.7633,
+              -33.0258
+            ],
+            [
+              -33.066,
+              -30.8983
+            ],
+            [
+              -27.9041,
+              -32.9885
+            ],
+            [
+              -19.8361,
+              -27.0436
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "psc" } },
+    {
+      "const_id": "Psc",
+      "data": {
+        "gen": "Piscium",
+        "alt": {
+          "alt": "Pisces",
+          "alt_fr": "Poissons",
+          "alt_es": "Peces",
+          "alt_de": "Fische",
+          "alt_pt": "Peixes",
+          "alt_it": ""
+        },
+        "rank": "2",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5,
+          15
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              18.4373,
+              24.5837
+            ],
+            [
+              17.9152,
+              30.0896
+            ],
+            [
+              19.8666,
+              27.2641
+            ],
+            [
+              18.4373,
+              24.5837
+            ],
+            [
+              17.8634,
+              21.0347
+            ],
+            [
+              22.8709,
+              15.3458
+            ],
+            [
+              26.3485,
+              9.1577
+            ],
+            [
+              30.5117,
+              2.7638
+            ],
+            [
+              28.389,
+              3.1875
+            ],
+            [
+              25.3579,
+              5.4876
+            ],
+            [
+              22.5463,
+              6.1438
+            ],
+            [
+              18.4329,
+              7.5754
+            ],
+            [
+              15.7359,
+              7.8901
+            ],
+            [
+              12.1706,
+              7.5851
+            ],
+            [
+              -0.1721,
+              6.8633
+            ],
+            [
+              -5.0123,
+              5.6263
+            ],
+            [
+              -8.0079,
+              6.379
+            ],
+            [
+              -9.9142,
+              5.3813
+            ],
+            [
+              -10.7086,
+              3.2823
+            ],
+            [
+              -8.2669,
+              1.2556
+            ],
+            [
+              -4.4883,
+              1.78
+            ],
+            [
+              -3.402,
+              3.4868
+            ],
+            [
+              -5.0123,
+              5.6263
+            ]
+          ],
+          [
+            [
+              -10.7086,
+              3.2823
+            ],
+            [
+              -14.0308,
+              3.82
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "pup" } },
+    {
+      "const_id": "Pup",
+      "data": {
+        "gen": "Puppis",
+        "alt": {
+          "alt": "Puppis",
+          "alt_fr": "Petit Chien",
+          "alt_es": "Popa",
+          "alt_de": "Achterdeck",
+          "alt_pt": "Cão Menor",
+          "alt_it": ""
+        },
+        "rank": "2",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111,
+          -46
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              99.4403,
+              -43.1959
+            ],
+            [
+              109.2857,
+              -37.0975
+            ],
+            [
+              113.8454,
+              -28.3693
+            ],
+            [
+              114.7078,
+              -26.8038
+            ],
+            [
+              117.3236,
+              -24.8598
+            ],
+            [
+              119.2147,
+              -22.8801
+            ],
+            [
+              121.886,
+              -24.3043
+            ],
+            [
+              120.896,
+              -40.0031
+            ],
+            [
+              122.3831,
+              -47.3366
+            ]
+          ],
+          [
+            [
+              117.3236,
+              -24.8598
+            ],
+            [
+              117.0215,
+              -25.9372
+            ],
+            [
+              115.952,
+              -28.9548
+            ],
+            [
+              113.8454,
+              -28.3693
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "pyx" } },
+    {
+      "const_id": "Pyx",
+      "data": {
+        "gen": "Pyxidis",
+        "alt": {
+          "alt": "Pyxis",
+          "alt_fr": "Boussole",
+          "alt_es": "Brújula",
+          "alt_de": "Schiffskompass",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132,
+          -24
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              120.896,
+              -40.0031
+            ],
+            [
+              130.0256,
+              -35.3084
+            ],
+            [
+              130.8981,
+              -33.1864
+            ],
+            [
+              132.633,
+              -27.7098
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "ret" } },
+    {
+      "const_id": "Ret",
+      "data": {
+        "gen": "Reticuli",
+        "alt": {
+          "alt": "Reticulum",
+          "alt_fr": "Réticule",
+          "alt_es": "Retículo",
+          "alt_de": "Netz",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.5,
+          -61
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              63.6062,
+              -62.4739
+            ],
+            [
+              64.121,
+              -59.3022
+            ],
+            [
+              59.6865,
+              -61.4002
+            ],
+            [
+              56.0499,
+              -64.8069
+            ],
+            [
+              63.6062,
+              -62.4739
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "sco" } },
+    {
+      "const_id": "Sco",
+      "data": {
+        "gen": "Scorpii",
+        "alt": {
+          "alt": "Scorpius",
+          "alt_fr": "Scorpion",
+          "alt_es": "Escorpión",
+          "alt_de": "Skorpion",
+          "alt_pt": "Escorpião",
+          "alt_it": ""
+        },
+        "rank": "1",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111,
+          -38
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -120.287,
+              -26.1141
+            ],
+            [
+              -119.9166,
+              -22.6217
+            ],
+            [
+              -118.6407,
+              -19.8055
+            ]
+          ],
+          [
+            [
+              -119.9166,
+              -22.6217
+            ],
+            [
+              -114.7029,
+              -25.5928
+            ],
+            [
+              -112.6481,
+              -26.432
+            ],
+            [
+              -111.0294,
+              -28.216
+            ],
+            [
+              -107.4591,
+              -34.2932
+            ],
+            [
+              -107.0324,
+              -38.0474
+            ],
+            [
+              -106.3541,
+              -42.3613
+            ],
+            [
+              -101.9617,
+              -43.2392
+            ],
+            [
+              -95.6703,
+              -42.9978
+            ],
+            [
+              -93.1038,
+              -40.127
+            ],
+            [
+              -94.378,
+              -39.03
+            ],
+            [
+              -96.5978,
+              -37.1038
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "scl" } },
+    {
+      "const_id": "Scl",
+      "data": {
+        "gen": "Sculptoris",
+        "alt": {
+          "alt": "Sculptor",
+          "alt_fr": "Sculpteur",
+          "alt_es": "Escultor",
+          "alt_de": "Bildhauer",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.5,
+          -33
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              14.6515,
+              -29.3575
+            ],
+            [
+              -2.7686,
+              -28.1303
+            ],
+            [
+              -10.294,
+              -32.532
+            ],
+            [
+              -6.7573,
+              -37.8183
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "sct" } },
+    {
+      "const_id": "Sct",
+      "data": {
+        "gen": "Scuti",
+        "alt": {
+          "alt": "Scutum",
+          "alt_fr": "Écu de Sobieski",
+          "alt_es": "Escudo",
+          "alt_de": "Schild",
+          "alt_pt": "Scutum",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78,
+          -12.5
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -81.1982,
+              -8.2441
+            ],
+            [
+              -78.2064,
+              -4.7479
+            ],
+            [
+              -79.4316,
+              -9.0526
+            ],
+            [
+              -82.7006,
+              -14.5658
+            ],
+            [
+              -81.1982,
+              -8.2441
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "ser" } },
+    {
+      "const_id": "Ser",
+      "data": {
+        "gen": "Serpentis",
+        "alt": {
+          "alt": "Serpens",
+          "alt_fr": "Serpent",
+          "alt_es": "Serpiente",
+          "alt_de": "Schlange",
+          "alt_pt": "Serpente",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.5,
+          5
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -123.4531,
+              15.4218
+            ],
+            [
+              -124.6123,
+              19.6704
+            ],
+            [
+              -122.8151,
+              18.1416
+            ],
+            [
+              -120.8867,
+              15.6616
+            ],
+            [
+              -123.4531,
+              15.4218
+            ],
+            [
+              -126.2994,
+              10.5389
+            ],
+            [
+              -123.933,
+              6.4256
+            ],
+            [
+              -122.296,
+              4.4777
+            ],
+            [
+              -116.4136,
+              -3.6943
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "sex" } },
+    {
+      "const_id": "Sex",
+      "data": {
+        "gen": "Sextantis",
+        "alt": {
+          "alt": "Sextans",
+          "alt_fr": "Sextant",
+          "alt_es": "Sextante",
+          "alt_de": "Sextant",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          157.5,
+          -7
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              151.9845,
+              -0.3716
+            ],
+            [
+              148.1268,
+              -8.105
+            ],
+            [
+              157.3696,
+              -2.7391
+            ],
+            [
+              157.5728,
+              -0.637
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "sge" } },
+    {
+      "const_id": "Sge",
+      "data": {
+        "gen": "Sagittae",
+        "alt": {
+          "alt": "Sagitta",
+          "alt_fr": "La Flèche",
+          "alt_es": "Flecha",
+          "alt_de": "Pfeil",
+          "alt_pt": "Flecha",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69,
+          18
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -64.9759,
+              18.0139
+            ],
+            [
+              -63.1531,
+              18.5343
+            ],
+            [
+              -60.3107,
+              19.4921
+            ]
+          ],
+          [
+            [
+              -64.7378,
+              17.476
+            ],
+            [
+              -63.1531,
+              18.5343
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "sgr" } },
+    {
+      "const_id": "Sgr",
+      "data": {
+        "gen": "Sagittarii",
+        "alt": {
+          "alt": "Sagittarius",
+          "alt_fr": "Sagittaire",
+          "alt_es": "Sagitario",
+          "alt_de": "Schütze",
+          "alt_pt": "Sagitário",
+          "alt_it": ""
+        },
+        "rank": "1",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.5,
+          -34
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -85.5932,
+              -36.7617
+            ],
+            [
+              -83.957,
+              -34.3846
+            ],
+            [
+              -84.7515,
+              -29.8281
+            ],
+            [
+              -83.0073,
+              -25.4217
+            ],
+            [
+              -86.5591,
+              -21.0588
+            ]
+          ],
+          [
+            [
+              -69.3404,
+              -44.459
+            ],
+            [
+              -69.0284,
+              -40.6159
+            ],
+            [
+              -74.347,
+              -29.8801
+            ],
+            [
+              -78.5859,
+              -26.9908
+            ],
+            [
+              -83.0073,
+              -25.4217
+            ]
+          ],
+          [
+            [
+              -61.1846,
+              -41.8683
+            ],
+            [
+              -60.0659,
+              -35.2763
+            ],
+            [
+              -61.0402,
+              -26.2995
+            ],
+            [
+              -65.8232,
+              -24.8836
+            ],
+            [
+              -68.6813,
+              -24.5086
+            ],
+            [
+              -71.1149,
+              -25.2567
+            ],
+            [
+              -76.1836,
+              -26.2967
+            ],
+            [
+              -78.5859,
+              -26.9908
+            ],
+            [
+              -84.7515,
+              -29.8281
+            ],
+            [
+              -88.548,
+              -30.4241
+            ],
+            [
+              -83.957,
+              -34.3846
+            ],
+            [
+              -74.347,
+              -29.8801
+            ],
+            [
+              -73.265,
+              -27.6704
+            ],
+            [
+              -76.1836,
+              -26.2967
+            ],
+            [
+              -73.8292,
+              -21.7415
+            ],
+            [
+              -72.559,
+              -21.0236
+            ],
+            [
+              -70.5913,
+              -18.9529
+            ],
+            [
+              -69.5818,
+              -17.8472
+            ],
+            [
+              -69.5682,
+              -15.955
+            ]
+          ],
+          [
+            [
+              -73.8292,
+              -21.7415
+            ],
+            [
+              -75.5675,
+              -21.1067
+            ],
+            [
+              -76.4576,
+              -22.7448
+            ],
+            [
+              -76.1836,
+              -26.2967
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "tau" } },
+    {
+      "const_id": "Tau",
+      "data": {
+        "gen": "Tauri",
+        "alt": {
+          "alt": "Taurus",
+          "alt_fr": "Taureau",
+          "alt_es": "Toro",
+          "alt_de": "Stier",
+          "alt_pt": "Touro",
+          "alt_it": ""
+        },
+        "rank": "1",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          54,
+          15
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              84.4112,
+              21.1425
+            ],
+            [
+              68.9802,
+              16.5093
+            ],
+            [
+              67.1656,
+              15.8709
+            ],
+            [
+              64.9483,
+              15.6276
+            ],
+            [
+              65.7337,
+              17.5425
+            ],
+            [
+              67.1542,
+              19.1804
+            ],
+            [
+              81.573,
+              28.6075
+            ]
+          ],
+          [
+            [
+              64.9483,
+              15.6276
+            ],
+            [
+              60.1701,
+              12.4903
+            ],
+            [
+              51.7923,
+              9.7327
+            ],
+            [
+              60.7891,
+              5.9893
+            ]
+          ],
+          [
+            [
+              51.7923,
+              9.7327
+            ],
+            [
+              51.2033,
+              9.0289
+            ],
+            [
+              54.2183,
+              0.4017
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "tel" } },
+    {
+      "const_id": "Tel",
+      "data": {
+        "gen": "Telescopii",
+        "alt": {
+          "alt": "Telescopium",
+          "alt_fr": "Téléscope",
+          "alt_es": "Telescopio",
+          "alt_de": "Teleskop",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.5,
+          -54
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -87.1927,
+              -45.9544
+            ],
+            [
+              -83.2566,
+              -45.9685
+            ],
+            [
+              -82.7923,
+              -49.0706
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "tra" } },
+    {
+      "const_id": "TrA",
+      "data": {
+        "gen": "Trianguli Australis",
+        "alt": {
+          "alt": "Triangulum Australe",
+          "alt_fr": "Triangle australe",
+          "alt_es": "Triángulo Austral",
+          "alt_de": "Südl. Dreieck",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "2",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120,
+          -67.5
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -107.8338,
+              -69.0277
+            ],
+            [
+              -121.2143,
+              -63.4307
+            ],
+            [
+              -130.2726,
+              -68.6795
+            ],
+            [
+              -107.8338,
+              -69.0277
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "tri" } },
+    {
+      "const_id": "Tri",
+      "data": {
+        "gen": "Trianguli",
+        "alt": {
+          "alt": "Triangulum",
+          "alt_fr": "Triangle",
+          "alt_es": "Triángulo",
+          "alt_de": "Dreieck",
+          "alt_pt": "Triângulo",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27,
+          34
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              28.2704,
+              29.5788
+            ],
+            [
+              32.3859,
+              34.9873
+            ],
+            [
+              34.3286,
+              33.8472
+            ],
+            [
+              28.2704,
+              29.5788
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "tuc" } },
+    {
+      "const_id": "Tuc",
+      "data": {
+        "gen": "Tucanae",
+        "alt": {
+          "alt": "Tucana",
+          "alt_fr": "Toucan",
+          "alt_es": "Tucán",
+          "alt_de": "Tukan",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12,
+          -64
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -25.3746,
+              -60.2596
+            ],
+            [
+              -10.6426,
+              -58.2357
+            ],
+            [
+              7.8861,
+              -62.9582
+            ],
+            [
+              5.0178,
+              -64.8748
+            ],
+            [
+              -0.0209,
+              -65.5771
+            ],
+            [
+              -23.1668,
+              -64.9664
+            ],
+            [
+              -25.3746,
+              -60.2596
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "uma" } },
+    {
+      "const_id": "UMa",
+      "data": {
+        "gen": "Ursae Majoris",
+        "alt": {
+          "alt": "Ursa Major",
+          "alt_fr": "Grande Ourse",
+          "alt_es": "Osa Mayor",
+          "alt_de": "Großer Bär",
+          "alt_pt": "Ursa Maior",
+          "alt_it": ""
+        },
+        "rank": "1",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165,
+          48
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -176.1435,
+              57.0326
+            ],
+            [
+              165.932,
+              61.751
+            ],
+            [
+              165.4603,
+              56.3824
+            ],
+            [
+              178.4577,
+              53.6948
+            ],
+            [
+              -176.1435,
+              57.0326
+            ],
+            [
+              -166.4927,
+              55.9598
+            ],
+            [
+              -159.0186,
+              54.9254
+            ],
+            [
+              -153.1148,
+              49.3133
+            ]
+          ],
+          [
+            [
+              178.4577,
+              53.6948
+            ],
+            [
+              176.5126,
+              47.7794
+            ],
+            [
+              169.6197,
+              33.0943
+            ],
+            [
+              169.5465,
+              31.5308
+            ]
+          ],
+          [
+            [
+              176.5126,
+              47.7794
+            ],
+            [
+              167.4159,
+              44.4985
+            ],
+            [
+              155.5822,
+              41.4995
+            ]
+          ],
+          [
+            [
+              167.4159,
+              44.4985
+            ],
+            [
+              154.2741,
+              42.9144
+            ]
+          ],
+          [
+            [
+              165.932,
+              61.751
+            ],
+            [
+              142.8821,
+              63.0619
+            ],
+            [
+              127.5661,
+              60.7182
+            ],
+            [
+              147.7473,
+              59.0387
+            ],
+            [
+              165.4603,
+              56.3824
+            ]
+          ],
+          [
+            [
+              165.4603,
+              56.3824
+            ],
+            [
+              148.0265,
+              54.0643
+            ],
+            [
+              143.2143,
+              51.6773
+            ],
+            [
+              134.8019,
+              48.0418
+            ]
+          ],
+          [
+            [
+              135.9064,
+              47.1565
+            ],
+            [
+              143.2143,
+              51.6773
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "umi" } },
+    {
+      "const_id": "UMi",
+      "data": {
+        "gen": "Ursae Minoris",
+        "alt": {
+          "alt": "Ursa Minor",
+          "alt_fr": "Petite Ourse",
+          "alt_es": "Osa Menor",
+          "alt_de": "Kleiner Bär",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "2",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.5,
+          68
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -123.9853,
+              77.7945
+            ],
+            [
+              -115.6238,
+              75.7553
+            ],
+            [
+              -129.8178,
+              71.834
+            ],
+            [
+              -137.3236,
+              74.1555
+            ],
+            [
+              -123.9853,
+              77.7945
+            ],
+            [
+              -108.5073,
+              82.0373
+            ],
+            [
+              -96.9458,
+              86.5865
+            ],
+            [
+              37.9546,
+              89.2641
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "vel" } },
+    {
+      "const_id": "Vel",
+      "data": {
+        "gen": "Velorum",
+        "alt": {
+          "alt": "Vela",
+          "alt_fr": "Voiles",
+          "alt_es": "Velas",
+          "alt_de": "Segel",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+
+        "rank": "2",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.25,
+          -46
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              131.1759,
+              -54.7088
+            ],
+            [
+              140.5284,
+              -55.0107
+            ],
+            [
+              149.2156,
+              -54.5678
+            ],
+            [
+              161.6924,
+              -49.4203
+            ],
+            [
+              153.684,
+              -42.1219
+            ],
+            [
+              142.675,
+              -40.4667
+            ],
+            [
+              136.999,
+              -43.4326
+            ],
+            [
+              122.3831,
+              -47.3366
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "vir" } },
+    {
+      "const_id": "Vir",
+      "data": {
+        "gen": "Virginis",
+        "alt": {
+          "alt": "Virgo",
+          "alt_fr": "Vièrge",
+          "alt_es": "Virgen",
+          "alt_de": "Jungfrau",
+          "alt_pt": "Virgem",
+          "alt_it": ""
+        },
+        "rank": "1",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -160.5,
+          -4
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              176.4648,
+              6.5294
+            ],
+            [
+              177.6738,
+              1.7647
+            ],
+            [
+              -175.0235,
+              -0.6668
+            ],
+            [
+              -169.5848,
+              -1.4494
+            ],
+            [
+              -162.5125,
+              -5.539
+            ],
+            [
+              -158.7018,
+              -11.1613
+            ],
+            [
+              -145.9964,
+              -6.0005
+            ],
+            [
+              -139.2349,
+              -5.6582
+            ]
+          ],
+          [
+            [
+              -164.4558,
+              10.9592
+            ],
+            [
+              -166.0991,
+              3.3975
+            ],
+            [
+              -169.5848,
+              -1.4494
+            ]
+          ],
+          [
+            [
+              -162.5125,
+              -5.539
+            ],
+            [
+              -156.3267,
+              -0.5958
+            ],
+            [
+              -149.5884,
+              1.5445
+            ],
+            [
+              -138.4378,
+              1.8929
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "vol" } },
+    {
+      "const_id": "Vol",
+      "data": {
+        "gen": "Volantis",
+        "alt": {
+          "alt": "Volans",
+          "alt_fr": "Poisson volant",
+          "alt_es": "Pez Volador",
+          "alt_de": "Fliegender Fisch",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "south"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111,
+          -73
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              135.6117,
+              -66.3961
+            ],
+            [
+              126.4341,
+              -66.1369
+            ],
+            [
+              121.9825,
+              -68.6171
+            ],
+            [
+              109.2076,
+              -67.9572
+            ],
+            [
+              107.1869,
+              -70.4989
+            ],
+            [
+              121.9825,
+              -68.6171
+            ],
+            [
+              135.6117,
+              -66.3961
+            ]
+          ]
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "vul" } },
+    {
+      "const_id": "Vul",
+      "data": {
+        "gen": "Vulpeculae",
+        "alt": {
+          "alt": "Vulpecula",
+          "alt_fr": "Petit Renard",
+          "alt_es": "Zorra",
+          "alt_de": "Fuchs",
+          "alt_pt": "Raposa",
+          "alt_it": ""
+        },
+        "rank": "3",
+        "hem": "north"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.5,
+          21
+        ]
+      },
+      "geometry_line": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              -70.9457,
+              21.3904
+            ],
+            [
+              -67.8236,
+              24.6649
+            ],
+            [
+              -61.6346,
+              24.0796
+            ],
+            [
+              -59.7248,
+              27.7536
+            ],
+            [
+              -56.0578,
+              27.8142
+            ]
+          ]
+        ]
+      }
     }
   ]
-}
-
-
-
-
-{
-  "const_id": "Ori",
-  "data": {
-    "name": "Orion",
-    "es": "Orión",
-    "de": "Orion",
-
-    "gen": "Orionis",
-    "rank": "1",
-    "hem": [
-      83.6481,
-      5.949,
-      5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      84,
-      13
-    ]
-  }
-},
-{
-  "const_id": "Pav",
-  "data": {
-    "name": "Pavo",
-    "es": "Pavo",
-    "de": "Pfau",
-
-    "gen": "Pavonis",
-    "rank": "2",
-    "hem": [
-      -65.8235,
-      -66.7815,
-      7
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -63,
-      -62
-    ]
-  }
-},
-{
-  "const_id": "Peg",
-  "data": {
-    "name": "Pegasus",
-    "es": "Pegaso",
-    "de": "Pegasus",
-
-    "gen": "Pegasi",
-    "rank": "1",
-    "hem": [
-      -20.4597,
-      19.4663,
-      5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -25.5,
-      16
-    ]
-  }
-},
-{
-  "const_id": "Per",
-  "data": {
-    "name": "Perseus",
-    "es": "Perseo",
-    "de": "Perseus",
-
-    "gen": "Persei",
-    "rank": "1",
-    "hem": [
-      47.6241,
-      45.0132,
-      5.5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      66,
-      45
-    ]
-  }
-},
-{
-  "const_id": "Phe",
-  "data": {
-    "name": "Phoenix",
-    "es": "Fénix",
-    "de": "Phönix",
-
-    "gen": "Phoenicis",
-    "rank": "2",
-    "hem": [
-      13.0216,
-      -48.5762,
-      7
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      16.5,
-      -43
-    ]
-  }
-},
-{
-  "const_id": "Pic",
-  "data": {
-    "name": "Pictor",
-    "es": "Pintor",
-    "de": "Maler",
-
-    "gen": "Pictoris",
-    "rank": "3",
-    "hem": [
-      85.6144,
-      -53.9741,
-      7
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      82.5,
-      -50
-    ]
-  }
-},
-{
-  "const_id": "Psc",
-  "data": {
-    "name": "Pisces",
-    "es": "Peces",
-    "de": "Fische",
-
-    "gen": "Piscium",
-    "rank": "2",
-    "hem": [
-      7.7567,
-      13.6872,
-      4.5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      19.5,
-      15
-    ]
-  }
-},
-{
-  "const_id": "PsA",
-  "data": {
-    "name": "Piscis Austrinus",
-    "es": "Pez Austral",
-    "de": "Südl. Fisch",
-
-    "gen": "Piscis Austrini",
-    "rank": "2",
-    "hem": [
-      -25.7324,
-      -30.6422,
-      8
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -27,
-      -29
-    ]
-  }
-},
-{
-  "const_id": "Pup",
-  "data": {
-    "name": "Puppis",
-    "es": "Popa",
-    "de": "Achterdeck",
-
-    "gen": "Puppis",
-    "rank": "2",
-    "hem": [
-      108.8693,
-      -31.1774,
-      4
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      111,
-      -46
-    ]
-  }
-},
-{
-  "const_id": "Pyx",
-  "data": {
-    "name": "Pyxis",
-    "es": "Brújula",
-    "de": "Schiffskompass",
-
-    "gen": "Pyxconst_idis",
-    "rank": "3",
-    "hem": [
-      134.2911,
-      -27.3516,
-      8
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      132,
-      -24
-    ]
-  }
-},
-{
-  "const_id": "Ret",
-  "data": {
-    "name": "Reticulum",
-    "es": "Retículo",
-    "de": "Netz",
-
-    "gen": "Reticuli",
-    "rank": "3",
-    "hem": [
-      58.8186,
-      -59.9975,
-      8
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      55.5,
-      -61
-    ]
-  }
-},
-{
-  "const_id": "Sge",
-  "data": {
-    "name": "Sagitta",
-    "es": "Flecha",
-    "de": "Pfeil",
-
-    "gen": "Sagittae",
-    "rank": "3",
-    "hem": [
-      -65.237,
-      18.8614,
-      9
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -69,
-      18
-    ]
-  }
-},
-{
-  "const_id": "Sgr",
-  "data": {
-    "name": "Sagittarius",
-    "es": "Sagitario",
-    "de": "Schütze",
-
-    "gen": "Sagittarii",
-    "rank": "1",
-    "hem": [
-      -73.5153,
-      -28.9769,
-      4.5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -67.5,
-      -34
-    ]
-  }
-},
-{
-  "const_id": "Sco",
-  "data": {
-    "name": "Scorpius",
-    "es": "Escorpión",
-    "de": "Skorpion",
-
-    "gen": "Scorpii",
-    "rank": "1",
-    "hem": [
-      -106.6888,
-      -27.4315,
-      4.5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -111,
-      -38
-    ]
-  }
-},
-{
-  "const_id": "Scl",
-  "data": {
-    "name": "Sculptor",
-    "es": "Escultor",
-    "de": "Bildhauer",
-
-    "gen": "Sculptoris",
-    "rank": "3",
-    "hem": [
-      7.4301,
-      -32.5884,
-      8
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      1.5,
-      -33
-    ]
-  }
-},
-{
-  "const_id": "Sct",
-  "data": {
-    "name": "Scutum",
-    "es": "Escudo",
-    "de": "Schild",
-
-    "gen": "Scuti",
-    "rank": "3",
-    "hem": [
-      -79.9036,
-      -9.8886,
-      9
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -78,
-      -12.5
-    ]
-  }
-},
-{
-  "const_id": "Ser",
-  "data": {
-    "name": "Serpens",
-    "es": "Serpiente",
-    "de": "Schlange",
-
-    "gen": "Serpentis",
-    "rank": "3",
-    "hem": [
-      -103.3781,
-      4.97,
-      4
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -127.5,
-      5
-    ]
-  }
-},
-{
-  "const_id": "Sex",
-  "data": {
-    "name": "Sextans",
-    "es": "Sextante",
-    "de": "Sextant",
-
-    "gen": "Sextantis",
-    "rank": "3",
-    "hem": [
-      154.0731,
-      -2.6147,
-      8
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      157.5,
-      -7
-    ]
-  }
-},
-{
-  "const_id": "Tau",
-  "data": {
-    "name": "Taurus",
-    "es": "Toro",
-    "de": "Stier",
-
-    "gen": "Tauri",
-    "rank": "1",
-    "hem": [
-      70.5328,
-      15.8771,
-      5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      54,
-      15
-    ]
-  }
-},
-{
-  "const_id": "Tel",
-  "data": {
-    "name": "Telescopium",
-    "es": "Telescopio",
-    "de": "Teleskop",
-
-    "gen": "Telescopii",
-    "rank": "3",
-    "hem": [
-      -70.1161,
-      -51.0369,
-      8
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -82.5,
-      -54
-    ]
-  }
-},
-{
-  "const_id": "Tri",
-  "data": {
-    "name": "Triangulum",
-    "es": "Triángulo",
-    "de": "Dreieck",
-
-    "gen": "Trianguli",
-    "rank": "3",
-    "hem": [
-      32.7664,
-      31.4761,
-      8
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      27,
-      34
-    ]
-  }
-},
-{
-  "const_id": "TrA",
-  "data": {
-    "name": "Triangulum Australe",
-    "es": "Triángulo Austral",
-    "de": "Südl. Dreieck",
-
-    "gen": "Trianguli Australis",
-    "rank": "2",
-    "hem": [
-      -118.7628,
-      -65.388,
-      9
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -120,
-      -67.5
-    ]
-  }
-},
-{
-  "const_id": "Tuc",
-  "data": {
-    "name": "Tucana",
-    "es": "Tucán",
-    "de": "Tukan",
-
-    "gen": "Tucanae",
-    "rank": "3",
-    "hem": [
-      -4.66,
-      -66.33,
-      8
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -12,
-      -64
-    ]
-  }
-},
-{
-  "const_id": "UMa",
-  "data": {
-    "name": "Ursa Major",
-    "es": "Osa Mayor",
-    "de": "Großer Bär",
-
-    "gen": "Ursae Majoris",
-    "rank": "1",
-    "hem": [
-      169.6902,
-      52.7212,
-      3.5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      165,
-      48
-    ]
-  }
-},
-{
-  "const_id": "UMi",
-  "data": {
-    "name": "Ursa Minor",
-    "es": "Osa Menor",
-    "de": "Kleiner Bär",
-
-    "gen": "Ursae Minoris",
-    "rank": "2",
-    "hem": [
-      -134.9925,
-      79.0318,
-      6
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -133.5,
-      68
-    ]
-  }
-},
-{
-  "const_id": "Vel",
-  "data": {
-    "name": "Vela",
-    "es": "Velas",
-    "de": "Segel",
-
-    "gen": "Velorum",
-    "rank": "2",
-    "hem": [
-      143.6591,
-      -48.1672,
-      5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      143.25,
-      -46
-    ]
-  }
-},
-{
-  "const_id": "Vir",
-  "data": {
-    "name": "Virgo",
-    "es": "Virgen",
-    "de": "Jungfrau",
-
-    "gen": "Virginis",
-    "rank": "1",
-    "hem": [
-      -158.9023,
-      -4.1584,
-      4.5
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -160.5,
-      -4
-    ]
-  }
-},
-{
-  "const_id": "Vol",
-  "data": {
-    "name": "Volans",
-    "es": "Pez Volador",
-    "de": "Fliegender Fisch",
-
-    "gen": "Volantis",
-    "rank": "3",
-    "hem": [
-      116.9327,
-      -69.8012,
-      8
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      111,
-      -73
-    ]
-  }
-},
-{
-  "const_id": "Vul",
-  "data": {
-    "name": "Vulpecula",
-    "es": "Zorra",
-    "de": "Fuchs",
-
-    "gen": "Vulpeculae",
-    "rank": "3",
-    "hem": [
-      -56.5304,
-      24.4427,
-      8
-    ]
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -64.5,
-      21
-    ]
-  }
 }
