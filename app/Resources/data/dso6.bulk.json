@@ -513,7 +513,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Stock2",
-      "catalog": "",
+      "catalog": "sto",
       "data": {
         "desig": "Stock 2",
         "type": "oc",
@@ -567,7 +567,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "RCW59",
-      "catalog": "",
+      "catalog": "rcw",
       "data": {
         "desig": "RCW 59",
         "type": "en",
@@ -2655,7 +2655,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Stock1",
-      "catalog": "",
+      "catalog": "sto",
       "data": {
         "desig": "Stock 1",
         "type": "oc",
