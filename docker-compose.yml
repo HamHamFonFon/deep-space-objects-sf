@@ -6,7 +6,7 @@ services:
     image: nginx:1.11.10
     container_name: nginx_dso
     ports:
-      - "81:80"
+      - "80:80"
     links:
       - "php:php"
     volumes:
