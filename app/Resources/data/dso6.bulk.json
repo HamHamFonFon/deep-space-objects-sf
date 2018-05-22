@@ -45,7 +45,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "LDN617",
-      "catalog": "",
+      "catalog": "LDN",
       "data": {
         "desig": "LDN 617",
         "type": "dn",
@@ -99,7 +99,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6193",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6193",
         "type": "oc",
@@ -117,7 +117,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6250",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6250",
         "type": "oc",
@@ -135,7 +135,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6397",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6397",
         "type": "gc",
@@ -189,7 +189,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr62",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 62",
         "type": "oc",
@@ -207,7 +207,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2281",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2281",
         "type": "oc",
@@ -261,7 +261,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr464",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 464",
         "type": "oc",
@@ -279,7 +279,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2516",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2516",
         "type": "oc",
@@ -297,7 +297,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC3114",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 3114",
         "type": "oc",
@@ -315,7 +315,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "IC2581",
-      "catalog": "",
+      "catalog": "ic",
       "data": {
         "desig": "IC 2581",
         "type": "oc",
@@ -333,7 +333,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC3293",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 3293",
         "type": "oc",
@@ -351,7 +351,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "IC2602",
-      "catalog": "",
+      "catalog": "ic",
       "data": {
         "desig": "IC 2602",
         "type": "oc",
@@ -387,7 +387,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr228",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 228",
         "type": "oc",
@@ -405,7 +405,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC3372",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 3372",
         "type": "en",
@@ -441,7 +441,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC3532",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 3532",
         "type": "oc",
@@ -477,7 +477,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr240",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 240",
         "type": "oc",
@@ -495,7 +495,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr463",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 463",
         "type": "oc",
@@ -531,7 +531,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr33",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 33",
         "type": "oc",
@@ -549,7 +549,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC3766",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 3766",
         "type": "oc",
@@ -585,7 +585,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "IC2944",
-      "catalog": "",
+      "catalog": "ic",
       "data": {
         "desig": "IC 2944",
         "type": "oc",
@@ -639,7 +639,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC5281",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 5281",
         "type": "oc",
@@ -657,7 +657,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC5316",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 5316",
         "type": "oc",
@@ -675,7 +675,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC5460",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 5460",
         "type": "oc",
@@ -693,7 +693,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC5662",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 5662",
         "type": "oc",
@@ -729,7 +729,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "IC1396",
-      "catalog": "",
+      "catalog": "ic",
       "data": {
         "desig": "IC 1396",
         "type": "oc",
@@ -747,7 +747,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr471",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 471",
         "type": "oc",
@@ -765,7 +765,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr121",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 121",
         "type": "oc",
@@ -783,7 +783,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr132",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 132",
         "type": "oc",
@@ -801,7 +801,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2362",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2362",
         "type": "oc",
@@ -819,7 +819,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr140",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 140",
         "type": "oc",
@@ -837,7 +837,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC1963",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 1963",
         "type": "oc",
@@ -909,7 +909,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC4755",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 4755",
         "type": "oc",
@@ -945,7 +945,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6871",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6871",
         "type": "oc",
@@ -963,7 +963,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr419",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 419",
         "type": "oc",
@@ -999,7 +999,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "LDN896",
-      "catalog": "",
+      "catalog": "LDN",
       "data": {
         "desig": "LDN 896",
         "type": "dn",
@@ -1017,7 +1017,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6960",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6960",
         "type": "snr",
@@ -1035,7 +1035,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "LDN935",
-      "catalog": "",
+      "catalog": "LDN",
       "data": {
         "desig": "LDN 935",
         "type": "dn",
@@ -1071,7 +1071,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC7000",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 7000",
         "type": "en",
@@ -1107,7 +1107,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC1909",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 1909",
         "type": "rn",
@@ -1125,7 +1125,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr89",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 89",
         "type": "oc",
@@ -1215,7 +1215,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2232",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2232",
         "type": "oc",
@@ -1233,7 +1233,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2238",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2238",
         "type": "en",
@@ -1251,7 +1251,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2237",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2237",
         "type": "sfr",
@@ -1269,7 +1269,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr97",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 97",
         "type": "oc",
@@ -1287,7 +1287,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2239",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2239",
         "type": "oc",
@@ -1305,7 +1305,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2244",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2244",
         "type": "oc",
@@ -1341,7 +1341,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr106",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 106",
         "type": "oc",
@@ -1359,7 +1359,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr107",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 107",
         "type": "oc",
@@ -1377,7 +1377,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2264",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2264",
         "type": "oc",
@@ -1395,7 +1395,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2301",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2301",
         "type": "oc",
@@ -1431,7 +1431,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6067",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6067",
         "type": "oc",
@@ -1449,7 +1449,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6087",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6087",
         "type": "oc",
@@ -1575,7 +1575,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "IC4665",
-      "catalog": "",
+      "catalog": "ic",
       "data": {
         "desig": "IC 4665",
         "type": "oc",
@@ -1611,7 +1611,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6633",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6633",
         "type": "oc",
@@ -1629,7 +1629,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr65",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 65",
         "type": "oc",
@@ -1665,7 +1665,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr69",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 69",
         "type": "oc",
@@ -1683,7 +1683,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC1981",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 1981",
         "type": "oc",
@@ -1701,7 +1701,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC1980",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 1980",
         "type": "oc",
@@ -1719,7 +1719,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr70",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 70",
         "type": "oc",
@@ -1737,7 +1737,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Sh2-264",
-      "catalog": "",
+      "catalog": "Sh",
       "data": {
         "desig": "Sh2-264",
         "type": "en",
@@ -1773,7 +1773,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Sh2-276",
-      "catalog": "",
+      "catalog": "sh",
       "data": {
         "desig": "Sh2-276",
         "type": "en",
@@ -1791,7 +1791,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2169",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2169",
         "type": "oc",
@@ -1809,7 +1809,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6752",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6752",
         "type": "gc",
@@ -1827,7 +1827,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC869",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 869",
         "type": "oc",
@@ -1899,7 +1899,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC1499",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 1499",
         "type": "en",
@@ -1917,7 +1917,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr135",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 135",
         "type": "oc",
@@ -1935,7 +1935,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2478",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2478",
         "type": "oc",
@@ -1953,7 +1953,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2451",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2451",
         "type": "oc",
@@ -1971,7 +1971,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2477",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2477",
         "type": "oc",
@@ -1989,7 +1989,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr173",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 173",
         "type": "oc",
@@ -2007,7 +2007,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Sh2-312",
-      "catalog": "",
+      "catalog": "sh",
       "data": {
         "desig": "Sh2-312",
         "type": "en",
@@ -2043,7 +2043,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Sh2-1",
-      "catalog": "",
+      "catalog": "sh",
       "data": {
         "desig": "Sh2-1",
         "type": "bn",
@@ -2061,7 +2061,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6124",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6124",
         "type": "oc",
@@ -2079,7 +2079,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr302",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 302",
         "type": "oc",
@@ -2097,7 +2097,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6227",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6227",
         "type": "oc",
@@ -2115,7 +2115,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6231",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6231",
         "type": "oc",
@@ -2133,7 +2133,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr316",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 316",
         "type": "oc",
@@ -2151,7 +2151,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6281",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6281",
         "type": "oc",
@@ -2169,7 +2169,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6322",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6322",
         "type": "oc",
@@ -2187,7 +2187,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6334",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6334",
         "type": "en",
@@ -2205,7 +2205,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6383",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6383",
         "type": "oc",
@@ -2223,7 +2223,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6416",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6416",
         "type": "oc",
@@ -2259,7 +2259,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6605",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6605",
         "type": "oc",
@@ -2277,7 +2277,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "IC4756",
-      "catalog": "",
+      "catalog": "ic",
       "data": {
         "desig": "IC 4756",
         "type": "oc",
@@ -2295,7 +2295,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6530",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6530",
         "type": "oc",
@@ -2313,7 +2313,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "IC353",
-      "catalog": "",
+      "catalog": "ic",
       "data": {
         "desig": "IC 353",
         "type": "en",
@@ -2331,7 +2331,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "IC360",
-      "catalog": "",
+      "catalog": "ic",
       "data": {
         "desig": "IC 360",
         "type": "en",
@@ -2403,7 +2403,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Sh2-240",
-      "catalog": "",
+      "catalog": "sh",
       "data": {
         "desig": "Sh2-240",
         "type": "snr",
@@ -2421,7 +2421,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC6025",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 6025",
         "type": "oc",
@@ -2439,7 +2439,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC104",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 104",
         "type": "gc",
@@ -2475,7 +2475,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr285",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 285",
         "type": "oc",
@@ -2493,7 +2493,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2547",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2547",
         "type": "oc",
@@ -2547,7 +2547,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "IC2391",
-      "catalog": "",
+      "catalog": "ic",
       "data": {
         "desig": "IC 2391",
         "type": "oc",
@@ -2565,7 +2565,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "IC2395",
-      "catalog": "",
+      "catalog": "ic",
       "data": {
         "desig": "IC 2395",
         "type": "oc",
@@ -2601,7 +2601,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC3228",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 3228",
         "type": "oc",
@@ -2619,7 +2619,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "NGC2348",
-      "catalog": "",
+      "catalog": "NGC",
       "data": {
         "desig": "NGC 2348",
         "type": "oc",
@@ -2637,7 +2637,7 @@
     {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
     {
       "id": "Cr399",
-      "catalog": "",
+      "catalog": "coll",
       "data": {
         "desig": "Cr 399",
         "type": "oc",
