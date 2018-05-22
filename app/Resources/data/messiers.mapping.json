@@ -1,6 +1,9 @@
 {
   "properties": {
-    "messier_id": {
+    "id": {
+      "type": "text"
+    },
+    "catalog": {
       "type": "text"
     },
     "order": {

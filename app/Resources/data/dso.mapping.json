@@ -1,7 +1,13 @@
 {
   "properties": {
-    "dso_id": {
+    "id": {
       "type": "text"
+    },
+    "catalog": {
+      "type": "text"
+    },
+    "order": {
+      "type": "integer"
     },
     "geometry": {
       "type": "geo_shape"
@@ -50,10 +56,10 @@
         "mag": {
           "type": "float"
         },
-        "dim": {
+        "const_id": {
           "type": "text"
         },
-        "const_id": {
+        "dim": {
           "type": "text"
         },
         "dist_al": {
