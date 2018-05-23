@@ -17,19 +17,19 @@ services:
   php:
     build: docker/php
     container_name: php_dso
-    links:
-      - redis
+#    links:
+#      - redis
     volumes:
      - ${SYMFONY_APP_PATH}:/var/www/dso:rw
      - "./docker/php/php.ini:/usr/local/etc/php/conf.d/custom.ini:ro"
     working_dir: "/var/wwww/dso"
 
   # REDIS
-  redis:
-    image: redis:alpine
-    container_name: redis_dso
-    ports:
-      - 6379:6380
+#  redis:
+#    image: redis:alpine
+#    container_name: redis_dso
+#    ports:
+#      - 6379:6380
 
 
 

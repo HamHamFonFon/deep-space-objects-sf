@@ -62,6 +62,9 @@
         "dim": {
           "type": "text"
         },
+        "cl": {
+          "type": "text"
+        },
         "dist_al": {
           "type": "float"
         },

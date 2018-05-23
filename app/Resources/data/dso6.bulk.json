@@ -1,20 +1,3657 @@
 {
   "bulkData": [
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m1",
+      "catalog": "messier",
+      "order": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.625,
+          22.0167
+        ]
+      },
+      "data": {
+        "desig": "NGC 1952",
+        "alt": {
+          "alt": "Crab Nebula",
+          "alt_fr": "Nebuleuse du crabe",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa do Caranguejo",
+          "alt_it": ""
+        },
+        "type": "snr",
+        "mag": 8.4,
+        "const_id": "TAU",
+        "dim": "6x4",
+        "cl": "",
+        "dist_al": 4.9,
+        "ra": "05h 34m 31.94s",
+        "dec": "+22° 00′ 52.2″",
+        "astrobin_id": null
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m2",
+      "catalog": "messier",
+      "order": 2,
+      "data": {
+        "desig": "NGC 7089",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 6.5,
+        "const_id": "Aqr",
+        "dim": "13",
+        "cl": "II",
+        "dist_al": 33.0,
+        "ra": "21h 33m 27.02s",
+        "dec": "–00° 49′ 23.7″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -36.625,
+          -0.8167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m3",
+      "catalog": "messier",
+      "order": 3,
+      "data": {
+        "desig": "NGC 5272",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 6.4,
+        "const_id": "CVn",
+        "dim": "16",
+        "cl": "VI",
+        "dist_al": 33.9,
+        "ra": "13h 42m 11.62s",
+        "dec": "+28° 22′ 38.2″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -154.45,
+          28.3833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m4",
+      "catalog": "messier",
+      "order": 4,
+      "data": {
+        "desig": "NGC 6121",
+        "alt": {
+          "alt": "Cat's eye",
+          "alt_fr": "Oeil du chat",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa do Olho de gato",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 5.6,
+        "const_id": "Sco",
+        "dim": "26",
+        "cl": "IX",
+        "dist_al": 7.2,
+        "ra": "16h 23m 35.22s",
+        "dec": "–26° 31′ 32.7″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.1,
+          -26.5333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m5",
+      "catalog": "messier",
+      "order": 5,
+      "data": {
+        "desig": "NGC 5904",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 5.6,
+        "const_id": "Ser",
+        "dim": "17",
+        "cl": "V",
+        "dist_al": 24.5,
+        "ra": "15h 18m 33.22s",
+        "dec": "+02° 04′ 51.7″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.35,
+          2.0833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m6",
+      "catalog": "messier",
+      "order": 6,
+      "data": {
+        "desig": "NGC 6405",
+        "alt": {
+          "alt": "Butterfly Cluster",
+          "alt_fr": "Amas du papillon",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Aglomerado da Borboleta",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 4.2,
+        "const_id": "Sco",
+        "dim": "15",
+        "cl": "III2p",
+        "dist_al": 1.6,
+        "ra": "17h 40.1m",
+        "dec": "−32° 13′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.9751,
+          -32.2167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m7",
+      "order": 7,
+      "catalog": "messier",
+      "data": {
+        "desig": "NGC 6475",
+        "alt": {
+          "alt": "Ptolemy´s Cluster",
+          "alt_fr": "Amas de Ptolémée",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Aglomerado de Ptolomeu",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 4.1,
+        "const_id": "Sco",
+        "dim": "80",
+        "cl": "II2r",
+        "dist_al": 0.65,
+        "ra": "17h 53m 51.2s",
+        "dec": "–34° 47′ 34″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.525,
+          -34.8167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m8",
+      "catalog": "messier",
+      "order": 8,
+      "data": {
+        "desig": "NGC 6523",
+        "alt": {
+          "alt": "Lagoon Nebula",
+          "alt_fr": "Nébuleuse de la lagune",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa Laguna",
+          "alt_it": ""
+        },
+        "type": "sfr",
+        "mag": 6,
+        "const_id": "Sgr",
+        "dim": "90x40",
+        "cl": "",
+        "dist_al": 4.1,
+        "ra": "18h 03m 37s",
+        "dec": "−24° 23′ 12″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.05,
+          -24.3833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m9",
+      "catalog": "messier",
+      "order": 9,
+      "data": {
+        "desig": "NGC 6333",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.7,
+        "const_id": "Oph",
+        "dim": "9",
+        "cl": "VIII",
+        "dist_al": 25.8,
+        "ra": "17h 19m 11.78s",
+        "dec": "–18° 30′ 58.5″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.2,
+          -18.5167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m10",
+      "catalog": "messier",
+      "order": 10,
+      "data": {
+        "desig": "NGC 6254",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 6.6,
+        "const_id": "Oph",
+        "dim": "15",
+        "cl": "VII",
+        "dist_al": 14.3,
+        "ra": "16h 57m 8.92s",
+        "dec": "−04° 05′ 58.07″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.7249,
+          -4.1
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m11",
+      "catalog": "messier",
+      "order": 11,
+      "data": {
+        "desig": "NGC 6705",
+        "alt": {
+          "alt": "Wild Duck Cluster",
+          "alt_fr": "Amas du canard sauvage",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Aglomerado do Pato Selvagem",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 6.3,
+        "const_id": "Sct",
+        "dim": "14",
+        "cl": "I2r",
+        "dist_al": 6.2,
+        "ra": "18h 51.1m",
+        "dec": "−06° 16′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.225,
+          -6.2667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m12",
+      "catalog": "messier",
+      "order": 12,
+      "data": {
+        "desig": "NGC 6218",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 6.7,
+        "const_id": "Oph",
+        "dim": "14",
+        "cl": "IX",
+        "dist_al": 15.7,
+        "ra": "16h 47m 14.18s",
+        "dec": "–01° 56′ 54.7″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.1999,
+          -1.95
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m13",
+      "catalog": "messier",
+      "order": 13,
+      "data": {
+        "desig": "NGC 6205",
+        "alt": {
+          "alt": "Great Hercules Cluster",
+          "alt_fr": "Grand amas d'Hercule",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Grande Aglomerado Globular de Hércules",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 5.8,
+        "const_id": "Her",
+        "dim": "17",
+        "cl": "V",
+        "dist_al": 22.2,
+        "ra": "16h 41m 41.24s",
+        "dec": "+36° 27′ 35.5″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.575,
+          36.4667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m14",
+      "catalog": "messier",
+      "order": 14,
+      "data": {
+        "desig": "NGC 6402",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.6,
+        "const_id": "Oph",
+        "dim": "12",
+        "cl": "VIII",
+        "dist_al": 30.3,
+        "ra": "17h 37m 36.15s",
+        "dec": "–03° 14′ 45.3″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.5999,
+          -3.25
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m15",
+      "catalog": "messier",
+      "order": 15,
+      "data": {
+        "desig": "NGC 7078",
+        "alt": {
+          "alt": "",
+          "alt_fr": "Nuage de Pégase",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Aglomerado globular de Pégaso",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 6.2,
+        "const_id": "Peg",
+        "dim": "12",
+        "cl": "IV",
+        "dist_al": 33.6,
+        "ra": "21h 29m 58.33s",
+        "dec": "+12° 10′ 01.2″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -37.5,
+          12.1667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m16",
+      "catalog": "messier",
+      "order": 16,
+      "data": {
+        "desig": "NGC 6611",
+        "alt": {
+          "alt": "Eagle Nebula",
+          "alt_fr": "Nébuleuse de l'aigle",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa da Águia",
+          "alt_it": ""
+        },
+        "type": "sfr",
+        "mag": 6.4,
+        "const_id": "Ser",
+        "dim": "7",
+        "cl": "II3mn",
+        "dist_al": 7.0,
+        "ra": "18h 18m 48s",
+        "dec": "−13° 49′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.3,
+          -13.7833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m17",
+      "catalog": "messier",
+      "order": 17,
+      "data": {
+        "desig": "NGC 6618",
+        "alt": {
+          "alt": "Omega Nebula",
+          "alt_fr": "Nébuleuse Oméga",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa Ômega",
+          "alt_it": ""
+        },
+        "type": "sfr",
+        "mag": 7,
+        "const_id": "Sgr",
+        "dim": "46x37",
+        "cl": "",
+        "dist_al": 5.0,
+        "ra": "18h 20m 26s",
+        "dec": "−16° 10′ 36″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.8,
+          -16.1833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m18",
+      "catalog": "messier",
+      "order": 18,
+      "data": {
+        "desig": "NGC 6613",
+        "alt": {
+          "alt": "Black swan",
+          "alt_fr": "Le cygne noir",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Cisne Negro",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 7.5,
+        "const_id": "Sgr",
+        "dim": "9",
+        "cl": "II3pn",
+        "dist_al": 4.9,
+        "ra": "18h 19.9m",
+        "dec": "−17° 08′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.0249,
+          -17.1333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m19",
+      "catalog": "messier",
+      "order": 19,
+      "data": {
+        "desig": "NGC 6273",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 6.8,
+        "const_id": "Oph",
+        "dim": "14",
+        "cl": "VIII",
+        "dist_al": 28.7,
+        "ra": "17h 02m 37.69s",
+        "dec": "−26° 16′ 04.6″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.35,
+          -26.2667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m20",
+      "catalog": "messier",
+      "order": 20,
+      "data": {
+        "desig": "NGC 6514",
+        "alt": {
+          "alt": "Trifid Nebula",
+          "alt_fr": "Nébuleuse Trifide",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa Trífida",
+          "alt_it": ""
+        },
+        "type": "sfr",
+        "mag": 9,
+        "const_id": "Sgr",
+        "dim": "29x27",
+        "cl": "",
+        "dist_al": 5.2,
+        "ra": "18h 02m 23s",
+        "dec": "−23° 01′ 48″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3501,
+          -23.0333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m21",
+      "catalog": "messier",
+      "order": 21,
+      "data": {
+        "desig": "NGC 6531",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 6.5,
+        "const_id": "Sgr",
+        "dim": "13",
+        "cl": "I3m",
+        "dist_al": 4.25,
+        "ra": "18h 04.6m",
+        "dec": "−22° 30′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.8499,
+          -22.5
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m22",
+      "catalog": "messier",
+      "order": 22,
+      "data": {
+        "desig": "NGC 6656",
+        "alt": {
+          "alt": "Saggitarius cluster",
+          "alt_fr": "Amas du sagittaire",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nuvem Estelar de Sagitário",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 5.1,
+        "const_id": "Sgr",
+        "dim": "24",
+        "cl": "VII",
+        "dist_al": 9.6,
+        "ra": "18h 36m 23.94s",
+        "dec": "–23° 54′ 17.1″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.8999,
+          -23.9
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m23",
+      "catalog": "messier",
+      "order": 23,
+      "data": {
+        "desig": "NGC 6494",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 6.9,
+        "const_id": "Sgr",
+        "dim": "27",
+        "cl": "III1m",
+        "dist_al": 2.15,
+        "ra": "17h 56.8m",
+        "dec": "−19° 01′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.7999,
+          -19.0167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m24",
+      "catalog": "messier",
+      "order": 25,
+      "data": {
+        "desig": "",
+        "alt": {
+          "alt": "Milky Way patch",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "pos",
+        "mag": 4.6,
+        "const_id": "Sgr",
+        "dim": "90",
+        "cl": "",
+        "dist_al":10.0,
+        "ra": "18h 17m",
+        "dec": "−18° 29′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.775,
+          -18.4833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m25",
+      "catalog": "messier",
+      "order": 25,
+      "data": {
+        "desig": "IC 4725",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 4.6,
+        "const_id": "Sgr",
+        "dim": "32",
+        "cl": "I2p",
+        "dist_al": 2.0,
+        "ra": "18h 31.6m",
+        "dec": "−19° 15′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.1,
+          -19.25
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m26",
+      "catalog": "messier",
+      "order": 26,
+      "data": {
+        "desig": "NGC 6694",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 8,
+        "const_id": "Sct",
+        "dim": "15",
+        "cl": "I1m",
+        "dist_al": 5.0,
+        "ra": "18h 45.2m",
+        "dec": "−09° 24′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.7001,
+          -9.4
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m27",
+      "catalog": "messier",
+      "order": 27,
+      "data": {
+        "desig": "NGC 6853",
+        "alt": {
+          "alt": "Dumbbell Nebula",
+          "alt_fr": "Nébuleuse de l'haltère",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa do Haltere",
+          "alt_it": ""
+        },
+        "type": "pn",
+        "mag": 7.4,
+        "const_id": "Vul",
+        "dim": "8x4",
+        "cl": "IV(II)",
+        "dist_al": 1.148,
+        "ra": "19h 59m 36.340s",
+        "dec": "+22° 43′ 16.09″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.1001,
+          22.7167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m28",
+      "catalog": "messier",
+      "order": 28,
+      "data": {
+        "desig": "NGC 6626",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 6.8,
+        "const_id": "Sgr",
+        "dim": "11",
+        "cl": "IV",
+        "dist_al": 17.9,
+        "ra": "18h 24m 32.89s",
+        "dec": "–24° 52′ 11.4″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.875,
+          -24.8667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m29",
+      "catalog": "messier",
+      "order": 29,
+      "data": {
+        "desig": "NGC 6913",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 7.1,
+        "const_id": "Cyg",
+        "dim": "7",
+        "cl": "III3p",
+        "dist_al": 7.2,
+        "ra": "20h 23m 56s",
+        "dec": "+38° 31.4′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.025,
+          38.5333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m30",
+      "catalog": "messier",
+      "order": 30,
+      "data": {
+        "desig": "NGC 7099",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.2,
+        "const_id": "Cap",
+        "dim": "11",
+        "cl": "V",
+        "dist_al": 27.8,
+        "ra": "21h 40m 22.12",
+        "dec": "–23° 10′ 47.5″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -34.9001,
+          -23.1833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m31",
+      "catalog": "messier",
+      "order": 31,
+      "data": {
+        "desig": "NGC 224",
+        "alt": {
+          "alt": "Andromeda",
+          "alt_fr": "Galaxie d'Andromède",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia de Andrômeda ",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 3.4,
+        "const_id": "And",
+        "dim": "190x60",
+        "cl": "SA(s)b LINER",
+        "dist_al": 2430,
+        "ra": "00h 42m 44.3s",
+        "dec": "+41° 16′ 9″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.6751,
+          41.2667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m32",
+      "catalog": "messier",
+      "order": 32,
+      "data": {
+        "desig": "NGC 221",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 8.2,
+        "const_id": "And",
+        "dim": "9x7",
+        "cl": "cE2",
+        "dist_al": 2410,
+        "ra": "00h 42m 41.8s",
+        "dec": "+40° 51′ 55″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.6751,
+          40.8667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m33",
+      "catalog": "messier",
+      "order": 33,
+      "data": {
+        "desig": "NGC 598",
+        "alt": {
+          "alt": "Triangulum",
+          "alt_fr": "Galaxie du Triangle",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia do Triângulo",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 5.7,
+        "const_id": "Tri",
+        "dim": "71x42",
+        "cl": "SA(s)cd",
+        "dist_al": 2380,
+        "ra": "01h 33m 50.02s",
+        "dec": "+30° 39′ 36.7″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.475,
+          30.65
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m34",
+      "catalog": "messier",
+      "order": 34,
+      "data": {
+        "desig": "NGC 1039",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 5.5,
+        "const_id": "Per",
+        "dim": "35",
+        "cl": "II3m",
+        "dist_al": 1.5,
+        "ra": "02h 42.1m",
+        "dec": "+42° 46′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.5,
+          42.7833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m35",
+      "catalog": "messier",
+      "order": 35,
+      "data": {
+        "desig": "NGC 2168",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 5.3,
+        "const_id": "Gem",
+        "dim": "28",
+        "cl": "III2m",
+        "dist_al": 2.8,
+        "ra": "06h 09.1m",
+        "dec": "+24° 21′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          92.2249,
+          24.3333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m36",
+      "catalog": "messier",
+      "order": 36,
+      "data": {
+        "desig": "NGC 1960",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 6.3,
+        "const_id": "Aur",
+        "dim": "12",
+        "cl": "II3m",
+        "dist_al": 4.1,
+        "ra": "05h 36m 12s",
+        "dec": "+34° 08′ 4″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.0251,
+          34.1333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m37",
+      "catalog": "messier",
+      "order": 37,
+      "data": {
+        "desig": "NGC 2099",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 6.2,
+        "const_id": "Aur",
+        "dim": "24",
+        "cl": "II1r",
+        "dist_al": 4.511,
+        "ra": "05h 52m 18s",
+        "dec": "+32° 33′ 02″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.1,
+          32.55
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m38",
+      "catalog": "messier",
+      "order": 38,
+      "data": {
+        "desig": "NGC 1912",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 7.4,
+        "const_id": "Aur",
+        "dim": "21",
+        "cl": "III2m",
+        "dist_al": 4.2,
+        "ra": "05h 28m 42s",
+        "dec": "+35° 51′ 18″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          82.175,
+          35.8333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m39",
+      "catalog": "messier",
+      "order": 39,
+      "data": {
+        "desig": "NGC 7092",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 4.6,
+        "const_id": "Cyg",
+        "dim": "32",
+        "cl": "III2p",
+        "dist_al": 0.8244,
+        "ra": "21h 31m 42s",
+        "dec": "+48° 25′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -36.9499,
+          48.4333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m40",
+      "catalog": "messier",
+      "order": 40,
+      "data": {
+        "desig": "WN 4",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "pos",
+        "mag": 8.4,
+        "const_id": "UMa",
+        "dim": "",
+        "cl": "",
+        "dist_al": 0.51,
+        "ra": "12h 22m 12.5s",
+        "dec": "+58° 4' 59",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -174.4001,
+          58.0833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m41",
+      "catalog": "messier",
+      "order": 41,
+      "data": {
+        "desig": "NGC 2287",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 4.6,
+        "const_id": "CMA",
+        "dim": "38",
+        "cl": "II3m",
+        "dist_al": 2.3,
+        "ra": "06h 46.0m",
+        "dec": "−20° 46′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.75,
+          -20.7333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m42",
+      "catalog": "messier",
+      "order": 42,
+      "data": {
+        "desig": "NGC 1976",
+        "alt": {
+          "alt": "Orion Nebula",
+          "alt_fr": "Nébuleuse d'Orion",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa de Órion",
+          "alt_it": ""
+        },
+        "type": "sfr",
+        "mag": 4,
+        "const_id": "ORI",
+        "dim": "66x60",
+        "cl": "",
+        "dist_al": 1.324,
+        "ra": "05h 35m 17.3",
+        "dec": "−05° 23′ 28″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.85,
+          -5.45
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m43",
+      "catalog": "messier",
+      "order": 43,
+      "data": {
+        "desig": "NGC 1982",
+        "alt": {
+          "alt": "Mairan nebula",
+          "alt_fr": "Nébuleuse de Mairan",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa De Mairan",
+          "alt_it": ""
+        },
+        "type": "sfr",
+        "mag": 9,
+        "const_id": "ORI",
+        "dim": "20x15",
+        "cl": "",
+        "dist_al": 1.6,
+        "ra": "05h 35.6m",
+        "dec": "−05° 16′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.9,
+          -5.2667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m44",
+      "catalog": "messier",
+      "order": 44,
+      "data": {
+        "desig": "NGC 2632",
+        "alt": {
+          "alt": "Praesepe",
+          "alt_fr": "Amas de la crèche",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Presépio",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 3.7,
+        "const_id": "Cnc",
+        "dim": "95",
+        "cl": "II2m",
+        "dist_al": 0.577,
+        "ra": "08h 40.4m",
+        "dec": "19° 59′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.025,
+          19.9833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m45",
+      "catalog": "messier",
+      "order": 45,
+      "data": {
+        "desig": "",
+        "alt": {
+          "alt": "Pleiades",
+          "alt_fr": "Amas des Pleiades",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Plêiades",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 1.6,
+        "const_id": "TAU",
+        "dim": "110",
+        "cl": "I3rn",
+        "dist_al": 0.39,
+        "ra": "03h 47m 24s",
+        "dec": "+24° 07′ 00″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.75,
+          24.1167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m46",
+      "catalog": "messier",
+      "order": 46,
+      "data": {
+        "desig": "NGC 2437",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 6,
+        "const_id": "Pup",
+        "dim": "27",
+        "cl": "III2m",
+        "dist_al": 5.4,
+        "ra": "07h 41.8m",
+        "dec": "−14° 49",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.4501,
+          -14.8167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m47",
+      "catalog": "messier",
+      "order": 47,
+      "data": {
+        "desig": "NGC 2422",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 5.2,
+        "const_id": "Pup",
+        "dim": "30",
+        "cl": "III2m",
+        "dist_al": 1.6,
+        "ra": "07h 36.6m",
+        "dec": "-14° 30′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.15,
+          -14.5
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m48",
+      "catalog": "messier",
+      "order": 48,
+      "data": {
+        "desig": "NGC 2548",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 5.5,
+        "const_id": "Hya",
+        "dim": "54",
+        "cl": "I2m",
+        "dist_al": 1.5,
+        "ra": "08h 13.7m",
+        "dec": "-05° 45′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.45,
+          -5.8
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m49",
+      "catalog": "messier",
+      "order": 49,
+      "data": {
+        "desig": "NGC 4472",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 8.4,
+        "const_id": "Vir",
+        "dim": "10x8",
+        "cl": "E2 Sy2",
+        "dist_al": 53600,
+        "ra": "12h 29m 46.7s",
+        "dec": "+08° 00′ 02″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -172.5499,
+          8
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m50",
+      "catalog": "messier",
+      "order": 50,
+      "data": {
+        "desig": "NGC 2323",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 6.3,
+        "const_id": "Mon",
+        "dim": "16",
+        "cl": "II3m",
+        "dist_al": 3.2,
+        "ra": "07h 03.2m",
+        "dec": "−08° 20′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8,
+          -8.3333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m51",
+      "catalog": "messier",
+      "order": 51,
+      "data": {
+        "desig": "NGC 5194/5",
+        "alt": {
+          "alt": "Whirlpool",
+          "alt_fr": "Galaxie du Tourbillon",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia do Rodamoinho",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 8.4,
+        "const_id": "CVn",
+        "dim": "11x8",
+        "cl": "SA(s)bc pec",
+        "dist_al": 19000,
+        "ra": "13h 29m 52.7s",
+        "dec": "+47° 11′ 43″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.5251,
+          47.2
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m52",
+      "catalog": "messier",
+      "order": 52,
+      "data": {
+        "desig": "NGC 7654",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 7.3,
+        "const_id": "Cas",
+        "dim": "13",
+        "cl": "I2r",
+        "dist_al": 5.0,
+        "ra": "23h 24.2m",
+        "dec": "+61° 35′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.95,
+          61.5833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m53",
+      "catalog": "messier",
+      "order": 53,
+      "data": {
+        "desig": "NGC 5024",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.6,
+        "const_id": "Com",
+        "dim": "13",
+        "cl": "V",
+        "dist_al": 58.0,
+        "ra": "13h 12m 55.25s",
+        "dec": "+18° 10′ 05.4″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -161.775,
+          18.1667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m54",
+      "catalog": "messier",
+      "order": 54,
+      "data": {
+        "desig": "NGC 6715",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.6,
+        "const_id": "Sgr",
+        "dim": "9",
+        "cl": "III",
+        "dist_al": 87.4,
+        "ra": "18h 55m 03.33s",
+        "dec": "−30° 28′ 47.5″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2251,
+          -30.4833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m55",
+      "catalog": "messier",
+      "order": 55,
+      "data": {
+        "desig": "NGC 6809",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 6.3,
+        "const_id": "Sgr",
+        "dim": "19",
+        "cl": "XI",
+        "dist_al": 17.6,
+        "ra": "19h 39m 59.71s",
+        "dec": "−30° 57′ 53.1″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65,
+          -30.9667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m56",
+      "catalog": "messier",
+      "order": 56,
+      "data": {
+        "desig": "NGC 6779",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 8.3,
+        "const_id": "LYR",
+        "dim": "7",
+        "cl": "X",
+        "dist_al": 32.9,
+        "ra": "19h 16m 35.57s",
+        "dec": "+30° 11′ 00.5″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.85,
+          30.1833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m57",
+      "catalog": "messier",
+      "order": 57,
+      "data": {
+        "desig": "NGC 6720",
+        "alt": {
+          "alt": "Ring Nebula",
+          "alt_fr": "Nébuleuse de l'anneau",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa do Anel",
+          "alt_it": ""
+        },
+        "type": "pn",
+        "mag": 8.8,
+        "const_id": "LYR",
+        "dim": "1",
+        "cl": "IV(III)",
+        "dist_al": 1.6,
+        "ra": "18h 53m 35.079s",
+        "dec": "+33° 01′ 45.03″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.6001,
+          33.0333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m58",
+      "catalog": "messier",
+      "order": 58,
+      "data": {
+        "desig": "NGC 4579",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.7,
+        "const_id": "Vir",
+        "dim": "6x5",
+        "cl": "SAB(rs)b Sy1.9",
+        "dist_al": 63000,
+        "ra": "12h 37m 43.5s",
+        "dec": "+11° 49′ 05″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -170.575,
+          11.8167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m59",
+      "catalog": "messier",
+      "order": 59,
+      "data": {
+        "desig": "NGC 4621",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 9.6,
+        "const_id": "Vir",
+        "dim": "5x4",
+        "cl": "E5",
+        "dist_al": 55000,
+        "ra": "12h 42m 02.3s",
+        "dec": "+11° 38′ 49″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -169.5,
+          11.65
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m60",
+      "catalog": "messier",
+      "order": 60,
+      "data": {
+        "desig": "NGC 4649",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 8.8,
+        "const_id": "Vir",
+        "dim": "7x6",
+        "cl": "E2",
+        "dist_al": 51000,
+        "ra": "12h 43m 39.6s",
+        "dec": "+11° 33′ 09″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -169.075,
+          11.55
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m61",
+      "catalog": "messier",
+      "order": 61,
+      "data": {
+        "desig": "NGC 4303",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.7,
+        "const_id": "Vir",
+        "dim": "7x6",
+        "cl": "SAB(rs)bc Sy2",
+        "dist_al": 50200,
+        "ra": "12h 21m 54.9s",
+        "dec": "+04° 28′ 25″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -174.525,
+          4.4667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m62",
+      "catalog": "messier",
+      "order": 62,
+      "data": {
+        "desig": "NGC 6266",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 6.5,
+        "const_id": "Oph",
+        "dim": "14",
+        "cl": "IV",
+        "dist_al": 22.2,
+        "ra": "17h 01m 12.60s",
+        "dec": "–30° 06′ 44.5″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.7,
+          -30.1167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m63",
+      "catalog": "messier",
+      "order": 63,
+      "data": {
+        "desig": "NGC 5055",
+        "alt": {
+          "alt": "Sunflower Galaxy",
+          "alt_fr": " Galaxie du tournesol",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia do Girassol",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 8.6,
+        "const_id": "CVn",
+        "dim": "13x7",
+        "cl": "SA(rs)bc LINER",
+        "dist_al": 37000,
+        "ra": "13h 15m 49.3s",
+        "dec": "+42° 01′ 45″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -161.05,
+          42.0333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m64",
+      "catalog": "messier",
+      "order": 64,
+      "data": {
+        "desig": "NGC 4826",
+        "alt": {
+          "alt": "Blackeye Galaxy",
+          "alt_fr": "Galaxie de l'oeil noir",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia Olho Negro",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 8.5,
+        "const_id": "Com",
+        "dim": "10x5",
+        "cl": "(R)SA(rs)ab Sy2",
+        "dist_al": 22000,
+        "ra": "12h 56m 43.7s",
+        "dec": "+21° 40′ 58″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -165.825,
+          21.6833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "order": 65,
+      "catalog": "messier",
+      "data": {
+        "id": "m65",
+        "desig": "NGC 3623",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.3,
+        "const_id": "Leo",
+        "dim": "10x3",
+        "cl": "SAB(rs)a LINER",
+        "dist_al": 37000,
+        "ra": "11h 18m 55.9s",
+        "dec": "+13° 05′ 32″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.725,
+          13.0833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m66",
+      "catalog": "messier",
+      "order": 66,
+      "data": {
+        "desig": "NGC 3627",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 8.9,
+        "const_id": "Leo",
+        "dim": "9x4",
+        "cl": "SAB(s)b Sy2",
+        "dist_al": 31000,
+        "ra": "11h 20m 15.0s",
+        "dec": "+12° 59′ 30″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.0501,
+          12.9833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m67",
+      "catalog": "messier",
+      "order": 67,
+      "data": {
+        "desig": "NGC 2682",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 6.1,
+        "const_id": "Cnc",
+        "dim": "30",
+        "cl": "II2m",
+        "dist_al": 2.61,
+        "ra": "08h 51.3m",
+        "dec": "+11° 49′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.6,
+          11.8167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m68",
+      "catalog": "messier",
+      "order": 68,
+      "data": {
+        "desig": "NGC 4590",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.8,
+        "const_id": "Hya",
+        "dim": "12",
+        "cl": "X",
+        "dist_al": 33.6,
+        "ra": "12h 39m 27.98s",
+        "dec": "–26° 44′ 38.6″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -170.1251,
+          -26.75
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m69",
+      "catalog": "messier",
+      "order": 69,
+      "data": {
+        "desig": "NGC 6637",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.6,
+        "const_id": "Sgr",
+        "dim": "7",
+        "cl": "V",
+        "dist_al": 29.7,
+        "ra": "18h 31m 23.10s",
+        "dec": "−32° 20′ 53.1″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.15,
+          -32.35
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m70",
+      "catalog": "messier",
+      "order": 70,
+      "data": {
+        "desig": "NGC 6681",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.9,
+        "const_id": "Sgr",
+        "dim": "8",
+        "cl": "V",
+        "dist_al": 29.4,
+        "ra": "18h 43m 12.76s",
+        "dec": "–32° 17′ 31.6″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.2,
+          -32.3
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m71",
+      "catalog": "messier",
+      "order": 71,
+      "data": {
+        "desig": "NGC 6838",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 8.2,
+        "const_id": "Sge",
+        "dim": "7",
+        "cl": "X-XI",
+        "dist_al": 13.0,
+        "ra": "19h 53m 46.49s",
+        "dec": "+18° 46′ 45.1″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.5499,
+          18.7833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m72",
+      "catalog": "messier",
+      "order": 72,
+      "data": {
+        "desig": "NGC 6981",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 9.3,
+        "const_id": "Aqr",
+        "dim": "6",
+        "cl": "IX",
+        "dist_al": 53.4,
+        "ra": "20h 53m 27.70s",
+        "dec": "–12° 32′ 14.3″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.6249,
+          -12.5333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m73",
+      "catalog": "messier",
+      "order": 73,
+      "data": {
+        "desig": "NGC 6994",
+        "alt": {
+          "alt": "4 Star asterism",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "pos",
+        "mag": 9,
+        "const_id": "Aqr",
+        "dim": "",
+        "cl": "",
+        "dist_al": 2.5,
+        "ra": "20h 58m 54s",
+        "dec": "−12° 38′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.2749,
+          -12.6333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m74",
+      "catalog": "messier",
+      "order": 74,
+      "data": {
+        "desig": "NGC 628",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.4,
+        "const_id": "Psc",
+        "dim": "11x10",
+        "cl": "SA(s)c",
+        "dist_al": 24000,
+        "ra": "01h 36m 41.8s",
+        "dec": "+15° 47′ 01″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.1751,
+          15.7833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m75",
+      "catalog": "messier",
+      "order": 75,
+      "data": {
+        "desig": "NGC 6864",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 8.5,
+        "const_id": "Sgr",
+        "dim": "6",
+        "cl": "I",
+        "dist_al": 67.5,
+        "ra": "20h 06m 04.75s",
+        "dec": "−21° 55′ 16.2″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.475,
+          -21.9167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m76",
+      "catalog": "messier",
+      "order": 76,
+      "data": {
+        "desig": "NGC 650/1",
+        "alt": {
+          "alt": "Little Dumbbell Nebula",
+          "alt_fr": "Nébuleuse du petit haltère",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Pequena Nebulosa do Haltere",
+          "alt_it": ""
+        },
+        "type": "pn",
+        "mag": 10.1,
+        "const_id": "Per",
+        "dim": "2x1",
+        "cl": "III(VI)",
+        "dist_al": 2.5,
+        "ra": "01h 42.4m",
+        "dec": "+51° 34′ 31″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.6001,
+          51.5667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m77",
+      "catalog": "messier",
+      "order": 77,
+      "data": {
+        "desig": "NGC 1068",
+        "alt": {
+          "alt": "Cetus A",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 8.9,
+        "const_id": "Cet",
+        "dim": "7x6",
+        "cl": "(R)SA(rs)b pec Sy2",
+        "dist_al": 47000,
+        "ra": "02h 42m 40.7s",
+        "dec": "−00° 00′ 48″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.6751,
+          -0.0167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m78",
+      "catalog": "messier",
+      "order": 78,
+      "data": {
+        "desig": "NGC 2068",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "rn",
+        "mag": 8.3,
+        "const_id": "ORI",
+        "dim": "8x6",
+        "cl": "",
+        "dist_al": 1.6,
+        "ra": "05h 46m 46.7s",
+        "dec": "+00° 00′ 50″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.675,
+          0.05
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m79",
+      "catalog": "messier",
+      "order": 79,
+      "data": {
+        "desig": "NGC 1904",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.7,
+        "const_id": "Lep",
+        "dim": "9",
+        "cl": "V",
+        "dist_al": 41,
+        "ra": "05h 24m 10.59s",
+        "dec": "−24° 31′ 27.3″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.125,
+          -24.55
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m80",
+      "catalog": "messier",
+      "order": 80,
+      "data": {
+        "desig": "NGC 6093",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.3,
+        "const_id": "Sco",
+        "dim": "9",
+        "cl": "II",
+        "dist_al": 32.6,
+        "ra": "16h 17m 02.41s",
+        "dec": "–22° 58′ 33.9″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.7501,
+          -22.9833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m81",
+      "catalog": "messier",
+      "order": 81,
+      "data": {
+        "desig": "NGC 3031",
+        "alt": {
+          "alt": "Bode´s Galaxy",
+          "alt_fr": "Galaxie de Bode",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia de Bode",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 6.9,
+        "const_id": "UMa",
+        "dim": "27x14",
+        "cl": "SA(s)ab Sy1.8",
+        "dist_al": 11400,
+        "ra": "09h 55m 33.2s",
+        "dec": "+69° 3′ 55″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.8996,
+          69.0667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m82",
+      "catalog": "messier",
+      "order": 82,
+      "data": {
+        "desig": "NGC 3034",
+        "alt": {
+          "alt": "Cigar Galaxy",
+          "alt_fr": "Galaxie du cigare",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia do Charuto",
+          "alt_it": ""
+        },
+        "type": "i",
+        "mag": 8.4,
+        "const_id": "UMa",
+        "dim": "11x4",
+        "cl": "I0 sbrst",
+        "dist_al": 10700,
+        "ra": "09h 55m 52.2s",
+        "dec": "+69° 40′ 47″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.9496,
+          69.6833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m83",
+      "catalog": "messier",
+      "order": 83,
+      "data": {
+        "desig": "NGC 5236",
+        "alt": {
+          "alt": "Southern Pinwheel",
+          "alt_fr": "Moulinet du sud",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia Cata-vento do Sul",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 7.6,
+        "const_id": "Hya",
+        "dim": "13x12",
+        "cl": "SAB(s)c sbrst",
+        "dist_al": 14700,
+        "ra": "13h 37m 00.9s",
+        "dec": "−29° 51′ 57″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -155.75,
+          -29.8667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m84",
+      "catalog": "messier",
+      "order": 84,
+      "data": {
+        "desig": "NGC 4374",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 9.1,
+        "const_id": "Vir",
+        "dim": "7x6",
+        "cl": "E1 Sy2",
+        "dist_al": 57000,
+        "ra": "12h 25m 03.7s",
+        "dec": "+12° 53′ 13″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -173.725,
+          12.8833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m85",
+      "catalog": "messier",
+      "order": 85,
+      "data": {
+        "desig": "NGC 4382",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 9.1,
+        "const_id": "Com",
+        "dim": "7x5",
+        "cl": "SA(s)0+ pec",
+        "dist_al": 56000,
+        "ra": "12h 25m 24.0s",
+        "dec": "+18° 11′ 28″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -173.65,
+          18.1833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m86",
+      "catalog": "messier",
+      "order": 86,
+      "data": {
+        "desig": "NGC 4406",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 8.9,
+        "const_id": "Vir",
+        "dim": "9x6",
+        "cl": "S0(3)/E3",
+        "dist_al": 49000,
+        "ra": "12h 26m 11.7s",
+        "dec": "+12° 56′ 46″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -173.4499,
+          12.95
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m87",
+      "catalog": "messier",
+      "order": 87,
+      "data": {
+        "desig": "NGC 4486",
+        "alt": {
+          "alt": "Virgo A",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 8.6,
+        "const_id": "Vir",
+        "dim": "8x7",
+        "cl": "cD0-1 pec LINER",
+        "dist_al": 51870,
+        "ra": "12h 30m 49.42338s",
+        "dec": "+12° 23′ 28.0439″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -172.3,
+          12.4
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m88",
+      "catalog": "messier",
+      "order": 88,
+      "data": {
+        "desig": "NGC 4501",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.6,
+        "const_id": "Com",
+        "dim": "7x4",
+        "cl": "SA(rs)b Sy2",
+        "dist_al": 39000,
+        "ra": "12h 31m 59.2s",
+        "dec": "+14° 25′ 14″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -172.0001,
+          14.4167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m89",
+      "catalog": "messier",
+      "order": 89,
+      "data": {
+        "desig": "NGC 4552",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 9.8,
+        "const_id": "Vir",
+        "dim": "5x5",
+        "cl": "E0-1 Sy2",
+        "dist_al": 47000,
+        "ra": "12h 35m 39.8s",
+        "dec": "+12° 33′ 23″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -171.075,
+          12.55
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m90",
+      "catalog": "messier",
+      "order": 90,
+      "data": {
+        "desig": "NGC 4569",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.5,
+        "const_id": "Vir",
+        "dim": "10x5",
+        "cl": "SAB(rs)ab",
+        "dist_al": 55900,
+        "ra": "12h 36m 49.8s",
+        "dec": "+13° 09′ 46″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -170.8,
+          13.1667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m91",
+      "catalog": "messier",
+      "order": 91,
+      "data": {
+        "desig": "NGC 4548",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 10.2,
+        "const_id": "Com",
+        "dim": "5x4",
+        "cl": "SB(rs)b LINER",
+        "dist_al": 47000,
+        "ra": "12h 35m 26.4s",
+        "dec": "+14° 29′ 47″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -171.15,
+          14.5
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m92",
+      "catalog": "messier",
+      "order": 92,
+      "data": {
+        "desig": "NGC 6341",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 6.4,
+        "const_id": "Her",
+        "dim": "11",
+        "cl": "IV",
+        "dist_al": 26.7,
+        "ra": "17h 17m 07.39s",
+        "dec": "+43° 08′ 09.4″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.725,
+          43.1333
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m93",
+      "catalog": "messier",
+      "order": 93,
+      "data": {
+        "desig": "NGC 2447",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 6,
+        "const_id": "Pup",
+        "dim": "22",
+        "cl": "IV1p",
+        "dist_al": 3.6,
+        "ra": "07h 44.6m",
+        "dec": "−23° 52′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.15,
+          -23.8667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m94",
+      "catalog": "messier",
+      "order": 94,
+      "data": {
+        "desig": "NGC 4736",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 8.2,
+        "const_id": "CVn",
+        "dim": "11x9",
+        "cl": "(R)SA(r)ab Sy2",
+        "dist_al": 14700,
+        "ra": "12h 50m 53.1s",
+        "dec": "+41° 07′ 14″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -167.275,
+          41.1167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m95",
+      "catalog": "messier",
+      "order": 95,
+      "data": {
+        "desig": "NGC 3351",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.7,
+        "const_id": "Leo",
+        "dim": "3x3",
+        "cl": "SB(r)b sbrst",
+        "dist_al": 31200,
+        "ra": "10h 43m 57.7s",
+        "dec": "+11° 42′ 14″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161,
+          11.7
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m96",
+      "catalog": "messier",
+      "order": 96,
+      "data": {
+        "desig": "NGC 3368",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.2,
+        "const_id": "Leo",
+        "dim": "8x5",
+        "cl": "SAB(rs)ab LINER",
+        "dist_al": 28000,
+        "ra": "10h 46m 45.7s",
+        "dec": "+11° 49′ 12″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.7,
+          11.8167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m97",
+      "catalog": "messier",
+      "order": 97,
+      "data": {
+        "desig": "NGC 3587",
+        "alt": {
+          "alt": "Owl Nebula",
+          "alt_fr": "Nébuleuse du hibou",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Nebulosa da Coruja",
+          "alt_it": ""
+        },
+        "type": "pn",
+        "mag": 9.9,
+        "const_id": "UMa",
+        "dim": "3",
+        "cl": "IIIa",
+        "dist_al": 2.03,
+        "ra": "11h 14m 47.734s",
+        "dec": "+55° 01′ 08.50″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.7001,
+          55.0167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m98",
+      "catalog": "messier",
+      "order": 98,
+      "data": {
+        "desig": "NGC 4192",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 10.1,
+        "const_id": "Com",
+        "dim": "10x3",
+        "cl": "SAB(s)ab LINER",
+        "dist_al": 44400,
+        "ra": "12h 13m 48.292s",
+        "dec": "+14° 54′ 01.69″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -176.55,
+          14.9
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m99",
+      "catalog": "messier",
+      "order": 99,
+      "data": {
+        "desig": "NGC 4254",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.9,
+        "const_id": "Com",
+        "dim": "5x5",
+        "cl": "SA(s)c LINER",
+        "dist_al": 44700,
+        "ra": "12h 18m 49.6s",
+        "dec": "+14° 24′ 59″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -175.3,
+          14.4167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m100",
+      "catalog": "messier",
+      "order": 100,
+      "data": {
+        "desig": "NGC 4321",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.3,
+        "const_id": "Com",
+        "dim": "7x6",
+        "cl": "SAB(s)bc LINER",
+        "dist_al": 55000,
+        "ra": "12h 22m 54.9s",
+        "dec": "+15° 49′ 21″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -174.2749,
+          15.8167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m101",
+      "catalog": "messier",
+      "order": 101,
+      "data": {
+        "desig": "NGC 5457",
+        "alt": {
+          "alt": "Pinwheel",
+          "alt_fr": "Galaxie du moulinet",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia Cata-vento",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 7.9,
+        "const_id": "UMa",
+        "dim": "29x27",
+        "cl": "SAB(rs)cd",
+        "dist_al": 19100,
+        "ra": "14h 03m 12.6s",
+        "dec": "+54° 20′ 57″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.2,
+          54.35
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m102",
+      "catalog": "messier",
+      "order": 102,
+      "data": {
+        "desig": "NGC 5866",
+        "alt": {
+          "alt": "Spindle",
+          "alt_fr": "Galaxie du fuseau",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia do Fuso",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.9,
+        "const_id": "Dra",
+        "dim": "5x2",
+        "cl": "S0-a+ LINER",
+        "dist_al": 50000,
+        "ra": "15h 06m 29.5s",
+        "dec": "+55° 45′ 48″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -133.3774,
+          55.76
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m103",
+      "catalog": "messier",
+      "order": 103,
+      "data": {
+        "desig": "NGC 581",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "oc",
+        "mag": 7.4,
+        "const_id": "Cas",
+        "dim": "6",
+        "cl": "III2p",
+        "dist_al": 10,
+        "ra": "01h 33.2m",
+        "dec": "+60° 42′",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.3,
+          60.7
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m104",
+      "catalog": "messier",
+      "order": 104,
+      "data": {
+        "desig": "NGC 4594",
+        "alt": {
+          "alt": "Sombrero",
+          "alt_fr": "Galaxie du sombrero",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "Galáxia do Sombreiro",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 8,
+        "const_id": "Vir",
+        "dim": "9x4",
+        "cl": "SA(s)a Sy1.9",
+        "dist_al": 28700,
+        "ra": "12h 39m 59.4s",
+        "dec": "−11° 37′ 23″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -170,
+          -11.6167
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m105",
+      "catalog": "messier",
+      "order": 105,
+      "data": {
+        "desig": "NGC 3379",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 9.3,
+        "const_id": "Leo",
+        "dim": "5x5",
+        "cl": "E1 LINER",
+        "dist_al": 30400,
+        "ra": "10h 47m 49.6s",
+        "dec": "+12° 34′ 54″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.9501,
+          12.5833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m106",
+      "catalog": "messier",
+      "order": 106,
+      "data": {
+        "desig": "NGC 4258",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 8.4,
+        "const_id": "CVn",
+        "dim": "19x7",
+        "cl": "SAB(s)bc Sy1.9",
+        "dist_al": 22200,
+        "ra": "12h 18m 57.5s",
+        "dec": "+47° 18′ 14″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -175.2499,
+          47.3
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m107",
+      "catalog": "messier",
+      "order": 107,
+      "data": {
+        "desig": "NGC 6171",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "gc",
+        "mag": 7.9,
+        "const_id": "Oph",
+        "dim": "10",
+        "cl": "X",
+        "dist_al": 20.9,
+        "ra": "16h 32m 31.86s",
+        "dec": "–13° 03′ 13.6″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.875,
+          -13.05
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m108",
+      "catalog": "messier",
+      "order": 108,
+      "data": {
+        "desig": "NGC 3556",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 10,
+        "const_id": "UMa",
+        "dim": "9x2",
+        "cl": "SB(s)cd",
+        "dist_al": 46000,
+        "ra": "11h 11m 31.0s",
+        "dec": "+55° 40′ 27″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.8751,
+          55.6667
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m109",
+      "catalog": "messier",
+      "order": 109,
+      "data": {
+        "desig": "NGC 3992",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "s",
+        "mag": 9.8,
+        "const_id": "UMa",
+        "dim": "8x5",
+        "cl": "SB(rs)bc LINER",
+        "dist_al": 59500,
+        "ra": "11h 57m 36.0s",
+        "dec": "+53° 22′ 28″",
+        "astrobin_id": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          179.4,
+          53.3833
+        ]
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
+    {
+      "id": "m110",
+      "catalog": "messier",
+      "order": 110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.1,
+          41.6833
+        ]
+      },
+      "data": {
+        "desig": "NGC 205",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "type": "e",
+        "mag": 8.5,
+        "const_id": "And",
+        "dim": "22x11",
+        "cl": "E5 pec",
+        "dist_al": 2600,
+        "ra": "00h 40m 22.1s",
+        "dec": "+41° 41′ 07″",
+        "astrobin_id": null
+      }
+    },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC752",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 752",
         "type": "oc",
         "mag": 5.7,
         "dim": "50",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
         "const_id": "",
         "dist_al": "",
         "ra": "",
         "dec": "",
         "astrobin_id": ""
-
       },
       "geometry": {
         "type": "Point",
@@ -24,15 +3661,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC7686",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 7686",
         "type": "oc",
         "mag": 5.6,
-        "dim": "15"
+        "dim": "15",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -42,7 +3692,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "LDN617",
       "catalog": "LDN",
@@ -50,7 +3700,20 @@
         "desig": "LDN 617",
         "type": "dn",
         "mag": 999,
-        "dim": "180"
+        "dim": "180",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -60,15 +3723,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B137",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 137",
         "type": "dn",
         "mag": 999,
-        "dim": "180x10"
+        "dim": "180x10",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -78,15 +3754,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B138",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 138",
         "type": "dn",
         "mag": 999,
-        "dim": "180"
+        "dim": "180",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -96,15 +3785,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6193",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6193",
         "type": "oc",
         "mag": 5.2,
-        "dim": "15"
+        "dim": "15",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -114,15 +3816,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6250",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6250",
         "type": "oc",
         "mag": 5.9,
-        "dim": "10"
+        "dim": "10",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -132,15 +3847,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6397",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6397",
         "type": "gc",
         "mag": 5.3,
-        "dim": "25.7"
+        "dim": "25.7",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -150,7 +3878,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Latysev1",
       "catalog": "",
@@ -158,7 +3886,20 @@
         "desig": "Latysev 1",
         "type": "oc",
         "mag": 999,
-        "dim": "330"
+        "dim": "330",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -168,7 +3909,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Mel31",
       "catalog": "",
@@ -176,7 +3917,20 @@
         "desig": "Mel 31",
         "type": "oc",
         "mag": 999,
-        "dim": "135"
+        "dim": "135",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -186,7 +3940,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr62",
       "catalog": "coll",
@@ -194,7 +3948,20 @@
         "desig": "Cr 62",
         "type": "oc",
         "mag": 4.2,
-        "dim": "28"
+        "dim": "28",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -204,15 +3971,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2281",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2281",
         "type": "oc",
         "mag": 5.4,
-        "dim": "15"
+        "dim": "15",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -222,15 +4002,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B9",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 9",
         "type": "dn",
         "mag": 999,
-        "dim": "150x30"
+        "dim": "150x30",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -240,15 +4033,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B8",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 8",
         "type": "dn",
         "mag": 999,
-        "dim": "150x90"
+        "dim": "150x90",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -258,7 +4064,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr464",
       "catalog": "coll",
@@ -266,7 +4072,20 @@
         "desig": "Cr 464",
         "type": "oc",
         "mag": 4.2,
-        "dim": "120"
+        "dim": "120",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -276,15 +4095,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2516",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2516",
         "type": "oc",
         "mag": 3.8,
-        "dim": "21"
+        "dim": "21",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -294,15 +4126,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC3114",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 3114",
         "type": "oc",
         "mag": 4.2,
-        "dim": "35"
+        "dim": "35",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -312,7 +4157,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "IC2581",
       "catalog": "ic",
@@ -320,7 +4165,20 @@
         "desig": "IC 2581",
         "type": "oc",
         "mag": 4.3,
-        "dim": "8"
+        "dim": "8",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -330,15 +4188,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC3293",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 3293",
         "type": "oc",
         "mag": 4.7,
-        "dim": "40"
+        "dim": "40",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -348,7 +4219,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "IC2602",
       "catalog": "ic",
@@ -356,7 +4227,20 @@
         "desig": "IC 2602",
         "type": "oc",
         "mag": 1.9,
-        "dim": "100"
+        "dim": "100",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -366,7 +4250,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Tr14",
       "catalog": "",
@@ -374,7 +4258,20 @@
         "desig": "Tr 14",
         "type": "oc",
         "mag": 5.5,
-        "dim": "5"
+        "dim": "5",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -384,7 +4281,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr228",
       "catalog": "coll",
@@ -392,7 +4289,20 @@
         "desig": "Cr 228",
         "type": "oc",
         "mag": 4.4,
-        "dim": "15"
+        "dim": "15",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -402,15 +4312,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC3372",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 3372",
         "type": "en",
         "mag": 3,
-        "dim": "120x120"
+        "dim": "120x120",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -420,7 +4343,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Tr16",
       "catalog": "",
@@ -428,7 +4351,20 @@
         "desig": "Tr 16",
         "type": "oc",
         "mag": 5,
-        "dim": "10"
+        "dim": "10",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -438,15 +4374,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC3532",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 3532",
         "type": "oc",
         "mag": 3,
-        "dim": "50"
+        "dim": "50",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -456,7 +4405,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Fein1",
       "catalog": "",
@@ -464,7 +4413,20 @@
         "desig": "Fein 1",
         "type": "oc",
         "mag": 4.7,
-        "dim": "50"
+        "dim": "50",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -474,7 +4436,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr240",
       "catalog": "coll",
@@ -482,7 +4444,20 @@
         "desig": "Cr 240",
         "type": "oc",
         "mag": 3.9,
-        "dim": "25"
+        "dim": "25",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -492,7 +4467,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr463",
       "catalog": "coll",
@@ -500,7 +4475,20 @@
         "desig": "Cr 463",
         "type": "oc",
         "mag": 5.7,
-        "dim": "36"
+        "dim": "36",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -510,7 +4498,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Stock2",
       "catalog": "sto",
@@ -518,7 +4506,20 @@
         "desig": "Stock 2",
         "type": "oc",
         "mag": 4.4,
-        "dim": "60"
+        "dim": "60",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -528,7 +4529,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr33",
       "catalog": "coll",
@@ -536,7 +4537,20 @@
         "desig": "Cr 33",
         "type": "oc",
         "mag": 5.9,
-        "dim": "40"
+        "dim": "40",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -546,15 +4560,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC3766",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 3766",
         "type": "oc",
         "mag": 5.3,
-        "dim": "12"
+        "dim": "12",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -564,7 +4591,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "RCW59",
       "catalog": "rcw",
@@ -572,7 +4599,20 @@
         "desig": "RCW 59",
         "type": "en",
         "mag": 999,
-        "dim": "180"
+        "dim": "180",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -582,7 +4622,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "IC2944",
       "catalog": "ic",
@@ -590,7 +4630,20 @@
         "desig": "IC 2944",
         "type": "oc",
         "mag": 4.5,
-        "dim": "60x35"
+        "dim": "60x35",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -600,7 +4653,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Ced122",
       "catalog": "",
@@ -608,7 +4661,20 @@
         "desig": "Ced 122",
         "type": "en",
         "mag": 999,
-        "dim": "144x130"
+        "dim": "144x130",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -618,7 +4684,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "OmegaCentauri",
       "catalog": "",
@@ -626,7 +4692,20 @@
         "desig": "Omega Centauri",
         "type": "gc",
         "mag": 3.9,
-        "dim": "36.3"
+        "dim": "36.3",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -636,15 +4715,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC5281",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 5281",
         "type": "oc",
         "mag": 5.9,
-        "dim": "7"
+        "dim": "7",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -654,15 +4746,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC5316",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 5316",
         "type": "oc",
         "mag": 6,
-        "dim": "14"
+        "dim": "14",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -672,15 +4777,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC5460",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 5460",
         "type": "oc",
         "mag": 5.6,
-        "dim": "25"
+        "dim": "25",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -690,15 +4808,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC5662",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 5662",
         "type": "oc",
         "mag": 5.5,
-        "dim": "29"
+        "dim": "29",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -708,7 +4839,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Tr37",
       "catalog": "",
@@ -716,7 +4847,20 @@
         "desig": "Tr 37",
         "type": "oc",
         "mag": 5.1,
-        "dim": "50"
+        "dim": "50",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -726,7 +4870,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "IC1396",
       "catalog": "ic",
@@ -734,7 +4878,20 @@
         "desig": "IC 1396",
         "type": "oc",
         "mag": 3.5,
-        "dim": "89"
+        "dim": "89",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -744,7 +4901,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr471",
       "catalog": "coll",
@@ -752,7 +4909,20 @@
         "desig": "Cr 471",
         "type": "oc",
         "mag": 999,
-        "dim": "130"
+        "dim": "130",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -762,7 +4932,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr121",
       "catalog": "coll",
@@ -770,7 +4940,20 @@
         "desig": "Cr 121",
         "type": "oc",
         "mag": 2.6,
-        "dim": "50"
+        "dim": "50",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -780,7 +4963,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr132",
       "catalog": "coll",
@@ -788,7 +4971,20 @@
         "desig": "Cr 132",
         "type": "oc",
         "mag": 3.6,
-        "dim": "80"
+        "dim": "80",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -798,10 +4994,10 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2362",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2362",
         "type": "oc",
@@ -816,7 +5012,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr140",
       "catalog": "coll",
@@ -824,7 +5020,20 @@
         "desig": "Cr 140",
         "type": "oc",
         "mag": 3.5,
-        "dim": "60"
+        "dim": "60",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -834,15 +5043,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC1963",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 1963",
         "type": "oc",
         "mag": 999,
-        "dim": "120"
+        "dim": "120",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -852,7 +5074,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Mel111",
       "catalog": "",
@@ -860,7 +5082,20 @@
         "desig": "Mel 111",
         "type": "oc",
         "mag": 1.8,
-        "dim": "275"
+        "dim": "275",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -870,7 +5105,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "ComaI",
       "catalog": "",
@@ -878,7 +5113,20 @@
         "desig": "Coma I",
         "type": "gg",
         "mag": 13.5,
-        "dim": "224"
+        "dim": "224",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -888,7 +5136,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Coalsack",
       "catalog": "",
@@ -896,7 +5144,20 @@
         "desig": "Coalsack",
         "type": "dn",
         "mag": 999,
-        "dim": "400x300"
+        "dim": "400x300",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -906,15 +5167,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC4755",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 4755",
         "type": "oc",
         "mag": 4.2,
-        "dim": "10"
+        "dim": "10",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -924,7 +5198,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Sh2-91",
       "catalog": "",
@@ -932,7 +5206,20 @@
         "desig": "Sh2-91",
         "type": "snr",
         "mag": 999,
-        "dim": "120x2"
+        "dim": "120x2",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -942,15 +5229,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6871",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6871",
         "type": "oc",
         "mag": 5.2,
-        "dim": "20"
+        "dim": "20",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -960,7 +5260,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr419",
       "catalog": "coll",
@@ -968,7 +5268,20 @@
         "desig": "Cr 419",
         "type": "oc",
         "mag": 5.4,
-        "dim": "4.5"
+        "dim": "4.5",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -978,15 +5291,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B348",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 348",
         "type": "dn",
         "mag": 999,
-        "dim": "240x120"
+        "dim": "240x120",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -996,15 +5322,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "LDN896",
-      "catalog": "LDN",
+      "catalog": "ldn",
       "data": {
         "desig": "LDN 896",
         "type": "dn",
         "mag": 999,
-        "dim": "240x120"
+        "dim": "240x120",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1014,15 +5353,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6960",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6960",
         "type": "snr",
         "mag": 7,
-        "dim": "210x160"
+        "dim": "210x160",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1032,15 +5384,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "LDN935",
-      "catalog": "LDN",
+      "catalog": "ldn",
       "data": {
         "desig": "LDN 935",
         "type": "dn",
         "mag": 999,
-        "dim": "150"
+        "dim": "150",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1050,7 +5415,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "LeGentil3",
       "catalog": "",
@@ -1058,7 +5423,20 @@
         "desig": "Le Gentil 3",
         "type": "dn",
         "mag": 999,
-        "dim": "720x360"
+        "dim": "720x360",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1068,15 +5446,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC7000",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 7000",
         "type": "en",
         "mag": 4,
-        "dim": "120x30"
+        "dim": "120x30",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1086,7 +5477,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "LMC",
       "catalog": "",
@@ -1094,7 +5485,20 @@
         "desig": "LMC",
         "type": "sd",
         "mag": 0.4,
-        "dim": "550x170"
+        "dim": "550x170",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1104,15 +5508,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC1909",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 1909",
         "type": "rn",
         "mag": 999,
-        "dim": "180x60"
+        "dim": "180x60",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1122,7 +5539,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr89",
       "catalog": "coll",
@@ -1130,7 +5547,20 @@
         "desig": "Cr 89",
         "type": "oc",
         "mag": 5.7,
-        "dim": "35"
+        "dim": "35",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1140,7 +5570,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "HydraI",
       "catalog": "",
@@ -1148,7 +5578,20 @@
         "desig": "Hydra I",
         "type": "gg",
         "mag": 12.7,
-        "dim": "168"
+        "dim": "168",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1158,15 +5601,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B228",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 228",
         "type": "dn",
         "mag": 999,
-        "dim": "240x20"
+        "dim": "240x20",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1176,7 +5632,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "SL11",
       "catalog": "",
@@ -1184,7 +5640,20 @@
         "desig": "SL 11",
         "type": "dn",
         "mag": 999,
-        "dim": "150x40"
+        "dim": "150x40",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1194,7 +5663,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Steph1",
       "catalog": "",
@@ -1202,7 +5671,20 @@
         "desig": "Steph 1",
         "type": "oc",
         "mag": 3.8,
-        "dim": "20"
+        "dim": "20",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1212,15 +5694,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2232",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2232",
         "type": "oc",
         "mag": 3.9,
-        "dim": "30"
+        "dim": "30",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1230,15 +5725,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2238",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2238",
         "type": "en",
         "mag": 6,
-        "dim": "80x60"
+        "dim": "80x60",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1248,15 +5756,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2237",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2237",
         "type": "sfr",
         "mag": 5.5,
-        "dim": "80x60"
+        "dim": "80x60",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1266,7 +5787,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr97",
       "catalog": "coll",
@@ -1274,7 +5795,20 @@
         "desig": "Cr 97",
         "type": "oc",
         "mag": 5.4,
-        "dim": "21"
+        "dim": "21",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1284,15 +5818,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2239",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2239",
         "type": "oc",
         "mag": 4.8,
-        "dim": "24"
+        "dim": "24",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1302,15 +5849,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2244",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2244",
         "type": "oc",
         "mag": 4.8,
-        "dim": "24"
+        "dim": "24",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1320,15 +5880,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B37",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 37",
         "type": "dn",
         "mag": 999,
-        "dim": "180"
+        "dim": "180",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1338,7 +5911,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr106",
       "catalog": "coll",
@@ -1346,7 +5919,20 @@
         "desig": "Cr 106",
         "type": "oc",
         "mag": 4.6,
-        "dim": "45"
+        "dim": "45",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1356,7 +5942,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr107",
       "catalog": "coll",
@@ -1364,7 +5950,20 @@
         "desig": "Cr 107",
         "type": "oc",
         "mag": 5.1,
-        "dim": "35"
+        "dim": "35",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1374,15 +5973,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2264",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2264",
         "type": "oc",
         "mag": 3.9,
-        "dim": "20"
+        "dim": "20",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1392,15 +6004,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2301",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2301",
         "type": "oc",
         "mag": 6,
-        "dim": "12"
+        "dim": "12",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1410,7 +6035,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "DarkDoodad",
       "catalog": "",
@@ -1418,7 +6043,20 @@
         "desig": "Dark Doodad",
         "type": "dn",
         "mag": 999,
-        "dim": "180x12"
+        "dim": "180x12",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1428,15 +6066,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6067",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6067",
         "type": "oc",
         "mag": 5.6,
-        "dim": "13"
+        "dim": "13",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1446,15 +6097,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6087",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6087",
         "type": "oc",
         "mag": 5.4,
-        "dim": "12"
+        "dim": "12",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1464,7 +6128,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Mel227",
       "catalog": "",
@@ -1472,7 +6136,20 @@
         "desig": "Mel 227",
         "type": "oc",
         "mag": 5.3,
-        "dim": "50"
+        "dim": "50",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1482,15 +6159,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B43",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 43",
         "type": "dn",
         "mag": 999,
-        "dim": "120x40"
+        "dim": "120x40",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1500,15 +6190,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B44",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 44",
         "type": "dn",
         "mag": 999,
-        "dim": "280x40"
+        "dim": "280x40",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1518,15 +6221,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B45",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 45",
         "type": "dn",
         "mag": 999,
-        "dim": "120x20"
+        "dim": "120x20",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1536,15 +6252,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B268",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 268",
         "type": "dn",
         "mag": 999,
-        "dim": "120"
+        "dim": "120",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1554,15 +6283,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B78",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 78",
         "type": "dn",
         "mag": 999,
-        "dim": "200x140"
+        "dim": "200x140",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1572,7 +6314,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "IC4665",
       "catalog": "ic",
@@ -1580,7 +6322,20 @@
         "desig": "IC 4665",
         "type": "oc",
         "mag": 4.2,
-        "dim": "41"
+        "dim": "41",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1590,7 +6345,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Mel186",
       "catalog": "",
@@ -1598,7 +6353,20 @@
         "desig": "Mel 186",
         "type": "oc",
         "mag": 3,
-        "dim": "240"
+        "dim": "240",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1608,15 +6376,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6633",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6633",
         "type": "oc",
         "mag": 4.6,
-        "dim": "27"
+        "dim": "27",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1626,7 +6407,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr65",
       "catalog": "coll",
@@ -1634,7 +6415,20 @@
         "desig": "Cr 65",
         "type": "oc",
         "mag": 3,
-        "dim": "220"
+        "dim": "220",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1644,7 +6438,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "LDN1641",
       "catalog": "",
@@ -1652,7 +6446,20 @@
         "desig": "LDN 1641",
         "type": "dn",
         "mag": 999,
-        "dim": "300"
+        "dim": "300",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1662,7 +6469,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr69",
       "catalog": "coll",
@@ -1670,7 +6477,20 @@
         "desig": "Cr 69",
         "type": "oc",
         "mag": 2.8,
-        "dim": "65"
+        "dim": "65",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1680,15 +6500,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC1981",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 1981",
         "type": "oc",
         "mag": 4.2,
-        "dim": "25"
+        "dim": "25",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1698,15 +6531,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC1980",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 1980",
         "type": "oc",
         "mag": 2.5,
-        "dim": "14x14"
+        "dim": "14x14",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1716,7 +6562,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr70",
       "catalog": "coll",
@@ -1724,7 +6570,20 @@
         "desig": "Cr 70",
         "type": "oc",
         "mag": 0.4,
-        "dim": "150"
+        "dim": "150",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1734,7 +6593,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Sh2-264",
       "catalog": "Sh",
@@ -1742,7 +6601,20 @@
         "desig": "Sh2-264",
         "type": "en",
         "mag": 5,
-        "dim": "70"
+        "dim": "70",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1752,15 +6624,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B36",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 36",
         "type": "dn",
         "mag": 999,
-        "dim": "120"
+        "dim": "120",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1770,7 +6655,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Sh2-276",
       "catalog": "sh",
@@ -1778,7 +6663,20 @@
         "desig": "Sh2-276",
         "type": "en",
         "mag": 7,
-        "dim": "600x60"
+        "dim": "600x60",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1788,15 +6686,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2169",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2169",
         "type": "oc",
         "mag": 5.9,
-        "dim": "7"
+        "dim": "7",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1806,15 +6717,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6752",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6752",
         "type": "gc",
         "mag": 5.4,
-        "dim": "20.4"
+        "dim": "20.4",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1824,15 +6748,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC869",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 869",
         "type": "oc",
         "mag": 5.3,
-        "dim": "30"
+        "dim": "30",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1842,7 +6779,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Tr2",
       "catalog": "",
@@ -1850,7 +6787,20 @@
         "desig": "Tr 2",
         "type": "oc",
         "mag": 5.9,
-        "dim": "20"
+        "dim": "20",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1860,7 +6810,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "PerseusI",
       "catalog": "",
@@ -1868,7 +6818,20 @@
         "desig": "Perseus I",
         "type": "gg",
         "mag": 13,
-        "dim": "190.4"
+        "dim": "190.4",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1878,7 +6841,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Mel20",
       "catalog": "",
@@ -1886,7 +6849,20 @@
         "desig": "Mel 20",
         "type": "oc",
         "mag": 1.2,
-        "dim": "185"
+        "dim": "185",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1896,15 +6872,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC1499",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 1499",
         "type": "en",
         "mag": 5,
-        "dim": "160x40"
+        "dim": "160x40",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1914,7 +6903,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr135",
       "catalog": "coll",
@@ -1922,7 +6911,20 @@
         "desig": "Cr 135",
         "type": "oc",
         "mag": 2.1,
-        "dim": "50"
+        "dim": "50",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1932,15 +6934,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2478",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2478",
         "type": "oc",
         "mag": 4.4,
-        "dim": "30"
+        "dim": "30",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1950,15 +6965,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2451",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2451",
         "type": "oc",
         "mag": 2.8,
-        "dim": "50"
+        "dim": "50",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1968,15 +6996,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2477",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2477",
         "type": "oc",
         "mag": 5.8,
-        "dim": "27"
+        "dim": "27",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -1986,7 +7027,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr173",
       "catalog": "coll",
@@ -1994,7 +7035,20 @@
         "desig": "Cr 173",
         "type": "oc",
         "mag": 0.6,
-        "dim": "370"
+        "dim": "370",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2004,7 +7058,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Sh2-312",
       "catalog": "sh",
@@ -2012,7 +7066,20 @@
         "desig": "Sh2-312",
         "type": "en",
         "mag": 999,
-        "dim": "720"
+        "dim": "720",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2022,7 +7089,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Blanco1",
       "catalog": "",
@@ -2030,7 +7097,20 @@
         "desig": "Blanco 1",
         "type": "oc",
         "mag": 4.5,
-        "dim": "89"
+        "dim": "89",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2040,7 +7120,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Sh2-1",
       "catalog": "sh",
@@ -2048,7 +7128,20 @@
         "desig": "Sh2-1",
         "type": "bn",
         "mag": 999,
-        "dim": "150x60"
+        "dim": "150x60",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2058,15 +7151,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6124",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6124",
         "type": "oc",
         "mag": 5.8,
-        "dim": "29"
+        "dim": "29",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2076,7 +7182,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr302",
       "catalog": "coll",
@@ -2084,7 +7190,20 @@
         "desig": "Cr 302",
         "type": "oc",
         "mag": 1,
-        "dim": "500"
+        "dim": "500",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2094,15 +7213,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6227",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6227",
         "type": "oc",
         "mag": 5,
-        "dim": "18"
+        "dim": "18",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2112,15 +7244,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6231",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6231",
         "type": "oc",
         "mag": 2.6,
-        "dim": "15"
+        "dim": "15",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2130,7 +7275,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr316",
       "catalog": "coll",
@@ -2138,7 +7283,20 @@
         "desig": "Cr 316",
         "type": "oc",
         "mag": 3.4,
-        "dim": "105"
+        "dim": "105",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2148,15 +7306,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6281",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6281",
         "type": "oc",
         "mag": 5.4,
-        "dim": "200x150"
+        "dim": "200x150",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2166,10 +7337,10 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6322",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6322",
         "type": "oc",
@@ -2184,15 +7355,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6334",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6334",
         "type": "en",
         "mag": 999,
-        "dim": "120x110"
+        "dim": "120x110",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2202,15 +7386,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6383",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6383",
         "type": "oc",
         "mag": 5.5,
-        "dim": "20"
+        "dim": "20",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2220,15 +7417,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6416",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6416",
         "type": "oc",
         "mag": 5.7,
-        "dim": "14"
+        "dim": "14",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2238,15 +7448,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B111",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 111",
         "type": "dn",
         "mag": 999,
-        "dim": "120x120"
+        "dim": "120x120",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2256,15 +7479,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6605",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6605",
         "type": "oc",
         "mag": 6,
-        "dim": "2"
+        "dim": "2",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2274,7 +7510,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "IC4756",
       "catalog": "ic",
@@ -2282,7 +7518,20 @@
         "desig": "IC 4756",
         "type": "oc",
         "mag": 4.6,
-        "dim": "39"
+        "dim": "39",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2292,15 +7541,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6530",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6530",
         "type": "oc",
         "mag": 4.6,
-        "dim": "15"
+        "dim": "15",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2310,7 +7572,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "IC353",
       "catalog": "ic",
@@ -2318,7 +7580,20 @@
         "desig": "IC 353",
         "type": "en",
         "mag": 999,
-        "dim": "180x30"
+        "dim": "180x30",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2328,7 +7603,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "IC360",
       "catalog": "ic",
@@ -2336,7 +7611,20 @@
         "desig": "IC 360",
         "type": "en",
         "mag": 999,
-        "dim": "180x100"
+        "dim": "180x100",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2346,15 +7634,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B7",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 7",
         "type": "dn",
         "mag": 999,
-        "dim": "600"
+        "dim": "600",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2364,7 +7665,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Hyades",
       "catalog": "",
@@ -2372,7 +7673,20 @@
         "desig": "Hyades",
         "type": "oc",
         "mag": 0.5,
-        "dim": "330"
+        "dim": "330",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2382,15 +7696,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "B22",
-      "catalog": "",
+      "catalog": "barnard",
       "data": {
         "desig": "B 22",
         "type": "dn",
         "mag": 999,
-        "dim": "120"
+        "dim": "120",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2400,7 +7727,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Sh2-240",
       "catalog": "sh",
@@ -2408,7 +7735,20 @@
         "desig": "Sh2-240",
         "type": "snr",
         "mag": 999,
-        "dim": "200x180"
+        "dim": "200x180",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2418,15 +7758,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC6025",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 6025",
         "type": "oc",
         "mag": 5.1,
-        "dim": "12"
+        "dim": "12",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2436,15 +7789,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC104",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 104",
         "type": "gc",
         "mag": 4,
-        "dim": "30"
+        "dim": "30",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2454,7 +7820,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "SMC",
       "catalog": "",
@@ -2462,7 +7828,20 @@
         "desig": "SMC",
         "type": "i",
         "mag": 2.3,
-        "dim": "319x205"
+        "dim": "319x205",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2472,7 +7851,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr285",
       "catalog": "coll",
@@ -2480,7 +7859,20 @@
         "desig": "Cr 285",
         "type": "oc",
         "mag": 0.4,
-        "dim": "1400"
+        "dim": "1400",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2490,15 +7882,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2547",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2547",
         "type": "oc",
         "mag": 4.7,
-        "dim": "20"
+        "dim": "20",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2508,7 +7913,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Gum12",
       "catalog": "",
@@ -2516,7 +7921,20 @@
         "desig": "Gum 12",
         "type": "snr",
         "mag": 999,
-        "dim": "264x108"
+        "dim": "264x108",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2526,7 +7944,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Pismis4",
       "catalog": "",
@@ -2534,7 +7952,20 @@
         "desig": "Pismis 4",
         "type": "oc",
         "mag": 5.9,
-        "dim": "18"
+        "dim": "18",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2544,7 +7975,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "IC2391",
       "catalog": "ic",
@@ -2552,7 +7983,20 @@
         "desig": "IC 2391",
         "type": "oc",
         "mag": 2.5,
-        "dim": "60"
+        "dim": "60",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2562,7 +8006,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "IC2395",
       "catalog": "ic",
@@ -2570,7 +8014,20 @@
         "desig": "IC 2395",
         "type": "oc",
         "mag": 4.6,
-        "dim": "17"
+        "dim": "17",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2580,7 +8037,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Tr10",
       "catalog": "",
@@ -2588,7 +8045,20 @@
         "desig": "Tr 10",
         "type": "oc",
         "mag": 4.6,
-        "dim": "15"
+        "dim": "15",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2598,15 +8068,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC3228",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 3228",
         "type": "oc",
         "mag": 6,
-        "dim": "5"
+        "dim": "5",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2616,15 +8099,28 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "NGC2348",
-      "catalog": "NGC",
+      "catalog": "ngc",
       "data": {
         "desig": "NGC 2348",
         "type": "oc",
         "mag": 999,
-        "dim": "180x100"
+        "dim": "180x100",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2634,7 +8130,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Cr399",
       "catalog": "coll",
@@ -2642,7 +8138,20 @@
         "desig": "Cr 399",
         "type": "oc",
         "mag": 3.6,
-        "dim": "60"
+        "dim": "60",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
@@ -2652,7 +8161,7 @@
         ]
       }
     },
-    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "" } },
+    {"create": {"_index": "astronomy_test", "_type": "dso", "_id": "%randId%"}},
     {
       "id": "Stock1",
       "catalog": "sto",
@@ -2660,7 +8169,20 @@
         "desig": "Stock 1",
         "type": "oc",
         "mag": 5.3,
-        "dim": "60"
+        "dim": "60",
+        "alt": {
+          "alt": "",
+          "alt_fr": "",
+          "alt_es": "",
+          "alt_de": "",
+          "alt_pt": "",
+          "alt_it": ""
+        },
+        "const_id": "",
+        "dist_al": "",
+        "ra": "",
+        "dec": "",
+        "astrobin_id": ""
       },
       "geometry": {
         "type": "Point",
