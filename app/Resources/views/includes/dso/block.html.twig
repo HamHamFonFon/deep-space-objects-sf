@@ -1,0 +1,32 @@
+{# @var Astrobin\Response\ListImages listImageClass #}
+{% set img = null %}
+{% set transKey = dso.id ~ '.label' %}
+
+{% if dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\ListImages') and 0 < dso.images.count %}
+  {% set img = dso.images.listImages.0.url_regular %}
+{% elseif dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\Image') %}
+  {% set img = dso.images.url_regular %}
+{% endif %}
+
+{% set dsoAlt = dso.alt %}
+<div class="col-md-4 mb-4">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ img }}" alt="{{ dso.id }}">
+
+    <div class="card-body">
+      <h5 class="card-title">{{ dso.id|capitalize }} {% if dso.desig is not empty %}- {{ dso.desig }}{% endif %}</h5>
+      <p class="card-text">
+        {% if dsoAlt is not empty %}
+          {% set listData = [dsoAlt, dso.type|trans, dso.constId|lower|trans] %}
+        {% else %}
+          {% set listData = [dso.type|trans, dso.constId|lower|trans] %}
+        {% endif %}
+        {{ listData|join(', ') }}
+      </p>
+    </div>
+
+    <div class="card-footer">
+      <a href="{{ dso.full_url }}" class="btn btn-primary">{{ 'more'|trans }}</a>
+    </div>
+  </div>
+</div>

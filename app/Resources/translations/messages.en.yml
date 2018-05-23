@@ -7,6 +7,15 @@ error.message: Error %error%, maybe you fall in a black hole :) ?
 more: More informations
 hem.no: Northern hemisphere
 hem.su: Southern hemisphere
+#Catalog
+catalog.messier: Messier Catalog
+catalog.ngc: New General Catalog
+catalog.ic: Index Catalog
+catalog.ldn: Lynds' Catalogue of Dark Nebulae
+catalog.sh: Sharpless catalog
+catalog.cr: Collinder catalog
+catalog.sto : Stock open clusters
+catalog.rcw: RCW Catalog
 # Lang:
 fr: French
 en: English (UK)
@@ -34,7 +43,14 @@ dec: Declination
 # Vue list
 whatIsListMessier: The Messier objects are a set of 110 astronomical objects catalogued by the French astronomer Charles Messier in his "Catalogue des Nébuleuses et des Amas d'Étoiles" ("Catalogue of Nebulae and Star Clusters").
 filteringListMessier: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
-messier.list: List of Messier objects
+list.messier: List of Messier objects
+catalog.ngc: New General Catalog
+catalog.ic: Index Catalog
+catalog.ldn: Lynds' Catalogue of Dark Nebulae
+catalog.sh: Sharpless catalog
+catalog.cr: Collinder catalog
+catalog.sto : Stock open clusters
+catalog.rcw: RCW Catalog
 messierOrderAsc: Sort ascendant
 messierOrderDesc: Sort descendant
 messierMagnitudeAsc: Lowest magnitude

@@ -7,6 +7,15 @@ error.message: Erro %error%, talvez você caiu num buraco negro
 more: Mais informações
 hem.no: Hemisfério Norte
 hem.su: Hemisfério sul
+#Catalog
+catalog.messier: Messier Catalog
+catalog.ngc: New General Catalog
+catalog.ic: Index Catalog
+catalog.ldn: Lynds' Catalogue of Dark Nebulae
+catalog.sh: Sharpless catalog
+catalog.cr: Collinder catalog
+catalog.sto : Stock open clusters
+catalog.rcw: RCW Catalog
 # Lang:
 fr: Francês
 en: Inglês (UK)
@@ -16,7 +25,6 @@ pt_BR: Português (BR)
 homepage.message: Descobre belezas e mistérios do universo
 home.search.placeholder: Procurar no catálogo
 dayImage: Imagem do dia
-messierList: Lista dos objetos de Messier
 # View full
 info: Informações
 magnitude: Magnitude aparente
@@ -34,7 +42,14 @@ dec: Declinação
 # Vue list
 whatIsListMessier: Les objets de Messier sont une liste d'objets astronomiques catalogués par l'astronome français Charles Messier dans son Catalogue des Nébuleuses et des Amas d'Étoiles, publiée en 1771.
 filteringListMessier: Filtrar lista de itens por constelação, tipo e magnitude... e descobrir os mais lindos objetos celestes.
-messier.list: Lista dos objetos de Messier
+list.messier: Lista dos objetos de Messier
+list.ngc: New General Catalog
+list.ic: Index Catalog
+list.ldn: Lynds' Catalogue of Dark Nebulae
+list.sh: Sharpless catalog
+list.cr: Collinder catalog
+list.sto : Stock open clusters
+list.rcw: RCW Catalog
 messierOrderAsc: Ordem crescente
 messierOrderDesc: Ordem decrescente
 messierMagnitudeAsc: Magnitude miníma

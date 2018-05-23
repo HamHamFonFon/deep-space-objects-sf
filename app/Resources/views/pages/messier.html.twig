@@ -1,13 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% set pageTitle = messier.name|capitalize ~ ' : ' ~ messier.desig %}
+{% set pageTitle = dso.id|capitalize ~ ' : ' ~ dso.desig %}
 
 {% block content %}
 
+  {% set dsoAlt = dso.alt %}
   {% set img = null %}
-  {% if messier.images is defined %}
-    {% if messier.images.count is defined and 0 < messier.images.count %}
-      {% set img = messier.images.listImages.0.url_hd %}
+  {% if dso.images is defined %}
+    {% if dso.images.count is defined and 0 < dso.images.count %}
+      {% set img = dso.images.listImages.0.url_hd %}
     {% endif %}
   {% endif %}
 
@@ -15,26 +16,27 @@
 
     <div class="row my-4">
       <div class="col-lg-8">
-        <img class="img-fluid rounded" src="{{ img }}" alt="{{ messier.name }}">
+        <img class="img-fluid rounded" src="{{ img }}" alt="{{ dso.id }}">
       </div>
       <!-- /.col-lg-8 -->
       <div class="col-lg-4">
-        <h1>{{ messier.name }}</h1>
-        {% set transKey = messier.id ~ '.label' %}
-        {% set subtitle = [messier.desig, transKey|trans|default(messier.alt)]|join(' - ') %}
+        <h1>{{ dso.id|capitalize }}</h1>
+        {% set transKey = dso.id ~ '.label' %}
+
+        {% set subtitle = [dso.desig, dsoAlt]|join(' - ') %}
         <h2>{{ subtitle }}</h2>
 
         <ul class="list-group">
           <li class="list-group-item active">{{ 'info'|trans }}</li>
-          <li class="list-group-item">{{ messier.type|trans }}</li>
-          <li class="list-group-item">{{ 'magnitude'|trans }} : {{ messier.mag }}</li>
-          <li class="list-group-item">{{ 'const'|trans }} : {{ messier.constId|lower|trans }}</li>
-          <li class="list-group-item">{{ 'dim'|trans }} <sub>(1)</sub> : {{ messier.dim }}</li>
-          {% set distLY = messier.distAl %}
+          <li class="list-group-item">{{ dso.type|trans }}</li>
+          <li class="list-group-item">{{ 'magnitude'|trans }} : {{ dso.mag }}</li>
+          <li class="list-group-item">{{ 'const'|transchoice(1) }} : {{ dso.constId|lower|trans }}</li>
+          <li class="list-group-item">{{ 'dim'|trans }} <sub>(1)</sub> : {{ dso.dim }}</li>
+          {% set distLY = dso.distAl %}
           <li class="list-group-item">{{ 'distAl'|trans }} : {{ distLY|number_format_by_locale }}</li>
           <li class="list-group-item">{{ 'distPc'|trans }} : {{ distLY|convert_al_pc }}</li>
-          <li class="list-group-item">{{ 'ra'|trans }} : {{ messier.ra}}</li>
-          <li class="list-group-item">{{ 'dec'|trans }} : {{ messier.dec }}</li>
+          <li class="list-group-item">{{ 'ra'|trans }} : {{ dso.ra}}</li>
+          <li class="list-group-item">{{ 'dec'|trans }} : {{ dso.dec }}</li>
         </ul>
 
         <p>
@@ -47,29 +49,29 @@
       <!-- /.col-md-4 -->
     </div>
 
-    {% if messiers_const is defined and 0 < messiers_const|length %}
+    {% if dsos_const is defined and 0 < dsos_const|length %}
       <h3>{{ 'constImgGall'|trans }} :</h3>
       <div class="row">
-        {% for messier in messiers_const %}
-          {% include ':includes/messier:block.html.twig' with {messier: messier} %}
+        {% for dso in dsos_const %}
+          {% include ':includes/dso:block.html.twig' with {dso: dso} %}
         {% endfor %}
       </div>
     {% endif %}
 
-    {% if messiers_type is defined and 0 < messiers_type|length %}
-      <h3>{{ 'typeImgGall'|trans({'%type%': messier.type|trans}) }} :</h3>
+    {% if dsos_type is defined and 0 < dsos_type|length %}
+      <h3>{{ 'typeImgGall'|trans({'%type%': dso.type|trans}) }} :</h3>
       <div class="row">
-        {% for messier in messiers_type %}
-          {% include ':includes/messier:block.html.twig' with {messier: messier} %}
+        {% for dso in dsos_type %}
+          {% include ':includes/dso:block.html.twig' with {dso: dso} %}
         {% endfor %}
       </div>
     {% endif %}
 
-    {% if messier.images is defined and 0 < messier.images|length %}
+    {% if dso.images is defined and 0 < dso.images|length %}
       {% include 'includes/layout/astrobin_message.html.twig' %}
       <h3>{{ 'imagesGall'|trans }} :</h3>
       <div class="row">
-        {% for img in messier.images.listImages|slice(1, messier.images.count) %}
+        {% for img in dso.images.listImages|slice(1, dso.images.count) %}
           {% include 'includes/astrobin/image.html.twig' with {image: img} %}
         {% endfor %}
       </div>

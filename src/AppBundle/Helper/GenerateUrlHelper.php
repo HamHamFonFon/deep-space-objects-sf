@@ -4,7 +4,7 @@ namespace AppBundle\Helper;
 
 use AppBundle\Entity\AbstractKuzzleDocumentEntity;
 use AppBundle\Entity\Messier;
-use AppBundle\Repository\MessierRepository;
+use AppBundle\Repository\DsoRepository;
 use Symfony\Component\Routing\RouterInterface;
 
 /**
@@ -35,11 +35,10 @@ class GenerateUrlHelper
         $url = null;
         if ($entity) {
             switch ($entity::getCollectionName()) {
-                case MessierRepository::COLLECTION_NAME:
-                    $url = $this->router->generate('messier_full', ['objectId' => $entity->getId()], $absoluteUrl);
+                case DsoRepository::COLLECTION_NAME:
+                    $url = $this->router->generate('dso_full', ['catalog' => $entity->getCatalog(), 'objectId' => $entity->getId()], $absoluteUrl);
                     break;
                 case 'planet':
-                case 'ngc':
                 case 'constellation':
                 default:
                     $url = $this->router->generate('homepage');

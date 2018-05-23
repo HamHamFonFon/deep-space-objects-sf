@@ -3,7 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Form\HomeSearchFormType;
-use AppBundle\Repository\MessierRepository;
+use AppBundle\Repository\DsoRepository;
 use Astrobin\Response\Today;
 use Astrobin\Services\GetTodayImage;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

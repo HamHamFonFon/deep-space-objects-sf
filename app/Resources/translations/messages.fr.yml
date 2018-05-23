@@ -7,6 +7,15 @@ error.message: Erreur %error%, peut-être êtes-vous tombé dans un trou noir :)
 more: Plus d'informations
 hem.no: Hémisphère nord
 hem.su: Hémisphère sud
+#Catalog
+catalog.messier: Catalog de Messier
+catalog.ngc: New General Catalog
+catalog.ic: Index Catalog
+catalog.ldn: Lynds' Catalogue of Dark Nebulae
+catalog.sh: Sharpless catalog
+catalog.cr: Collinder catalog
+catalog.sto : Stock open clusters
+catalog.rcw: RCW Catalog
 # Lang:
 fr: Français
 en: Anglais (UK)
@@ -34,7 +43,15 @@ dec: Déclinaison
 # Vue list
 whatIsListMessier: Les objets de Messier sont une liste d'objets astronomiques catalogués par l'astronome français Charles Messier dans son Catalogue des Nébuleuses et des Amas d'Étoiles, publiée en 1771.
 filteringListMessier: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
-messier.list: Liste des objects de Messier
+list.messier: Liste des objects de Messier
+list.ngc: Liste du "New General Catalog"
+list.ic: Liste du "Index Catalog"
+list.ldn: Catalogue de Lynds des Nébuleuses sombres
+list.sh: Sharpless catalog
+list.cr: Collinder catalog
+list.sto : Stock open clusters
+list.rcw: RCW Catalog
+messierOrderAsc: Ord
 messierOrderAsc: Tri ascendant
 messierOrderDesc: Tri descendant
 messierMagnitudeAsc: Magnitude la plus faible

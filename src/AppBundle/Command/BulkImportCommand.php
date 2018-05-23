@@ -26,7 +26,9 @@ class BulkImportCommand extends ContainerAwareCommand
 
         $contentFile = file_get_contents($dataFile);
         $newData = preg_replace_callback('/%randId%/', function() {
-            return md5(uniqid());
+            $datetime = new \DateTime();
+            $prefix = $datetime->getTimestamp();
+            return md5(uniqid($prefix));
         }, $contentFile);
 
         $dataNewFile =  $this->getContainer()->get('kernel')->getRootDir() . DIRECTORY_SEPARATOR . 'Resources/data/dso.generate.data.json';

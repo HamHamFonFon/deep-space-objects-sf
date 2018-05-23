@@ -50,8 +50,8 @@ services:
     abstract: true
     arguments:
       - "@app.helper.kuzzle"
-  app.repository.messier:
-    class: AppBundle\Repository\MessierRepository
+  app.repository.dso:
+    class: AppBundle\Repository\DsoRepository
     parent: app.repository.abstractobject
     arguments:
       - "@astrobin.webservice.getimage"

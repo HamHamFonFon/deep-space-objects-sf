@@ -90,7 +90,7 @@ abstract class AbstractKuzzleRepository
      */
     protected function findById($id)
     {
-        return $this->findBy('term', ['data.messier_id' => $id], [], [],0, 1);
+        return $this->findBy('term', ['id' => $id], [], [],0, 1);
     }
 
 

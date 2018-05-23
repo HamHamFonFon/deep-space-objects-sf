@@ -37,7 +37,9 @@ abstract class AbstractKuzzleDocumentEntity
                     $object = $this;
                     array_walk($data, function($value, $field) use (&$object) {
                         $method = 'set' . str_replace(' ', '', ucwords(str_replace('_', ' ', $field)));
-                        $object->$method($value);
+                        if (true === method_exists($this, $method)) {
+                            $object->$method($value);
+                        }
                     });
                 } else {
                     if (true === method_exists($this, $method)) {
@@ -46,7 +48,6 @@ abstract class AbstractKuzzleDocumentEntity
                 }
             }
         }
-
         return $this;
     }
 

@@ -14,14 +14,17 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownCat">
           <a class="dropdown-item disabled" href="#">All catalogues</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{ path('messier_list') }}">Messier</a>
-          <a class="dropdown-item disabled" href="#">NGC</a> {#New General Catalog#}
-          <a class="dropdown-item disabled" href="#">IC</a> {#Index catalog#}
-          <a class="dropdown-item disabled" href="#">LDN</a> {#Lynds' Catalogue of Dark Nebulae#}#}
-          <a class="dropdown-item disabled" href="#">SH</a> {#Sharpless catalog#}
-          <a class="dropdown-item disabled" href="#">CR</a>{#Collinder#}
-          <a class="dropdown-item disabled" href="#">sto</a> {#Stock open clusters#}
-          <a class="dropdown-item disabled" href="#">rcw</a> {#RCW#}
+
+          {% set listCatalog = ['messier', 'ngc', 'ic', 'ldn', 'sh', 'cr', 'sto', 'rcw'] %}
+          {% for catalog in listCatalog %}
+            <a
+              class="dropdown-item"
+              href="{{ path('catalog_list', {'catalog': catalog}) }}"
+            >
+              {% set label = 'catalog.' ~ catalog %}
+              {{ label|trans }}
+            </a>
+          {% endfor %}
         </div>
       </li>
 

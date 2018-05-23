@@ -2,6 +2,7 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Dso;
 use AppBundle\Entity\Messier;
 use AppBundle\Helper\GenerateUrlHelper;
 use AppBundle\Kuzzle\KuzzleHelper;
@@ -14,10 +15,10 @@ use Symfony\Component\Routing\RouterInterface;
  * Class MessierRepository
  * @package AppBundle\Repository
  */
-class MessierRepository extends AbstractKuzzleRepository
+class DsoRepository extends AbstractKuzzleRepository
 {
 
-    const COLLECTION_NAME = 'messiers';
+    const COLLECTION_NAME = 'dso';
 
     /** @var KuzzleHelper  */
     public $kuzzleHelper;
@@ -43,29 +44,29 @@ class MessierRepository extends AbstractKuzzleRepository
 
 
     /**
-     * Get Messier object in Kuzzle and return it
+     * Get Object in Kuzzle and return it
      * @param $id
-     * @return Messier|null
+     * @return Dso|null $dso
      */
-    public function getMessier($id)
+    public function getObject($id)
     {
-        $messier = null;
-        if (false === strpos(strtolower($id), 'm',0)) {
+        $dso = null;
+        if (is_null($id)) {
             return null;
         }
 
         /** @var SearchResult $result */
         $result = $this->findById($id);
         if (0 < $result->getTotal()) {
-            $messier = $this->buildEntityByDocument($result->getDocuments()[0], 6);
-
+            $dso = $this->buildEntityByDocument($result->getDocuments()[0], 6);
         }
 
-        return $messier;
+        return $dso;
     }
 
 
     /**
+     * @deprecated
      * @param $constId
      * @param $excludedMessier
      * @param $limit
@@ -89,6 +90,7 @@ class MessierRepository extends AbstractKuzzleRepository
     }
 
     /**
+     * @deprecated
      * Get objects messiers by type, filtered by constellation
      *
      * @param $type
@@ -117,23 +119,22 @@ class MessierRepository extends AbstractKuzzleRepository
      * @param $to
      * @return array
      */
-    public function getList($from, $size, $order, $nbImages = 1)
+    public function getList($typeCatalog, $from, $size, $order, $nbImages = 1)
     {
-        $listMessiers = [];
+        $listDso = [];
         /** @var  $listItems */
-        $listItems = $this->findBy('match_all', [], [], $order, $from, $size);
+        $listItems = $this->findBy('term', ['catalog' => $typeCatalog], [], $order, $from, $size);
         if (!is_null($listItems) && 0 < $listItems->getTotal()) {
             foreach ($listItems->getDocuments() as $document) {
-                $listMessiers[] = $this->buildEntityByDocument($document, $nbImages);
+                $listDso[] = $this->buildEntityByDocument($document, $nbImages);
             }
         }
 
-        return [$listItems->getTotal(), $listMessiers];
+        return [$listItems->getTotal(), $listDso];
     }
 
 
     /**
-     * TODO : make a factory pattern
      *
      * @param Document $kuzzleDocument
      * @param $limitImages
@@ -141,22 +142,25 @@ class MessierRepository extends AbstractKuzzleRepository
      */
     private function buildEntityByDocument(Document $kuzzleDocument, $limitImages = 1)
     {
+        // TODO : make a factory pattern
         $kuzzleEntity = $this->getKuzzleEntity();
-        /** @var Messier $messier */
-        $messier = new $kuzzleEntity;
 
-        $id = $kuzzleDocument->getId();
-        $messier->buildObject($kuzzleDocument)->setId($id);
-        $this->urlHelper->generateUrl($messier);
+        /** @var Dso $dso */
+        $dso = new $kuzzleEntity;
 
+        $dso->buildObject($kuzzleDocument);
+        $this->urlHelper->generateUrl($dso);
         try {
-            $astrobinImage = $this->wsGetImage->getImagesBySubject($id, $limitImages);
-            $messier->addImages($astrobinImage);
+            if (!is_null($dso->getAstrobinId())) {
+                $astrobinImage = $this->wsGetImage->getImageById($dso->getAstrobinId());
+            } else {
+                $astrobinImage = $this->wsGetImage->getImagesBySubject($dso->getId(), $limitImages);
+            }
+            $dso->addImages($astrobinImage);
         } catch (\Exception $e) {
             dump($e->getMessage());
         }
-
-        return $messier;
+        return $dso;
     }
 
 
@@ -165,6 +169,6 @@ class MessierRepository extends AbstractKuzzleRepository
      */
     public function getKuzzleEntity()
     {
-        return '\AppBundle\Entity\Messier';
+        return '\AppBundle\Entity\Dso';
     }
 }

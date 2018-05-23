@@ -2,7 +2,7 @@
 
 namespace AppBundle\Entity;
 
-use AppBundle\Repository\MessierRepository;
+use AppBundle\Repository\DsoRepository;
 use Astrobin\Response\Collection;
 use Astrobin\Response\Image;
 
@@ -30,14 +30,14 @@ class Messier extends AbstractKuzzleDocumentEntity
     protected $ra;
     protected $dec;
 
-    const ENTITY_TYPE = 'messier';
+    const ENTITY_TYPE = 'dso';
 
     /**
      * @return string
      */
     public static function getCollectionName()
     {
-        return MessierRepository::COLLECTION_NAME;
+        return DsoRepository::COLLECTION_NAME;
     }
 
     /**

@@ -4,7 +4,8 @@
 
   <div class="container">
     <header class="jumbotron my-4">
-      <h1 class="display-3">{{ 'messier.list'|trans }}</h1>
+      {% set labelTitle = 'list.' ~ catalog %}
+      <h1 class="display-3">{{ labelTitle|trans }}</h1>
       <p class="lead">
         {{ 'whatIsListMessier'|trans }}
       </p>
@@ -26,8 +27,8 @@
 
     <div class="row text-center">
       {% if list is defined and 0 < list|length %}
-        {% for messier in list %}
-          {% include ':includes/messier:block.html.twig' %}
+        {% for item in list %}
+          {% include ':includes/dso:block.html.twig' with {dso: item} %}
         {% endfor %}
       {% endif %}
     </div>

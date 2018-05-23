@@ -3,7 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Messier;
-use AppBundle\Repository\MessierRepository;
+use AppBundle\Repository\DsoRepository;
 use AppBundle\Repository\SearchRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -35,7 +35,7 @@ class SearchController extends Controller
             $searchTerms = $request->request->get('search');
         }
 
-        $collectionMessier = MessierRepository::COLLECTION_NAME;
+        $collectionMessier = DsoRepository::COLLECTION_NAME;
 
         $result[$collectionMessier] = $searchRepository->buildSearch($searchTerms, $collectionMessier);
         $data = [
