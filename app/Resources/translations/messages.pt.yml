@@ -16,6 +16,8 @@ catalog.sh: Sharpless catalog
 catalog.cr: Collinder catalog
 catalog.sto : Stock open clusters
 catalog.rcw: RCW Catalog
+catalog.abl: Catalogue Abell
+catalog.ugc: Uppsala General Catalog
 # Lang:
 fr: Francês
 en: Inglês (UK)
@@ -50,6 +52,8 @@ list.sh: Sharpless catalog
 list.cr: Collinder catalog
 list.sto : Stock open clusters
 list.rcw: RCW Catalog
+list.abl:
+list.ugc:
 messierOrderAsc: Ordem crescente
 messierOrderDesc: Ordem decrescente
 messierMagnitudeAsc: Magnitude miníma

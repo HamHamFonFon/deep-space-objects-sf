@@ -16,6 +16,10 @@ catalog.sh: Sharpless catalog
 catalog.cr: Collinder catalog
 catalog.sto : Stock open clusters
 catalog.rcw: RCW Catalog
+catalog.abl: Abell catalog
+catalog.ugc: Uppsala General Catalog
+list.abl:
+list.ugc:
 # Lang:
 fr: French
 en: English (UK)
