@@ -9,12 +9,57 @@ use Symfony\Component\Console\Output\OutputInterface;
 class BulkImportCommand extends ContainerAwareCommand
 {
     protected static $mapping = [
-        'NGC' => 'ngc',
+        'NG' => 'ngc',
         'IC' => 'ic',
-        'LDN' => 'ldn',
-        'Sh2' => 'sh',
+        'LD' => 'ldn',
+        'Sh' => 'sh',
         'Cr' => 'cr',
-        'Sto' => 'sto'
+        'St' => 'sto',
+        'Ab' => 'abl',
+        'UG' => 'ugc',
+        'Ap' => '',
+        'He' => '',
+        'Ba' => '',
+        'Be' => '',
+        'Bi' => '',
+        'Bo' => '',
+        'B1' => '',
+        'B2' => '',
+        'B3' => '',
+        'B8' => '',
+        'B9' => '',
+        'K1' => '',
+        'K2' => '',
+        'K3' => '',
+        'M1' => '',
+        'M2' => '',
+        'M3' => '',
+        'M4' => '',
+        'AP' => '',
+        'Cz' => '',
+        'Ki' => '',
+        'Do' => '',
+        'Pa' => '',
+        'Pe' => '',
+        'Ce' => '',
+        'Ru' => '',
+        'Ly' => '',
+        'Ha' => '',
+        'Ho' => '',
+        'Hu' => '',
+        'vd' => '',
+        'Ca' => '',
+        'La' => '',
+        'Me' => '',
+        '3C' => '',
+        'To' => '',
+        'Tr' => '',
+        'Gu' => '',
+        'Gr' => '',
+        'Pi' => '',
+        'Fe' => '',
+        'Ro' => ''
+
     ];
 
     /**
@@ -52,17 +97,26 @@ class BulkImportCommand extends ContainerAwareCommand
         return;
     }
 
-
+    /**
+     *
+     */
     private function transformCatalog()
     {
         $file = $this->getContainer()->get('kernel')->getRootDir() . DIRECTORY_SEPARATOR . 'Resources/data/dso20.bulk.generate.json';
-        $jsonFile = json_decode(file_get_contents($file), false);
+        $jsonFile = json_decode(file_get_contents($file), true);
 
-        dump($jsonFile);
-        //        $newData = preg_replace_callback('/%catalog%/', function($match, $dso) use ($mappingCat) {
-//            dump($dso);
-//        }, $newData);
+        $mapping = self::$mapping;
+        foreach ($jsonFile['bulkData'] as $dso) {
+            if (preg_match('/%catalog%/', json_encode($dso))) {
+                $type = substr($dso['id'], 0, 2);
+                $valueReplace = $mapping[$type];
+                $dso = preg_replace_callback('/%catalog%/', function() use ($valueReplace){
+                    return $valueReplace;
+                }, json_encode($dso));
+            }
+        }
 
+        dump($jsonFile['bulkData']);
         return;
     }
 }
