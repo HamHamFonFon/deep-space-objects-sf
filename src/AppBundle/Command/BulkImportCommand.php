@@ -8,6 +8,15 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class BulkImportCommand extends ContainerAwareCommand
 {
+    protected static $mapping = [
+        'NGC' => 'ngc',
+        'IC' => 'ic',
+        'LDN' => 'ldn',
+        'Sh2' => 'sh',
+        'Cr' => 'cr',
+        'Sto' => 'sto'
+    ];
+
     /**
      * {@inheritdoc}
      */
@@ -21,9 +30,13 @@ class BulkImportCommand extends ContainerAwareCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $this->transformId();
+        $this->transformCatalog();
+    }
 
-        $dataFile =  $this->getContainer()->get('kernel')->getRootDir() . DIRECTORY_SEPARATOR . 'Resources/data/dso6.bulk.json';
-
+    private function transformId()
+    {
+        $dataFile =  $this->getContainer()->get('kernel')->getRootDir() . DIRECTORY_SEPARATOR . 'Resources/data/dso20.bulk.json';
         $contentFile = file_get_contents($dataFile);
 
         // Change ID
@@ -33,10 +46,23 @@ class BulkImportCommand extends ContainerAwareCommand
             return md5(uniqid($prefix));
         }, $contentFile);
 
-        // Change Catalog
-        $mappingCat = ['NGC' => 'ngc', 'IC' => 'ic'];
-
-        $dataNewFile =  $this->getContainer()->get('kernel')->getRootDir() . DIRECTORY_SEPARATOR . 'Resources/data/dso.generate.data.json';
+        $dataNewFile =  $this->getContainer()->get('kernel')->getRootDir() . DIRECTORY_SEPARATOR . 'Resources/data/dso20.bulk.generate.json';
         file_put_contents($dataNewFile, $newData);
+
+        return;
+    }
+
+
+    private function transformCatalog()
+    {
+        $file = $this->getContainer()->get('kernel')->getRootDir() . DIRECTORY_SEPARATOR . 'Resources/data/dso20.bulk.generate.json';
+        $jsonFile = json_decode(file_get_contents($file), false);
+
+        dump($jsonFile);
+        //        $newData = preg_replace_callback('/%catalog%/', function($match, $dso) use ($mappingCat) {
+//            dump($dso);
+//        }, $newData);
+
+        return;
     }
 }
