@@ -87,8 +87,6 @@ class BulkImportCommand extends ContainerAwareCommand
 
 //        $this->transformId();
         $this->transformCatalog();
-        $output->writeln('File errors');
-        $output->writeln($this->listErrors);
     }
 
     private function transformId()
@@ -110,30 +108,32 @@ class BulkImportCommand extends ContainerAwareCommand
      */
     private function transformCatalog()
     {
-        $mapping = self::$mapping;
+        $mappingCatalog = self::$mapping;
         $jsonData = json_decode(file_get_contents($this->srcFile), true);
 
         foreach ($jsonData['bulkData'] as $key=>$dso) {
+            $document = null;
+            $id = $this->generateKuzzleId();
             if (preg_match('/%catalog%/', json_encode($dso))) {
 
                 $type = substr($dso['id'], 0, 2);
-                $valueReplace = $mapping[$type];
+                $valueReplace = $mappingCatalog[$type];
 
                 $dsoStr = json_encode($dso);
                 $newValueCatalog = preg_replace_callback('/%catalog%/', function() use ($valueReplace){
                     return $valueReplace;
                 }, $dsoStr);
 
-//                $jsonData['bulkData'][$key] = json_decode($newValueCatalog);
                 $document = json_decode($newValueCatalog, true);
-                $id = $this->generateKuzzleId();
 
-               $this->insertDso($id, $document);
+            }elseif (array_key_exists('catalog', $dso) && '%catalog%' !== $dso['catalog']) {
+                $document = $dso;
+            }
+
+            if (isset($document)) {
+                $this->insertDso($id, $document);
             }
         }
-
-//        $dataCleanFile =  $this->getContainer()->get('kernel')->getRootDir() . DIRECTORY_SEPARATOR . 'Resources/data/dso20.bulk.generate.json';
-//        file_put_contents($dataCleanFile, json_encode($jsonData, JSON_UNESCAPED_SLASHES));
         return;
     }
 
@@ -147,14 +147,12 @@ class BulkImportCommand extends ContainerAwareCommand
     {
         $kuzzleCollection = $this->kuzzle->collection(DsoRepository::COLLECTION_NAME, $this->kuzzleIndex);
         try {
-//            dump("Create document $id [" . $document['id'] ."]");
             $kuzzleCollection->createDocument($document, $id);
         } catch(\ErrorException $e) {
             $this->listErrors[] = '[' . $document['id'] . ']' . $e->getMessage();
         } catch (\Exception $e) {
             $this->listErrors[] = '[' . $document['id'] . ']' . $e->getMessage();
         }
-
         return;
     }
 
