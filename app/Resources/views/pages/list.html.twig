@@ -7,7 +7,8 @@
       {% set labelTitle = 'list.' ~ catalog %}
       <h1 class="display-3">{{ labelTitle|trans }}</h1>
       <p class="lead">
-        {{ 'whatIsListMessier'|trans }}
+        {% set descLabel = 'description.' ~ catalog %}
+        {{ descLabel|trans }}
       </p>
       {#<div class="row">#}
         {#<button type="submit" class="btn btn-primary btn-lg">{{ 'submit'|trans }}</button>#}

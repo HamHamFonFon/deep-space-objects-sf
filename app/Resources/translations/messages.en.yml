@@ -45,39 +45,41 @@ mag: Magnitude
 ra: Right ascension
 dec: Declination
 # Vue list
-whatIsListMessier: The Messier objects are a set of 110 astronomical objects catalogued by the French astronomer Charles Messier in his "Catalogue des Nébuleuses et des Amas d'Étoiles" ("Catalogue of Nebulae and Star Clusters").
-filteringListMessier: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
+filteringList: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
 list.messier: List of Messier objects
-catalog.ngc: New General Catalog
-catalog.ic: Index Catalog
-catalog.ldn: Lynds' Catalogue of Dark Nebulae
-catalog.sh: Sharpless catalog
-catalog.cr: Collinder catalog
-catalog.sto : Stock open clusters
-catalog.rcw: RCW Catalog
+description.messier: The Messier objects are a set of 110 astronomical objects catalogued by the French astronomer Charles Messier in his "Catalogue des Nébuleuses et des Amas d'Étoiles" ("Catalogue of Nebulae and Star Clusters").
+list.ngc: New General Catalog
+list.ic: Index Catalog
+list.ldn: Lynds' Catalogue of Dark Nebulae
+list.sh: Sharpless catalog
+list.cr: Collinder catalog
+list.sto : Stock open clusters
+list.rcw: RCW Catalog
+list.abl:
+list.ugc:
 messierOrderAsc: Sort ascendant
 messierOrderDesc: Sort descendant
 messierMagnitudeAsc: Lowest magnitude
 messierMagnitudeDesc: Highest magnitude
 # Type DSO
-gg: Galaxy cluster
-g:  Generic galaxy
-s:  Spiral galaxy
-s0: Lenticular galaxy
-sd: Dwarf galaxy
-e:  Elliptical galaxy
-i:  Irregular galaxy
-oc: Open cluster
-gc: Globular cluster
-en: Emission nebula
-bn: Generic bright nebula
-sfr: Starforming Nebula (with open cluster)
-rn: Reflection nebula
-pn: Planetary nebula
-snr: Supernova remnant
-dn:  Dark nebula grey
-pos: Asterism
-sc: Star clusters
+type.gg: Galaxy cluster
+type.g:  Generic galaxy
+type.s:  Spiral galaxy
+type.s0: Lenticular galaxy
+type.sd: Dwarf galaxy
+type.e:  Elliptical galaxy
+type.i:  Irregular galaxy
+type.oc: Open cluster
+type.gc: Globular cluster
+type.en: Emission nebula
+type.bn: Generic bright nebula
+type.sfr: Starforming Nebula (with open cluster)
+type.rn: Reflection nebula
+type.pn: Planetary nebula
+type.snr: Supernova remnant
+type.dn:  Dark nebula grey
+type.pos: Asterism
+type.sc: Star clusters
 # Constellations
 and: Andromeda
 aqr: Aquarius

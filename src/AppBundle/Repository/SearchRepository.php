@@ -27,9 +27,8 @@ class SearchRepository
     protected $translator;
 
     public static $listFields = [
-        'messiers' => [
-            'data.messier_id',
-            'data.name',
+        'dso' => [
+            'id',
             'data.desig',
             'data.alt.alt', // todo : add language
             'data.const_id',
@@ -73,12 +72,37 @@ class SearchRepository
             if (0 < $searchResult->getTotal()) {
                 foreach ($searchResult->getDocuments() as $document) {
                     $documentContent = $document->getContent();
-                    $label = (!empty($documentContent['data']['alt'])) ? $this->translator->trans($document->getId().'.label') : $documentContent['data']['alt'];
+
+                    switch ($documentContent['catalog']) {
+                        case 'messier':
+                            if (!empty($documentContent['data']['alt']['alt'])) {
+                                $label = $documentContent['data']['alt']['alt'] . ' - ' .  $documentContent['data']['desig'];
+                            } else {
+                                $label = ucfirst($documentContent['id']) . ' - ' . $documentContent['data']['desig'];
+                            }
+                            break;
+                        case 'ngc':
+                        case 'ic':
+                            if (!empty($documentContent['data']['alt']['alt'])) {
+                                $label = $documentContent['data']['alt']['alt'] . ' - ' .  $documentContent['data']['desig'];
+                            } else {
+                                $label = $documentContent['data']['desig'];
+                            }
+                            break;
+                        default:
+                            $label = $documentContent['data']['desig'];
+                    }
+
+
+                    $id = $documentContent['id'];
+                    $type = $this->translator->trans('type.' . $documentContent['data']['type']);
+                    $catalog = (!empty($documentContent['catalog'])) ? $this->translator->trans('catalog.' . $documentContent['catalog']) : '';
 
                     $result[] = [
-                        'id' => $document->getId(),
-                        'value' => (!empty($label)) ? implode(' - ', [$label,  strtoupper($document->getId())]) : strtoupper($document->getId()),
-                        'info' => $documentContent['data']['desig']
+                        'value' => $label,
+                        'info' => $type,
+                        'id' => $id,
+                        'catalog' => $documentContent['catalog']
                     ];
                 }
             }

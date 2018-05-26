@@ -42,9 +42,9 @@ mag: Magnitude
 ra: Ascencão reta
 dec: Declinação
 # Vue list
-whatIsListMessier: Les objets de Messier sont une liste d'objets astronomiques catalogués par l'astronome français Charles Messier dans son Catalogue des Nébuleuses et des Amas d'Étoiles, publiée en 1771.
-filteringListMessier: Filtrar lista de itens por constelação, tipo e magnitude... e descobrir os mais lindos objetos celestes.
+filteringList: Filtrar lista de itens por constelação, tipo e magnitude... e descobrir os mais lindos objetos celestes.
 list.messier: Lista dos objetos de Messier
+description.messier: Les objets de Messier sont une liste d'objets astronomiques catalogués par l'astronome français Charles Messier dans son Catalogue des Nébuleuses et des Amas d'Étoiles, publiée en 1771.
 list.ngc: New General Catalog
 list.ic: Index Catalog
 list.ldn: Lynds' Catalogue of Dark Nebulae
@@ -59,24 +59,24 @@ messierOrderDesc: Ordem decrescente
 messierMagnitudeAsc: Magnitude miníma
 messierMagnitudeDesc: Magnitude maxíma
 # Type DSO
-gg: Aglomerado de galáxias
-g: Galáxia genérica
-s: Galáxia espiral
-s0: Galáxia lenticular
-sd: Galáxia anã
-e: Galáxia elíptica
-i: Galáxia irregular
-oc: Aglomerado aberto
-gc: Aglomerado globular
-en: Nebulosa de emissão
-bn: Nebulosa brilhante genérica
-sfr: Nebulosa difusa
-rn: Nebulosa de reflexão
-pn: Nebulosa planetária
-snr: Remanescente de supernova
-dn: Nebulosa escura
-pos: Asterismo
-sc: Aglomerado estelar
+type.gg: Aglomerado de galáxias
+type.g: Galáxia genérica
+type.s: Galáxia espiral
+type.s0: Galáxia lenticular
+type.sd: Galáxia anã
+type.e: Galáxia elíptica
+type.i: Galáxia irregular
+type.oc: Aglomerado aberto
+type.gc: Aglomerado globular
+type.en: Nebulosa de emissão
+type.bn: Nebulosa brilhante genérica
+type.sfr: Nebulosa difusa
+type.type.rn: Nebulosa de reflexão
+type.pn: Nebulosa planetária
+type.snr: Remanescente de supernova
+type.dn: Nebulosa escura
+type.pos: Asterismo
+type.sc: Aglomerado estelar
 # Constellations
 and: Andrômeda
 aqr: Aquário

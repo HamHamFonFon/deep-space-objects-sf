@@ -1,6 +1,7 @@
 {# @var Astrobin\Response\ListImages listImageClass #}
 {% set img = null %}
 {% set transKey = dso.id ~ '.label' %}
+{% set dsoType = 'type.' ~ dso.type %}
 
 {% if dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\ListImages') and 0 < dso.images.count %}
   {% set img = dso.images.listImages.0.url_regular %}
@@ -14,13 +15,12 @@
     <img class="card-img-top" src="{{ img }}" alt="{{ dso.id }}">
 
     <div class="card-body">
-      <h5 class="card-title">{{ dso.id|capitalize }} {% if dso.desig is not empty %}- {{ dso.desig }}{% endif %}</h5>
+      <h5 class="card-title">
+        {{ dso.id|capitalize }} {% if dsoAlt is defined and dsoAlt is not empty %}- {{ dsoAlt }}{% endif %}
+      </h5>
+
       <p class="card-text">
-        {% if dsoAlt is not empty %}
-          {% set listData = [dsoAlt, dso.type|trans, dso.constId|lower|trans] %}
-        {% else %}
-          {% set listData = [dso.type|trans, dso.constId|lower|trans] %}
-        {% endif %}
+        {% set listData = [dso.desig, dsoType|trans, dso.constId|lower|trans] %}
         {{ listData|join(', ') }}
       </p>
     </div>

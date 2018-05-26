@@ -35,9 +35,9 @@ class SearchController extends Controller
             $searchTerms = $request->request->get('search');
         }
 
-        $collectionMessier = DsoRepository::COLLECTION_NAME;
+        $collectionDso = DsoRepository::COLLECTION_NAME;
 
-        $result[$collectionMessier] = $searchRepository->buildSearch($searchTerms, $collectionMessier);
+        $result[$collectionDso] = $searchRepository->buildSearch($searchTerms, $collectionDso);
         $data = [
             "status" => true,
             "error" => null,

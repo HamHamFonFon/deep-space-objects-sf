@@ -43,9 +43,9 @@ mag: Magnitude
 ra: Ascension droite
 dec: Déclinaison
 # Vue list
-whatIsListMessier: Les objets de Messier sont une liste d'objets astronomiques catalogués par l'astronome français Charles Messier dans son Catalogue des Nébuleuses et des Amas d'Étoiles, publiée en 1771.
-filteringListMessier: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
+filteringList: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
 list.messier: Liste des objects de Messier
+description.messier: Les objets de Messier sont une liste d'objets astronomiques catalogués par l'astronome français Charles Messier dans son Catalogue des Nébuleuses et des Amas d'Étoiles, publiée en 1771.
 list.ngc: Liste du "New General Catalog"
 list.ic: Liste du "Index Catalog"
 list.ldn: Catalogue de Lynds des Nébuleuses sombres
@@ -61,24 +61,24 @@ messierOrderDesc: Tri descendant
 messierMagnitudeAsc: Magnitude la plus faible
 messierMagnitudeDesc: Magnitude la plus haute
 # Type DSO
-gg: Amas de galaxies
-g: Generic galaxy
-s: Galaxie en spiral
-s0: Galaxie lenticculaire
-sd: Galaxie naine
-e: Galaxie elliptique
-i: Galaxie irrégulière
-oc: Amas ouvert
-gc: Amas globulaire
-en: Nébuleuse en émission
-bn: Generic bright nebula
-sfr: Nébuleuse diffuse
-rn: Nébuleuse par réflexion
-pn: Nébuleuse planétaire
-snr: Rémanant de supernova
-dn: Nébuleuse sombre
-pos: Asterism
-sc: Amas stellaires
+type.gg: Amas de galaxies
+type.g: Generic galaxy
+type.s: Galaxie en spiral
+type.s0: Galaxie lenticculaire
+type.sd: Galaxie naine
+type.e: Galaxie elliptique
+type.i: Galaxie irrégulière
+type.oc: Amas ouvert
+type.gc: Amas globulaire
+type.en: Nébuleuse en émission
+type.bn: Generic bright nebula
+type.sfr: Nébuleuse diffuse
+type.rn: Nébuleuse par réflexion
+type.pn: Nébuleuse planétaire
+type.snr: Rémanant de supernova
+type.dn: Nébuleuse sombre
+type.pos: Asterism
+type.sc: Amas stellaires
 # Constellations
 and: Andromède
 aqr: Verseau

@@ -10664,11 +10664,11 @@ DSO.Search = function ($, ns, r) {
       emptyTemplate: "No results for {{query}}",
       display: ["*"],
       source: {
-        messiers: {
+        dso: {
           ajax: {
             type: "POST",
             url: r.generate('search_autocomplete'),
-            path: "data.astronomy.messiers",
+            path: "data.astronomy.dso",
             data: {
               search: '{{query}}'
             }
@@ -10689,7 +10689,7 @@ DSO.Search = function ($, ns, r) {
         onInit: function onInit(node) {},
         onResult: function onResult(node, query, result, resultCount, resultCountPerGroup) {},
         onClick: function onClick(node, a, item, event) {
-          window.location.href = r.generate('messier_full', { objectId: item.id });
+          window.location.href = r.generate('dso_full', { catalog: item.catalog, objectId: item.id });
         }
       }
     });

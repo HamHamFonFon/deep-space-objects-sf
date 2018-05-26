@@ -75,6 +75,7 @@ class DsoController extends Controller
         ];
 
         $params['form'] = $formOrder->createView();
+        $params['catalog'] = $catalog;
 
         /** @var Response $response */
         $response = new Response();
@@ -92,7 +93,7 @@ class DsoController extends Controller
      *     name="dso_full",
      *     requirements={
      *         "catalog"="\w+",
-     *         "objectId"="\w+"
+     *         "objectId"="[a-zA-Z0-9-+_]+"
      *     }
      * )
      * @param Request $request
@@ -105,8 +106,7 @@ class DsoController extends Controller
         /** @var DsoRepository $messierRepository */
         $dsoRepository = $this->container->get('app.repository.dso');
         /** @var Dso $dso */
-        $params['dso'] = $dso = $dsoRepository->getObject($objectId);
-
+        $params['dso'] = $dso = $dsoRepository->getObject(strtolower($objectId));
 
 //        // Get Messiers objects from same type
 //        $params['messiers_type'] = $messierRepository->getMessiersByType($messier->getType(), $messier->getId(), 3, 1);
@@ -134,7 +134,7 @@ class DsoController extends Controller
 //                'X-Kuzzle-Id', $listKuzzleId
 //            );
 //        }
-        return $this->render('pages/messier.html.twig', $params, $response);
+        return $this->render('pages/dso.html.twig', $params, $response);
     }
 
 
