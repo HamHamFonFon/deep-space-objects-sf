@@ -10664,7 +10664,7 @@ DSO.Search = function ($, ns, r) {
       emptyTemplate: "No results for {{query}}",
       display: ["*"],
       source: {
-        dso: {
+        "Deep space": {
           ajax: {
             type: "POST",
             url: r.generate('search_autocomplete'),
@@ -10674,7 +10674,7 @@ DSO.Search = function ($, ns, r) {
             }
           }
         },
-        constellations: {
+        "Constellations": {
           ajax: {
             type: "POST",
             url: r.generate('search_autocomplete'),

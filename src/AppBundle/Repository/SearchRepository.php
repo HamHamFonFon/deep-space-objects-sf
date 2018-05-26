@@ -114,7 +114,7 @@ class SearchRepository
                         'value' => $label,
                         'info' => $type,
                         'id' => $id,
-                        'catalog' => $documentContent['catalog']
+                        'catalog' => $documentContent['catalog'],
                     ];
                 }
             }

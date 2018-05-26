@@ -1028,8 +1028,7 @@
     },
     {"create": {"_index": "astronomy_test", "_type": "constellations", "_id": "cen" } },
     {
-      "const_id": "Cen",
-      "data": {
+        "data": {
         "gen": "Centauri",
         "alt": {
           "alt": "Centaurus",
@@ -1040,7 +1039,7 @@
           "alt_it": ""
         },
         "rank": "1",
-        "hem": "north"
+        "hem": "south"
       },
       "geometry": {
         "type": "Point",
