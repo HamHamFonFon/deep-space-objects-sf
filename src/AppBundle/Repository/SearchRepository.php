@@ -77,7 +77,7 @@ class SearchRepository
 
             $query = $this->buildQuery($searchTerms, self::$listFields[$collection]);
             $searchResult = $kuzzleCollection->search(
-                $this->kuzzleHelper->buildQuery($typeSearch, $typeQuery, $query, [], [], [], self::SEARCH_FROM, self::SEARCH_SIZE)
+                $this->kuzzleHelper->buildQuery($typeSearch, $typeQuery, $query, [], ['order' => 'asc', 'data.mag' => 'asc'], [], self::SEARCH_FROM, self::SEARCH_SIZE)
             );
 
             if (0 < $searchResult->getTotal()) {
@@ -87,13 +87,14 @@ class SearchRepository
                     switch ($documentContent['catalog']) {
                         case 'messier':
                             if (!empty($documentContent['data']['alt'][$fieldAlt])) {
-                                $label = $documentContent['data']['alt'][$fieldAlt] . ' - ' .  $documentContent['data']['desig'];
+                                $label = $documentContent['data']['alt'][$fieldAlt] . ' (' . ucfirst($documentContent['id']) . ') - ' .  $documentContent['data']['desig'];
                             } else {
                                 $label = ucfirst($documentContent['id']) . ' - ' . $documentContent['data']['desig'];
                             }
                             break;
                         case 'ngc':
                         case 'ic':
+
                             if (!empty($documentContent['data']['alt'][$fieldAlt])) {
                                 $label = $documentContent['data']['alt'][$fieldAlt] . ' - ' .  $documentContent['data']['desig'];
                             } else {

@@ -63,7 +63,7 @@ messierMagnitudeDesc: Magnitude la plus haute
 # Type DSO
 type.gg: Amas de galaxies
 type.g: Generic galaxy
-type.s: Galaxie en spiral
+type.s: Galaxie en spirale
 type.s0: Galaxie lenticculaire
 type.sd: Galaxie naine
 type.e: Galaxie elliptique

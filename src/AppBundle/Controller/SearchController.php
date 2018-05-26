@@ -32,7 +32,7 @@ class SearchController extends Controller
         /** @var SearchRepository $searchRepository */
         $searchRepository = $this->container->get('app.repository.search');
         if ($request->request->has('search')) {
-            $searchTerms = $request->request->get('search');
+            $searchTerms = strtolower($request->request->get('search'));
         }
 
         $collectionDso = DsoRepository::COLLECTION_NAME;

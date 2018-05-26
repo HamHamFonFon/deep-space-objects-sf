@@ -76,7 +76,7 @@ class DsoRepository extends AbstractKuzzleRepository
     public function getMessiersByConst($constId, $excludedMessier, $limit = 10, $limitImages = 1)
     {
         $listMessiers = [];
-        $results = $this->findBy('term', ['data.const_id' => $constId], [], ['data.magnitude' => 'ASC'],0, $limit);
+        $results = $this->findBy('term', ['data.const_id' => $constId], [], ['data.mag' => 'ASC'],0, $limit);
         if (0 < $results->getTotal()) {
             foreach ($results->getDocuments() as $document) {
                 $listMessiers[] = $this->buildEntityByDocument($document, $limitImages);
