@@ -4,6 +4,7 @@ namespace AppBundle\Repository;
 
 use AppBundle\Kuzzle\KuzzleHelper;
 use Kuzzle\Collection;
+use Symfony\Component\HttpKernel\EventListener\LocaleListener;
 use Symfony\Component\Translation\Translator;
 
 /**
@@ -26,6 +27,8 @@ class SearchRepository
     /** @var Translator */
     protected $translator;
 
+    protected $locale;
+
     public static $listFields = [
         'dso' => [
             'id',
@@ -40,11 +43,12 @@ class SearchRepository
      * SearchRepository constructor.
      * @param KuzzleHelper $kuzzleHelper
      */
-    public function __construct(KuzzleHelper $kuzzleHelper, Translator $translator)
+    public function __construct(KuzzleHelper $kuzzleHelper, Translator $translator, $locale)
     {
         $this->kuzzleHelper = $kuzzleHelper;
         $this->kuzzleService = $kuzzleHelper->kuzzleService;
         $this->translator = $translator;
+        $this->locale = $locale;
     }
 
 
@@ -56,6 +60,7 @@ class SearchRepository
     public function buildSearch($searchTerms, $collection)
     {
         $result = null;
+        $fieldAlt = 'alt';
 
         if (in_array($collection, array_keys(self::$listFields))) {
 
@@ -64,6 +69,12 @@ class SearchRepository
 
             $typeSearch = 'should';
             $typeQuery = 'prefix';
+
+            if ('en' != $this->locale) {
+                array_push(self::$listFields['dso'], 'data.alt.alt_' . $this->locale);
+                $fieldAlt = 'alt_' . $this->locale;
+            }
+
             $query = $this->buildQuery($searchTerms, self::$listFields[$collection]);
             $searchResult = $kuzzleCollection->search(
                 $this->kuzzleHelper->buildQuery($typeSearch, $typeQuery, $query, [], [], [], self::SEARCH_FROM, self::SEARCH_SIZE)
@@ -75,16 +86,16 @@ class SearchRepository
 
                     switch ($documentContent['catalog']) {
                         case 'messier':
-                            if (!empty($documentContent['data']['alt']['alt'])) {
-                                $label = $documentContent['data']['alt']['alt'] . ' - ' .  $documentContent['data']['desig'];
+                            if (!empty($documentContent['data']['alt'][$fieldAlt])) {
+                                $label = $documentContent['data']['alt'][$fieldAlt] . ' - ' .  $documentContent['data']['desig'];
                             } else {
                                 $label = ucfirst($documentContent['id']) . ' - ' . $documentContent['data']['desig'];
                             }
                             break;
                         case 'ngc':
                         case 'ic':
-                            if (!empty($documentContent['data']['alt']['alt'])) {
-                                $label = $documentContent['data']['alt']['alt'] . ' - ' .  $documentContent['data']['desig'];
+                            if (!empty($documentContent['data']['alt'][$fieldAlt])) {
+                                $label = $documentContent['data']['alt'][$fieldAlt] . ' - ' .  $documentContent['data']['desig'];
                             } else {
                                 $label = $documentContent['data']['desig'];
                             }

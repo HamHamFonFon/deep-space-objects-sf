@@ -22,6 +22,7 @@ class LocaleSubscriber implements EventSubscriberInterface
 
     private $defaultLocale;
 
+    protected $locale;
 
     /**
      * LocaleSubscriber constructor.
@@ -44,10 +45,19 @@ class LocaleSubscriber implements EventSubscriberInterface
         }
 
         if ($locale = $request->attributes->get('_locale')) {
-            $request->getSession()->set('_locale', $locale);
+            $this->locale = $request->getSession()->set('_locale', $locale);
         } else {
-            $request->setLocale($request->getSession()->get('_locale', $this->defaultLocale));
+            $this->locale = $request->setLocale($request->getSession()->get('_locale', $this->defaultLocale));
         }
+    }
+
+    /**
+     * Returne current locale
+     * @return mixed
+     */
+    public function getLocale()
+    {
+        return $this->locale;
     }
 
     /**

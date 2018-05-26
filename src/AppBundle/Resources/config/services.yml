@@ -45,6 +45,7 @@ services:
     arguments:
         - "@app.helper.kuzzle"
         - "@translator.default"
+        - "@=service('request_stack').getCurrentRequest().getLocale()"
   app.repository.abstractobject:
     class: AppBundle\Repository\AbstractKuzzleRepository
     abstract: true
