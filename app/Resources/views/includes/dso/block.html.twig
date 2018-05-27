@@ -1,26 +1,46 @@
 {# @var Astrobin\Response\ListImages listImageClass #}
 {% set img = null %}
+{% set dsoAlt = dso.alt %}
 {% set transKey = dso.id ~ '.label' %}
 {% set dsoType = 'type.' ~ dso.type %}
 
+{#Title#}
+{% set title %}
+  {% if dsoAlt is not empty %}
+    {{ dsoAlt }}
+    {% if 'messier' == dso.catalog %}
+      - {{ dso.id|capitalize }}
+    {% endif %}
+  {% else %}
+    {% if 'messier' == dso.catalog %}
+      {{ dso.id|capitalize }}
+    {% else %}
+      {{ dso.desig }}
+    {% endif %}
+  {% endif %}
+{% endset %}
+
+{#Image#}
 {% if dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\ListImages') and 0 < dso.images.count %}
   {% set img = dso.images.listImages.0.url_regular %}
 {% elseif dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\Image') %}
   {% set img = dso.images.url_regular %}
 {% endif %}
 
-{% set dsoAlt = dso.alt %}
 <div class="col-md-4 mb-4">
   <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{ img }}" alt="{{ dso.id }}">
+    <img class="card-img-top" src="{{ img|default(asset('img/default.jpg')) }}" alt="{{ dso.id }}">
 
     <div class="card-body">
       <h5 class="card-title">
-        {{ dso.id|capitalize }} {% if dsoAlt is defined and dsoAlt is not empty %}- {{ dsoAlt }}{% endif %}
+        {{ title }}
       </h5>
 
       <p class="card-text">
-        {% set listData = [dso.desig, dsoType|trans, dso.constId|lower|trans] %}
+        {% set listData = [dsoType|trans, dso.constId|lower|trans] %}
+        {% if 'messier' == dso.catalog %}
+          {% set listData = listData|merge([dso.desig]) %}
+        {% endif %}
         {{ listData|join(', ') }}
       </p>
     </div>

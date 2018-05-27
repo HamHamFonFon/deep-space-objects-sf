@@ -12,19 +12,42 @@
     {% endif %}
   {% endif %}
 
+  {#Title#}
+  {% set title %}
+    {% if dsoAlt is not empty %}
+      {{ dsoAlt }}
+    {% else %}
+      {% if 'messier' == dso.catalog %}
+        {{ dso.id|capitalize }}
+      {% else %}
+        {{ dso.desig }}
+      {% endif %}
+    {% endif %}
+  {% endset %}
+
+  {#Subtitle#}
+  {% set subTitle %}
+    {% if dsoAlt is not empty %}
+      {% if 'messier' == dso.catalog %}
+        {{ dso.id|capitalize }} - {{ dso.desig }}
+      {% else %}
+        {{ dso.desig }}
+      {% endif %}
+    {% endif %}
+  {% endset %}
   <div class="container">
 
     <div class="row my-4">
       <div class="col-lg-8">
-        <img class="img-fluid rounded" src="{{ img }}" alt="{{ dso.id }}">
+        <img class="img-fluid rounded" src="{{ img|default(asset('img/default.jpg')) }}" alt="{{ dso.id }}">
       </div>
       <!-- /.col-lg-8 -->
       <div class="col-lg-4">
-        <h1>{{ dso.id|capitalize }}</h1>
+
+        <h1>{{ title }}</h1>
         {% set transKey = dso.id ~ '.label' %}
 
-        {% set subtitle = [dso.desig, dsoAlt]|join(' - ') %}
-        <h2>{{ subtitle }}</h2>
+        <h2>{{ subTitle }}</h2>
 
         <ul class="list-group">
           <li class="list-group-item active">{{ 'info'|trans }}</li>
