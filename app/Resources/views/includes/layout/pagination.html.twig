@@ -1,19 +1,94 @@
+{% macro renderPageLink(route, page, currentPage, paramsRoute, label = null) %}
+  {% if paramsRoute is not defined or paramsRoute is empty %}
+    {% set paramsRoute = {} %}
+  {% endif %}
+
+  {% if page is defined and page is not empty %}
+    {% set paramsRoute = paramsRoute|merge({'page': page}) %}
+  {% endif %}
+
+  <a
+      href="{{ path(route, paramsRoute) }}"
+      class="page-link"
+  >
+    {{ label|default(page) }}
+  </a>
+{% endmacro %}
+
+{% from _self import renderPageLink %}
+
+{% set extremePagesLimit = 2 %}
+{% set nearbyPagesLimit = 2 %}
+{% set firstPage = pagination.first_page %}
+{% set lastPage = pagination.last_page %}
+{% set currentPage = pagination.current_page %}
+{% set route = pagination.route %}
+{% set paramsRoute = pagination.paramsRoute %}
+
 <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    {% set previousPage = pagination.current_page-1 %}
-    <li class="page-item{% if pagination.current_page == previousPage or pagination.first_page == pagination.current_page %} disabled{% endif %}">
-      <a class="page-link" href="{{ path(pagination.route, pagination.paramsRoute|merge({'page': previousPage})) }}">Previous</a>
-    </li>
+  <ul class="pagination justify-content-end">
 
-    {% for page in pagination.first_page..pagination.last_page %}
-      <li class="page-item {% if pagination.current_page == page %} active{% endif %}">
-        <a class="page-link" href="{{ path(pagination.route, pagination.paramsRoute|merge({'page': page})) }}">{{ page }}  {% if pagination.current_page == page %}<span class="sr-only">(current)</span>{% endif %}</a>
+    {% if 1 < currentPage %}
+      {#Previous page#}
+      <li class="page-item">
+        {{ renderPageLink(route, currentPage-1, currentPage, paramsRoute, "Previous") }}
       </li>
-    {% endfor %}
 
-    {% set nextPage = pagination.current_page+1 %}
-    <li class="page-item{% if pagination.current_page == nextPage or pagination.last_page == pagination.current_page %} disabled{% endif %}">
-      <a class="page-link" href="{{ path(pagination.route, pagination.paramsRoute|merge({'page': nextPage})) }}">Next</a>
+      {% for pageIndex in range(1, extremePagesLimit) %}
+        {% if pageIndex < currentPage - nearbyPagesLimit %}
+          <li class="page-item">
+            {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
+          </li>
+        {% endif %}
+      {% endfor %}
+
+      {# Delimiter #}
+      {% if extremePagesLimit + 1 < currentPage - nearbyPagesLimit %}
+        <li class="page-item">&hellip;</li>
+      {% endif %}
+
+      {% for pageIndex in range(currentPage - nearbyPagesLimit, currentPage - 1) %}
+        {% if pageIndex > 0 %}
+          <li class="Pagination-btn">
+            {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {#CURRENT PAGE#}
+    <li class="Pagination-btn Pagination-btn--active">
+      {{ renderPageLink(route, currentPage, currentPage, paramsRoute) }}
     </li>
+
+    {% if currentPage < lastPage %}
+      {# Nearby next pages #}
+      {% for pageIndex in range(currentPage + 1, currentPage + nearbyPagesLimit) %}
+        {% if pageIndex <= lastPage %}
+          <li class="page-item">
+            {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
+          </li>
+        {% endif %}
+      {% endfor %}
+
+      {# Delimiter #}
+      {% if (lastPage - extremePagesLimit) > (currentPage + nearbyPagesLimit) %}
+        <li class="page-item">&hellip;</li>
+      {% endif %}
+
+      {# Extreme last pages #}
+      {% for pageIndex in range(lastPage - extremePagesLimit + 1, lastPage) %}
+        {% if pageIndex > currentPage + nearbyPagesLimit %}
+          <li class="page-item">
+            {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
+          </li>
+        {% endif %}
+      {% endfor %}
+
+      {# Next page #}
+      <li class="page-item">
+        {{ renderPageLink(route, currentPage + 1, currentPage, paramsRoute, "Next") }}
+      </li>
+    {% endif %}
   </ul>
 </nav>
