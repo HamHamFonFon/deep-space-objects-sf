@@ -58,7 +58,7 @@ class DsoRepository extends AbstractKuzzleRepository
         /** @var SearchResult $result */
         $result = $this->findById($id);
         if (0 < $result->getTotal()) {
-            $dso = $this->buildEntityByDocument($result->getDocuments()[0], 6);
+            $dso = $this->buildEntityByDocument($result->getDocuments()[0], 7);
         }
 
         return $dso;
@@ -66,27 +66,28 @@ class DsoRepository extends AbstractKuzzleRepository
 
 
     /**
-     * @deprecated
+     * Retrieve objects from same constellation
+     *
      * @param $constId
      * @param $excludedMessier
      * @param $limit
      * @param $limitImages
      * @return array
      */
-    public function getMessiersByConst($constId, $excludedMessier, $limit = 10, $limitImages = 1)
+    public function getObjectsByConst($constId, $excludedObject, $limit = 10, $limitImages = 1)
     {
-        $listMessiers = [];
+        $list = [];
         $results = $this->findBy('term', ['data.const_id' => $constId], [], ['data.mag' => 'ASC'],0, $limit);
         if (0 < $results->getTotal()) {
             foreach ($results->getDocuments() as $document) {
-                $listMessiers[] = $this->buildEntityByDocument($document, $limitImages);
+                $list[] = $this->buildEntityByDocument($document, $limitImages);
             }
         }
-        $listMessiers = array_filter($listMessiers, function (Messier $messier) use ($excludedMessier) {
-            return $messier->getId() !== $excludedMessier;
+        $list = array_filter($list, function (Dso $dso) use ($excludedObject) {
+            return $dso->getId() !== $excludedObject;
         });
 
-        return $listMessiers;
+        return $list;
     }
 
     /**

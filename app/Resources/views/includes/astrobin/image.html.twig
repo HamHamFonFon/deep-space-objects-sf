@@ -1,21 +1,15 @@
-<div class="col-md-4 mb-4">
-  <div class="card h-100">
+<div class="col-md-4">
+  <div class="card mb-2">
+    <img src="{{ image.url_hd }}" class="card-img-top" alt="{{ image.user }}">
     <div class="card-body">
-      <h2 class="card-title">{{ image.title|join(' - ') }}</h2>
-
-      <div class="card-text">
-        <picture>
-          <img src="{{ image.url_gallery }}" class=" img-fluid rounded float-left" alt="{{ image.user }}">
-        </picture>
-        {% if image.description is not empty %}
-          <p>
-            {{ image.description }}
-          </p>
-        {% endif %}
-      </div>
-    </div>
-    <div class="card-footer">
-      <a href="#" class="btn btn-primary">More Info</a>
+      <h4 class="card-title">{{ image.title|join(' - ') }}</h4>
+      {% if image.description is not empty %}
+        <div class="card-text">
+          {{ image.description }}
+          <br>
+          {{ image.user }}
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>

@@ -82,24 +82,34 @@
       </div>
     {% endif %}
 
-    {% if dsos_type is defined and 0 < dsos_type|length %}
-      <h3>{{ 'typeImgGall'|trans({'%type%': dso.type|trans}) }} :</h3>
-      <div class="row">
-        {% for dso in dsos_type %}
-          {% include ':includes/dso:block.html.twig' with {dso: dso} %}
-        {% endfor %}
-      </div>
-    {% endif %}
+
 
     {% if dso.images is defined and 1 < dso.images|length %}
       {% include 'includes/layout/astrobin_message.html.twig' %}
       <h3>{{ 'imagesGall'|trans }} :</h3>
-      <div class="row">
-        {% for img in dso.images.listImages|slice(1, dso.images.count) %}
-          {% include 'includes/astrobin/image.html.twig' with {image: img} %}
-        {% endfor %}
+
+      <div id="multi-gallery-astrobin" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item">
+            {% for img in dso.images.listImages|slice(1, dso.images.count) %}
+              {% include 'includes/astrobin/image.html.twig' with {image: img} %}
+
+              {% if loop.index is divisible by(3) %}
+                </div>
+                <div class="carousel-item">
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="controls-top">
+          <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+          <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        </div>
       </div>
     {% endif %}
-  </div>
 
+
+  </div>
 {% endblock %}
