@@ -17,7 +17,7 @@ parameters:
         - pt
         - pt_BR
     list.messier.order:
-        messierOrderAsc: messier_order_asc
-        messierOrderDesc: messier_order_desc
-        messierMagnitudeAsc: messier_mag_asc
-        messierMagnitudeDesc: messier_mag_desc
+        listOrderAsc: order_asc
+        listOrderDesc: order_desc
+        listMagnitudeAsc: mag_asc
+        listMagnitudeDesc: mag_desc

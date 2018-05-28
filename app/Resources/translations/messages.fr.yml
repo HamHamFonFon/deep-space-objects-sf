@@ -55,11 +55,10 @@ list.sto : Stock open clusters
 list.rcw: RCW Catalog
 list.abl:
 list.ugc:
-messierOrderAsc: Ord
-messierOrderAsc: Tri ascendant
-messierOrderDesc: Tri descendant
-messierMagnitudeAsc: Magnitude la plus faible
-messierMagnitudeDesc: Magnitude la plus haute
+listOrderAsc: Tri ascendant
+listOrderDesc: Tri descendant
+listMagnitudeAsc: Magnitude la plus faible
+listMagnitudeDesc: Magnitude la plus haute
 # Type DSO
 type.gg: Amas de galaxies
 type.g: Generic galaxy

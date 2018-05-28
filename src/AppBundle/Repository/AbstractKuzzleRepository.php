@@ -29,13 +29,13 @@ abstract class AbstractKuzzleRepository
 
     protected $locale;
 
-    const DEFAULT_SORT = 'messier_order_asc';
+    const DEFAULT_SORT = 'order_asc';
 
     private static $listOrder = [
-        'messier_order_asc' => ['order' => 'asc'],
-        'messier_order_desc' => ['order' => 'desc'],
-        'messier_mag_asc' => ['data.mag' => 'asc'],
-        'messier_mag_desc' => ['data.mag' => 'desc']
+        'order_asc' => ['order' => 'asc'],
+        'order_desc' => ['order' => 'desc'],
+        'mag_asc' => ['data.mag' => 'asc'],
+        'mag_desc' => ['data.mag' => 'desc']
     ];
 
     /**
