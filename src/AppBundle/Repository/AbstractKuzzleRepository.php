@@ -27,6 +27,8 @@ abstract class AbstractKuzzleRepository
     /** @var \Kuzzle\Kuzzle  */
     protected $kuzzleService;
 
+    protected $locale;
+
     const DEFAULT_SORT = 'messier_order_asc';
 
     private static $listOrder = [
@@ -44,6 +46,22 @@ abstract class AbstractKuzzleRepository
     {
         $this->kuzzleHelper = $kuzzleHelper;
         $this->kuzzleService = $kuzzleHelper->kuzzleService;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocale()
+    {
+        return $this->locale;
+    }
+
+    /**
+     * @param mixed $locale
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
     }
 
 

@@ -51,6 +51,10 @@ services:
     abstract: true
     arguments:
       - "@app.helper.kuzzle"
+    calls:
+      - method: setLocale
+        arguments:
+          - "@=service('request_stack').getCurrentRequest().getLocale()"
   app.repository.dso:
     class: AppBundle\Repository\DsoRepository
     parent: app.repository.abstractobject

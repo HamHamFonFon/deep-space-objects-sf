@@ -10,7 +10,7 @@ use AppBundle\Repository\DsoRepository;
  */
 class Dso extends AbstractKuzzleDocumentEntity
 {
-
+    protected $locale;
     protected $id;
     protected $catalog;
     protected $geometry;
@@ -27,6 +27,19 @@ class Dso extends AbstractKuzzleDocumentEntity
     protected $ra;
     protected $dec;
     protected $astrobinId;
+
+
+    /**
+     * @param string $locale
+     * @return Dso
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+        return $this;
+    }
+
+
 
     /**
      * @return string
@@ -159,13 +172,8 @@ class Dso extends AbstractKuzzleDocumentEntity
     /**
      * @return mixed
      */
-    public function getAlt($locale = null)
+    public function getAlt()
     {
-        if (is_null($locale)) {
-            $this->alt = $this->alt['alt'];
-        } else {
-            $this->alt = $this->alt['alt_' . $locale];
-        }
         return $this->alt;
     }
 
@@ -174,7 +182,11 @@ class Dso extends AbstractKuzzleDocumentEntity
      */
     public function setAlt($alt)
     {
-        $this->alt = $alt;
+        if (empty($this->locale) || 'en' === $this->locale) {
+            $this->alt = $alt['alt'];
+        } else {
+            $this->alt = $alt['alt_' . $this->locale];
+        }
     }
 
     /**

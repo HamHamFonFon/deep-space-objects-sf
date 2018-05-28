@@ -149,7 +149,7 @@ class DsoRepository extends AbstractKuzzleRepository
         /** @var Dso $dso */
         $dso = new $kuzzleEntity;
 
-        $dso->buildObject($kuzzleDocument);
+        $dso->setLocale($this->getLocale())->buildObject($kuzzleDocument);
         $this->urlHelper->generateUrl($dso);
         try {
             if (!is_null($dso->getAstrobinId())) {
