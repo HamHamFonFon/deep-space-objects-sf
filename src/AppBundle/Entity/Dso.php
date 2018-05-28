@@ -15,6 +15,7 @@ class Dso extends AbstractKuzzleDocumentEntity
     protected $catalog;
     protected $geometry;
     public $images;
+    public $imageCover;
 
     protected $order; // only messier ?
     protected $desig;
@@ -39,14 +40,17 @@ class Dso extends AbstractKuzzleDocumentEntity
         return $this;
     }
 
-
-
     /**
      * @return string
      */
     public static function getCollectionName()
     {
         return DsoRepository::COLLECTION_NAME;
+    }
+
+    public function addImageCover($astrobinImage)
+    {
+        $this->imageCover = $astrobinImage;
     }
 
     /**

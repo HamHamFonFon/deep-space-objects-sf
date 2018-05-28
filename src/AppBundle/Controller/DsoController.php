@@ -60,9 +60,8 @@ class DsoController extends Controller
         }
 
         /** @var DsoRepository $messierRepository */
-        $messierRepository = $this->container->get('app.repository.dso');
-        list($params['total'], $params['list']) = $messierRepository->getList($catalog, $from, $size, $sort, 1);
-
+        $dsoRepository = $this->container->get('app.repository.dso');
+        list($params['total'], $params['list']) = $dsoRepository->getList($catalog, $from, $size, $sort, 1);
 
         $lastPage = ceil($params['total']/$size);
 
@@ -107,7 +106,6 @@ class DsoController extends Controller
         $dsoRepository = $this->container->get('app.repository.dso');
         /** @var Dso $dso */
         $params['dso'] = $dso = $dsoRepository->getObject(strtolower($objectId));
-
         // Get bjects from same constellation
         $params['dsos_const'] = $dsoRepository->getObjectsByConst(strtolower($dso->getConstId()), $dso->getId(), 3, 1);
 

@@ -10497,8 +10497,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js__ = __webpack_require__(/*! ./scripts/sortList.js */ "./src/AppBundle/Resources/public/js/scripts/sortList.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_galleryCarousel_js__ = __webpack_require__(/*! ./scripts/galleryCarousel.js */ "./src/AppBundle/Resources/public/js/scripts/galleryCarousel.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_galleryCarousel_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__scripts_galleryCarousel_js__);
 // ==================================================
 // Import JS libraries files and project files here
 // ==================================================
@@ -10511,7 +10509,7 @@ __webpack_require__(/*! ../styles/typehead.css */ "./src/AppBundle/Resources/pub
 
 
 
-
+// import "./scripts/galleryCarousel.js"
 
 /***/ }),
 
@@ -10595,31 +10593,6 @@ DSO.cookieLang = function ($, ns, r) {
 
   return ns;
 }(jQuery, {}, Routing);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
-/***/ "./src/AppBundle/Resources/public/js/scripts/galleryCarousel.js":
-/*!**********************************************************************!*\
-  !*** ./src/AppBundle/Resources/public/js/scripts/galleryCarousel.js ***!
-  \**********************************************************************/
-/*! dynamic exports provided */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(jQuery) {window.DSO = window.DSO || {};
-
-DSO.galleryCarousel = function ($, ns) {
-
-  ns.CAROUSEL_ID = '#multi-gallery-astrobin';
-
-  ns.init = function () {
-    $(ns.CAROUSEL_ID).carousel({
-      interval: 2000
-    });
-  };
-
-  return ns;
-}(jQuery, {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),

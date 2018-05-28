@@ -36,7 +36,7 @@ class GenerateUrlHelper
         if ($entity) {
             switch ($entity::getCollectionName()) {
                 case DsoRepository::COLLECTION_NAME:
-                    $url = $this->router->generate('dso_full', ['catalog' => $entity->getCatalog(), 'objectId' => $entity->getId()], $absoluteUrl);
+                    $url = $this->router->generate('dso_full', ['catalog' => strtolower($entity->getCatalog()), 'objectId' => strtolower($entity->getId())], $absoluteUrl);
                     break;
                 case 'planet':
                 case 'constellation':

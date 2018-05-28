@@ -6,6 +6,7 @@ use AppBundle\Entity\Dso;
 use AppBundle\Entity\Messier;
 use AppBundle\Helper\GenerateUrlHelper;
 use AppBundle\Kuzzle\KuzzleHelper;
+use Astrobin\Response\Image;
 use Astrobin\Services\GetImage;
 use Kuzzle\Document;
 use Kuzzle\Util\SearchResult;
@@ -152,12 +153,18 @@ class DsoRepository extends AbstractKuzzleRepository
         $dso->setLocale($this->getLocale())->buildObject($kuzzleDocument);
         $this->urlHelper->generateUrl($dso);
         try {
+            $astrobinListImage = $this->wsGetImage->getImagesBySubject($dso->getId(), $limitImages);
             if (!is_null($dso->getAstrobinId())) {
                 $astrobinImage = $this->wsGetImage->getImageById($dso->getAstrobinId());
+                $dso->addImageCover($astrobinImage);
             } else {
-                $astrobinImage = $this->wsGetImage->getImagesBySubject($dso->getId(), $limitImages);
+                if ($astrobinListImage instanceof Image) {
+                    $dso->addImageCover($astrobinListImage);
+                } else {
+                    $dso->addImageCover($astrobinListImage->listImages[0]);
+                }
             }
-            $dso->addImages($astrobinImage);
+            $dso->addImages($astrobinListImage);
         } catch (\Exception $e) {
             dump($e->getMessage());
         }

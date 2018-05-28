@@ -6,6 +6,13 @@
 
   {% set dsoAlt = dso.alt %}
   {% set img = null %}
+
+  {#Cover image#}
+  {% if dso.imageCover is defined and dso.imageCover is not empty %}
+    {% set imgCover = dso.imageCover.url_hd %}
+  {% endif %}
+
+  {#Gallery#}
   {% if dso.images is defined %}
     {% if dso.images.count is defined and 0 < dso.images.count %}
       {% set img = dso.images.listImages.0.url_hd %}
@@ -35,11 +42,12 @@
       {% endif %}
     {% endif %}
   {% endset %}
-  <div class="container">
 
+
+  <div class="container">
     <div class="row my-4">
       <div class="col-lg-8">
-        <img class="img-fluid rounded" src="{{ img|default(asset('img/default.jpg')) }}" alt="{{ dso.id }}">
+        <img class="img-fluid rounded" src="{{ imgCover|default(asset('img/default.jpg')) }}" alt="{{ dso.id }}">
       </div>
       <!-- /.col-lg-8 -->
       <div class="col-lg-4">
@@ -67,7 +75,6 @@
           1: {{ 'dimExp'|trans }}
         </p>
 
-
         <a class="btn btn-primary btn-lg" href="#">Call to Action!</a>
       </div>
       <!-- /.col-md-4 -->
@@ -88,25 +95,24 @@
       {% include 'includes/layout/astrobin_message.html.twig' %}
       <h3>{{ 'imagesGall'|trans }} :</h3>
 
-      <div id="multi-gallery-astrobin" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item">
+      {#<div id="multi-gallery-astrobin" class="carousel slide carousel-multi-item" data-ride="carousel">#}
+        {#<div class="carousel-inner" role="listbox">#}
+          {#<div class="carousel-item">#}
             {% for img in dso.images.listImages|slice(1, dso.images.count) %}
               {% include 'includes/astrobin/image.html.twig' with {image: img} %}
 
-              {% if loop.index is divisible by(3) %}
-                </div>
-                <div class="carousel-item">
-              {% endif %}
+              {#{% if loop.index is divisible by(3) %}#}
+                {#</div>#}
+                {#<div class="carousel-item">#}
+              {#{% endif %}#}
             {% endfor %}
-          </div>
-        </div>
+          {#</div>#}
+        {#</div>#}
 
-        <div class="controls-top">
-          <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-          <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-        </div>
+        {#<div class="controls-top">#}
+          {#<a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>#}
+          {#<a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>#}
+        {#</div>#}
       </div>
     {% endif %}
 

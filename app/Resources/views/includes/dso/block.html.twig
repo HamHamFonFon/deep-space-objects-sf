@@ -21,15 +21,19 @@
 {% endset %}
 
 {#Image#}
-{% if dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\ListImages') and 0 < dso.images.count %}
-  {% set img = dso.images.listImages.0.url_regular %}
-{% elseif dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\Image') %}
-  {% set img = dso.images.url_regular %}
+{#{% if dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\ListImages') and 0 < dso.images.count %}#}
+  {#{% set img = dso.images.listImages.0.url_regular %}#}
+{#{% elseif dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\Image') %}#}
+  {#{% set img = dso.images.url_regular %}#}
+{#{% endif %}#}
+{% if dso.imageCover is defined and dso.imageCover is not empty %}
+  {% set imgCover = dso.imageCover.url_hd %}
 {% endif %}
+
 
 <div class="col-md-4 mb-4">
   <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{ img|default(asset('img/default.jpg')) }}" alt="{{ dso.id }}">
+    <img class="card-img-top" src="{{ imgCover|default(asset('img/default.jpg')) }}" alt="{{ dso.id }}">
 
     <div class="card-body">
       <h5 class="card-title">
