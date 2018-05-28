@@ -4,15 +4,16 @@
   {% endif %}
 
   {% if page is defined and page is not empty %}
-    {% set paramsRoute = paramsRoute|merge({'page': page}) %}
+    {% set paramsRoute = paramsRoute|merge({"page": page}) %}
   {% endif %}
-
-  <a
-      href="{{ path(route, paramsRoute) }}"
-      class="page-link"
-  >
-    {{ label|default(page) }}
-  </a>
+  <li class="page-item {% if page == currentPage %}active{% endif %}">
+    <a
+        href="{{ path(route, paramsRoute) }}"
+        class="page-link"
+    >
+      {{ label|default(page) }} {% if page == currentPage %}<span class="sr-only">(current)</span>{% endif %}
+    </a>
+  </li>
 {% endmacro %}
 
 {% from _self import renderPageLink %}
@@ -30,15 +31,11 @@
 
     {% if 1 < currentPage %}
       {#Previous page#}
-      <li class="page-item">
-        {{ renderPageLink(route, currentPage-1, currentPage, paramsRoute, "Previous") }}
-      </li>
+      {{ renderPageLink(route, currentPage-1, currentPage, paramsRoute, "Previous") }}
 
       {% for pageIndex in range(1, extremePagesLimit) %}
         {% if pageIndex < currentPage - nearbyPagesLimit %}
-          <li class="page-item">
-            {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
-          </li>
+          {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
         {% endif %}
       {% endfor %}
 
@@ -49,25 +46,19 @@
 
       {% for pageIndex in range(currentPage - nearbyPagesLimit, currentPage - 1) %}
         {% if pageIndex > 0 %}
-          <li class="Pagination-btn">
-            {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
-          </li>
+          {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
         {% endif %}
       {% endfor %}
     {% endif %}
 
     {#CURRENT PAGE#}
-    <li class="Pagination-btn Pagination-btn--active">
-      {{ renderPageLink(route, currentPage, currentPage, paramsRoute) }}
-    </li>
+    {{ renderPageLink(route, currentPage, currentPage, paramsRoute) }}
 
     {% if currentPage < lastPage %}
       {# Nearby next pages #}
       {% for pageIndex in range(currentPage + 1, currentPage + nearbyPagesLimit) %}
         {% if pageIndex <= lastPage %}
-          <li class="page-item">
-            {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
-          </li>
+          {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
         {% endif %}
       {% endfor %}
 
@@ -79,9 +70,7 @@
       {# Extreme last pages #}
       {% for pageIndex in range(lastPage - extremePagesLimit + 1, lastPage) %}
         {% if pageIndex > currentPage + nearbyPagesLimit %}
-          <li class="page-item">
-            {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
-          </li>
+          {{ renderPageLink(route, pageIndex, currentPage, paramsRoute) }}
         {% endif %}
       {% endfor %}
 

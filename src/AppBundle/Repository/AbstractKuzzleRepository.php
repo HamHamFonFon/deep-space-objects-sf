@@ -87,10 +87,9 @@ abstract class AbstractKuzzleRepository
 
         if (!in_array($sort, array_keys(self::$listOrder))) {
             $qSort = self::$listOrder[self::DEFAULT_SORT];
-        }else {
+        } else {
             $qSort = self::$listOrder[$sort];
         }
-
 
         /** @var SearchResult $searchResult */
         $searchResult = $kuzzleCollection->search(

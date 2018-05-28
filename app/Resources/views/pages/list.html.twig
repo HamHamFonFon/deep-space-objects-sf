@@ -34,9 +34,11 @@
       {% endif %}
     </div>
 
-    <div class="col-6 right">
-      {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
+    <div class="row">
+      <div class="col-12 right">
+        {#{{ path(pagination.route, pagination.paramsRoute) }}#}
+        {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
+      </div>
     </div>
-
   </div>
 {% endblock %}

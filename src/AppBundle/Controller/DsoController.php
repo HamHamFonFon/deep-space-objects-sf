@@ -22,6 +22,29 @@ class DsoController extends Controller
 {
 
     /**
+     * @route("/catalogue",
+     *     name="catalog_search"
+     * )
+     * @param Request $request
+     * @return Response
+     */
+    public function catalogAction(Request $request)
+    {
+        $params = [];
+
+
+
+        $response = new Response();
+        $response->setPublic();
+        $response->setSharedMaxAge(
+            $this->container->getParameter('http_ttl')
+        );
+
+        return $this->render('', $params, $response);
+    }
+
+
+    /**
      * @Route("/catalogue/{catalog}",
      *     name="catalog_list",
      *     requirements={"catalog"="\w+"}
@@ -33,7 +56,7 @@ class DsoController extends Controller
     {
         $params = $data = [];
 
-        $data['catalog'] = $params['catalog'] = $catalog;
+        $params['catalog'] = $catalog;
         $from = 0;
         $size = 12;
         $page = $firstPage = 1;
@@ -59,11 +82,15 @@ class DsoController extends Controller
             $sort = $data['order'];
         }
 
-        /** @var DsoRepository $messierRepository */
+        /** @var DsoRepository $dsoRepository */
         $dsoRepository = $this->container->get('app.repository.dso');
         list($params['total'], $params['list']) = $dsoRepository->getList($catalog, $from, $size, $sort, 1);
 
         $lastPage = ceil($params['total']/$size);
+
+        $data['page'] = $page;
+        $data['catalog'] = $catalog;
+        $data['order'] = $sort;
 
         $params['pagination'] = [
             'first_page' => $firstPage,
