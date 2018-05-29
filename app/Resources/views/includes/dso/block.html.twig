@@ -1,9 +1,10 @@
 {# @var Astrobin\Response\ListImages listImageClass #}
 {% set img = null %}
 {% set dsoAlt = dso.alt %}
-{% set transKey = dso.id ~ '.label' %}
 {% set dsoType = 'type.' ~ dso.type %}
-
+{% if dso.constId is not empty %}
+  {% set dsoConst = 'const.' ~ dso.constId|lower %}
+{% endif %}
 {#Title#}
 {% set title %}
   {% if dsoAlt is not empty %}
@@ -21,11 +22,6 @@
 {% endset %}
 
 {#Image#}
-{#{% if dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\ListImages') and 0 < dso.images.count %}#}
-  {#{% set img = dso.images.listImages.0.url_regular %}#}
-{#{% elseif dso.images is defined and true == dso.images|is_instance_of('\\Astrobin\\Response\\Image') %}#}
-  {#{% set img = dso.images.url_regular %}#}
-{#{% endif %}#}
 {% if dso.imageCover is defined and dso.imageCover is not empty %}
   {% set imgCover = dso.imageCover.url_hd %}
 {% endif %}
@@ -41,7 +37,7 @@
       </h5>
 
       <p class="card-text">
-        {% set listData = [dsoType|trans, dso.constId|lower|trans] %}
+        {% set listData = [dsoType|trans, dsoConst|default('')|trans] %}
         {% if 'messier' == dso.catalog %}
           {% set listData = listData|merge([dso.desig]) %}
         {% endif %}

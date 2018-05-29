@@ -1,0 +1,20 @@
+<h3 class="h3">{{ name|transchoice(2)|capitalize }}</h3>
+<ul>
+  {% for facet in data|sort %}
+
+    {% if true == translation %}
+      {% set transKey = facet.key %}
+      {% set labelFacet = name ~ '.' ~ transKey|lower %}
+    {% else %}
+      {% set labelFacet = facet.key %}
+    {% endif %}
+
+    {% set countFacet = facet.doc_count %}
+    <li>
+      <a href="#" data-type="{{ name }}" data-filter="{{ facet.key }}" type="facet">
+        {{ labelFacet|trans }} ({{ countFacet }})
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+<hr>
