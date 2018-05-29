@@ -3,6 +3,7 @@
 namespace AppBundle\Helper;
 
 use AppBundle\Entity\AbstractKuzzleDocumentEntity;
+use AppBundle\Entity\Dso;
 use AppBundle\Entity\Messier;
 use AppBundle\Repository\DsoRepository;
 use Symfony\Component\Routing\RouterInterface;
@@ -26,7 +27,7 @@ class GenerateUrlHelper
     }
 
     /**
-     * @param Messier|AbstractKuzzleDocumentEntity $entity
+     * @param Dso|AbstractKuzzleDocumentEntity $entity
      * @param $absoluteUrl
      * @return AbstractKuzzleDocumentEntity|Messier
      */
@@ -43,7 +44,6 @@ class GenerateUrlHelper
                 default:
                     $url = $this->router->generate('homepage');
             }
-
             $entity->full_url = $url;
         }
         return $entity;

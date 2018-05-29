@@ -50,7 +50,10 @@ class DsoController extends Controller
      *     requirements={"catalog"="\w+"}
      * )
      * @param Request $request
+     * @param $catalog
      * @return Response
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
      */
     public function listAction(Request $request, $catalog)
     {
@@ -84,7 +87,9 @@ class DsoController extends Controller
 
         /** @var DsoRepository $dsoRepository */
         $dsoRepository = $this->container->get('app.repository.dso');
-        list($params['total'], $params['list']) = $dsoRepository->getList($catalog, $from, $size, $sort, 1);
+        list($params['total'], $params['list'], $params['aggregates']) = $dsoRepository->getList($catalog, $from, $size, $sort, 1);
+        unset($params['aggregates']['allfacets']['doc_count']);
+        dump($params['aggregates']);
 
         $lastPage = ceil($params['total']/$size);
 
@@ -118,13 +123,16 @@ class DsoController extends Controller
      *     options={"expose"=true},
      *     name="dso_full",
      *     requirements={
-     *         "catalog"="\w+",
+     *         "catalog"="[a-zA-Z0-9-+_]+",
      *         "objectId"="[a-zA-Z0-9-+_]+"
      *     }
      * )
      * @param Request $request
+     * @param $catalog
      * @param string $objectId
      * @return Response
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
      */
     public function fullAction(Request $request, $catalog, $objectId)
     {

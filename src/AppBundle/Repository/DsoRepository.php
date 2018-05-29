@@ -49,6 +49,8 @@ class DsoRepository extends AbstractKuzzleRepository
      * Get Object in Kuzzle and return it
      * @param $id
      * @return Dso|null $dso
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
      */
     public function getObject($id)
     {
@@ -71,10 +73,12 @@ class DsoRepository extends AbstractKuzzleRepository
      * Retrieve objects from same constellation
      *
      * @param $constId
-     * @param $excludedMessier
-     * @param $limit
-     * @param $limitImages
+     * @param $excludedObject
+     * @param int $limit
+     * @param int $limitImages
      * @return array
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
      */
     public function getObjectsByConst($constId, $excludedObject, $limit = 10, $limitImages = 1)
     {
@@ -97,9 +101,12 @@ class DsoRepository extends AbstractKuzzleRepository
      * Get objects messiers by type, filtered by constellation
      *
      * @param $type
-     * @param $limit
-     * @param $limitImages
+     * @param $excludedMessier
+     * @param int $limit
+     * @param int $limitImages
      * @return array
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
      */
     public function getMessiersByType($type, $excludedMessier, $limit = 10, $limitImages = 1)
     {
@@ -118,27 +125,55 @@ class DsoRepository extends AbstractKuzzleRepository
     }
 
     /**
-     * @param $start
-     * @param $to
+     * @param $typeCatalog
+     * @param $from
+     * @param $size
+     * @param $order
+     * @param int $nbImages
      * @return array
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
      */
     public function getList($typeCatalog, $from, $size, $order, $nbImages = 1)
     {
         $listDso = [];
+        $aggregates = [
+            'const' => [
+                'terms' => [
+                    'field' => 'data.const_id.keyword'
+                ]
+            ],
+            'type' => [
+                'terms' => [
+                    'field' => 'data.type.keyword'
+                ]
+            ],
+            'mag' => [
+                'range' => [
+                    'field' => 'data.mag',
+                    'ranges' => [
+                        ['to' => 5],
+                        ['from' => 5, 'to' => 10],
+                        ['from' => 10]
+                    ]
+                ]
+            ]
+        ];
+
         /** @var  $listItems */
-        $listItems = $this->findBy('term', ['catalog' => $typeCatalog], [], $order, $from, $size);
+        $listItems = $this->findBy('term', ['catalog' => $typeCatalog], [], $order, $from, $size, $aggregates);
         if (!is_null($listItems) && 0 < $listItems->getTotal()) {
             foreach ($listItems->getDocuments() as $document) {
                 $listDso[] = $this->buildEntityByDocument($document, $nbImages);
             }
+            $listAggregates = $listItems->getAggregations();
         }
 
-        return [$listItems->getTotal(), $listDso];
+        return [$listItems->getTotal(), $listDso, $listAggregates];
     }
 
 
     /**
-     *
      * @param Document $kuzzleDocument
      * @param int $limitImages
      * @return Dso

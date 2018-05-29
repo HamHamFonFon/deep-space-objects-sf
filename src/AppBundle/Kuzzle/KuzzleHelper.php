@@ -147,9 +147,14 @@ class KuzzleHelper
             $finalQuery['sort'] = $fieldSort;
         }
 
-        // TODO Add agregates
         if (isset($aggregates) && 0 < count($aggregates)) {
-
+            $finalQuery['aggregations'] = [
+                'allfacets' => [
+//                    'global' => new \stdClass(),
+                    "filter" => [ "term" => [ "catalog" => "messier" ] ], // ====> TEST
+                    'aggregations' => $aggregates
+                ]
+            ];
         }
 
         $finalQuery['from'] = $from;
