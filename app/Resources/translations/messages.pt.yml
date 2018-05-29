@@ -52,7 +52,7 @@ list.sh: Sharpless catalog
 list.cr: Collinder catalog
 list.sto : Stock open clusters
 list.rcw: RCW Catalog
-list.abl:
+list.abl: Abell catalogue
 list.ugc:
 listOrderAsc: Ordem crescente
 listOrderDesc: Ordem decrescente

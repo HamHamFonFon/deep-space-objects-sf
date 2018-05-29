@@ -54,8 +54,8 @@ list.ldn: Lynds' Catalogue of Dark Nebulae
 list.sh: Sharpless catalog
 list.cr: Collinder catalog
 list.sto : Stock open clusters
-list.rcw: RCW Catalog
-list.abl:
+list.rcw: RCW catalog
+list.abl: Abell catalog
 list.ugc:
 listOrderAsc: Sort ascendant
 listOrderDesc: Sort descendant
