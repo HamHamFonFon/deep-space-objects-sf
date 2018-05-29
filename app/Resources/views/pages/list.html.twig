@@ -6,32 +6,46 @@
     <header class="jumbotron my-4">
       {% set labelTitle = 'list.' ~ catalog %}
       <h1 class="display-3">{{ labelTitle|trans }}</h1>
-      <p class="lead">
+      <div class="lead">
         {% set descLabel = 'description.' ~ catalog %}
         {{ descLabel|trans }}
-      </p>
-      {#<div class="row">#}
-        {#<button type="submit" class="btn btn-primary btn-lg">{{ 'submit'|trans }}</button>#}
-      {#</div>#}
+      </div>
     </header>
 
-
     <div class="row">
-      <div class="col-4">
-        {% include 'forms/listorder.html.twig' %}
-      </div>
-      <div class="col-2"></div>
-      <div class="col-6 right">
+      <div class="col-12 right">
         {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
       </div>
     </div>
 
     <div class="row text-center">
-      {% if list is defined and 0 < list|length %}
-        {% for item in list %}
-          {% include ':includes/dso:block.html.twig' with {dso: item} %}
+      <div class="col-3 text-left">
+        <h2 class="display-4">Filtres</h2>
+        <hr>
+        {% include 'forms/listorder.html.twig' %}
+        <hr>
+
+        {% for facetName, facetData in aggregates.allfacets %}
+          <h3 class="h3">{{ facetName|transchoice(2)|capitalize }}</h3>
+          <ul>
+          {% for facet in facetData['buckets']|sort %}
+            {% set labelFacet = facet.key|lower %}
+            {% set countFacet = facet.doc_count %}
+            <li>{{ labelFacet|trans }} ({{ countFacet }})</li>
+          {% endfor %}
+          </ul>
+          <hr>
         {% endfor %}
-      {% endif %}
+      </div>
+      <div class="col-9">
+        <div class="row">
+          {% if list is defined and 0 < list|length %}
+            {% for item in list %}
+              {% include ':includes/dso:block.html.twig' with {dso: item} %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
     </div>
 
     <div class="row">

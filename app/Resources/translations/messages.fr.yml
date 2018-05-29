@@ -59,6 +59,7 @@ listOrderAsc: Tri ascendant
 listOrderDesc: Tri descendant
 listMagnitudeAsc: Magnitude la plus faible
 listMagnitudeDesc: Magnitude la plus haute
+type: Type d'objet|Type d'objets
 # Type DSO
 type.gg: Amas de galaxies
 type.g: Generic galaxy

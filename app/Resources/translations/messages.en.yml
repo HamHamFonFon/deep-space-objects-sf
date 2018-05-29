@@ -18,8 +18,6 @@ catalog.sto : Stock open clusters
 catalog.rcw: RCW Catalog
 catalog.abl: Abell catalog
 catalog.ugc: Uppsala General Catalog
-list.abl:
-list.ugc:
 # Lang:
 fr: French
 en: English (UK)
@@ -61,6 +59,7 @@ listOrderAsc: Sort ascendant
 listOrderDesc: Sort descendant
 listMagnitudeAsc: Lowest magnitude
 listMagnitudeDesc: Highest magnitude
+type: Type of object|Objects type
 # Type DSO
 type.gg: Galaxy cluster
 type.g:  Generic galaxy

@@ -58,6 +58,7 @@ listOrderAsc: Ordem crescente
 listOrderDesc: Ordem decrescente
 listMagnitudeAsc: Magnitude miníma
 listMagnitudeDesc: Magnitude maxíma
+type: Tipo de objeto|Tipo de objeto
 # Type DSO
 type.gg: Aglomerado de galáxias
 type.g: Galáxia genérica
