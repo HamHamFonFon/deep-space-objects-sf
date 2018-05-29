@@ -5,11 +5,14 @@ namespace AppBundle\Command;
 use AppBundle\Repository\DsoRepository;
 use Kuzzle\Kuzzle;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class BulkImportCommand extends ContainerAwareCommand
 {
+    protected $defaultCatalog = 'unasigned';
+
     protected static $mapping = [
         'NG' => 'ngc',
         'IC' => 'ic',
@@ -19,34 +22,34 @@ class BulkImportCommand extends ContainerAwareCommand
         'St' => 'sto',
         'Ab' => 'abl',
         'UG' => 'ugc',
-        'An' => '', 'Ap' => '', 'AP' => '',
-        'He' => '',
-        'Ba' => '', 'Be' => '', 'Bi' => '', 'Bo' => '',
-        'B1' => '', 'B2' => '', 'B3' => '', 'B4' => '', 'B5' => '', 'B6' => '', 'B7' => '', 'B8' => '', 'B9' => '',
-        'K1' => '', 'K2' => '', 'K3' => '', 'K4' => '',
-        'M1' => '', 'M2' => '', 'M3' => '', 'M4' => '', 'M7' => '',
-        'Cz' => '',
-        'Ki' => '',
-        'Do' => '',
-        'Pa' => '', 'Pe' => '',
-        'Ce' => '',
-        'Ru' => '',
-        'Ly' => '',
-        'Ha' => '', 'Ho' => '', 'Hu' => '',
-        'H1' => '', 'H2' => '',
-        'vd' => '',
-        'Ca' => '',
-        'La' => '',
-        'Me' => '',
-        '3C' => '',
-        'Te' => '', 'To' => '', 'Tr' => '',
-        'Gu' => '', 'Gr' => '',
-        'Pi' => '',
-        'Fe' => '',
-        'Ro' => '',
-        'Jo' => '',
-        'J3' => '', 'J9' => '',
-        'Vd' => '', 'VV' => ''
+        'An' => 'unasigned', 'Ap' => 'unasigned', 'AP' => 'unasigned',
+        'He' => 'unasigned',
+        'Ba' => 'unasigned', 'Be' => 'unasigned', 'Bi' => 'unasigned', 'Bo' => 'unasigned',
+        'B1' => 'unasigned', 'B2' => 'unasigned', 'B3' => 'unasigned', 'B4' => 'unasigned', 'B5' => 'unasigned', 'B6' => 'unasigned', 'B7' => 'unasigned', 'B8' => 'unasigned', 'B9' => 'unasigned',
+        'K1' => 'unasigned', 'K2' => 'unasigned', 'K3' => 'unasigned', 'K4' => 'unasigned',
+        'M1' => 'unasigned', 'M2' => 'unasigned', 'M3' => 'unasigned', 'M4' => 'unasigned', 'M7' => 'unasigned',
+        'Cz' => 'unasigned',
+        'Ki' => 'unasigned',
+        'Do' => 'unasigned',
+        'Pa' => 'unasigned', 'Pe' => 'unasigned',
+        'Ce' => 'unasigned',
+        'Ru' => 'unasigned',
+        'Ly' => 'unasigned',
+        'Ha' => 'unasigned', 'Ho' => 'unasigned', 'Hu' => 'unasigned',
+        'H1' => 'unasigned', 'H2' => 'unasigned',
+        'vd' => 'unasigned',
+        'Ca' => 'unasigned',
+        'La' => 'unasigned',
+        'Me' => 'unasigned',
+        '3C' => 'unasigned',
+        'Te' => 'unasigned', 'To' => 'unasigned', 'Tr' => 'unasigned',
+        'Gu' => 'unasigned', 'Gr' => 'unasigned',
+        'Pi' => 'unasigned',
+        'Fe' => 'unasigned',
+        'Ro' => 'unasigned',
+        'Jo' => 'unasigned',
+        'J3' => 'unasigned', 'J9' => 'unasigned',
+        'Vd' => 'unasigned', 'VV' => 'unasigned', 'VY' => 'unasigned'
     ];
 
     private $kernel;
@@ -61,7 +64,7 @@ class BulkImportCommand extends ContainerAwareCommand
      */
     protected function configure()
     {
-        $this->setName('dso:import:bulk')->setDescription('Hello PhpStorm');
+        $this->setName('dso:import:bulk')->setDescription('Import DSO data from bulk and insert into collection');
     }
 
     /**
@@ -85,10 +88,17 @@ class BulkImportCommand extends ContainerAwareCommand
             'port' => $kuzzlePort
         ]);
 
-//        $this->transformId();
-        $this->transformCatalog();
+        $this->transformCatalog($output);
+
+        if (0 < count($this->listErrors)) {
+            $output->writeln($this->listErrors);
+        }
     }
 
+
+    /**
+     * @deprecated
+     */
     private function transformId()
     {
         $contentFile = file_get_contents($this->srcFile);
@@ -104,13 +114,18 @@ class BulkImportCommand extends ContainerAwareCommand
     }
 
     /**
-     *
+     * @param OutputInterface $output
      */
-    private function transformCatalog()
+    private function transformCatalog(OutputInterface $output)
     {
         $mappingCatalog = self::$mapping;
+        if (!file_exists($this->srcFile) || !is_readable($this->srcFile)) {
+            dump('Error reading source file');
+        }
         $jsonData = json_decode(file_get_contents($this->srcFile), true);
 
+        $progressBar = new ProgressBar($output, count($jsonData['bulkData'])/2);
+        $progressBar->start();
         foreach ($jsonData['bulkData'] as $key=>$dso) {
             $document = null;
             $id = $this->generateKuzzleId();
@@ -126,14 +141,32 @@ class BulkImportCommand extends ContainerAwareCommand
 
                 $document = json_decode($newValueCatalog, true);
 
-            }elseif (array_key_exists('catalog', $dso) && '%catalog%' !== $dso['catalog']) {
+            } elseif (array_key_exists('catalog', $dso) && '%catalog%' !== $dso['catalog']) {
                 $document = $dso;
+            }
+
+            if (preg_match('/%order%/', json_encode($document))) {
+                $order = filter_var($dso['data']['desig'], FILTER_SANITIZE_NUMBER_INT);
+                if (!is_numeric($order)) {
+                    $order = 0;
+                }
+
+                $dsoStr = json_encode($document);
+                $newOrderCatalog = preg_replace_callback('/"%order%"/', function() use ($order){
+                    return $order;
+                }, $dsoStr);
+
+                $document = json_decode($newOrderCatalog, true);
             }
 
             if (isset($document)) {
                 $this->insertDso($id, $document);
+                $progressBar->advance();
             }
         }
+        $progressBar->finish();
+        $output->writeln("\n");
+
         return;
     }
 
@@ -145,7 +178,8 @@ class BulkImportCommand extends ContainerAwareCommand
      */
     private function insertDso($id, $document)
     {
-        $kuzzleCollection = $this->kuzzle->collection(DsoRepository::COLLECTION_NAME, $this->kuzzleIndex);
+        $collectionName = DsoRepository::COLLECTION_NAME;
+        $kuzzleCollection = $this->kuzzle->collection($collectionName, $this->kuzzleIndex);
         try {
             $kuzzleCollection->createDocument($document, $id);
         } catch(\ErrorException $e) {

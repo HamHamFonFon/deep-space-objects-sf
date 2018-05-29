@@ -4,7 +4,12 @@
       "type": "text"
     },
     "catalog": {
-      "type": "text"
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword"
+        }
+      }
     },
     "order": {
       "type": "integer"
@@ -51,13 +56,23 @@
           }
         },
         "type": {
-          "type": "text"
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
         },
         "mag": {
           "type": "float"
         },
         "const_id": {
-          "type": "text"
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
         },
         "dim": {
           "type": "text"
