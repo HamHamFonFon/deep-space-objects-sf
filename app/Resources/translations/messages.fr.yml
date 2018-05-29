@@ -49,12 +49,13 @@ description.messier: Les objets de Messier sont une liste d'objets astronomiques
 list.ngc: Liste du "New General Catalog"
 list.ic: Liste du "Index Catalog"
 list.ldn: Catalogue de Lynds des Nébuleuses sombres
-list.sh: Sharpless catalog
-list.cr: Collinder catalog
+list.sh: Catalogue Sharpless
+list.cr: Catalogue Collinder
 list.sto : Stock open clusters
-list.rcw: RCW Catalog
-list.abl:
-list.ugc:
+list.rcw: Catalogue RCW
+list.abl: Catalogue Abell
+list.ugc: Catalogue UGC
+filters: Filtres
 listOrderAsc: Tri ascendant
 listOrderDesc: Tri descendant
 listMagnitudeAsc: Magnitude la plus faible
@@ -80,40 +81,42 @@ type.dn: Nébuleuse sombre
 type.pos: Asterism
 type.sc: Amas stellaires
 # Constellations
-and: Andromède
-aqr: Verseau
-aur: Le Cocher
-cap: Le Capricorne
-cas: Cassiopée
-cet: La Baleine
-cma: Le Grand Chien
-com: Chevelure de Bérénice
-cnc: Cancer
-cvn: Chiens de chasse
-cyg: Cygne
-dra: Dragon
-gem: Les Gemeaux
-her: Hercule
-hya: L'Hydre
-leo: Le Lion
-lep: Le Lièvre
-lyr: Lyre
-mon: La Licorne
-per: Persée
-psc: Les Poissons
-pup: Petit Chien
-oph: Ophiuchus
-ori: Orion
-ser: Le Serpent
-sco: Scorpion
-sct: Écu de Sobieski
-sge: La Flèche
-sgr: Sagittaire
-tau: Taureau
-tri: Le Triangle
-uma: Grande Ourse
-vir: Vièrge
-vul: Le Petit Renard
+const.and: Andromède
+const.aqr: Verseau
+const.aur: Le Cocher
+const.cap: Le Capricorne
+const.cas: Cassiopée
+const.cet: La Baleine
+const.cma: Le Grand Chien
+const.com: Chevelure de Bérénice
+const.cnc: Cancer
+const.cvn: Chiens de chasse
+const.cyg: Cygne
+const.dor: Dorade
+const.dra: Dragon
+const.gem: Les Gemeaux
+const.her: Hercule
+const.hya: L'Hydre
+const.leo: Le Lion
+const.lep: Le Lièvre
+const.lyr: Lyre
+const.mon: La Licorne
+const.per: Persée
+const.psc: Les Poissons
+const.pup: Petit Chien
+const.oph: Ophiuchus
+const.ori: Orion
+const.ser: Le Serpent
+const.sco: Scorpion
+const.sct: Écu de Sobieski
+const.sge: La Flèche
+const.sgr: Sagittaire
+const.tau: Taureau
+const.tuc: Toucan
+const.tri: Le Triangle
+const.uma: Grande Ourse
+const.vir: Vièrge
+const.vul: Le Petit Renard
 # Messier name (from english traduction):
 m1.label: Nébuleuse du crabe
 m4.label: Oeil du chat

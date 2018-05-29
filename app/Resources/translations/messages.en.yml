@@ -55,6 +55,7 @@ list.sto : Stock open clusters
 list.rcw: RCW catalog
 list.abl: Abell catalog
 list.ugc:
+filters: Filters
 listOrderAsc: Sort ascendant
 listOrderDesc: Sort descendant
 listMagnitudeAsc: Lowest magnitude
@@ -80,40 +81,42 @@ type.dn:  Dark nebula grey
 type.pos: Asterism
 type.sc: Star clusters
 # Constellations
-and: Andromeda
-aqr: Aquarius
-aur: Auriga
-cap: Capricornus
-cas: Cassiopeia
-cet: Cetus
-cma: Canis Majoris
-com: Coma Berenice
-cnc: Cancer
-cvn: Canes Venatici
-cyg: Cygnus
-dra: Drago
-gem: Gemini
-her: Hercules
-hya: Hydra
-leo: Leo
-lep: Lepus
-lyr: Lyra
-mon: Monoceros
-per: Perseus
-psc: Pisces
-pup: Puppies
-oph: Ophiuchus
-ori: Orion
-ser: Serpens
-sco: Scorpius
-sct: Scutum
-sge: Sagitta
-sgr: Sagittarius
-tau: Taurus
-tri: Triangulum
-uma: Ursa Major
-vir: Virgo
-vul: Vulpecula
+const.and: Andromeda
+const.aqr: Aquarius
+const.aur: Auriga
+const.cap: Capricornus
+const.cas: Cassiopeia
+const.cet: Cetus
+const.cma: Canis Majoris
+const.com: Coma Berenice
+const.cnc: Cancer
+const.cvn: Canes Venatici
+const.cyg: Cygnus
+const.dor: Dorado
+const.dra: Drago
+const.gem: Gemini
+const.her: Hercules
+const.hya: Hydra
+const.leo: Leo
+const.lep: Lepus
+const.lyr: Lyra
+const.mon: Monoceros
+const.per: Perseus
+const.psc: Pisces
+const.pup: Puppies
+const.oph: Ophiuchus
+const.ori: Orion
+const.ser: Serpens
+const.sco: Scorpius
+const.sct: Scutum
+const.sge: Sagitta
+const.sgr: Sagittarius
+const.tau: Taurus
+const.tuc: Tucana
+const.tri: Triangulum
+const.uma: Ursa Major
+const.vir: Virgo
+const.vul: Vulpecula
 # Messier name (no translation for english):
 m1.label: Crab Nebula
 m4.label: Cat's eye

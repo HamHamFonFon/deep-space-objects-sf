@@ -59,6 +59,7 @@ listOrderDesc: Ordem decrescente
 listMagnitudeAsc: Magnitude miníma
 listMagnitudeDesc: Magnitude maxíma
 type: Tipo de objeto|Tipo de objeto
+filters: filtros
 # Type DSO
 type.gg: Aglomerado de galáxias
 type.g: Galáxia genérica
@@ -72,47 +73,49 @@ type.gc: Aglomerado globular
 type.en: Nebulosa de emissão
 type.bn: Nebulosa brilhante genérica
 type.sfr: Nebulosa difusa
-type.type.rn: Nebulosa de reflexão
+type.rn: Nebulosa de reflexão
 type.pn: Nebulosa planetária
 type.snr: Remanescente de supernova
 type.dn: Nebulosa escura
 type.pos: Asterismo
 type.sc: Aglomerado estelar
 # Constellations
-and: Andrômeda
-aqr: Aquário
-aur: Auriga
-cap: Capricórnio
-cas: Cassiopeia
-cet: Baleia
-cma: Cão Maior
-com: Coma Berenice
-cnc: Câncer
-cvn: Canes Venatici
-cyg: Cygnus
-dra: Draco
-gem: Gêmeos
-her: Hércules
-hya: Hydra
-leo: Leo
-lep: Lebre
-lyr: Lyra
-mon: Unicórnio
-per: Perseu
-psc: Peixes
-pup: Cão Menor
-oph: Serpentário
-ori: Orion
-ser: Serpente
-sco: Escorpião
-sct: Scutum
-sge: Flecha
-sgr: Sagitário
-tau: Touro
-tri: Triângulo
-uma: Ursa Maior
-vir: Virgem
-vul: Raposa
+const.and: Andrômeda
+const.aqr: Aquário
+const.aur: Auriga
+const.cap: Capricórnio
+const.cas: Cassiopeia
+const.cet: Baleia
+const.cma: Cão Maior
+const.com: Coma Berenice
+const.cnc: Câncer
+const.cvn: Canes Venatici
+const.cyg: Cygnus
+const.dor: 
+const.dra: Draco
+const.gem: Gêmeos
+const.her: Hércules
+const.hya: Hydra
+const.leo: Leo
+const.lep: Lebre
+const.lyr: Lyra
+const.mon: Unicórnio
+const.per: Perseu
+const.psc: Peixes
+const.pup: Cão Menor
+const.oph: Serpentário
+const.ori: Orion
+const.ser: Serpente
+const.sco: Escorpião
+const.sct: Scutum
+const.sge: Flecha
+const.sgr: Sagitário
+const.tau: Touro
+const.tuc:
+const.tri: Triângulo
+const.uma: Ursa Maior
+const.vir: Virgem
+const.vul: Raposa
 # Messier name (from english traduction):
 m1.label: Nebulosa do Caranguejo
 m4.label: Nebulosa do Olho de gato
