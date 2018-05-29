@@ -33,15 +33,18 @@ class SearchRepository
         'dso' => [
             'id',
             'data.desig',
-            'data.alt.alt', // todo : add language
+            'data.alt.alt',
             'data.const_id',
             'data.type'
         ]
     ];
 
+
     /**
      * SearchRepository constructor.
      * @param KuzzleHelper $kuzzleHelper
+     * @param Translator $translator
+     * @param $locale
      */
     public function __construct(KuzzleHelper $kuzzleHelper, Translator $translator, $locale)
     {
@@ -114,7 +117,7 @@ class SearchRepository
                         'value' => $label,
                         'info' => $type,
                         'id' => $id,
-                        'catalog' => $documentContent['catalog'],
+                        'catalog' => $documentContent['catalog']
                     ];
                 }
             }
