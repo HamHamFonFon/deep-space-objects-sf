@@ -89,7 +89,6 @@ class DsoController extends Controller
         $dsoRepository = $this->container->get('app.repository.dso');
         list($params['total'], $params['list'], $params['aggregates']) = $dsoRepository->getList($catalog, $from, $size, $sort, 1);
         unset($params['aggregates']['allfacets']['doc_count']);
-        dump($params['aggregates']);
 
         $lastPage = ceil($params['total']/$size);
 
@@ -106,7 +105,6 @@ class DsoController extends Controller
         ];
 
         $params['form'] = $formOrder->createView();
-        $params['catalog'] = $catalog;
 
         /** @var Response $response */
         $response = new Response();
