@@ -6,6 +6,7 @@ use AppBundle\Entity\Dso;
 use AppBundle\Entity\Messier;
 use AppBundle\Helper\GenerateUrlHelper;
 use AppBundle\Kuzzle\KuzzleHelper;
+use Astrobin\Exceptions\WsResponseException;
 use Astrobin\Response\Image;
 use Astrobin\Services\GetImage;
 use Kuzzle\Document;
@@ -139,8 +140,10 @@ class DsoRepository extends AbstractKuzzleRepository
     /**
      *
      * @param Document $kuzzleDocument
-     * @param $limitImages
-     * @return Messier
+     * @param int $limitImages
+     * @return Dso
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
      */
     private function buildEntityByDocument(Document $kuzzleDocument, $limitImages = 1)
     {
@@ -152,12 +155,17 @@ class DsoRepository extends AbstractKuzzleRepository
 
         $dso->setLocale($this->getLocale())->buildObject($kuzzleDocument);
         $this->urlHelper->generateUrl($dso);
+
+        if (!is_null($dso->getAstrobinId())) {
+            $astrobinImage = $this->wsGetImage->getImageById($dso->getAstrobinId());
+            $dso->addImageCover($astrobinImage);
+        }
+
         try {
             $astrobinListImage = $this->wsGetImage->getImagesBySubject($dso->getId(), $limitImages);
-            if (!is_null($dso->getAstrobinId())) {
-                $astrobinImage = $this->wsGetImage->getImageById($dso->getAstrobinId());
-                $dso->addImageCover($astrobinImage);
-            } else {
+
+            // If there is no astrobinId we try to add the first image as image cover
+            if (is_null($dso->getAstrobinId())) {
                 if ($astrobinListImage instanceof Image) {
                     $dso->addImageCover($astrobinListImage);
                 } else {
@@ -166,8 +174,9 @@ class DsoRepository extends AbstractKuzzleRepository
             }
             $dso->addImages($astrobinListImage);
         } catch (\Exception $e) {
-            dump($e->getMessage());
+//            dump($e->getMessage());
         }
+
         return $dso;
     }
 

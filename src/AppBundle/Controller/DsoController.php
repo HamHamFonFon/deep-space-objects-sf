@@ -133,7 +133,8 @@ class DsoController extends Controller
         $dsoRepository = $this->container->get('app.repository.dso');
         /** @var Dso $dso */
         $params['dso'] = $dso = $dsoRepository->getObject(strtolower($objectId));
-        // Get bjects from same constellation
+
+        // Get objects from same constellation
         $params['dsos_const'] = $dsoRepository->getObjectsByConst(strtolower($dso->getConstId()), $dso->getId(), 3, 1);
 
         if (is_null($params['dso'])) {
