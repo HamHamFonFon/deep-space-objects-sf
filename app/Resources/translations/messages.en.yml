@@ -27,7 +27,6 @@ pt_BR: Portuguese (Brazil)
 homepage.message: Discover beauties and mysteries of the universe
 home.search.placeholder: Research in the catalog...
 dayImage: Image of the day
-messierList:  Messiers's object list
 # View full
 info: Informations
 magnitude: Apparent magnitude
@@ -82,40 +81,92 @@ type.pos: Asterism
 type.sc: Star clusters
 # Constellations
 const.and: Andromeda
+const.ant: Antlia
+const.aps: Apus
+const.aql: Aquila
 const.aqr: Aquarius
+const.ara: Ara
+const.ari: Aries
 const.aur: Auriga
+const.boo: Boötes
+const.cae: Caelum
+const.cam: Camelopardalis
 const.cap: Capricornus
+const.car: Carina
 const.cas: Cassiopeia
+const.cen: Centaurus
+const.cep: Cepheus
 const.cet: Cetus
+const.cha: Chamaeleon
+const.cir: Circinus
 const.cma: Canis Majoris
+const.cmi: Canis Minor
+const.col: Columba
 const.com: Coma Berenice
 const.cnc: Cancer
+const.cra: Corona Austrina
+const.crb: Corona Borealis
+const.crt: Crater
+const.cru: Crux
+const.crv: Corvus
 const.cvn: Canes Venatici
 const.cyg: Cygnus
+const.del: Delphinus
 const.dor: Dorado
 const.dra: Drago
+const.equ: Equuleus
+const.eri: Eridanus
+const.for: Fornax
 const.gem: Gemini
+const.gru: Grus
 const.her: Hercules
+const.hor: Horologium
 const.hya: Hydra
+const.hyi: Hydrus
+const.ind: Indus
+const.lac: Lacerta
 const.leo: Leo
 const.lep: Lepus
+const.lib: Libra
+const.lmi: Leo Minor
+const.lup: Lupus
+const.lyn: Lynx
 const.lyr: Lyra
+const.men: Mensa
+const.mic: Microscopium
 const.mon: Monoceros
-const.per: Perseus
-const.psc: Pisces
-const.pup: Puppies
+const.mus: Musca
+const.nor: Norma
+const.oct: Octans
 const.oph: Ophiuchus
 const.ori: Orion
-const.ser: Serpens
+const.pav: Pavo
+const.peg: Pegasus
+const.per: Perseus
+const.phe: Phoenix
+const.pic: Pictor
+const.psa: Piscis Austrinus
+const.psc: Pisces
+const.pup: Puppies
+const.pyx: Pyxis
+const.ret: Reticulum
+const.scl: Sculptor
 const.sco: Scorpius
 const.sct: Scutum
+const.ser: Serpens
+const.sex: Sextans
 const.sge: Sagitta
 const.sgr: Sagittarius
 const.tau: Taurus
-const.tuc: Tucana
+const.tel: Telescopium
+const.tra: Triangulum Australe
 const.tri: Triangulum
+const.tuc: Tucana
 const.uma: Ursa Major
+const.umi: Ursa Minor
+const.vel: Vela
 const.vir: Virgo
+const.vol: Volans
 const.vul: Vulpecula
 # Messier name (no translation for english):
 m1.label: Crab Nebula

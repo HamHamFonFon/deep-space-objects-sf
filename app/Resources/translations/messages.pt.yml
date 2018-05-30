@@ -81,40 +81,91 @@ type.pos: Asterismo
 type.sc: Aglomerado estelar
 # Constellations
 const.and: Andrômeda
+const.ant:
+const.aps:
+const.aql:
 const.aqr: Aquário
+const.ara:
+const.ari:
 const.aur: Auriga
+const.boo:
+const.cae:
+const.cam:
 const.cap: Capricórnio
+const.car:
 const.cas: Cassiopeia
+const.cen:
+const.cep:
 const.cet: Baleia
+const.cha:
+const.cir:
 const.cma: Cão Maior
+const.cmi:
+const.col:
 const.com: Coma Berenice
 const.cnc: Câncer
+const.cra:
+const.crb:
+const.crt:
+const.cru:
+const.crv:
 const.cvn: Canes Venatici
 const.cyg: Cygnus
-const.dor: 
+const.del:
+const.dor: Doradus
 const.dra: Draco
+const.equ:
+const.eri:
+const.for:
 const.gem: Gêmeos
+const.gru:
 const.her: Hércules
+const.hor:
 const.hya: Hydra
+const.hyi:
+const.ind:
+const.lac:
 const.leo: Leo
 const.lep: Lebre
+const.lib:
+const.lmi:
+const.lup:
+const.lyn:
 const.lyr: Lyra
+const.men:
+const.mic:
 const.mon: Unicórnio
-const.per: Perseu
-const.psc: Peixes
-const.pup: Cão Menor
+const.mus:
+const.nor:
+const.oct:
 const.oph: Serpentário
 const.ori: Orion
-const.ser: Serpente
+const.pav:
+const.peg: Pegasus
+const.per: Perseu
+const.phe:
+const.pic:
+const.psa:
+const.psc: Peixes
+const.pup: Cão Menor
+const.pyx:
+const.ret:
 const.sco: Escorpião
 const.sct: Scutum
+const.ser: Serpente
+const.sex:
 const.sge: Flecha
 const.sgr: Sagitário
 const.tau: Touro
-const.tuc:
+const.tel:
+const.tra:
 const.tri: Triângulo
+const.tuc:
 const.uma: Ursa Maior
+const.umi: Ursa Minor
+const.vel:
 const.vir: Virgem
+const.vol:
 const.vul: Raposa
 # Messier name (from english traduction):
 m1.label: Nebulosa do Caranguejo

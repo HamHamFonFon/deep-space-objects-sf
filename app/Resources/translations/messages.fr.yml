@@ -27,7 +27,6 @@ pt_br: Portugais (Brésil)
 homepage.message: Découvrez les beautés et les mystères de l'univers
 home.search.placeholder: Rechercher dans le catalogue...
 dayImage: L'image du jour
-messierList: Liste des objets de Messier
 # View full
 info: Informations
 magnitude: Magnitude apparente
@@ -82,40 +81,92 @@ type.pos: Asterism
 type.sc: Amas stellaires
 # Constellations
 const.and: Andromède
+const.ant: Machine pneumatique
+const.aps: Oiseau de paradis
+const.aql: L'aigle
 const.aqr: Verseau
+const.ara: Autel
+const.ari: Bélier
 const.aur: Le Cocher
+const.boo: Bouvier
+const.cae: Burin
+const.cam: Giraffe
 const.cap: Le Capricorne
+const.car: Carène
 const.cas: Cassiopée
+const.cen: Centaure
+const.cep: Céphée
 const.cet: La Baleine
+const.cha: Caméléon
+const.cir: Compas
 const.cma: Le Grand Chien
+const.cmi: Le Petit Chien
+const.col: Colombe
 const.com: Chevelure de Bérénice
 const.cnc: Cancer
+const.cra: Couronne australe
+const.crb: Couronne boréale
+const.crt: Coupe
+const.cru: Croix du Sud
+const.crv: Corbeau
 const.cvn: Chiens de chasse
 const.cyg: Cygne
+const.del: Dauphin
 const.dor: Dorade
 const.dra: Dragon
+const.equ: Petit Cheval
+const.eri: Éridan
+const.for: Fourneau
 const.gem: Les Gemeaux
+const.gru: Grue
 const.her: Hercule
+const.hor: Horloge
 const.hya: L'Hydre
+const.hyi: Hydre mâle
+const.ind: Indien
+const.lac: Lézard
 const.leo: Le Lion
 const.lep: Le Lièvre
+const.lib: Balance
+const.lmi: Petit Lion
+const.lup: Loup
+const.lyn: Lynx
 const.lyr: Lyre
+const.men: Table
+const.mic: Microscope
 const.mon: La Licorne
-const.per: Persée
-const.psc: Les Poissons
-const.pup: Petit Chien
+const.mus: Mouche
+const.nor: Règle
+const.oct: Octant
 const.oph: Ophiuchus
 const.ori: Orion
-const.ser: Le Serpent
+const.pav: Paon
+const.peg: Pégase
+const.per: Persée
+const.phe: Phénix
+const.pic: Peintre
+const.psa: Poisson austral
+const.psc: Les Poissons
+const.pup: Petit Chien
+const.pyx: Boussole
+const.ret: Réticule
+const.scl: Sculpteur
 const.sco: Scorpion
 const.sct: Écu de Sobieski
+const.ser: Le Serpent
+const.sex: Sextant
 const.sge: La Flèche
 const.sgr: Sagittaire
 const.tau: Taureau
-const.tuc: Toucan
+const.tel: Téléscope
+const.tra: Triangle australe
 const.tri: Le Triangle
+const.tuc: Toucan
 const.uma: Grande Ourse
+const.umi: Petite Ourse
+const.vel: Voiles
 const.vir: Vièrge
+const.vol: Poisson volant
 const.vul: Le Petit Renard
 # Messier name (from english traduction):
 m1.label: Nébuleuse du crabe
