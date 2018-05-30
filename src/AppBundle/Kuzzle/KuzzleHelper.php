@@ -151,7 +151,7 @@ class KuzzleHelper
             $finalQuery['aggregations'] = [
                 'allfacets' => [
 //                    'global' => new \stdClass(),
-                    "filter" => [ "term" => [ "catalog" => "messier" ] ], // ====> TEST
+                    "filter" => [ "term" => [ "catalog" => "ngc" ] ], // ====> TEST
                     'aggregations' => $aggregates
                 ]
             ];

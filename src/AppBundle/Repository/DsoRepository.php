@@ -138,14 +138,16 @@ class DsoRepository extends AbstractKuzzleRepository
     {
         $listDso = [];
         $aggregates = [
-            'const' => [
-                'terms' => [
-                    'field' => 'data.const_id.keyword'
-                ]
-            ],
             'type' => [
                 'terms' => [
-                    'field' => 'data.type.keyword'
+                    'field' => 'data.type.keyword',
+                    'size' => 20
+                ]
+            ],
+            'const' => [
+                'terms' => [
+                    'field' => 'data.const_id.keyword',
+                    'size' => 100
                 ]
             ],
             'mag' => [
