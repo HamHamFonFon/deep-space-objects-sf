@@ -13,9 +13,11 @@
     </header>
 
     <div class="row">
-      <div class="col-12 right">
-        {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
-      </div>
+      {% if 1 < pagination.last_page %}
+        <div class="col-12 right">
+          {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
+        </div>
+      {% endif %}
     </div>
 
     <div class="row text-center">
@@ -24,13 +26,14 @@
         <hr>
         {% include 'forms/listorder.html.twig' %}
         <hr>
+        {% set paramsRoute = { 'route': pagination.route, 'params': pagination.paramsRoute}  %}
         {#Type#}
-        {% include 'includes/facets/facet-group.html.twig' with {'name': 'type', 'data': aggregates.allfacets.type.buckets, 'translation': true, 'sort': true} %}
+        {% include 'includes/facets/facet-group.html.twig' with {'name': 'type', 'data': aggregates.allfacets.type.buckets, 'translation': true, 'sort': true, 'paramsRoute': paramsRoute} %}
         {#Constellations#}
-        {% include 'includes/facets/facet-group.html.twig' with {'name': 'const', 'data': aggregates.allfacets.const.buckets, 'translation': true, 'sort': true} %}
+        {% include 'includes/facets/facet-group.html.twig' with {'name': 'const', 'data': aggregates.allfacets.const.buckets, 'translation': true, 'sort': true, 'paramsRoute': paramsRoute} %}
 
         {#Magnitude#}
-        {% include 'includes/facets/facet-group.html.twig' with {'name': 'mag', 'data': aggregates.allfacets.mag.buckets, 'translation': false} %}
+        {% include 'includes/facets/facet-group.html.twig' with {'name': 'mag', 'data': aggregates.allfacets.mag.buckets, 'translation': false, 'paramsRoute': paramsRoute} %}
       </div>
       <div class="col-9">
         <div class="row">
@@ -44,10 +47,12 @@
     </div>
 
     <div class="row">
-      <div class="col-12 right">
-        {#{{ path(pagination.route, pagination.paramsRoute) }}#}
-        {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
-      </div>
+      {% if 1 < pagination.last_page %}
+        <div class="col-12 right">
+          {#{{ path(pagination.route, pagination.paramsRoute) }}#}
+          {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
+        </div>
+      {% endif %}
     </div>
   </div>
 {% endblock %}

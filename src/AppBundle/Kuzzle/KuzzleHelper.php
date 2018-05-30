@@ -67,6 +67,7 @@ class KuzzleHelper
             return null;
         }
 
+        // Add query
         $finalQuery = $queryClauses = $filterClauses = [];
         if (isset($typeQuery) && 'match_all' == $typeQuery) {
             $finalQuery['query'] = [$typeQuery => (object)$query];
@@ -108,32 +109,25 @@ class KuzzleHelper
 
         // Filters
         if (isset($filters) && 0 < count($filters)) {
-//            foreach ($filters as $field=>$value) {
-//                $term = is_array($filters) ? 'terms' : 'term';
-//                $filterClauses[] = [
-//                    $term => [
-//                        $field => $value
-//                    ]
-//                ];
-//            }
-//
-//            if (0 < count($filterClauses)) {
-//                $filterClauses = [
-//                    'bool' => [
-//                        'must' => $filterClauses
-//                    ]
-//                ];
-//
-//                $finalQuery = [
-//                    'filter' => $filterClauses
-//                ];
-//            }
             $filtersQuery = [];
-            $finalQuery['query'] = [
-                'bool' => [
-                    'filter' => $filtersQuery
-                ]
-            ];
+            if ('AND' == key($filters)) {
+                $filterAnd = [];
+                foreach ($filters['AND'] as $field=>$value) {
+                    $filterAnd[]['term'][$field] = $value;
+                }
+                $filtersQuery = $filterAnd;
+
+            }  elseif ('OR' == key($filters)) {
+                $filterOr = [];
+                foreach ($filters['OR'] as $field => $value) {
+                    $filterOr[]['term'][$field] = $value;
+                }
+                $filtersQuery['bool']['should'] = $filterOr;
+            }
+
+            if (0 < count($filtersQuery)) {
+                $finalQuery['query']['bool']['filter'] = $filtersQuery;
+            }
         }
 
         // Add sort
@@ -147,20 +141,39 @@ class KuzzleHelper
             $finalQuery['sort'] = $fieldSort;
         }
 
+        // Add aggregates
         if (isset($aggregates) && 0 < count($aggregates)) {
+            $aggregatesFields = $aggregateFilter = [];
+            if (array_key_exists('aggregates', $aggregates)) {
+                $aggregatesFields = $aggregates['aggregates'];
+            }
+
+            if (array_key_exists('filter', $aggregates)) {
+                $aggFilter = [];
+                // TODO : améliorer ?
+                foreach ($aggregates['filter'] as $type => $tabFieldValues) {
+                    $aggFilter[$type] = $tabFieldValues;
+                }
+                $aggregateFilter['filter'] = $aggFilter;
+                // FIN TODO
+            } elseif (array_key_exists('global', $aggregates)) {
+                $aggregateFilter['global'] = new \stdClass();
+            }
+
             $finalQuery['aggregations'] = [
                 'allfacets' => [
-//                    'global' => new \stdClass(),
-                    "filter" => [ "term" => [ "catalog" => "ngc" ] ], // ====> TEST
-                    'aggregations' => $aggregates
+                    'aggregations' => $aggregatesFields
                 ]
             ];
+
+            if (0 < count($aggregateFilter)) {
+                $finalQuery['aggregations']['allfacets'] += $aggregateFilter;
+            }
         }
 
         $finalQuery['from'] = $from;
         $finalQuery['size'] = $size;
-
-//        dump(json_encode($finalQuery));
+        dump(json_encode($finalQuery));
         return $finalQuery;
     }
 }

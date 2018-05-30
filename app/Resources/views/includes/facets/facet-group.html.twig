@@ -14,7 +14,9 @@
 
     {% set countFacet = facet.doc_count %}
     <li>
-      <a href="#" data-type="{{ name }}" data-filter="{{ facet.key }}" type="facet">
+      {% set dataField = 'data.' ~  name %}
+      {% set params = paramsRoute.params|merge({'data.' ~  name: facet.key}) %}
+      <a href="{{ path(paramsRoute.route, params) }}" data-field="{{ dataField }}" data-value="{{ facet.key }}" type="facet">
         {{ labelFacet|trans }} ({{ countFacet }})
       </a>
     </li>

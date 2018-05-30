@@ -134,36 +134,47 @@ class DsoRepository extends AbstractKuzzleRepository
      * @throws \Astrobin\Exceptions\WsException
      * @throws \ReflectionException
      */
-    public function getList($typeCatalog, $from, $size, $order, $nbImages = 1)
+    public function getList($typeCatalog, $filters, $from, $size, $order, $nbImages = 1)
     {
         $listDso = [];
+        $filters = [
+            'AND' => $filters
+        ];
+
         $aggregates = [
-            'type' => [
-                'terms' => [
-                    'field' => 'data.type.keyword',
-                    'size' => 20
-                ]
-            ],
-            'const' => [
-                'terms' => [
-                    'field' => 'data.const_id.keyword',
-                    'size' => 100
-                ]
-            ],
-            'mag' => [
-                'range' => [
-                    'field' => 'data.mag',
-                    'ranges' => [
-                        ['to' => 5],
-                        ['from' => 5, 'to' => 10],
-                        ['from' => 10]
+            'aggregates' => [
+                'type' => [
+                    'terms' => [
+                        'field' => 'data.type.keyword',
+                        'size' => 20
                     ]
+                ],
+                'const' => [
+                    'terms' => [
+                        'field' => 'data.const_id.keyword',
+                        'size' => 100
+                    ]
+                ],
+                'mag' => [
+                    'range' => [
+                        'field' => 'data.mag',
+                        'ranges' => [
+                            ['to' => 5],
+                            ['from' => 5, 'to' => 10],
+                            ['from' => 10]
+                        ]
+                    ]
+                ]
+            ],
+            'filter' => [
+                'term' => [
+                    'catalog' => $typeCatalog
                 ]
             ]
         ];
 
         /** @var  $listItems */
-        $listItems = $this->findBy('term', ['catalog' => $typeCatalog], [], $order, $from, $size, $aggregates);
+        $listItems = $this->findBy('term', ['catalog' => $typeCatalog], $filters, $order, $from, $size, $aggregates);
         if (!is_null($listItems) && 0 < $listItems->getTotal()) {
             foreach ($listItems->getDocuments() as $document) {
                 $listDso[] = $this->buildEntityByDocument($document, $nbImages);

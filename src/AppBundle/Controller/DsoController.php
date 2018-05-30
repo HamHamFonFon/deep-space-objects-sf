@@ -85,9 +85,15 @@ class DsoController extends Controller
             $sort = $data['order'];
         }
 
+        // TEST
+        $filters = [
+            'data.const_id' => 'ori',
+            'data.type' => 'sfr'
+        ];
+
         /** @var DsoRepository $dsoRepository */
         $dsoRepository = $this->container->get('app.repository.dso');
-        list($params['total'], $params['list'], $params['aggregates']) = $dsoRepository->getList($catalog, $from, $size, $sort, 1);
+        list($params['total'], $params['list'], $params['aggregates']) = $dsoRepository->getList($catalog, $filters, $from, $size, $sort, 1);
         unset($params['aggregates']['allfacets']['doc_count']);
 
         $lastPage = ceil($params['total']/$size);

@@ -62,7 +62,7 @@ listMagnitudeDesc: Magnitude la plus haute
 type: Type d'objet|Type d'objets
 # Type DSO
 type.gg: Amas de galaxies
-type.g: Generic galaxy
+type.g: Galaxie générique
 type.s: Galaxie en spirale
 type.s0: Galaxie lenticculaire
 type.sd: Galaxie naine
