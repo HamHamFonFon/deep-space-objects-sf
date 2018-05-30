@@ -91,7 +91,6 @@ class DsoController extends Controller
         unset($params['aggregates']['allfacets']['doc_count']);
 
         $lastPage = ceil($params['total']/$size);
-
         $data['page'] = $page;
         $data['catalog'] = $catalog;
         $data['order'] = $sort;

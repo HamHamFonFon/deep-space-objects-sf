@@ -36,6 +36,7 @@ class DsoTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
+            new \Twig_SimpleFunction('uasort', [$this, 'uasort'])
         ];
     }
 
@@ -71,5 +72,19 @@ class DsoTwigExtension extends \Twig_Extension
 //        setlocale(LC_ALL, 'en_GB');
         $locale = localeconv();
         return number_format($number, 2, $locale['decimal_point'], $locale['thousands_sep']);
+    }
+
+    /**
+     * @param $tab
+     * @param $key
+     * @return
+     */
+    public function uasort($tab, $key)
+    {
+        uasort($tab, function($a, $b) use($key) {
+            return ($a[$key] < $b[$key]) ? -1 : 1;
+        });
+
+        return $tab;
     }
 }

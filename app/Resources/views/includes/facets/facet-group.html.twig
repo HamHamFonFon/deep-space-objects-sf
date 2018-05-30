@@ -1,7 +1,10 @@
 <h3 class="h3">{{ name|transchoice(2)|capitalize }}</h3>
 <ul>
-  {% for facet in data|sort %}
+  {% if sort is defined and true == sort %}
+    {% set data = uasort(data, 'key') %}
+  {% endif %}
 
+  {% for facet in data %}
     {% if true == translation %}
       {% set transKey = facet.key %}
       {% set labelFacet = name ~ '.' ~ transKey|lower %}

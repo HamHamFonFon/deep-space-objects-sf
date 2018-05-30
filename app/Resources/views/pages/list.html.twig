@@ -25,9 +25,9 @@
         {% include 'forms/listorder.html.twig' %}
         <hr>
         {#Type#}
-        {% include 'includes/facets/facet-group.html.twig' with {'name': 'type', 'data': aggregates.allfacets.type.buckets, 'translation': true} %}
+        {% include 'includes/facets/facet-group.html.twig' with {'name': 'type', 'data': aggregates.allfacets.type.buckets, 'translation': true, 'sort': true} %}
         {#Constellations#}
-        {% include 'includes/facets/facet-group.html.twig' with {'name': 'const', 'data': aggregates.allfacets.const.buckets, 'translation': true} %}
+        {% include 'includes/facets/facet-group.html.twig' with {'name': 'const', 'data': aggregates.allfacets.const.buckets, 'translation': true, 'sort': true} %}
 
         {#Magnitude#}
         {% include 'includes/facets/facet-group.html.twig' with {'name': 'mag', 'data': aggregates.allfacets.mag.buckets, 'translation': false} %}
