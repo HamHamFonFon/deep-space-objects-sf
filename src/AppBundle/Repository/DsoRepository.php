@@ -149,7 +149,7 @@ class DsoRepository extends AbstractKuzzleRepository
                         'size' => 20
                     ]
                 ],
-                'const' => [
+                'const_id' => [
                     'terms' => [
                         'field' => 'data.const_id.keyword',
                         'size' => 100

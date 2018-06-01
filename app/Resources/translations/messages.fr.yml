@@ -30,7 +30,7 @@ dayImage: L'image du jour
 # View full
 info: Informations
 magnitude: Magnitude apparente
-const: Constellation|Constellations
+const_id: Constellation|Constellations
 dim: Dimension
 dimExp: Dimension angulaire en minutes d'arcs
 distAl: Distance (années-lumière)
@@ -80,94 +80,94 @@ type.dn: Nébuleuse sombre
 type.pos: Asterism
 type.sc: Amas stellaires
 # Constellations
-const.and: Andromède
-const.ant: Machine pneumatique
-const.aps: Oiseau de paradis
-const.aql: L'aigle
-const.aqr: Verseau
-const.ara: Autel
-const.ari: Bélier
-const.aur: Le Cocher
-const.boo: Bouvier
-const.cae: Burin
-const.cam: Giraffe
-const.cap: Le Capricorne
-const.car: Carène
-const.cas: Cassiopée
-const.cen: Centaure
-const.cep: Céphée
-const.cet: La Baleine
-const.cha: Caméléon
-const.cir: Compas
-const.cma: Le Grand Chien
-const.cmi: Le Petit Chien
-const.col: Colombe
-const.com: Chevelure de Bérénice
-const.cnc: Cancer
-const.cra: Couronne australe
-const.crb: Couronne boréale
-const.crt: Coupe
-const.cru: Croix du Sud
-const.crv: Corbeau
-const.cvn: Chiens de chasse
-const.cyg: Cygne
-const.del: Dauphin
-const.dor: Dorade
-const.dra: Dragon
-const.equ: Petit Cheval
-const.eri: Éridan
-const.for: Fourneau
-const.gem: Les Gemeaux
-const.gru: Grue
-const.her: Hercule
-const.hor: Horloge
-const.hya: L'Hydre
-const.hyi: Hydre mâle
-const.ind: Indien
-const.lac: Lézard
-const.leo: Le Lion
-const.lep: Le Lièvre
-const.lib: Balance
-const.lmi: Petit Lion
-const.lup: Loup
-const.lyn: Lynx
-const.lyr: Lyre
-const.men: Table
-const.mic: Microscope
-const.mon: La Licorne
-const.mus: Mouche
-const.nor: Règle
-const.oct: Octant
-const.oph: Ophiuchus
-const.ori: Orion
-const.pav: Paon
-const.peg: Pégase
-const.per: Persée
-const.phe: Phénix
-const.pic: Peintre
-const.psa: Poisson austral
-const.psc: Les Poissons
-const.pup: Petit Chien
-const.pyx: Boussole
-const.ret: Réticule
-const.scl: Sculpteur
-const.sco: Scorpion
-const.sct: Écu de Sobieski
-const.ser: Le Serpent
-const.sex: Sextant
-const.sge: La Flèche
-const.sgr: Sagittaire
-const.tau: Taureau
-const.tel: Téléscope
-const.tra: Triangle australe
-const.tri: Le Triangle
-const.tuc: Toucan
-const.uma: Grande Ourse
-const.umi: Petite Ourse
-const.vel: Voiles
-const.vir: Vièrge
-const.vol: Poisson volant
-const.vul: Le Petit Renard
+const_id.and: Andromède
+const_id.ant: Machine pneumatique
+const_id.aps: Oiseau de paradis
+const_id.aql: L'aigle
+const_id.aqr: Verseau
+const_id.ara: Autel
+const_id.ari: Bélier
+const_id.aur: Le Cocher
+const_id.boo: Bouvier
+const_id.cae: Burin
+const_id.cam: Giraffe
+const_id.cap: Le Capricorne
+const_id.car: Carène
+const_id.cas: Cassiopée
+const_id.cen: Centaure
+const_id.cep: Céphée
+const_id.cet: La Baleine
+const_id.cha: Caméléon
+const_id.cir: Compas
+const_id.cma: Le Grand Chien
+const_id.cmi: Le Petit Chien
+const_id.col: Colombe
+const_id.com: Chevelure de Bérénice
+const_id.cnc: Cancer
+const_id.cra: Couronne australe
+const_id.crb: Couronne boréale
+const_id.crt: Coupe
+const_id.cru: Croix du Sud
+const_id.crv: Corbeau
+const_id.cvn: Chiens de chasse
+const_id.cyg: Cygne
+const_id.del: Dauphin
+const_id.dor: Dorade
+const_id.dra: Dragon
+const_id.equ: Petit Cheval
+const_id.eri: Éridan
+const_id.for: Fourneau
+const_id.gem: Les Gemeaux
+const_id.gru: Grue
+const_id.her: Hercule
+const_id.hor: Horloge
+const_id.hya: L'Hydre
+const_id.hyi: Hydre mâle
+const_id.ind: Indien
+const_id.lac: Lézard
+const_id.leo: Le Lion
+const_id.lep: Le Lièvre
+const_id.lib: Balance
+const_id.lmi: Petit Lion
+const_id.lup: Loup
+const_id.lyn: Lynx
+const_id.lyr: Lyre
+const_id.men: Table
+const_id.mic: Microscope
+const_id.mon: La Licorne
+const_id.mus: Mouche
+const_id.nor: Règle
+const_id.oct: Octant
+const_id.oph: Ophiuchus
+const_id.ori: Orion
+const_id.pav: Paon
+const_id.peg: Pégase
+const_id.per: Persée
+const_id.phe: Phénix
+const_id.pic: Peintre
+const_id.psa: Poisson austral
+const_id.psc: Les Poissons
+const_id.pup: Petit Chien
+const_id.pyx: Boussole
+const_id.ret: Réticule
+const_id.scl: Sculpteur
+const_id.sco: Scorpion
+const_id.sct: Écu de Sobieski
+const_id.ser: Le Serpent
+const_id.sex: Sextant
+const_id.sge: La Flèche
+const_id.sgr: Sagittaire
+const_id.tau: Taureau
+const_id.tel: Téléscope
+const_id.tra: Triangle australe
+const_id.tri: Le Triangle
+const_id.tuc: Toucan
+const_id.uma: Grande Ourse
+const_id.umi: Petite Ourse
+const_id.vel: Voiles
+const_id.vir: Vièrge
+const_id.vol: Poisson volant
+const_id.vul: Le Petit Renard
 # Messier name (from english traduction):
 m1.label: Nébuleuse du crabe
 m4.label: Oeil du chat

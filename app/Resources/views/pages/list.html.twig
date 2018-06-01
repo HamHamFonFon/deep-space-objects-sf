@@ -13,46 +13,63 @@
     </header>
 
     <div class="row">
-      {% if 1 < pagination.last_page %}
-        <div class="col-12 right">
-          {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
-        </div>
-      {% endif %}
-    </div>
-
-    <div class="row text-center">
-      <div class="col-3 text-left">
+      <div class="col-3">
         <h2 class="display-4">{{ 'filters'|trans|capitalize }}</h2>
         <hr>
-        {% include 'forms/listorder.html.twig' %}
-        <hr>
         {% set paramsRoute = { 'route': pagination.route, 'params': pagination.paramsRoute}  %}
+
         {#Type#}
-        {% include 'includes/facets/facet-group.html.twig' with {'name': 'type', 'data': aggregates.allfacets.type.buckets, 'translation': true, 'sort': true, 'paramsRoute': paramsRoute} %}
+        {% if 1 < aggregates.allfacets.type.buckets|length %}
+          {% include 'includes/facets/facet-group.html.twig' with {'name': 'type', 'data': aggregates.allfacets.type.buckets, 'translation': true, 'sort': true, 'paramsRoute': paramsRoute} %}
+        {% endif %}
+
+
         {#Constellations#}
-        {% include 'includes/facets/facet-group.html.twig' with {'name': 'const', 'data': aggregates.allfacets.const.buckets, 'translation': true, 'sort': true, 'paramsRoute': paramsRoute} %}
+        {% if 1 <  aggregates.allfacets.const_id.buckets|length %}
+          {% include 'includes/facets/facet-group.html.twig' with {'name': 'const_id', 'data': aggregates.allfacets.const_id.buckets, 'translation': true, 'sort': true, 'paramsRoute': paramsRoute} %}
+        {% endif %}
 
         {#Magnitude#}
         {% include 'includes/facets/facet-group.html.twig' with {'name': 'mag', 'data': aggregates.allfacets.mag.buckets, 'translation': false, 'paramsRoute': paramsRoute} %}
       </div>
+
       <div class="col-9">
         <div class="row">
-          {% if list is defined and 0 < list|length %}
-            {% for item in list %}
-              {% include ':includes/dso:block.html.twig' with {dso: item} %}
-            {% endfor %}
+          <div class="col-6 left">
+            {% include 'forms/listorder.html.twig' %}
+          </div>
+          {% if 1 < pagination.last_page %}
+            <div class="col-6 right">
+              {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="row text-center">
+              {% if list is defined and 0 < list|length %}
+                {% for item in list %}
+                  {% include ':includes/dso:block.html.twig' with {dso: item} %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          {% if 1 < pagination.last_page %}
+            <div class="col-12 right">
+              {#{{ path(pagination.route, pagination.paramsRoute) }}#}
+              {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
+            </div>
           {% endif %}
         </div>
       </div>
+      </div>
     </div>
 
-    <div class="row">
-      {% if 1 < pagination.last_page %}
-        <div class="col-12 right">
-          {#{{ path(pagination.route, pagination.paramsRoute) }}#}
-          {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
-        </div>
-      {% endif %}
-    </div>
-  </div>
+
+
+
 {% endblock %}

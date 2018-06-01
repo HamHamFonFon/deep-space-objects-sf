@@ -57,7 +57,7 @@ class DsoController extends Controller
      */
     public function listAction(Request $request, $catalog)
     {
-        $params = $data = [];
+        $params = $data = $filters = [];
 
         $params['catalog'] = $catalog;
         $from = 0;
@@ -65,6 +65,7 @@ class DsoController extends Controller
         $page = $firstPage = 1;
         $sort = DsoRepository::DEFAULT_SORT;
 
+        $reqQuery = $request->query->all();
         if ($request->query->has('page')) {
             $page = $request->query->get('page');
             $from = ($page-1)*$size;
@@ -74,6 +75,15 @@ class DsoController extends Controller
             $sort = $request->query->get('order');
         }
 
+        unset($reqQuery['page'], $reqQuery['order']);
+        if (isset($reqQuery) && 0 < count($reqQuery)) {
+            $filters = call_user_func_array('array_merge', array_map(function($key, $value) {
+                return ['data.' . $key=>$value];
+            }, array_keys($reqQuery), $reqQuery));
+        }
+
+
+        // TODO : degager le formulaire !!!
         $optionsForm = [
             'method' => 'GET',
             'selectedOrder' => $sort
@@ -85,11 +95,6 @@ class DsoController extends Controller
             $sort = $data['order'];
         }
 
-        // TEST
-        $filters = [
-            'data.const_id' => 'ori',
-            'data.type' => 'sfr'
-        ];
 
         /** @var DsoRepository $dsoRepository */
         $dsoRepository = $this->container->get('app.repository.dso');
@@ -97,16 +102,21 @@ class DsoController extends Controller
         unset($params['aggregates']['allfacets']['doc_count']);
 
         $lastPage = ceil($params['total']/$size);
-        $data['page'] = $page;
+        if (1 < $page) {
+            $data['page'] = $page;
+        }
+
         $data['catalog'] = $catalog;
-        $data['order'] = $sort;
+        if (DsoRepository::DEFAULT_SORT !== $sort) {
+            $data['order'] = $sort;
+        }
 
         $params['pagination'] = [
             'first_page' => $firstPage,
             'last_page' => $lastPage,
             'current_page' => $page,
             'route' => 'catalog_list',
-            'paramsRoute' => $data
+            'paramsRoute' => array_merge($data, $filters)
         ];
 
         $params['form'] = $formOrder->createView();

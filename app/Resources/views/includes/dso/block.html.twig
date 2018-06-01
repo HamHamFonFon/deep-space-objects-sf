@@ -3,7 +3,7 @@
 {% set dsoAlt = dso.alt %}
 {% set dsoType = 'type.' ~ dso.type %}
 {% if dso.constId is not empty %}
-  {% set dsoConst = 'const.' ~ dso.constId|lower %}
+  {% set dsoConst = 'const_id.' ~ dso.constId|lower %}
 {% endif %}
 {#Title#}
 {% set title %}
