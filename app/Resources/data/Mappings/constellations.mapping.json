@@ -1,7 +1,7 @@
 {
   "properties": {
     "const_id": {
-      "type": "text"
+      "type": "keyword"
     },
     "geometry": {
       "type": "geo_shape"
