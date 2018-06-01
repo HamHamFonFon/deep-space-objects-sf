@@ -139,22 +139,23 @@ class DsoController extends Controller
      */
     public function fullAction(Request $request, $catalog, $objectId)
     {
-        $params = [];
+        $params = $listKuzzleId = [];
         /** @var DsoRepository $messierRepository */
         $dsoRepository = $this->container->get('app.repository.dso');
         /** @var Dso $dso */
         $params['dso'] = $dso = $dsoRepository->getObject(strtolower($objectId));
-
-        // Get objects from same constellation
-        $params['dsos_const'] = $dsoRepository->getObjectsByConst(strtolower($dso->getConstId()), $dso->getId(), 3, 1);
-
         if (is_null($params['dso'])) {
             throw new NotFoundHttpException();
         }
 
-        $listKuzzleId = array_map(function(Dso $dso) {
-            return $dso->getKuzzleId();
-        }, $params['dsos_const']);
+        // Get objects from same constellation
+        if (!is_null($dso->getConstId())) {
+            $params['dsos_const'] = $dsoRepository->getObjectsByConst(strtolower($dso->getConstId()), $dso->getId(), 3, 1);
+            $listKuzzleId = array_map(function(Dso $dso) {
+                return $dso->getKuzzleId();
+            }, $params['dsos_const']);
+        }
+
         array_unshift($listKuzzleId, $dso->getKuzzleId());
 
         /** @var Response $response */
