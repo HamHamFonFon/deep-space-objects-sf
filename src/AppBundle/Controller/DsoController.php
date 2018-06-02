@@ -59,6 +59,7 @@ class DsoController extends Controller
     {
         $params = $data = $filters = [];
 
+        $params['listOrder'] = $this->container->getParameter('list.messier.order');
         $params['catalog'] = $catalog;
         $from = 0;
         $size = 12;
@@ -71,30 +72,16 @@ class DsoController extends Controller
             $from = ($page-1)*$size;
         }
 
-        if ($request->query->has('order')) {
-            $sort = $request->query->get('order');
+        if ($request->query->has('sort')) {
+            $sort = $request->query->get('sort');
         }
 
-        unset($reqQuery['page'], $reqQuery['order']);
+        unset($reqQuery['page'], $reqQuery['sort']);
         if (isset($reqQuery) && 0 < count($reqQuery)) {
             $filters = call_user_func_array('array_merge', array_map(function($key, $value) {
                 return ['data.' . $key=>$value];
             }, array_keys($reqQuery), $reqQuery));
         }
-
-
-        // TODO : degager le formulaire !!!
-        $optionsForm = [
-            'method' => 'GET',
-            'selectedOrder' => $sort
-        ];
-        $formOrder = $this->createForm(ListOrderFormType::class, null, $optionsForm);
-        $formOrder->handleRequest($request);
-        if ($formOrder->isValid() && $formOrder->isSubmitted()) {
-            $data = $formOrder->getData();
-            $sort = $data['order'];
-        }
-
 
         /** @var DsoRepository $dsoRepository */
         $dsoRepository = $this->container->get('app.repository.dso');
@@ -118,8 +105,6 @@ class DsoController extends Controller
             'route' => 'catalog_list',
             'paramsRoute' => array_merge($data, $filters)
         ];
-
-        $params['form'] = $formOrder->createView();
 
         /** @var Response $response */
         $response = new Response();
