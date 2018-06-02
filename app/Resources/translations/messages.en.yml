@@ -80,6 +80,7 @@ type.dn:  Dark nebula grey
 type.pos: Asterism
 type.sc: Star clusters
 # Constellations
+const_id.unassigned: Unassigned
 const_id.and: Andromeda
 const_id.ant: Antlia
 const_id.aps: Apus

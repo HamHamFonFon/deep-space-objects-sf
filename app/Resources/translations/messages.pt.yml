@@ -80,6 +80,7 @@ type.dn: Nebulosa escura
 type.pos: Asterismo
 type.sc: Aglomerado estelar
 # Constellations
+const.unassigned:
 const_id.and: Andrômeda
 const_id.ant:
 const_id.aps:

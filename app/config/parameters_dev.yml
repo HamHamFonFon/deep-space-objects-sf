@@ -6,7 +6,7 @@ parameters:
     mailer_password: null
     secret: 7b207070292a969a62139845127e2f7b01665489
     kuzzle_host: localhost
-    kuzzle_index: astronomy_test
+    kuzzle_index: astronomy
     kuzzle_port: 7512
     astrobin.key: 3524e6ee81749ea19a1ed0f14c5390efb4ac578f
     astrobin.secret: 6f0a67f7aeb93cbce4addec000fca9991876df63

@@ -80,6 +80,7 @@ type.dn: Nébuleuse sombre
 type.pos: Asterism
 type.sc: Amas stellaires
 # Constellations
+const_id.unassigned: Non attribué
 const_id.and: Andromède
 const_id.ant: Machine pneumatique
 const_id.aps: Oiseau de paradis
