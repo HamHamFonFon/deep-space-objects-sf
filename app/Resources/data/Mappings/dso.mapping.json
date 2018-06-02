@@ -1,96 +1,115 @@
 {
-  "properties": {
-    "id": {
-      "type": "keyword"
-    },
-    "catalog": {
-      "type": "text",
-      "fields": {
-        "keyword": {
-          "type": "keyword"
+  "settings": {
+    "analysis": {
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": ["lowercase", "asciifolding"]
         }
       }
-    },
-    "order": {
-      "type": "integer"
-    },
-    "geometry": {
-      "type": "geo_shape"
-    },
-    "data": {
+    }
+  },
+  "mappings": {
+    "dso": {
       "properties": {
-        "desig": {
-          "type": "text"
+        "id": {
+          "type": "keyword",
+          "fields": {
+            "keyword": {
+              "normalizer": "lowercase_normalizer"
+            }
+          }
         },
-        "alt": {
+        "catalog": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "order": {
+          "type": "integer"
+        },
+        "geometry": {
+          "type": "geo_shape"
+        },
+        "data": {
           "properties": {
-            "alt" :{
-              "type": "text",
-              "fields": {
-                "en": {
+            "desig": {
+              "type": "text"
+            },
+            "alt": {
+              "properties": {
+                "alt" :{
                   "type": "text",
-                  "analyzer": "english"
-                },
-                "fr": {
-                  "type": "text",
-                  "analyzer": "french"
-                },
-                "es": {
-                  "type": "text",
-                  "analyzer": "spanish"
-                },
-                "de": {
-                  "type": "text",
-                  "analyzer": "german"
-                },
-                "pt": {
-                  "type": "text",
-                  "analyzer": "portuguese"
-                },
-                "it": {
-                  "type": "text",
-                  "analyzer": "italian"
+                  "fields": {
+                    "en": {
+                      "type": "text",
+                      "analyzer": "english"
+                    },
+                    "fr": {
+                      "type": "text",
+                      "analyzer": "french"
+                    },
+                    "es": {
+                      "type": "text",
+                      "analyzer": "spanish"
+                    },
+                    "de": {
+                      "type": "text",
+                      "analyzer": "german"
+                    },
+                    "pt": {
+                      "type": "text",
+                      "analyzer": "portuguese"
+                    },
+                    "it": {
+                      "type": "text",
+                      "analyzer": "italian"
+                    }
+                  }
                 }
               }
+            },
+            "type": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "mag": {
+              "type": "float"
+            },
+            "const_id": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "dim": {
+              "type": "text"
+            },
+            "cl": {
+              "type": "text"
+            },
+            "dist_al": {
+              "type": "float"
+            },
+            "ra": {
+              "type": "text"
+            },
+            "dec": {
+              "type": "text"
+            },
+            "astrobin_id": {
+              "type": "integer"
             }
           }
-        },
-        "type": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword"
-            }
-          }
-        },
-        "mag": {
-          "type": "float"
-        },
-        "const_id": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword"
-            }
-          }
-        },
-        "dim": {
-          "type": "text"
-        },
-        "cl": {
-          "type": "text"
-        },
-        "dist_al": {
-          "type": "float"
-        },
-        "ra": {
-          "type": "text"
-        },
-        "dec": {
-          "type": "text"
-        },
-        "astrobin_id": {
-          "type": "integer"
         }
       }
     }

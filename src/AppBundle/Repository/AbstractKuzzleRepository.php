@@ -107,7 +107,7 @@ abstract class AbstractKuzzleRepository
      */
     protected function findById($id)
     {
-        return $this->findBy('term', ['id' => $id], [], [],0, 1);
+        return $this->findBy('term', ['id.keyword' => $id], [], [],0, 1);
     }
 
 

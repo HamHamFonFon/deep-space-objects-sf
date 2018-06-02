@@ -31,7 +31,7 @@ class SearchRepository
 
     public static $listFields = [
         'dso' => [
-            'id',
+            'id.keyword',
             'data.desig',
             'data.alt.alt',
             'data.const_id',

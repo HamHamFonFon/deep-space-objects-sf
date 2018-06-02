@@ -11,7 +11,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class BulkImportCommand extends ContainerAwareCommand
 {
-    protected $defaultCatalog = 'unasigned';
+    protected $defaultCatalog = 'unassigned';
 
     protected static $mapping = [
         'NG' => 'ngc',
@@ -22,34 +22,34 @@ class BulkImportCommand extends ContainerAwareCommand
         'St' => 'sto',
         'Ab' => 'abl',
         'UG' => 'ugc',
-        'An' => 'unasigned', 'Ap' => 'unasigned', 'AP' => 'unasigned',
-        'He' => 'unasigned',
-        'Ba' => 'unasigned', 'Be' => 'unasigned', 'Bi' => 'unasigned', 'Bo' => 'unasigned',
-        'B1' => 'unasigned', 'B2' => 'unasigned', 'B3' => 'unasigned', 'B4' => 'unasigned', 'B5' => 'unasigned', 'B6' => 'unasigned', 'B7' => 'unasigned', 'B8' => 'unasigned', 'B9' => 'unasigned',
-        'K1' => 'unasigned', 'K2' => 'unasigned', 'K3' => 'unasigned', 'K4' => 'unasigned',
-        'M1' => 'unasigned', 'M2' => 'unasigned', 'M3' => 'unasigned', 'M4' => 'unasigned', 'M7' => 'unasigned',
-        'Cz' => 'unasigned',
-        'Ki' => 'unasigned',
-        'Do' => 'unasigned',
-        'Pa' => 'unasigned', 'Pe' => 'unasigned',
-        'Ce' => 'unasigned',
-        'Ru' => 'unasigned',
-        'Ly' => 'unasigned',
-        'Ha' => 'unasigned', 'Ho' => 'unasigned', 'Hu' => 'unasigned',
-        'H1' => 'unasigned', 'H2' => 'unasigned',
-        'vd' => 'unasigned',
-        'Ca' => 'unasigned',
-        'La' => 'unasigned',
-        'Me' => 'unasigned',
-        '3C' => 'unasigned',
-        'Te' => 'unasigned', 'To' => 'unasigned', 'Tr' => 'unasigned',
-        'Gu' => 'unasigned', 'Gr' => 'unasigned',
-        'Pi' => 'unasigned',
-        'Fe' => 'unasigned',
-        'Ro' => 'unasigned',
-        'Jo' => 'unasigned',
-        'J3' => 'unasigned', 'J9' => 'unasigned',
-        'Vd' => 'unasigned', 'VV' => 'unasigned', 'VY' => 'unasigned'
+        'An' => 'unassigned', 'Ap' => 'unassigned', 'AP' => 'unassigned',
+        'He' => 'unassigned',
+        'Ba' => 'unassigned', 'Be' => 'unassigned', 'Bi' => 'unassigned', 'Bo' => 'unassigned',
+        'B1' => 'unassigned', 'B2' => 'unassigned', 'B3' => 'unassigned', 'B4' => 'unassigned', 'B5' => 'unassigned', 'B6' => 'unassigned', 'B7' => 'unassigned', 'B8' => 'unassigned', 'B9' => 'unassigned',
+        'K1' => 'unassigned', 'K2' => 'unassigned', 'K3' => 'unassigned', 'K4' => 'unassigned',
+        'M1' => 'unassigned', 'M2' => 'unassigned', 'M3' => 'unassigned', 'M4' => 'unassigned', 'M7' => 'unassigned',
+        'Cz' => 'unassigned',
+        'Ki' => 'unassigned',
+        'Do' => 'unassigned',
+        'Pa' => 'unassigned', 'Pe' => 'unassigned',
+        'Ce' => 'unassigned',
+        'Ru' => 'unassigned',
+        'Ly' => 'unassigned',
+        'Ha' => 'unassigned', 'Ho' => 'unassigned', 'Hu' => 'unassigned',
+        'H1' => 'unassigned', 'H2' => 'unassigned',
+        'vd' => 'unassigned',
+        'Ca' => 'unassigned',
+        'La' => 'unassigned',
+        'Me' => 'unassigned',
+        '3C' => 'unassigned',
+        'Te' => 'unassigned', 'To' => 'unassigned', 'Tr' => 'unassigned',
+        'Gu' => 'unassigned', 'Gr' => 'unassigned',
+        'Pi' => 'unassigned',
+        'Fe' => 'unassigned',
+        'Ro' => 'unassigned',
+        'Jo' => 'unassigned',
+        'J3' => 'unassigned', 'J9' => 'unassigned',
+        'Vd' => 'unassigned', 'VV' => 'unassigned', 'vy' => 'unassigned', 'VY' => 'unassigned'
     ];
 
     private $kernel;
@@ -123,16 +123,15 @@ class BulkImportCommand extends ContainerAwareCommand
             dump('Error reading source file');
         }
         $jsonData = json_decode(file_get_contents($this->srcFile), true);
-
         $progressBar = new ProgressBar($output, count($jsonData['bulkData'])/2);
         $progressBar->start();
         foreach ($jsonData['bulkData'] as $key=>$dso) {
             $document = null;
             $id = $this->generateKuzzleId();
             if (preg_match('/%catalog%/', json_encode($dso))) {
-
                 $type = substr($dso['id'], 0, 2);
                 $valueReplace = $mappingCatalog[$type];
+                $dso['id'] = strtolower($dso['id']); // REMOVE when apply normalizer on collection
 
                 $dsoStr = json_encode($dso);
                 $newValueCatalog = preg_replace_callback('/%catalog%/', function() use ($valueReplace){
@@ -183,9 +182,9 @@ class BulkImportCommand extends ContainerAwareCommand
         try {
             $kuzzleCollection->createDocument($document, $id);
         } catch(\ErrorException $e) {
-            $this->listErrors[] = '[' . $document['id'] . ']' . $e->getMessage();
+            $this->listErrors[] = '[' . serialize($document) . ']' . $e->getMessage();
         } catch (\Exception $e) {
-            $this->listErrors[] = '[' . $document['id'] . ']' . $e->getMessage();
+            $this->listErrors[] = '[' . serialize($document) . ']' . $e->getMessage();
         }
         return;
     }
