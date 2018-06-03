@@ -8,6 +8,8 @@ more: Mais informações
 hem.no: Hemisfério Norte
 hem.su: Hemisfério sul
 #Catalog
+catalogs: Catálogos
+allCatalog: Todos os catálogos
 catalog.messier: Messier Catalog
 catalog.ngc: New General Catalog
 catalog.ic: Index Catalog

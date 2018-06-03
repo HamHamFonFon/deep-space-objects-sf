@@ -76,11 +76,20 @@ class DsoController extends Controller
             $sort = $request->query->get('sort');
         }
 
-        unset($reqQuery['page'], $reqQuery['sort']);
+        if ($request->query->has('mag')) {
+            $range = $request->query->get('mag');
+        }
+
+        unset($reqQuery['page'], $reqQuery['sort'], $reqQuery['mag']);
         if (isset($reqQuery) && 0 < count($reqQuery)) {
-            $filters = call_user_func_array('array_merge', array_map(function($key, $value) {
+            $type = 'term';
+            $filters[$type] = call_user_func_array('array_merge', array_map(function($key, $value) {
                 return ['data.' . $key=>$value];
             }, array_keys($reqQuery), $reqQuery));
+        }
+
+        if (isset($range) && !empty($range)) {
+            $filters['range']['data.mag'] = $range;
         }
 
         /** @var DsoRepository $dsoRepository */
@@ -89,9 +98,6 @@ class DsoController extends Controller
         unset($params['aggregates']['allfacets']['doc_count']);
 
         $lastPage = ceil($params['total']/$size);
-        if (1 < $page) {
-            $data['page'] = $page;
-        }
 
         $data['catalog'] = $catalog;
         if (DsoRepository::DEFAULT_SORT !== $sort) {
@@ -103,8 +109,9 @@ class DsoController extends Controller
             'last_page' => $lastPage,
             'current_page' => $page,
             'route' => 'catalog_list',
-            'paramsRoute' => array_merge($data, $filters)
+            'paramsRoute' => array_merge($data, $request->query->all())
         ];
+    dump( $params['pagination']['paramsRoute']);
 
         /** @var Response $response */
         $response = new Response();

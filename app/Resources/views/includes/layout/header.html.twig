@@ -9,10 +9,10 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCat" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Catalogues
+          {{ 'catalogs'|trans }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownCat">
-          <a class="dropdown-item disabled" href="#">All catalogues</a>
+          <a class="dropdown-item disabled" href="#">{{ 'allCatalog'|trans }}</a>
           <div class="dropdown-divider"></div>
 
           {% set listCatalog = ['messier', 'ngc', 'ic', 'ldn', 'sh', 'cr', 'sto', 'rcw', 'abl'] %}
@@ -31,7 +31,7 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownConst" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'const'|transchoice(2) }}
+          {{ 'const_id'|transchoice(2) }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownConst">
           <a class="dropdown-item" href="">{{ 'hem.no'|trans }}</a>

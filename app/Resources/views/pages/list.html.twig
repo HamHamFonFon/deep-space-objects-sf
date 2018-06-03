@@ -19,18 +19,20 @@
         {% set paramsRoute = { 'route': pagination.route, 'params': pagination.paramsRoute}  %}
 
         {#Type#}
-        {% if 1 < aggregates.allfacets.type.buckets|length %}
+        {% if 0 < aggregates.allfacets.type.buckets|length %}
           {% include 'includes/facets/facet-group.html.twig' with {'name': 'type', 'data': aggregates.allfacets.type.buckets, 'translation': true, 'sort': true, 'paramsRoute': paramsRoute} %}
         {% endif %}
 
 
         {#Constellations#}
-        {% if 1 <  aggregates.allfacets.const_id.buckets|length %}
+        {% if 0 <  aggregates.allfacets.const_id.buckets|length %}
           {% include 'includes/facets/facet-group.html.twig' with {'name': 'const_id', 'data': aggregates.allfacets.const_id.buckets, 'translation': true, 'sort': true, 'paramsRoute': paramsRoute} %}
         {% endif %}
 
         {#Magnitude#}
-        {% include 'includes/facets/facet-group.html.twig' with {'name': 'mag', 'data': aggregates.allfacets.mag.buckets, 'translation': false, 'paramsRoute': paramsRoute} %}
+        {% if 0 < aggregates.allfacets.mag.buckets|length %}
+          {% include 'includes/facets/facet-range.html.twig' with {'name': 'mag', 'data': aggregates.allfacets.mag.buckets, 'paramsRoute': paramsRoute} %}
+        {% endif %}
       </div>
 
       <div class="col-9">

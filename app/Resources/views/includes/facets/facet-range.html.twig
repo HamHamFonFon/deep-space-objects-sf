@@ -1,0 +1,27 @@
+<h3 class="h3">{{ name|transchoice(2)|capitalize }}</h3>
+<ul class="list-group">
+  {% for facet in data %}
+    {% set countFacet = facet.doc_count %}
+
+    {% if 0 < countFacet %}
+      {% if facet.to is defined and facet.from is not defined %}
+        {% set label = 'range.inf'|trans({'%to%': facet.to}) %}
+        {% set paramsRange = {"lte": facet.to} %}
+      {% elseif facet.to is defined and facet.from is defined %}
+        {% set label = 'range.between'|trans({'%from%': facet.from, '%to%': facet.to}) %}
+        {% set paramsRange = {"gte": facet.from, "lte": facet.to} %}
+      {% else %}
+        {% set label ='range.sup'|trans({'%from%': facet.from}) %}
+        {% set paramsRange = {"gte": facet.from} %}
+      {% endif %}
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        {% set params = paramsRoute.params|merge({(name): paramsRange}) %}
+        <a href="{{ path(paramsRoute.route, params) }}" type="facet-range">
+          {{ label }}
+        </a>
+        <span class="badge badge-primary badge-pill">{{ countFacet }}</span>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

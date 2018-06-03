@@ -8,7 +8,9 @@ more: More informations
 hem.no: Northern hemisphere
 hem.su: Southern hemisphere
 #Catalog
-catalog.messier: Messier Catalog
+catalogs: Catalogs
+allCatalog: All catalogs
+catalog.messier: Messier's catalog
 catalog.ngc: New General Catalog
 catalog.ic: Index Catalog
 catalog.ldn: Lynds' Catalogue of Dark Nebulae
@@ -42,6 +44,7 @@ mag: Magnitude
 ra: Right ascension
 dec: Declination
 # Vue list
+
 filteringList: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
 list.messier: List of Messier objects
 description.messier: The Messier objects are a set of 110 astronomical objects catalogued by the French astronomer Charles Messier in his "Catalogue des Nébuleuses et des Amas d'Étoiles" ("Catalogue of Nebulae and Star Clusters").
@@ -60,6 +63,9 @@ listOrderDesc: Sort descendant
 listMagnitudeAsc: Lowest magnitude
 listMagnitudeDesc: Highest magnitude
 type: Type of object|Objects type
+range.inf: Less than %to%
+range.between: Between %from% to %to%
+range.sup: More than %from%
 # Type DSO
 type.gg: Galaxy cluster
 type.g:  Generic galaxy

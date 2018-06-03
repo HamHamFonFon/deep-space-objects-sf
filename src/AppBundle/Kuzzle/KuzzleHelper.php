@@ -112,16 +112,21 @@ class KuzzleHelper
             $filtersQuery = [];
             if ('AND' == key($filters)) {
                 $filterAnd = [];
-                foreach ($filters['AND'] as $field=>$value) {
-                    $filterAnd[]['term'][$field] = $value;
+                foreach ($filters['AND'] as $type => $filter) {
+                    foreach ($filter as $field=>$value) {
+                        $filterAnd[][$type] = [$field=>$value];
+                    }
                 }
-                $filtersQuery = $filterAnd;
+                $filtersQuery['bool']['must'] = $filterAnd;
 
             }  elseif ('OR' == key($filters)) {
                 $filterOr = [];
-                foreach ($filters['OR'] as $field => $value) {
-                    $filterOr[]['term'][$field] = $value;
-                }
+//                foreach ($filters['OR'] as $type => $filter) {
+//                    $field = key($filter);
+//                    $value = $filter[$field];
+//                    $FilterAndLoop[] = [$field => $value];
+//                    $filterAnd[$type] = $FilterAndLoop;
+//                }
                 $filtersQuery['bool']['should'] = $filterOr;
             }
 
@@ -173,7 +178,9 @@ class KuzzleHelper
 
         $finalQuery['from'] = $from;
         $finalQuery['size'] = $size;
+        dump($finalQuery);
         dump(json_encode($finalQuery));
+//        die();
         return $finalQuery;
     }
 }
