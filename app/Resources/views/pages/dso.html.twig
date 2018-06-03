@@ -63,7 +63,7 @@
           {% set const = 'const_id.' ~ dso.constId|lower %}
           <li class="list-group-item">{{ type|trans }}</li>
           <li class="list-group-item">{{ 'magnitude'|trans }} : {{ dso.mag }}</li>
-          <li class="list-group-item">{{ 'const'|transchoice(1) }} : {{ const|trans }}</li>
+          <li class="list-group-item">{{ 'const_id'|transchoice(1) }} : {{ const|trans }}</li>
           <li class="list-group-item">{{ 'dim'|trans }} <sub>(1)</sub> : {{ dso.dim }}</li>
           {% set distLY = dso.distAl %}
           <li class="list-group-item">{{ 'distAl'|trans }} : {{ distLY|number_format_by_locale }}</li>
