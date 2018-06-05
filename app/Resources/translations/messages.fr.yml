@@ -20,6 +20,7 @@ catalog.sto : Stock open clusters
 catalog.rcw: Catalogue RCW
 catalog.abl: Catalogue Abell
 catalog.ugc: Catalogue général d'Uppsala
+catalog.dodz: Catalogue Dolidze-Dzimselejvili
 # Lang:
 fr: Français
 en: Anglais (UK)
@@ -56,6 +57,7 @@ list.sto : Stock open clusters
 list.rcw: Catalogue RCW
 list.abl: Catalogue Abell
 list.ugc: Catalogue UGC
+list.dodz: Catalogue Dolidze-Dzimselejvili
 filters: Filtres
 listOrderAsc: Tri ascendant
 listOrderDesc: Tri descendant

@@ -20,6 +20,7 @@ catalog.sto : Stock open clusters
 catalog.rcw: RCW Catalog
 catalog.abl: Catalogue Abell
 catalog.ugc: Uppsala General Catalog
+catalog.dodz: Dolidze-Dzimselejvil catalog
 # Lang:
 fr: Francês
 en: Inglês (UK)
@@ -55,7 +56,8 @@ list.cr: Collinder catalog
 list.sto : Stock open clusters
 list.rcw: RCW Catalog
 list.abl: Abell catalogue
-list.ugc:
+list.ugc: Uppsala General Catalog
+list.dodz: Dolidze-Dzimselejvil catalog
 listOrderAsc: Ordem crescente
 listOrderDesc: Ordem decrescente
 listMagnitudeAsc: Magnitude miníma
