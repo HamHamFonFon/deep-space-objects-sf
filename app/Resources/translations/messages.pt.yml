@@ -49,15 +49,25 @@ filteringList: Filtrar lista de itens por constelação, tipo e magnitude... e d
 list.messier: Lista dos objetos de Messier
 description.messier: Les objets de Messier sont une liste d'objets astronomiques catalogués par l'astronome français Charles Messier dans son Catalogue des Nébuleuses et des Amas d'Étoiles, publiée en 1771.
 list.ngc: New General Catalog
+description.ngc:
 list.ic: Index Catalog
+description.ic:
 list.ldn: Lynds' Catalogue of Dark Nebulae
+description.ldn:
 list.sh: Sharpless catalog
+description.sh:
 list.cr: Collinder catalog
+description.cr:
 list.sto : Stock open clusters
-list.rcw: RCW Catalog
-list.abl: Abell catalogue
+description.sto:
+list.rcw: RCW catalog
+description.rcw:
+list.abl: Abell catalog
+description.abl:
 list.ugc: Uppsala General Catalog
+description.ugc:
 list.dodz: Dolidze-Dzimselejvil catalog
+description.dodz:
 listOrderAsc: Ordem crescente
 listOrderDesc: Ordem decrescente
 listMagnitudeAsc: Magnitude miníma

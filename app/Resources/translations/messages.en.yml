@@ -50,15 +50,25 @@ filteringList: Filter list items by constellation, type and magnitude...and disc
 list.messier: List of Messier objects
 description.messier: The Messier objects are a set of 110 astronomical objects catalogued by the French astronomer Charles Messier in his "Catalogue des Nébuleuses et des Amas d'Étoiles" ("Catalogue of Nebulae and Star Clusters").
 list.ngc: New General Catalog
+description.ngc:
 list.ic: Index Catalog
+description.ic:
 list.ldn: Lynds' Catalogue of Dark Nebulae
+description.ldn:
 list.sh: Sharpless catalog
+description.sh:
 list.cr: Collinder catalog
+description.cr:
 list.sto : Stock open clusters
+description.sto:
 list.rcw: RCW catalog
+description.rcw:
 list.abl: Abell catalog
+description.abl:
 list.ugc: Uppsala General Catalog
+description.ugc:
 list.dodz: Dolidze-Dzimselejvil catalog
+description.dodz:
 filters: Filters
 listOrderAsc: Sort ascendant
 listOrderDesc: Sort descendant
