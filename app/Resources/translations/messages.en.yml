@@ -45,7 +45,6 @@ mag: Magnitude
 ra: Right ascension
 dec: Declination
 # Vue list
-
 filteringList: Filter list items by constellation, type and magnitude...and discover most beautiful celestial objects.
 list.messier: List of Messier objects
 description.messier: The Messier objects are a set of 110 astronomical objects catalogued by the French astronomer Charles Messier in his "Catalogue des Nébuleuses et des Amas d'Étoiles" ("Catalogue of Nebulae and Star Clusters").

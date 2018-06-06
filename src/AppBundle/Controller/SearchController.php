@@ -28,6 +28,8 @@ class SearchController extends Controller
      */
     public function searchAction(Request $request)
     {
+        $translator = $this->container->get('translator');
+
         $searchTerms = '';
         /** @var SearchRepository $searchRepository */
         $searchRepository = $this->container->get('app.repository.search');
@@ -36,8 +38,8 @@ class SearchController extends Controller
         }
 
         $collectionDso = DsoRepository::COLLECTION_NAME;
+        $result = $searchRepository->buildSearch($searchTerms, $collectionDso);
 
-        $result[$collectionDso] = $searchRepository->buildSearch($searchTerms, $collectionDso);
         $data = [
             "status" => true,
             "error" => null,

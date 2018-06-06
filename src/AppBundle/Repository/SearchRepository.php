@@ -64,7 +64,6 @@ class SearchRepository
     {
         $result = null;
         $fieldAlt = 'alt';
-
         if (in_array($collection, array_keys(self::$listFields))) {
 
             /** @var Collection $kuzzleCollection */
@@ -78,9 +77,27 @@ class SearchRepository
                 $fieldAlt = 'alt_' . $this->locale;
             }
 
+            // We build a raw aggregations
+            $aggregates = [
+                'raw' => [
+                    'catalog' => [
+                        'terms' => [
+                            'field' => 'catalog.keyword',
+                            'size' => 20
+                        ]
+                    ]/*,
+                    'const_id' => [
+                        'terms' => [
+                            'field' => 'data.const_id.keyword',
+                            'size' => 100
+                        ]
+                    ]*/
+                ]
+            ];
+
             $query = $this->buildQuery($searchTerms, self::$listFields[$collection]);
             $searchResult = $kuzzleCollection->search(
-                $this->kuzzleHelper->buildQuery($typeSearch, $typeQuery, $query, [], ['order' => 'asc', 'data.mag' => 'asc'], [], self::SEARCH_FROM, self::SEARCH_SIZE)
+                $this->kuzzleHelper->buildQuery($typeSearch, $typeQuery, $query, [], ['order' => 'asc', 'data.mag' => 'asc'], $aggregates, self::SEARCH_FROM, self::SEARCH_SIZE)
             );
 
             if (0 < $searchResult->getTotal()) {
@@ -97,7 +114,7 @@ class SearchRepository
                             break;
                         case 'ngc':
                         case 'ic':
-
+                        case 'ldn':
                             if (!empty($documentContent['data']['alt'][$fieldAlt])) {
                                 $label = $documentContent['data']['alt'][$fieldAlt] . ' - ' .  $documentContent['data']['desig'];
                             } else {
@@ -113,12 +130,24 @@ class SearchRepository
                     $type = $this->translator->trans('type.' . $documentContent['data']['type']);
                     $catalog = (!empty($documentContent['catalog'])) ? $this->translator->trans('catalog.' . $documentContent['catalog']) : '';
 
-                    $result[] = [
+                    $result[DsoRepository::COLLECTION_NAME][] = [
                         'value' => $label,
                         'info' => $type,
                         'id' => $id,
                         'catalog' => $documentContent['catalog']
                     ];
+                }
+            }
+
+            if (0 < $searchResult->getAggregations()) {
+                foreach ($searchResult->getAggregations() as $typeAgg => $aggregation) {
+
+                    foreach ($aggregation['buckets'] as $dataAggr) {
+                        $result[$typeAgg][] = [
+                            'value' => $this->translator->trans('catalog.' . $dataAggr['key']),
+                            'catalog' =>  $dataAggr['key']
+                        ];
+                    }
                 }
             }
         }

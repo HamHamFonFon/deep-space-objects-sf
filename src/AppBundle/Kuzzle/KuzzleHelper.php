@@ -47,6 +47,7 @@ class KuzzleHelper
 
 
     /**
+     * TODO : MAKE A TOTAL REFACTORING !!!
      * Build a Elastic Search query
      * @param string $typeSearch
      * @param $typeQuery
@@ -151,8 +152,17 @@ class KuzzleHelper
             $aggregatesFields = $aggregateFilter = [];
             if (array_key_exists('aggregates', $aggregates)) {
                 $aggregatesFields = $aggregates['aggregates'];
+                $finalQuery['aggregations'] = [
+                    'allfacets' => [
+                        'aggregations' => $aggregatesFields
+                    ]
+                ];
+            } elseif (array_key_exists('raw', $aggregates)) {
+                // Aggregations RAW
+                $finalQuery['aggregations'] = $aggregates['raw'];
             }
 
+            // Add filter/global
             if (array_key_exists('filter', $aggregates)) {
                 $aggFilter = [];
                 // TODO : améliorer ?
@@ -165,11 +175,7 @@ class KuzzleHelper
                 $aggregateFilter['global'] = new \stdClass();
             }
 
-            $finalQuery['aggregations'] = [
-                'allfacets' => [
-                    'aggregations' => $aggregatesFields
-                ]
-            ];
+
 
             if (0 < count($aggregateFilter)) {
                 $finalQuery['aggregations']['allfacets'] += $aggregateFilter;

@@ -49,6 +49,16 @@ DSO.Search = (function($, ns, r) {
             }
           }
         },
+        "Catalog": {
+          ajax: {
+            type: "POST",
+            url: r.generate('search_autocomplete'),
+            path: "data.astronomy.catalog",
+            data: {
+              search: '{{query}}'
+            }
+          }
+        },
         "Constellations": {
           ajax: {
             type: "POST",
@@ -66,7 +76,12 @@ DSO.Search = (function($, ns, r) {
         onResult: function(node, query, result, resultCount, resultCountPerGroup) {
         },
         onClick: function(node, a, item, event) {
-          window.location.href = r.generate('dso_full', {catalog: item.catalog, objectId: item.id});
+          if ("Deep space" === item.group) {
+            window.location.href = r.generate('dso_full', {catalog: item.catalog, objectId: item.id});
+          }
+          if ("Catalog" == item.group) {
+            window.location.href = r.generate('catalog_list', {catalog: item.catalog});
+          }
         }
       }
     })

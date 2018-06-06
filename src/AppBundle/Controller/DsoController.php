@@ -46,6 +46,7 @@ class DsoController extends Controller
 
     /**
      * @Route("/catalogue/{catalog}",
+     *     options={"expose"=true},
      *     name="catalog_list",
      *     requirements={"catalog"="\w+"}
      * )
@@ -111,7 +112,6 @@ class DsoController extends Controller
             'route' => 'catalog_list',
             'paramsRoute' => array_merge($data, $request->query->all())
         ];
-    dump( $params['pagination']['paramsRoute']);
 
         /** @var Response $response */
         $response = new Response();
