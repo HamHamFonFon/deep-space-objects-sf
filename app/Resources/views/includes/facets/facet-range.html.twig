@@ -17,7 +17,14 @@
 
       <li class="list-group-item d-flex justify-content-between align-items-center">
         {% set params = paramsRoute.params|merge({(name): paramsRange}) %}
-        <a href="{{ path(paramsRoute.route, params) }}" type="facet-range">
+        {% if selectedFilters[(name)] is defined and selectedFilters[(name)] == paramsRange %}
+          {% set paramsRemove = remove_element(paramsRoute.params, paramsRange) %}
+          <button type="button" class="close" aria-label="Close">
+            <a href="{{ path(paramsRoute.route, paramsRemove) }}"><span aria-hidden="true">&times;</span></a>
+          </button>
+        {% endif %}
+
+        <a href="{{ path(paramsRoute.route, params) }}" type="facet-range" data->
           {{ label }}
         </a>
         <span class="badge badge-primary badge-pill">{{ countFacet }}</span>

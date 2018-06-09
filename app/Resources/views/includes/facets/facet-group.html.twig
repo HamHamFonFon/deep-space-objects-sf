@@ -14,10 +14,20 @@
 
     {% set countFacet = facet.doc_count %}
     <li class="list-group-item d-flex justify-content-between align-items-center">
+
       {% set params = paramsRoute.params|merge({ (name): (facet.key|lower)}) %}
-      <a href="{{ path(paramsRoute.route, params) }}" data-field="{{ name }}" data-value="{{ facet.key|lower }}" type="facet">
+      {% if selectedFilters[(name)] is defined and selectedFilters[(name)] == facet.key %}
+        {% set paramsRemove = remove_element(paramsRoute.params, facet.key) %}
+        <button type="button" class="close" aria-label="Close">
+          <a href="{{ path(paramsRoute.route, paramsRemove) }}"><span aria-hidden="true">&times;</span></a>
+        </button>
+      {% endif %}
+
+
+      <a href="{{ path(paramsRoute.route, params) }}" data-field="{{ name }}" data-value="{{ facet.key|lower }}" type="facet" class="left" title="{{ labelFacet|trans }}">
         {{ labelFacet|trans }}
       </a>
+
       <span class="badge badge-primary badge-pill">{{ countFacet }}</span>
     </li>
   {% endfor %}

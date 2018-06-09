@@ -88,9 +88,11 @@ class DsoController extends Controller
                 return ['data.' . $key=>$value];
             }, array_keys($reqQuery), $reqQuery));
         }
+        $params['selectedFilters'] = $reqQuery;
 
         if (isset($range) && !empty($range)) {
             $filters['range']['data.mag'] = $range;
+            $params['selectedFilters']['mag'] = $range;
         }
 
         /** @var DsoRepository $dsoRepository */

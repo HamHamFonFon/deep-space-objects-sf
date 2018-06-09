@@ -36,7 +36,8 @@ class DsoTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('uasort', [$this, 'uasort'])
+            new \Twig_SimpleFunction('uasort', [$this, 'uasort']),
+            new \Twig_SimpleFunction('remove_element', [$this, 'removeElement'])
         ];
     }
 
@@ -87,5 +88,18 @@ class DsoTwigExtension extends \Twig_Extension
         });
 
         return $tab;
+    }
+
+    /**
+     * @param $arr
+     * @param $value
+     * @return mixed
+     */
+    public function removeElement($arr, $value)
+    {
+        $index = array_search($value, $arr);
+        unset($arr[$index]);
+
+        return $arr;
     }
 }
