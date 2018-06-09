@@ -31,6 +31,8 @@ class DsoRepository extends AbstractKuzzleRepository
     /** @var GenerateUrlHelper */
     public $urlHelper;
 
+    const SEARCH_SIZE = 12;
+
     /**
      * MessierRepository constructor.
      * @param KuzzleHelper $kuzzleHelper

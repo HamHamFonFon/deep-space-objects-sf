@@ -6,6 +6,7 @@ use AppBundle\Entity\Dso;
 use AppBundle\Entity\Messier;
 use AppBundle\Form\ListOrderFormType;
 use AppBundle\Repository\DsoRepository;
+use AppBundle\Repository\SearchRepository;
 use Astrobin\Services\GetImage;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -20,6 +21,8 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  */
 class DsoController extends Controller
 {
+
+
 
     /**
      * @route("/catalogue",
@@ -62,8 +65,8 @@ class DsoController extends Controller
 
         $params['listOrder'] = $this->container->getParameter('list.messier.order');
         $params['catalog'] = $catalog;
-        $from = 0;
-        $size = 12;
+        $from = SearchRepository::SEARCH_FROM;
+        $size = DsoRepository::SEARCH_SIZE;
         $page = $firstPage = 1;
         $sort = DsoRepository::DEFAULT_SORT;
 
@@ -98,6 +101,10 @@ class DsoController extends Controller
         /** @var DsoRepository $dsoRepository */
         $dsoRepository = $this->container->get('app.repository.dso');
         list($params['total'], $params['list'], $params['aggregates']) = $dsoRepository->getList($catalog, $filters, $from, $size, $sort, 1);
+        if (empty($params['list'])) {
+            list($params['total'], $params['list'], $params['aggregates']) = $dsoRepository->getList($catalog, $filters, SearchRepository::SEARCH_FROM,  DsoRepository::SEARCH_SIZE, $sort, 1);
+            $request->query->set('page', 1);
+        }
         unset($params['aggregates']['allfacets']['doc_count']);
 
         $lastPage = ceil($params['total']/$size);
