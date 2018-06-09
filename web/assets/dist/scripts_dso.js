@@ -17006,14 +17006,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_galleryCarousel_js__ = __webpack_require__(/*! ./scripts/galleryCarousel.js */ "./src/AppBundle/Resources/public/js/scripts/galleryCarousel.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_galleryCarousel_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__scripts_galleryCarousel_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__scripts_notationDso_js__ = __webpack_require__(/*! ./scripts/notationDso.js */ "./src/AppBundle/Resources/public/js/scripts/notationDso.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__scripts_notationDso_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__scripts_notationDso_js__);
 // ==================================================
 // Import JS libraries files and project files here
 // ==================================================
 __webpack_require__(/*! ./../.././../../../node_modules/jquery-typeahead/dist/jquery.typeahead.min.css */ "./node_modules/jquery-typeahead/dist/jquery.typeahead.min.css");
 __webpack_require__(/*! ../styles/typehead.css */ "./src/AppBundle/Resources/public/styles/typehead.css");
-
 __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
+
+// import "./scripts/kuzzle";
 // import "./scripts/routing.js"
+
 
 
 
@@ -17116,12 +17120,11 @@ DSO.cookieLang = function ($, ns, r) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {window.DSO = window.DSO || {};
 
+var bootstrap = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
+
 DSO.galleryCarousel = function ($, ns) {
-
   ns.CAROUSEL_ID = '#multi-gallery-astrobin';
-
   ns.init = function () {
-    console.log('Init carousel...');
     $(ns.CAROUSEL_ID).carousel({
       interval: 2000
     });
@@ -17149,6 +17152,66 @@ $(function () {
     }
   }
 });
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/AppBundle/Resources/public/js/scripts/notationDso.js":
+/*!******************************************************************!*\
+  !*** ./src/AppBundle/Resources/public/js/scripts/notationDso.js ***!
+  \******************************************************************/
+/*! dynamic exports provided */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(jQuery) {window.DSO = window.DSO || {};
+
+DSO.voteDso = function ($, ns, r) {
+
+  ns.BUTTON = 'button.vote';
+
+  ns.KUZZLE_ID = 'input#kuzzle-id';
+
+  ns.STARS = 'span#listStars';
+
+  /**
+   *
+   */
+  ns.init = function () {
+    if (0 < $(ns.KUZZLE_ID).length) {
+      ns.vote();
+    }
+  };
+
+  /**
+   * TODO : using kuzzle-sdk JS, not ajax request
+   */
+  ns.vote = function () {
+
+    var kuzzleId = $(ns.KUZZLE_ID).val();
+    $(ns.BUTTON).on('click', function () {
+      var $this = $(this);
+      var typeVote = $this.data('vote');
+
+      $.ajax({
+        method: "POST",
+        url: r.generate('dso_upvote'),
+        dataType: 'json',
+        data: {
+          'kuzzleId': kuzzleId,
+          'typeVote': typeVote
+        }
+      }).done(function (data) {
+        if (data !== null) {
+          var starHtml = JSON.parse(data).html;
+          $(ns.STARS).html(starHtml);
+          $(ns.BUTTON).prop("disabled", true);
+        }
+      });
+    });
+  };
+
+  return ns;
+}(jQuery, {}, Routing);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),

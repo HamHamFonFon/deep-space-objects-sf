@@ -33,6 +33,7 @@ abstract class AbstractKuzzleDocumentEntity
                     // TODO later
                     continue;
                 }
+
                 if (is_array($data) && "geometry" != $field) {
                     $object = $this;
                     array_walk($data, function($value, $field) use (&$object) {

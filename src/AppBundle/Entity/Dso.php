@@ -28,8 +28,10 @@ class Dso extends AbstractKuzzleDocumentEntity
     protected $ra;
     protected $dec;
     protected $astrobinId;
-
-
+    // Vote
+    protected $nbVote;
+    protected $valueVote;
+    protected $stars;
     /**
      * @param string $locale
      * @return Dso
@@ -274,6 +276,53 @@ class Dso extends AbstractKuzzleDocumentEntity
         $this->astrobinId = $astrobinId;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getNbVote()
+    {
+        return $this->nbVote;
+    }
+
+    /**
+     * @param mixed $nbVote
+     */
+    public function setNbVote($nbVote)
+    {
+        $this->nbVote = $nbVote;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getValueVote()
+    {
+        return $this->valueVote;
+    }
+
+    /**
+     * @param mixed $valueVote
+     */
+    public function setValueVote($valueVote)
+    {
+        $this->valueVote = $valueVote;
+    }
 
 
+    public function setStars()
+    {
+//        $this->stars = round(($this->getValueVote()*5)/$this->getNbVote());
+    }
+
+    /**
+     * @return float|int
+     */
+    public function getStars()
+    {
+        $this->stars = 0;
+        if (0 < $this->getNbVote()) {
+            $this->stars = round(($this->getValueVote()*5)/$this->getNbVote());
+        }
+        return $this->stars;
+    }
 }

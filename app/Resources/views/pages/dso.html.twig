@@ -45,6 +45,7 @@
 
 
   <div class="container">
+  <input type="hidden" id="kuzzle-id" value="{{ dso.kuzzleId }}">
     <div class="row my-4">
       <div class="col-lg-8">
         <img class="img-fluid rounded" src="{{ imgCover|default(asset('img/default.jpg')) }}" alt="{{ dso.id }}">
@@ -58,7 +59,11 @@
         <h2>{{ subTitle }}</h2>
 
         <ul class="list-group">
-          <li class="list-group-item active">{{ 'info'|trans }}</li>
+          <li class="list-group-item active">{{ 'info'|trans }}
+            <span id="listStars" class="pull-right">
+              {% include 'includes/dso/stars.html.twig' with {'stars': dso.stars} %}
+            </span>
+          </li>
           {% set type = 'type.' ~ dso.type %}
           {% set const = 'const_id.' ~ dso.constId|lower %}
           <li class="list-group-item">{{ type|trans }}</li>
@@ -76,7 +81,13 @@
           1: {{ 'dimExp'|trans }}
         </p>
 
-        <a class="btn btn-primary btn-lg" href="#">Call to Action!</a>
+        <button type="button" id="btnUp" class="vote btn btn-success btn-lg" data-vote="up">
+          <i class="icon-plus"></i>
+        </button>
+        <button type="button" id="btnDown" class="vote btn btn-danger btn-lg" data-vote="down">
+          <i class="icon-minus"></i>
+        </button>
+        <a class="btn btn-primary btn-lg" href="#">Suggest a correction</a>
       </div>
       <!-- /.col-md-4 -->
     </div>

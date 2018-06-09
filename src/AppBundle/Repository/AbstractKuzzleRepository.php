@@ -12,6 +12,7 @@ namespace AppBundle\Repository;
 use AppBundle\Entity\abstractKuzzleDocumentEntity;
 use AppBundle\Kuzzle\KuzzleHelper;
 use Kuzzle\Collection;
+use Kuzzle\Document;
 use Kuzzle\Util\SearchResult;
 
 
@@ -92,11 +93,9 @@ abstract class AbstractKuzzleRepository
         }
 
         /** @var SearchResult $searchResult */
-        $searchResult = $kuzzleCollection->search(
+        return $kuzzleCollection->search(
             $this->kuzzleHelper->buildQuery('must', $typeQuery, $query, $filters, $qSort, $aggregates, $from, $size)
         );
-
-        return $searchResult;
     }
 
 
@@ -114,6 +113,48 @@ abstract class AbstractKuzzleRepository
         return $this->findBy('term', [$field => $id], [], [],0, 1);
     }
 
+
+    /**
+     * Get Kuzzle Document from kuzzle identifier
+     * @param $kuzzleDocumentId
+     * @return Document|null
+     */
+    protected function getKuzzleDocument($kuzzleDocumentId)
+    {
+        /** @var abstractKuzzleDocumentEntity $kuzzleEntity */
+        $kuzzleEntity = $this->getKuzzleEntity();
+        $collection = $kuzzleEntity::getCollectionName();
+
+        /** @var Collection $kuzzleCollection */
+        $kuzzleCollection = $this->kuzzleService->collection($collection);
+
+        /** @var Document $document */
+        $document = $kuzzleCollection->fetchDocument($kuzzleDocumentId);
+
+        if ($document instanceof Document) {
+            return $document;
+        } else {
+            return null;
+        }
+    }
+
+
+    /**
+     * @param Document $kuzzleDoc
+     * @param $fields
+     * @return Document
+     */
+    protected function updateDocument(Document $kuzzleDoc, $fields)
+    {
+        /** @var abstractKuzzleDocumentEntity $kuzzleEntity */
+        $kuzzleEntity = $this->getKuzzleEntity();
+        $collection = $kuzzleEntity::getCollectionName();
+
+        /** @var Collection $kuzzleCollection */
+        $kuzzleCollection = $this->kuzzleService->collection($collection);
+
+        return $kuzzleCollection->updateDocument($kuzzleDoc->getId(), $fields);
+    }
 
     abstract protected function getKuzzleEntity();
 }

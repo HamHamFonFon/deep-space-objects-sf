@@ -211,23 +211,57 @@ class DsoRepository extends AbstractKuzzleRepository
             $dso->addImageCover($astrobinImage);
         }
 
-        try {
-            $astrobinListImage = $this->wsGetImage->getImagesBySubject($dso->getId(), $limitImages);
+        if (0 < $limitImages) {
+            try {
+                $astrobinListImage = $this->wsGetImage->getImagesBySubject($dso->getId(), $limitImages);
 
-            // If there is no astrobinId we try to add the first image as image cover
-            if (is_null($dso->getAstrobinId())) {
-                if ($astrobinListImage instanceof Image) {
-                    $dso->addImageCover($astrobinListImage);
-                } else {
-                    $dso->addImageCover($astrobinListImage->listImages[0]);
+                // If there is no astrobinId we try to add the first image as image cover
+                if (is_null($dso->getAstrobinId())) {
+                    if ($astrobinListImage instanceof Image) {
+                        $dso->addImageCover($astrobinListImage);
+                    } else {
+                        $dso->addImageCover($astrobinListImage->listImages[0]);
+                    }
                 }
-            }
-            $dso->addImages($astrobinListImage);
-        } catch (\Exception $e) {
+                $dso->addImages($astrobinListImage);
+            } catch (\Exception $e) {
 //            dump($e->getMessage());
+            }
         }
 
         return $dso;
+    }
+
+
+    /**
+     * @param $kuzzleId
+     * @param $typeVote
+     * @return Dso
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
+     */
+    public function updateVote($kuzzleId, $typeVote)
+    {
+        $valueMapping = [
+            'up' => 1,
+            'down' => -1
+        ];
+
+        $document = $this->getKuzzleDocument($kuzzleId);
+        $contentDoc = $document->getContent();
+        $val = $valueMapping[$typeVote];
+        $nbVote = (isset($contentDoc['vote']['nb_vote']))? $contentDoc['vote']['nb_vote'] : 0;
+        $valueVote = (isset($contentDoc['vote']['value_vote'])) ? $contentDoc['vote']['value_vote'] : 0;
+
+        $fields = [
+            'vote' => [
+                'nb_vote' => $nbVote+1,
+                'value_vote' => $valueVote + $val
+            ]
+        ];
+
+        $document = $this->updateDocument($document, $fields);
+        return $this->buildEntityByDocument($document, 0);
     }
 
 

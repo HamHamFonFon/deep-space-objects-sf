@@ -10,6 +10,7 @@ use AppBundle\Repository\SearchRepository;
 use Astrobin\Services\GetImage;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -180,5 +181,34 @@ class DsoController extends Controller
         );
 
         return $this->render('pages/dso.html.twig', $params, $response);
+    }
+
+
+    /**
+     * @Route(
+     *     "_upvate/dso",
+     *     options={"expose"=true},
+     *     name="dso_upvote"
+     * )
+     * @param Request $request
+     * @return JsonResponse
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
+     */
+    public function voteAction(Request $request)
+    {
+        $dso = $stars = null;
+        /** @var DsoRepository $dsoRepository */
+        $dsoRepository = $this->container->get('app.repository.dso');
+
+        if ($request->request->has('kuzzleId') && $request->request->has('typeVote')) {
+            $kuzzleId = $request->request->get('kuzzleId');
+            $typeVote = $request->request->get('typeVote');
+
+            /** @var Dso $dso */
+            $dso = $dsoRepository->updateVote($kuzzleId, $typeVote);
+            $stars = $this->renderView('includes/dso/stars.html.twig', ['stars' => $dso->getStars()]);
+        }
+        return new JsonResponse(json_encode(['html' => $stars]));
     }
 }

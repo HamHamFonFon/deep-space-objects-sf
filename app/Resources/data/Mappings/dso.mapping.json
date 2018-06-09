@@ -34,6 +34,16 @@
         "geometry": {
           "type": "geo_shape"
         },
+        "vote": {
+          "properties": {
+            "nb_vote": {
+              "type": "integer"
+            },
+            "value_vote": {
+              "type": "integer"
+            }
+          }
+        },
         "data": {
           "properties": {
             "desig": {
