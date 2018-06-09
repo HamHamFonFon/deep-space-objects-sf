@@ -68,12 +68,14 @@ class DsoTwigExtension extends \Twig_Extension
      * @param $number
      * @return string
      */
-    public function numberFormatByLocale($number, $locale)
+    public function numberFormatByLocale($number)
     {
 //        setlocale(LC_ALL, 'en_GB');
         $locale = localeconv();
-        dump($locale);
-        return number_format($number, 2, $locale['decimal_point'], $locale['thousands_sep']);
+        if (!is_null($number)) {
+            $number = number_format($number, 2, $locale['decimal_point'], $locale['thousands_sep']);
+        }
+        return $number;
     }
 
     /**

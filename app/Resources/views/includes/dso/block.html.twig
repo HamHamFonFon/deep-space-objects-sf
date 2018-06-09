@@ -8,10 +8,7 @@
 {#Title#}
 {% set title %}
   {% if dsoAlt is not empty %}
-    {{ dsoAlt }}
-    {% if 'messier' == dso.catalog %}
-      - {{ dso.id|capitalize }}
-    {% endif %}
+    {{ dsoAlt }} - {{ dso.desig }}
   {% else %}
     {% if 'messier' == dso.catalog %}
       {{ dso.id|capitalize }}
