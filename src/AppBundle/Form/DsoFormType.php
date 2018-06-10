@@ -25,10 +25,12 @@ class DsoFormType extends AbstractType
     protected $listCatalog;
 
     protected $listConstId;
-
+    
     /**
      * DsoFormType constructor.
      * @param $listType
+     * @param $listCatalog
+     * @param $listConstId
      */
     public function __construct($listType, $listCatalog, $listConstId)
     {
