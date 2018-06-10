@@ -92,6 +92,10 @@
       <!-- /.col-md-4 -->
     </div>
 
+    {#TEST#}
+    {% include 'forms/dso.html.twig' with {form: formDso} %}
+
+
     {% if dsos_const is defined and 0 < dsos_const|length %}
       <h3>{{ 'constImgGall'|trans }} :</h3>
       <div class="row">

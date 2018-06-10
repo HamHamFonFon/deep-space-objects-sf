@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Dso;
 use AppBundle\Entity\Messier;
+use AppBundle\Form\DsoFormType;
 use AppBundle\Form\ListOrderFormType;
 use AppBundle\Repository\DsoRepository;
 use AppBundle\Repository\SearchRepository;
@@ -160,6 +161,14 @@ class DsoController extends Controller
         if (is_null($params['dso'])) {
             throw new NotFoundHttpException();
         }
+
+        // Form test
+        $optionsForm = [
+            'method' => 'POST',
+            'action' => null,
+        ];
+        $formDso = $this->createForm(DsoFormType::class, $dso, $optionsForm);
+        $params['formDso'] = $formDso->createView();
 
         // Get objects from same constellation
         if (!is_null($dso->getConstId())) {

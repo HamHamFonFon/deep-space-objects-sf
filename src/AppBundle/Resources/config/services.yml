@@ -68,6 +68,11 @@ services:
     arguments: ['%list.messier.order%']
     tags:
         - { name: form.type, alias: 'list_order' }
+  app.form.dso:
+    class: AppBundle\Form\DsoFormType
+    arguments: ['%list.dso.type%', '%list.dso.catalog%', '%list.dso.const_id%']
+    tags:
+        - { name: form.type, alias: 'form_dso' }
   # Helper
   app.helper.urlgenerator:
     class: AppBundle\Helper\GenerateUrlHelper
