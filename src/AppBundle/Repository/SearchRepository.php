@@ -116,6 +116,7 @@ class SearchRepository
                         case 'ic':
                         case 'ldn':
                         case 'abl':
+                        case 'sh':
                             if (!empty($documentContent['data']['alt'][$fieldAlt])) {
                                 $label = $documentContent['data']['alt'][$fieldAlt] . ' - ' .  $documentContent['data']['desig'];
                             } else {

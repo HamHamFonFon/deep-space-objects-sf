@@ -184,6 +184,7 @@ class KuzzleHelper
 
         $finalQuery['from'] = $from;
         $finalQuery['size'] = $size;
+//        echo json_encode($finalQuery); die();
         return $finalQuery;
     }
 }

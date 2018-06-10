@@ -49,7 +49,7 @@ class DsoController extends Controller
 
 
     /**
-     * @Route("/catalogue/{catalog}",
+     * @Route("/catalog/{catalog}",
      *     options={"expose"=true},
      *     name="catalog_list",
      *     requirements={"catalog"="\w+"}
@@ -132,6 +132,7 @@ class DsoController extends Controller
 
         return $this->render(':pages:list.html.twig', $params, $response);
     }
+
 
     /**
      * @Route("/catalog/{catalog}/{objectId}",
