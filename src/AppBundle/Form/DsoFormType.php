@@ -25,7 +25,7 @@ class DsoFormType extends AbstractType
     protected $listCatalog;
 
     protected $listConstId;
-    
+
     /**
      * DsoFormType constructor.
      * @param $listType
