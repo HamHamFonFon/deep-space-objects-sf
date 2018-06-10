@@ -1,2 +1,51 @@
 {{ form_start(form) }}
+  <div class="form-row">
+    <div class="col">
+      {{ form_row(form.desig) }}
+    </div>
+    <div class="col">
+      {{ form_row(form.catalog) }}
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col">
+      {{ form_row(form.type) }}
+    </div>
+    <div class="col">
+      {{ form_row(form.constId) }}
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col">
+      {{ form_row(form.mag) }}
+    </div>
+    <div class="col">
+      {{ form_row(form.distAl) }}
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col">
+      {{ form_row(form.ra) }}
+    </div>
+    <div class="col">
+      {{ form_row(form.dec) }}
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col">
+      {{ form_row(form.order) }}
+    </div>
+    <div class="col">
+      {{ form_row(form.dim) }}
+    </div>
+    <div class="col">
+      {{ form_row(form.astrobinId) }}
+    </div>
+  </div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
 {{ form_end(form) }}

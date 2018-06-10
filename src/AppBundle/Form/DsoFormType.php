@@ -54,7 +54,7 @@ class DsoFormType extends AbstractType
             'required' => true,
             'label' => 'desig',
             'attr' => [
-                ''
+                'class' => 'form-control'
             ]
         ]);
 
@@ -63,12 +63,18 @@ class DsoFormType extends AbstractType
             'required' => true,
             'choices' => array_flip($this->listCatalog),
             'expanded' => false,
-            'multiple' => false
+            'multiple' => false,
+            'attr' => [
+                'class' => 'form-control'
+            ]
         ]);
 
         // Order
         $builder->add('order', NumberType::class, [
-            'required' => false
+            'required' => false,
+            'attr' => [
+                'class' => 'form-control'
+            ]
         ]);
 
         // Alt ??
@@ -78,17 +84,26 @@ class DsoFormType extends AbstractType
             'required' => true,
             'choices' => array_flip($this->listType),
             'expanded' => false,
-            'multiple' => false
+            'multiple' => false,
+            'attr' => [
+                'class' => 'form-control'
+            ]
         ]);
 
         // Magnitude
         $builder->add('mag', NumberType::class, [
-            'required' => false
+            'required' => false,
+            'attr' => [
+                'class' => 'form-control'
+            ]
         ]);
 
         // Dim
         $builder->add('dim', TextType::class, [
-            'required' => false
+            'required' => false,
+            'attr' => [
+                'class' => 'form-control'
+            ]
         ]);
 
         // Const
@@ -97,26 +112,41 @@ class DsoFormType extends AbstractType
             'expanded' => false,
             'multiple' => false,
             'choices' => array_flip($this->listConstId),
+            'attr' => [
+                'class' => 'form-control'
+            ]
         ]);
 
         // dist_al
         $builder->add('distAl', TextType::class, [
-            'required' => false
+            'required' => false,
+            'attr' => [
+                'class' => 'form-control'
+            ]
         ]);
 
         // Ra
         $builder->add('ra', TextType::class, [
-            'required' => false
+            'required' => false,
+            'attr' => [
+                'class' => 'form-control'
+            ]
         ]);
 
         // dec
         $builder->add('dec', TextType::class, [
-            'required' => false
+            'required' => false,
+            'attr' => [
+                'class' => 'form-control'
+            ]
         ]);
 
         // AstrobinId
         $builder->add('astrobinId', IntegerType::class, [
-            'required' => false
+            'required' => false,
+            'attr' => [
+                'class' => 'form-control'
+            ]
         ]);
 
     }
