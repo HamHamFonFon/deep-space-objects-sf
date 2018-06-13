@@ -38,6 +38,9 @@ framework:
         log: true
 
 
+# Breadcrumbs
+white_october_breadcrumbs: ~
+
 # Twig Configuration
 twig:
     debug: '%kernel.debug%'

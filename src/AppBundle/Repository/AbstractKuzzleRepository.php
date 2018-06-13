@@ -106,10 +106,10 @@ abstract class AbstractKuzzleRepository
      */
     protected function findById($id)
     {
-        $field = 'id';
-        if (preg_match('/[-_+]+/', $id)) {
+//        $field = 'id';
+//        if (preg_match('/[-_+]+/', $id)) {
             $field = 'id.keyword';
-        }
+//        }
         return $this->findBy('term', [$field => $id], [], [],0, 1);
     }
 

@@ -1,0 +1,11 @@
+<nav aria-label="breadcrumb">
+  {% if breadcrumb is defined and 0 < breadcrumb|length %}
+    <ol class="breadcrumb breadcrumb-arrow">
+      {% for page in breadcrumb %}
+        <li class="breadcrumb-item">
+          <a href="{{ page.full_url }}" title="{{ page.label|trans }}">{{ page.label|trans }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  {% endif %}
+</nav>

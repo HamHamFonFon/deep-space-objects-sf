@@ -50,7 +50,11 @@
               {% endblock %}
 
               {#Content#}
-              {% block content %}{% endblock %}
+              {% block content %}
+                {% block breadcrumb %}
+                  {#{{ render(controller('AppBundle:Layout:breadcrumbs')) }}#}
+                {% endblock %}
+              {% endblock %}
 
               {#Footer#}
               {% block footer %}

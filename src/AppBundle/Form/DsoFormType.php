@@ -64,6 +64,7 @@ class DsoFormType extends AbstractType
             'choices' => array_flip($this->listCatalog),
             'expanded' => false,
             'multiple' => false,
+            'label' => 'catalog',
             'attr' => [
                 'class' => 'form-control'
             ]
@@ -72,6 +73,7 @@ class DsoFormType extends AbstractType
         // Order
         $builder->add('order', NumberType::class, [
             'required' => false,
+            'label' => 'order',
             'attr' => [
                 'class' => 'form-control'
             ]
@@ -85,6 +87,7 @@ class DsoFormType extends AbstractType
             'choices' => array_flip($this->listType),
             'expanded' => false,
             'multiple' => false,
+            'label' => 'type',
             'attr' => [
                 'class' => 'form-control'
             ]
@@ -93,6 +96,7 @@ class DsoFormType extends AbstractType
         // Magnitude
         $builder->add('mag', NumberType::class, [
             'required' => false,
+            'label' => 'mag',
             'attr' => [
                 'class' => 'form-control'
             ]
@@ -101,6 +105,7 @@ class DsoFormType extends AbstractType
         // Dim
         $builder->add('dim', TextType::class, [
             'required' => false,
+            'label' => 'dim',
             'attr' => [
                 'class' => 'form-control'
             ]
@@ -111,7 +116,12 @@ class DsoFormType extends AbstractType
             'required' => true,
             'expanded' => false,
             'multiple' => false,
+            'label' => 'const_id',
             'choices' => array_flip($this->listConstId),
+//            'choice_attr' => function($choiceValue, $key, $value) {
+//                dump($choiceValue, $key, $value);
+//                return ucfirst($choiceValue);
+//            },
             'attr' => [
                 'class' => 'form-control'
             ]
@@ -120,6 +130,7 @@ class DsoFormType extends AbstractType
         // dist_al
         $builder->add('distAl', TextType::class, [
             'required' => false,
+            'label' => 'distAl',
             'attr' => [
                 'class' => 'form-control'
             ]
@@ -128,6 +139,7 @@ class DsoFormType extends AbstractType
         // Ra
         $builder->add('ra', TextType::class, [
             'required' => false,
+            'label' => 'ra',
             'attr' => [
                 'class' => 'form-control'
             ]
@@ -136,6 +148,7 @@ class DsoFormType extends AbstractType
         // dec
         $builder->add('dec', TextType::class, [
             'required' => false,
+            'label' => 'dec',
             'attr' => [
                 'class' => 'form-control'
             ]
@@ -145,6 +158,7 @@ class DsoFormType extends AbstractType
         $builder->add('astrobinId', IntegerType::class, [
             'required' => false,
             'attr' => [
+                'placeholder' => 'Set and Astrobin Id',
                 'class' => 'form-control'
             ]
         ]);

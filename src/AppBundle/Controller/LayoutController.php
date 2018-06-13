@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Router;
 
 
@@ -42,6 +43,32 @@ class LayoutController extends Controller
         }
 
         return new RedirectResponse($url);
+    }
+
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function breadcrumbsAction(Request $request)
+    {
+        /** @var Router $router */
+        $router = $this->container->get('router');
+
+        $params['breadcrumb'][] = [
+            'label' => 'menu.homepage',
+            'full_url' => $router->generate('homepage')
+        ];
+
+        dump($request);
+
+        $response = new Response();
+        $response->setPublic();
+        $response->setSharedMaxAge(
+            $this->container->getParameter('http_ttl')
+        );
+
+        return $this->render('includes/layout/breadcrumbs.html.twig', $params, $response);
     }
 
 }

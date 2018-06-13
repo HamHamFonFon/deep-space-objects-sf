@@ -13,10 +13,10 @@
     "dso": {
       "properties": {
         "id": {
-          "type": "keyword",
+          "type": "text",
           "fields": {
-            "keyword": {
-              "normalizer": "lowercase_normalizer"
+            "raw": {
+              "type": "keyword"
             }
           }
         },

@@ -43,8 +43,10 @@
     {% endif %}
   {% endset %}
 
-
   <div class="container">
+
+  {% block breadcrumb %}{{ wo_render_breadcrumbs() }}{% endblock %}
+
   <input type="hidden" id="kuzzle-id" value="{{ dso.kuzzleId }}">
     <div class="row my-4">
       <div class="col-lg-8">

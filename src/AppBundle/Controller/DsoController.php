@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use WhiteOctober\BreadcrumbsBundle\Model\Breadcrumbs;
 
 
 /**
@@ -154,6 +155,10 @@ class DsoController extends Controller
     public function fullAction(Request $request, $catalog, $objectId)
     {
         $params = $listKuzzleId = [];
+
+        /** @var Breadcrumbs $breadcrumbs */
+        $breadcrumbs = $this->container->get('white_october_breadcrumbs');
+
         /** @var DsoRepository $messierRepository */
         $dsoRepository = $this->container->get('app.repository.dso');
         /** @var Dso $dso */
@@ -179,6 +184,10 @@ class DsoController extends Controller
         }
 
         array_unshift($listKuzzleId, $dso->getKuzzleId());
+
+        $breadcrumbs->addItem('menu.homepage', $this->get('router')->generate('homepage'));
+        $breadcrumbs->addItem('catalog.' . $dso->getCatalog(), $this->get('router')->generate('catalog_list', ['catalog' => $dso->getCatalog()]));
+        $breadcrumbs->addItem($dso->getAlt(), $this->get('router')->generate('dso_full', ['catalog' => $dso->getCatalog(), 'objectId' => $dso->getId()]));
 
         /** @var Response $response */
         $response = new Response();
