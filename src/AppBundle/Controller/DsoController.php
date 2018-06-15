@@ -155,7 +155,6 @@ class DsoController extends Controller
     public function fullAction(Request $request, $catalog, $objectId)
     {
         $params = $listKuzzleId = [];
-
         /** @var Breadcrumbs $breadcrumbs */
         $breadcrumbs = $this->container->get('white_october_breadcrumbs');
 

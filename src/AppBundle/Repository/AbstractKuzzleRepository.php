@@ -108,7 +108,7 @@ abstract class AbstractKuzzleRepository
     {
 //        $field = 'id';
 //        if (preg_match('/[-_+]+/', $id)) {
-            $field = 'id.keyword';
+            $field = 'id.raw';
 //        }
         return $this->findBy('term', [$field => $id], [], [],0, 1);
     }
