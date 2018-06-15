@@ -9,6 +9,8 @@ use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use AppBundle\Entity\Dso;
 use Symfony\Component\Validator\Constraints\Blank;
@@ -171,10 +173,19 @@ class DsoFormType extends AbstractType
             ]
         ]);
 
+
+        $builder->addEventListener(FormEvents::POST_SET_DATA, function (FormEvent $event) {
+            $form = $event->getForm();
+            /** @var Dso $dso */
+            $dso = $event->getData();
+
+            $cleanId = $dso->getDesig();
+            $dso->setId($cleanId);
+        });
     }
 
 
-    // Add listener for ID
+
 
     /**
      * @param OptionsResolver $resolver
