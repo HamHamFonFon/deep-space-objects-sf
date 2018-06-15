@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use AppBundle\Entity\Dso;
+use Symfony\Component\Validator\Constraints\Blank;
 
 
 /**
@@ -160,6 +161,13 @@ class DsoFormType extends AbstractType
             'attr' => [
                 'placeholder' => 'Set and Astrobin Id',
                 'class' => 'form-control'
+            ]
+        ]);
+
+        $builder->add('honeypot', HiddenType::class, [
+            'mapped' => false,
+            'constraints' => [
+                new Blank()
             ]
         ]);
 

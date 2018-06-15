@@ -1,51 +1,79 @@
 {{ form_start(form) }}
-  <div class="form-row">
-    <div class="col">
-      {{ form_row(form.desig) }}
-    </div>
-    <div class="col">
-      {{ form_row(form.catalog) }}
+  <div class="form-group row">
+    {{ form_label(form.desig, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.desig) }}
     </div>
   </div>
 
-  <div class="form-row">
-    <div class="col">
-      {{ form_row(form.type) }}
-    </div>
-    <div class="col">
-      {{ form_row(form.constId) }}
+  <div class="form-group row">
+    {{ form_label(form.catalog, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.catalog) }}
     </div>
   </div>
 
-  <div class="form-row">
-    <div class="col">
-      {{ form_row(form.mag) }}
-    </div>
-    <div class="col">
-      {{ form_row(form.distAl) }}
+  <div class="form-group row">
+    {{ form_label(form.type, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.type) }}
     </div>
   </div>
 
-  <div class="form-row">
-    <div class="col">
-      {{ form_row(form.ra) }}
-    </div>
-    <div class="col">
-      {{ form_row(form.dec) }}
+  <div class="form-group row">
+    {{ form_label(form.constId, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.constId) }}
     </div>
   </div>
 
-  <div class="form-row">
-    <div class="col">
-      {{ form_row(form.order) }}
-    </div>
-    <div class="col">
-      {{ form_row(form.dim) }}
-    </div>
-    <div class="col">
-      {{ form_row(form.astrobinId) }}
+
+  <div class="form-group row">
+    {{ form_label(form.mag, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.mag) }}
     </div>
   </div>
 
-<button type="submit" class="btn btn-primary">Submit</button>
+  <div class="form-group row">
+    {{ form_label(form.distAl, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.distAl) }}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    {{ form_label(form.ra, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.ra) }}
+    </div>
+  </div>
+  <div class="form-group row">
+    {{ form_label(form.dec, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.dec) }}
+    </div>
+  </div>
+  <div class="form-group row">
+    {{ form_label(form.order, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.order) }}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    {{ form_label(form.dim, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.dim) }}
+    </div>
+  </div>
+  <div class="form-group row">
+    {{ form_label(form.astrobinId, null, { 'label_attr': { 'class' : 'col-form-label' }}) }}
+    <div class="col-10">
+      {{ form_widget(form.astrobinId) }}
+    </div>
+  </div>
+
+  {{ form_widget(form.honeypot) }}
+  <button type="submit" class="btn btn-primary">Submit</button>
 {{ form_end(form) }}

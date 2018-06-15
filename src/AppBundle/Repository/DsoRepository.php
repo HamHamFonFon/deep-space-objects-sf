@@ -72,6 +72,26 @@ class DsoRepository extends AbstractKuzzleRepository
 
 
     /**
+     * Return DSO from Kuzzle
+     *
+     * @param $kuzzleId
+     * @return null
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
+     */
+    public function getObjectByKuzzleId($kuzzleId)
+    {
+        if (is_null($kuzzleId)) {
+            return null;
+        }
+
+        $result = $this->getKuzzleDocument($kuzzleId);
+        if ($result instanceof Document) {
+            return $this->buildEntityByDocument($result);
+        }
+    }
+
+    /**
      * Retrieve objects from same constellation
      *
      * @param $constId

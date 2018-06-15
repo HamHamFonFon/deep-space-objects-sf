@@ -7,11 +7,16 @@ Encore
   .setPublicPath('/assets/dist')
 
   .addEntry('scripts_dso', './src/AppBundle/Resources/public/js/script.js')
+  // .addStyleEntry('style_dso', './src/AppBundle/Resources/public/styles/dso.scss')
 
   // allow legacy applications to use $/jQuery as a global variable
   .autoProvidejQuery()
 
-  // Fot bootstrap
+  .enableSassLoader(function(sassOptions) {}, {
+    resolveUrlLoader: false
+  })
+
+  // For bootstrap
   .autoProvideVariables({ Popper: ['popper.js', 'default'] })
 
   // empty the outputPath dir before each build

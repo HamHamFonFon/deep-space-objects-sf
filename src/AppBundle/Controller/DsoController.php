@@ -3,12 +3,9 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Dso;
-use AppBundle\Entity\Messier;
 use AppBundle\Form\DsoFormType;
-use AppBundle\Form\ListOrderFormType;
 use AppBundle\Repository\DsoRepository;
 use AppBundle\Repository\SearchRepository;
-use Astrobin\Services\GetImage;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -24,8 +21,6 @@ use WhiteOctober\BreadcrumbsBundle\Model\Breadcrumbs;
  */
 class DsoController extends Controller
 {
-
-
 
     /**
      * @route("/catalogue",
@@ -166,14 +161,6 @@ class DsoController extends Controller
             throw new NotFoundHttpException();
         }
 
-        // Form test
-        $optionsForm = [
-            'method' => 'POST',
-            'action' => null,
-        ];
-        $formDso = $this->createForm(DsoFormType::class, $dso, $optionsForm);
-        $params['formDso'] = $formDso->createView();
-
         // Get objects from same constellation
         if (!is_null($dso->getConstId())) {
             $params['dsos_const'] = $dsoRepository->getObjectsByConst(strtolower($dso->getConstId()), $dso->getId(), 3, 1);
@@ -184,6 +171,7 @@ class DsoController extends Controller
 
         array_unshift($listKuzzleId, $dso->getKuzzleId());
 
+        // Breadcrumbs
         $breadcrumbs->addItem('menu.homepage', $this->get('router')->generate('homepage'));
         $breadcrumbs->addItem('catalog.' . $dso->getCatalog(), $this->get('router')->generate('catalog_list', ['catalog' => $dso->getCatalog()]));
         $breadcrumbs->addItem($dso->getAlt(), $this->get('router')->generate('dso_full', ['catalog' => $dso->getCatalog(), 'objectId' => $dso->getId()]));
