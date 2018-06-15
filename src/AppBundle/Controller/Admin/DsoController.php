@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller\Admin;
 
+use AppBundle\Entity\Dso;
 use AppBundle\Form\DsoFormType;
 use AppBundle\Repository\DsoRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -38,6 +39,7 @@ class DsoController extends Controller
         /** @var Router $router */
         $router = $this->container->get('router');
 
+        /** @var Dso $dso */
         $dso = $dsoRepository->getObjectByKuzzleId($kuzzleId);
 
         $optionForm = [
@@ -48,8 +50,16 @@ class DsoController extends Controller
         $form = $this->createForm(DsoFormType::class, $dso, $optionForm);
         $form->handleRequest($request);
 
+        if ($form->isValid() && $form->isSubmitted()) {
+
+            $dataDso = $form->getData();
+
+            $this->redirectToRoute('dso_full', ['catalog' => $dso->getCatalog(), 'objectId' => $dso->getId()]);
+        }
+
         $params['form'] = $form->createView();
 
+        /** @var Response $response */
         $response = new Response();
         $response->setPublic();
         $response->setSharedMaxAge(
