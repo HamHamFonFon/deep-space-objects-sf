@@ -180,7 +180,7 @@ class DsoFormType extends AbstractType
             $dso = $event->getData();
 
             $cleanId = $dso->getDesig();
-            $dso->setId($cleanId);
+            $dso->setId(strtolower($cleanId));
         });
     }
 

@@ -70,10 +70,9 @@ class DsoTwigExtension extends \Twig_Extension
      */
     public function numberFormatByLocale($number)
     {
-//        setlocale(LC_ALL, 'en_GB');
-        $locale = localeconv();
+        $localeInfo = localeconv();
         if (!is_null($number)) {
-            $number = number_format($number, 2, $locale['decimal_point'], $locale['thousands_sep']);
+            $number = number_format($number, 2, $localeInfo['decimal_point'], $localeInfo['thousands_sep']);
         }
         return $number;
     }

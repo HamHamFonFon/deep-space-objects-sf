@@ -53,7 +53,8 @@ class BulkImportCommand extends ContainerAwareCommand
     ];
 
     private $kernel;
-    private $srcFile = 'Resources/data/Bulks/dso20.bulk.src.json';
+    private $srcDsoFile =   'Resources/data/Bulks/dso20.bulk.src.json';
+    private $srcConstFile = 'Resources/data/Bulks/constellations.bulk.src.json';
     private $generatedFile = 'Resources/data/Bulks/dso20.bulk.generate.json';
     protected $kuzzle;
     private $kuzzleIndex;
@@ -74,8 +75,8 @@ class BulkImportCommand extends ContainerAwareCommand
     {
         // Files
         $this->kernel = $kernel = $this->getContainer()->get('kernel')->getRootDir() . DIRECTORY_SEPARATOR;
-        $this->srcFile = $kernel . $this->srcFile;
-        $this->generatedFile = $kernel . $this->generatedFile;
+        $this->srcDsoFile = $kernel . $this->srcDsoFile;
+        $this->srcConstFile = $kernel . $this->srcConstFile;
 
         // Init Kuzzle
         $kuzzleHost = $this->getContainer()->getParameter('kuzzle_host');
@@ -88,7 +89,8 @@ class BulkImportCommand extends ContainerAwareCommand
             'port' => $kuzzlePort
         ]);
 
-        $this->transformCatalog($output);
+//        $this->importDso($output);
+        $this->importConstellations($output);
 
         if (0 < count($this->listErrors)) {
             $output->writeln($this->listErrors);
@@ -101,7 +103,7 @@ class BulkImportCommand extends ContainerAwareCommand
      */
     private function transformId()
     {
-        $contentFile = file_get_contents($this->srcFile);
+        $contentFile = file_get_contents($this->srcDsoFile);
 
         // Change ID
         $newData = preg_replace_callback('/%randId%/', function() {
@@ -116,13 +118,13 @@ class BulkImportCommand extends ContainerAwareCommand
     /**
      * @param OutputInterface $output
      */
-    private function transformCatalog(OutputInterface $output)
+    private function importDso(OutputInterface $output)
     {
         $mappingCatalog = self::$mapping;
-        if (!file_exists($this->srcFile) || !is_readable($this->srcFile)) {
+        if (!file_exists($this->srcDsoFile) || !is_readable($this->srcDsoFile)) {
             dump('Error reading source file');
         }
-        $jsonData = json_decode(file_get_contents($this->srcFile), true);
+        $jsonData = json_decode(file_get_contents($this->srcDsoFile), true);
         $progressBar = new ProgressBar($output, count($jsonData['bulkData'])/2);
         $progressBar->start();
         foreach ($jsonData['bulkData'] as $key=>$dso) {
@@ -178,6 +180,51 @@ class BulkImportCommand extends ContainerAwareCommand
     private function insertDso($id, $document)
     {
         $collectionName = DsoRepository::COLLECTION_NAME;
+        $kuzzleCollection = $this->kuzzle->collection($collectionName, $this->kuzzleIndex);
+        try {
+            $kuzzleCollection->createDocument($document, $id);
+        } catch(\ErrorException $e) {
+            $this->listErrors[] = '[' . serialize($document) . ']' . $e->getMessage();
+        } catch (\Exception $e) {
+            $this->listErrors[] = '[' . serialize($document) . ']' . $e->getMessage();
+        }
+        return;
+    }
+
+
+    public function importConstellations($output)
+    {
+
+        if (!file_exists($this->srcConstFile) || !is_readable($this->srcConstFile)) {
+            dump('Error reading source file');
+        }
+        $jsonData = json_decode(file_get_contents($this->srcConstFile), true);
+        $progressBar = new ProgressBar($output, count($jsonData['bulkData'])/2);
+        $progressBar->start();
+
+        foreach ($jsonData['bulkData'] as $key=>$const) {
+            $document = null;
+            $id = $this->generateKuzzleId();
+
+            if (!preg_match('/create/', json_encode($const))) {
+                $this->insertConst($id, $const);
+                $progressBar->advance();
+            }
+        }
+
+        $progressBar->finish();
+        $output->writeln("\n");
+    }
+
+
+    /**
+     * Insert data in Kuzzle
+     * @param $id
+     * @param $document
+     */
+    private function insertConst($id, $document)
+    {
+        $collectionName = 'constellations'; // DsoRepository::COLLECTION_NAME;
         $kuzzleCollection = $this->kuzzle->collection($collectionName, $this->kuzzleIndex);
         try {
             $kuzzleCollection->createDocument($document, $id);

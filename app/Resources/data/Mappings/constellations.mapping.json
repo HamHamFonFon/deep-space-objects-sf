@@ -1,7 +1,12 @@
 {
   "properties": {
-    "const_id": {
-      "type": "keyword"
+    "id": {
+      "type": "text",
+      "fields": {
+        "raw": {
+          "type": "keyword"
+        }
+      }
     },
     "geometry": {
       "type": "geo_shape"
