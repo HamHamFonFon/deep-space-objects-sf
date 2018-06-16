@@ -61,6 +61,11 @@ services:
     arguments:
       - "@astrobin.webservice.getimage"
       - '@app.helper.urlgenerator'
+  app.repository.constellation:
+    class: AppBundle\Repository\ConstellationRepository
+    parent: app.repository.abstractobject
+    arguments:
+     - '@app.helper.urlgenerator'
 
   # Form
   app.form.list_order:

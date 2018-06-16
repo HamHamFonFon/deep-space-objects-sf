@@ -1,6 +1,7 @@
 <?php
 
 namespace AppBundle\Entity;
+use AppBundle\Repository\ConstellationRepository;
 
 /**
  * Class Constellation
@@ -18,7 +19,7 @@ class Constellation extends AbstractKuzzleDocumentEntity
 
     /**
      * @param string $locale
-     * @return Dso
+     * @return Constellation
      */
     public function setLocale($locale)
     {
@@ -26,9 +27,12 @@ class Constellation extends AbstractKuzzleDocumentEntity
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public static function getCollectionName()
     {
-        return 'constelations'; //TODO change into Repository
+        return ConstellationRepository::COLLECTION_NAME;
     }
 
     /**

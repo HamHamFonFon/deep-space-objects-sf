@@ -3,8 +3,10 @@
 namespace AppBundle\Helper;
 
 use AppBundle\Entity\AbstractKuzzleDocumentEntity;
+use AppBundle\Entity\Constellation;
 use AppBundle\Entity\Dso;
 use AppBundle\Entity\Messier;
+use AppBundle\Repository\ConstellationRepository;
 use AppBundle\Repository\DsoRepository;
 use Symfony\Component\Routing\RouterInterface;
 
@@ -29,7 +31,7 @@ class GenerateUrlHelper
     /**
      * @param Dso|AbstractKuzzleDocumentEntity $entity
      * @param $absoluteUrl
-     * @return AbstractKuzzleDocumentEntity|Messier
+     * @return AbstractKuzzleDocumentEntity|Dso|Constellation
      */
     public function generateUrl($entity, $absoluteUrl = false)
     {
@@ -40,7 +42,10 @@ class GenerateUrlHelper
                     $url = $this->router->generate('dso_full', ['catalog' => strtolower($entity->getCatalog()), 'objectId' => strtolower($entity->getId())], $absoluteUrl);
                     break;
                 case 'planet':
-                case 'constellation':
+                    break;
+                case ConstellationRepository::COLLECTION_NAME:
+                    $url = $this->router->generate('constellation_full', ['id' => $entity->getId()], $absoluteUrl);
+                    break;
                 default:
                     $url = $this->router->generate('homepage');
             }

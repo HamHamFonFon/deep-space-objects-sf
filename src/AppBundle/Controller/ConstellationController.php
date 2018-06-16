@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Repository\ConstellationRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,11 +18,11 @@ class ConstellationController extends Controller
 
     /**
      * @Route(
-     *     "/constellations/{hem}"
-     *  name="constellations_list_hem"
+     *     "/constellations/{hem}",
+     *  name="constellations_list_hem",
      *  requirements={
      *      "hem"="north|south"
-     *  }
+     *  },
      *  options={"expose"=true}
      * )
      * @param Request $request
@@ -47,11 +48,26 @@ class ConstellationController extends Controller
     /**
      * @param $request
      * @param $id
+     * @Route(
+     *  "/constellation/{id}",
+     *  name="constellation_full",
+     *  options={"expose"=true},
+     *  requirements={
+     *     "id"="[A-Za-z]{3}"
+     *  }
+     * )
+     *
      * @return Response
      */
-    public function fullAction($request, $id)
+    public function fullAction(Request $request, $id)
     {
         $params = [];
+
+        /** @var ConstellationRepository $constRepository */
+        $constRepository = $this->container->get('app.repository.constellation');
+        $constellation = $constRepository->getObjectById($id);
+        dump($constellation);
+        $params['const'] = $constellation;
 
         $response = new Response();
         $response->setPublic();
@@ -59,6 +75,6 @@ class ConstellationController extends Controller
             $this->container->getParameter('http_ttl')
         );
 
-        return $this->render('', $params, $response);
+        return $this->render(':pages:constellation.html.twig', $params, $response);
     }
 }
