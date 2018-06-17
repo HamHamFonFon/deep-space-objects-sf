@@ -31,11 +31,17 @@ class SearchRepository
 
     public static $listFields = [
         'dso' => [
+            'id',
             'id.raw',
             'data.desig',
             'data.alt.alt',
             'data.const_id',
             'data.type'
+        ],
+        'constellations' => [
+            'id.raw',
+            'data.gen',
+            'data.alt'
         ]
     ];
 
@@ -62,7 +68,7 @@ class SearchRepository
      */
     public function buildSearch($searchTerms, $collection)
     {
-        $result = null;
+        $result = $aggregates = [];
         $fieldAlt = 'alt';
         if (in_array($collection, array_keys(self::$listFields))) {
 
@@ -73,27 +79,29 @@ class SearchRepository
             $typeQuery = 'prefix';
 
             if ('en' != $this->locale) {
-                array_push(self::$listFields['dso'], 'data.alt.alt_' . $this->locale);
+                array_push(self::$listFields[$collection], 'data.alt.alt_' . $this->locale);
                 $fieldAlt = 'alt_' . $this->locale;
             }
 
-            // We build a raw aggregations
-            $aggregates = [
-                'raw' => [
-                    'catalog' => [
-                        'terms' => [
-                            'field' => 'catalog.keyword',
-                            'size' => 20
+            if (DsoRepository::COLLECTION_NAME == $collection) {
+                // We build a raw aggregations
+                $aggregates = [
+                    'raw' => [
+                        'catalog' => [
+                            'terms' => [
+                                'field' => 'catalog.keyword',
+                                'size' => 20
+                            ]
+                        ],
+                        'const_id' => [
+                            'terms' => [
+                                'field' => 'data.const_id.keyword',
+                                'size' => 100
+                            ]
                         ]
-                    ]/*,
-                    'const_id' => [
-                        'terms' => [
-                            'field' => 'data.const_id.keyword',
-                            'size' => 100
-                        ]
-                    ]*/
-                ]
-            ];
+                    ]
+                ];
+            }
 
             $query = $this->buildQuery($searchTerms, self::$listFields[$collection]);
             $searchResult = $kuzzleCollection->search(
@@ -104,51 +112,61 @@ class SearchRepository
                 foreach ($searchResult->getDocuments() as $document) {
                     $documentContent = $document->getContent();
 
-                    switch ($documentContent['catalog']) {
-                        case 'messier':
-                            if (!empty($documentContent['data']['alt'][$fieldAlt])) {
-                                $label = $documentContent['data']['alt'][$fieldAlt] . ' (' . ucfirst($documentContent['id']) . ') - ' .  $documentContent['data']['desig'];
-                            } else {
-                                $label = ucfirst($documentContent['id']) . ' - ' . $documentContent['data']['desig'];
-                            }
-                            break;
-                        case 'ngc':
-                        case 'ic':
-                        case 'ldn':
-                        case 'abl':
-                        case 'sh':
-                            if (!empty($documentContent['data']['alt'][$fieldAlt])) {
-                                $label = $documentContent['data']['alt'][$fieldAlt] . ' - ' .  $documentContent['data']['desig'];
-                            } else {
+                    if (DsoRepository::COLLECTION_NAME == $collection) {
+                        switch ($documentContent['catalog']) {
+                            case 'messier':
+                                if (!empty($documentContent['data']['alt'][$fieldAlt])) {
+                                    $label = $documentContent['data']['alt'][$fieldAlt] . ' (' . ucfirst($documentContent['id']) . ') - ' .  $documentContent['data']['desig'];
+                                } else {
+                                    $label = ucfirst($documentContent['id']) . ' - ' . $documentContent['data']['desig'];
+                                }
+                                break;
+                            case 'ngc':
+                            case 'ic':
+                            case 'ldn':
+                            case 'abl':
+                            case 'sh':
+                                if (!empty($documentContent['data']['alt'][$fieldAlt])) {
+                                    $label = $documentContent['data']['alt'][$fieldAlt] . ' - ' .  $documentContent['data']['desig'];
+                                } else {
+                                    $label = $documentContent['data']['desig'];
+                                }
+                                break;
+                            default:
                                 $label = $documentContent['data']['desig'];
-                            }
-                            break;
-                        default:
-                            $label = $documentContent['data']['desig'];
+                        }
+
+
+                        $id = $documentContent['id'];
+                        $type = $this->translator->trans('type.' . $documentContent['data']['type']);
+                        $catalog = (!empty($documentContent['catalog'])) ? $this->translator->trans('catalog.' . $documentContent['catalog']) : '';
+
+                        $result[$collection][] = [
+                            'value' => $label,
+                            'info' => $type,
+                            'id' => $id,
+                            'catalog' => $documentContent['catalog']
+                        ];
+
+                    } elseif (ConstellationRepository::COLLECTION_NAME == $collection) {
+                        $result[$collection][] = [
+                            'value' => $documentContent['data']['alt'][$fieldAlt],
+                            'id' =>  $documentContent['id']
+                        ];
                     }
 
-
-                    $id = $documentContent['id'];
-                    $type = $this->translator->trans('type.' . $documentContent['data']['type']);
-                    $catalog = (!empty($documentContent['catalog'])) ? $this->translator->trans('catalog.' . $documentContent['catalog']) : '';
-
-                    $result[DsoRepository::COLLECTION_NAME][] = [
-                        'value' => $label,
-                        'info' => $type,
-                        'id' => $id,
-                        'catalog' => $documentContent['catalog']
-                    ];
                 }
             }
 
             if (0 < $searchResult->getAggregations()) {
                 foreach ($searchResult->getAggregations() as $typeAgg => $aggregation) {
-
                     foreach ($aggregation['buckets'] as $dataAggr) {
-                        $result[$typeAgg][] = [
-                            'value' => $this->translator->trans('catalog.' . $dataAggr['key']),
-                            'catalog' =>  $dataAggr['key']
-                        ];
+                        if (!empty($dataAggr['key'])) {
+                            $result[$typeAgg][] = [
+                                'value' => $this->translator->trans($typeAgg . '.' . strtolower($dataAggr['key'])),
+                                'id' =>  $dataAggr['key']
+                            ];
+                        }
                     }
                 }
             }

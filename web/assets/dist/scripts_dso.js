@@ -17280,6 +17280,9 @@ DSO.Search = function ($, ns, r) {
           if ("Catalog" == item.group) {
             window.location.href = r.generate('catalog_list', { catalog: item.catalog });
           }
+          if ("Constellations" == item.group) {
+            window.location.href = r.generate('constellation_full', { id: item.id });
+          }
         }
       }
     });

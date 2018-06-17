@@ -40,7 +40,6 @@ class ConstellationController extends Controller
         $page = $firstPage = 1;
         $sort = DsoRepository::DEFAULT_SORT;
 
-        $reqQuery = $request->query->all();
         if ($request->query->has('page')) {
             $page = $request->query->get('page');
             $from = ($page-1)*$size;

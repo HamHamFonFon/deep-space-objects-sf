@@ -2,15 +2,13 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\Messier;
+use AppBundle\Repository\ConstellationRepository;
 use AppBundle\Repository\DsoRepository;
 use AppBundle\Repository\SearchRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Translation\Translator;
 
 /**
  * Class SearchController
@@ -28,7 +26,7 @@ class SearchController extends Controller
      */
     public function searchAction(Request $request)
     {
-        $translator = $this->container->get('translator');
+        $resultDso = $resultConst = [];
 
         $searchTerms = '';
         /** @var SearchRepository $searchRepository */
@@ -37,14 +35,27 @@ class SearchController extends Controller
             $searchTerms = strtolower($request->request->get('search'));
         }
 
+        // Search DSO
         $collectionDso = DsoRepository::COLLECTION_NAME;
-        $result = $searchRepository->buildSearch($searchTerms, $collectionDso);
+        $resultDso = $searchRepository->buildSearch($searchTerms, $collectionDso);
+
+        // Seach Constellation
+        $collectionConst = ConstellationRepository::COLLECTION_NAME;
+        $resultConst = $searchRepository->buildSearch($searchTerms, $collectionConst);
+
+        if (array_key_exists('const_id', $resultDso) && !empty($resultConst)) {
+            $resultConst[$collectionConst] = $resultConst[$collectionConst] + $resultDso['const_id'];
+            unset($resultDso['const_id']);
+        } elseif (array_key_exists('const_id', $resultDso) && empty($resultConst)) {
+            $resultConst[$collectionConst] = $resultDso['const_id'];
+            unset($resultDso['const_id']);
+        }
 
         $data = [
             "status" => true,
             "error" => null,
             "data" => [
-                'astronomy' => $result
+                'astronomy' => $resultDso+$resultConst
             ]
         ];
 
