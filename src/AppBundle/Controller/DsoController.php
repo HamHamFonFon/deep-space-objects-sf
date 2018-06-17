@@ -3,7 +3,6 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Dso;
-use AppBundle\Form\DsoFormType;
 use AppBundle\Repository\DsoRepository;
 use AppBundle\Repository\SearchRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -23,7 +22,7 @@ class DsoController extends Controller
 {
 
     /**
-     * @route("/catalogue",
+     * @route("/Catalog",
      *     name="catalog_search"
      * )
      * @param Request $request
@@ -46,7 +45,7 @@ class DsoController extends Controller
 
 
     /**
-     * @Route("/catalog/{catalog}",
+     * @Route("/Catalog/{catalog}",
      *     options={"expose"=true},
      *     name="catalog_list",
      *     requirements={"catalog"="\w+"}
@@ -132,7 +131,7 @@ class DsoController extends Controller
 
 
     /**
-     * @Route("/catalog/{catalog}/{objectId}",
+     * @Route("/Catalog/{catalog}/{objectId}",
      *     options={"expose"=true},
      *     name="dso_full",
      *     requirements={
