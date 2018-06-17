@@ -55,7 +55,7 @@
         "rank": {
           "type": "integer"
         },
-        "hem": {
+        "loc": {
           "type": "text"
         }
       }
