@@ -34,8 +34,9 @@
           {{ 'const_id'|transchoice(2) }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownConst">
-          <a class="dropdown-item" href="">{{ 'hem.no'|trans }}</a>
-          <a class="dropdown-item" href="">{{ 'hem.su'|trans }}</a>
+          <a class="dropdown-item" href="{{ path('constellations_list_hem', {'hem': 'zodiac'}) }}">{{ 'hem.zo'|trans }}</a>
+          <a class="dropdown-item" href="{{ path('constellations_list_hem', {'hem': 'north'}) }}">{{ 'hem.no'|trans }}</a>
+          <a class="dropdown-item" href="{{ path('constellations_list_hem', {'hem': 'south'}) }}">{{ 'hem.su'|trans }}</a>
         </div>
       </li>
       <li class="nav-item">

@@ -21,7 +21,7 @@ class ConstellationController extends Controller
      *     "/constellations/{hem}",
      *  name="constellations_list_hem",
      *  requirements={
-     *      "hem"="north|south"
+     *      "hem"="zodiac|north|south"
      *  },
      *  options={"expose"=true}
      * )
@@ -33,6 +33,12 @@ class ConstellationController extends Controller
     {
         $params = [];
 
+        /** @var ConstellationRepository $constRepository */
+        $constRepository = $this->container->get('app.repository.constellation');
+
+        $list = $constRepository->getListByHem($hem, 0, 50);
+
+        $params['list'] = $list;
 
         /** @var Response $response */
         $response = new Response();
@@ -41,7 +47,7 @@ class ConstellationController extends Controller
             $this->container->getParameter('http_ttl')
         );
 
-        return $this->render('', $params, $response);
+        return $this->render('pages/constellations.html.twig', $params, $response);
     }
 
 
