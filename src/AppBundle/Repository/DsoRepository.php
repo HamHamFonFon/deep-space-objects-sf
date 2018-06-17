@@ -33,6 +33,13 @@ class DsoRepository extends AbstractKuzzleRepository
 
     const SEARCH_SIZE = 12;
 
+    protected static $listOrder = [
+        'order_asc' => ['order' => 'asc'],
+        'order_desc' => ['order' => 'desc'],
+        'mag_asc' => ['data.mag' => 'asc'],
+        'mag_desc' => ['data.mag' => 'desc']
+    ];
+
     /**
      * MessierRepository constructor.
      * @param KuzzleHelper $kuzzleHelper

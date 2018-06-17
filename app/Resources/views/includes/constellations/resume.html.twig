@@ -1,0 +1,16 @@
+{% set imgCover = asset('/img/const_thumbs/' ~ const.id|lower ~ '.jpg') %}
+<div class="col-md-4 mb-4">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ imgCover|default(asset('img/default.jpg')) }}" alt="{{ const.id }}">
+
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ const.alt }} ({{ const.gen }})
+      </h5>
+    </div>
+
+    <div class="card-footer">
+      <a href="{{ const.full_url }}" class="btn btn-primary">{{ 'more'|trans }}</a>
+    </div>
+  </div>
+</div>

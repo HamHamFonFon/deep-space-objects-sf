@@ -16,6 +16,14 @@ class ConstellationRepository extends AbstractKuzzleRepository
     protected $kuzzleHelper;
     protected $urlHelper;
 
+    protected static $listOrder = [
+        'title_asc' => ['id.raw' => 'asc'],
+        'title_desc' => ['id.raw' => 'desc'],
+        'order_asc' => ['data.order' => 'asc'],
+        'order_desc' => ['data.order' => 'desc'],
+    ];
+
+    const SEARCH_SIZE = 16;
     const COLLECTION_NAME = 'constellations';
 
     /**
@@ -39,11 +47,30 @@ class ConstellationRepository extends AbstractKuzzleRepository
         $constellation = null;
         $result = $this->findById($id);
         if (0 < $result->getTotal()) {
-            dump($result->getDocuments()[0]);
             return $this->buildEntityByDocument($result->getDocuments()[0]);
         }
     }
 
+
+    /**
+     * @param $hem
+     * @param $from
+     * @param $size
+     * @return array
+     */
+    public function getListByLoc($hem, $from, $size)
+    {
+        $listConst = [];
+        $result = $this->findBy('term', ['data.loc' => $hem], null, 'title_asc', $from, $size, null);
+        if (0 < $result->getTotal()) {
+            foreach ($result->getDocuments() as $document) {
+                $constellation = $this->buildEntityByDocument($document);
+                array_push($listConst, $constellation);
+            }
+        }
+
+        return [$listConst, $result->getTotal()];
+    }
 
     /**
      * @param $document

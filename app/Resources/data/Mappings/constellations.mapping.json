@@ -55,6 +55,9 @@
         "rank": {
           "type": "integer"
         },
+        "order": {
+          "type": "integer"
+        },
         "loc": {
           "type": "text"
         }

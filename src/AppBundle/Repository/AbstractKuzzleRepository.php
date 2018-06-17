@@ -32,13 +32,6 @@ abstract class AbstractKuzzleRepository
 
     const DEFAULT_SORT = 'order_asc';
 
-    private static $listOrder = [
-        'order_asc' => ['order' => 'asc'],
-        'order_desc' => ['order' => 'desc'],
-        'mag_asc' => ['data.mag' => 'asc'],
-        'mag_desc' => ['data.mag' => 'desc']
-    ];
-
     /**
      * abstractKuzzleRepository constructor.
      * @param KuzzleHelper $kuzzleHelper
@@ -47,6 +40,15 @@ abstract class AbstractKuzzleRepository
     {
         $this->kuzzleHelper = $kuzzleHelper;
         $this->kuzzleService = $kuzzleHelper->kuzzleService;
+    }
+
+    /**
+     * List for sorting request
+     * @return mixed
+     */
+    public static final function getListOrder()
+    {
+        return static::$listOrder;
     }
 
     /**
@@ -86,10 +88,11 @@ abstract class AbstractKuzzleRepository
         /** @var Collection $kuzzleCollection */
         $kuzzleCollection = $this->kuzzleService->collection($collection);
 
-        if (!in_array($sort, array_keys(self::$listOrder))) {
-            $qSort = self::$listOrder[self::DEFAULT_SORT];
+        $listOrder = self::getListOrder();
+        if (!in_array($sort, array_keys($listOrder))) {
+            $qSort = $listOrder[self::DEFAULT_SORT];
         } else {
-            $qSort = self::$listOrder[$sort];
+            $qSort = $listOrder[$sort];
         }
 
         /** @var SearchResult $searchResult */

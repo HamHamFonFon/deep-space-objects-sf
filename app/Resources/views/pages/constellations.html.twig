@@ -2,10 +2,65 @@
 
 {% block content %}
 
-  NB : {{ list|length }}
-  <ul class="">
-  {% for const in list %}
-    <li>{{ const.gen }} - {{ const.alt }}</li>
-  {% endfor %}
-  </ul>
+  <div class="container">
+    <header class="jumbotron my-4">
+      {% set labelTitle = 'constellations' %}
+      <h1 class="display-3">{{ labelTitle|trans }}</h1>
+      <div class="lead">
+        {% set descLabel = 'description.' %}
+        {{ descLabel|trans }}
+      </div>
+    </header>
+
+    <div class="row">
+      <div class="col-12">
+
+        <div class="row border-bottom">
+          <div class="col-6 left">
+            {% if listOrder is defined and 0 < listOrder|length %}
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="sortItems" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ 'select.order.label'|trans }}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="sortItems">
+                  {% for label,value in listOrder %}
+                    {% set params = pagination.paramsRoute|merge({'sort': value}) %}
+                    <a class="dropdown-item" href="{{ path(pagination.route, params) }}">{{ label|trans }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+
+          {% if pagination is defined and 1 < pagination.last_page %}
+            <div class="col-6 right">
+              {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-12">
+            <div class="row text-center">
+              {% if list is defined and 0 < list|length %}
+                {% for item in list %}
+                  {% include ':includes/constellations:resume.html.twig' with {const: item} %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          {% if pagination is defined and 1 < pagination.last_page %}
+            <div class="col-12 right">
+              {#{{ path(pagination.route, pagination.paramsRoute) }}#}
+              {% include ':includes/layout:pagination.html.twig' with {pagination: pagination} %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}

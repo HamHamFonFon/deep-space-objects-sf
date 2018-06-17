@@ -3,6 +3,8 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Repository\ConstellationRepository;
+use AppBundle\Repository\DsoRepository;
+use AppBundle\Repository\SearchRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,12 +35,34 @@ class ConstellationController extends Controller
     {
         $params = [];
 
+        $from = SearchRepository::SEARCH_FROM;
+        $size = 50; // ConstellationRepository::SEARCH_SIZE;
+        $page = $firstPage = 1;
+        $sort = DsoRepository::DEFAULT_SORT;
+
+        $reqQuery = $request->query->all();
+        if ($request->query->has('page')) {
+            $page = $request->query->get('page');
+            $from = ($page-1)*$size;
+        }
+
+        if ($request->query->has('sort')) {
+            $sort = $request->query->get('sort');
+        }
+
         /** @var ConstellationRepository $constRepository */
         $constRepository = $this->container->get('app.repository.constellation');
 
-        $list = $constRepository->getListByHem($hem, 0, 50);
+        list($params['list'], $params['total']) = $constRepository->getListByLoc($hem, $from, $size);
+        $lastPage = ceil($params['total']/$size);
 
-        $params['list'] = $list;
+        $params['pagination'] = [
+            'first_page' => $firstPage,
+            'last_page' => $lastPage,
+            'current_page' => $page,
+            'route' => 'constellations_list_hem',
+            'paramsRoute' => array_merge(['hem' => $hem], $request->query->all())
+        ];
 
         /** @var Response $response */
         $response = new Response();
