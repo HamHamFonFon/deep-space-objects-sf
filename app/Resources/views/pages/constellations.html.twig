@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+  NB : {{ list|length }}
+  <ul class="">
+  {% for const in list %}
+    <li>{{ const.gen }} - {{ const.alt }}</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
