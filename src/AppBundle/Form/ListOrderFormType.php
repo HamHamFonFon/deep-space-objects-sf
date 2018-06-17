@@ -31,7 +31,7 @@ class ListOrderFormType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('order', ChoiceType::class, [
+        $builder->add('sort', ChoiceType::class, [
             'choices' => $this->listOrder,
             'label' => 'select.order.label',
             'placeholder' => 'select.order.placeholder',
