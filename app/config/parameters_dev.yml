@@ -21,6 +21,11 @@ parameters:
         listOrderDesc: order_desc
         listMagnitudeAsc: mag_asc
         listMagnitudeDesc: mag_desc
+    list.const.order:
+        listOrderAsc: order_asc
+        listOrderDesc: order_desc
+        listNameAsc: id_asc
+        listNameDesc: id_desc
     list.dso.type:
         gg: type.gg
         g: type.g

@@ -23,7 +23,7 @@ class ConstellationRepository extends AbstractKuzzleRepository
         'order_desc' => ['data.order' => 'desc'],
     ];
 
-    const SEARCH_SIZE = 16;
+    const SEARCH_SIZE = 15;
     const COLLECTION_NAME = 'constellations';
 
     /**
@@ -44,7 +44,6 @@ class ConstellationRepository extends AbstractKuzzleRepository
      */
     public function getObjectById($id)
     {
-        $constellation = null;
         $result = $this->findById($id);
         if (0 < $result->getTotal()) {
             return $this->buildEntityByDocument($result->getDocuments()[0]);

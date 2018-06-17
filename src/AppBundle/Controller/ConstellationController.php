@@ -36,7 +36,7 @@ class ConstellationController extends Controller
         $params = [];
 
         $from = SearchRepository::SEARCH_FROM;
-        $size = 50; // ConstellationRepository::SEARCH_SIZE;
+        $size = ConstellationRepository::SEARCH_SIZE;
         $page = $firstPage = 1;
         $sort = DsoRepository::DEFAULT_SORT;
 
@@ -55,6 +55,8 @@ class ConstellationController extends Controller
 
         list($params['list'], $params['total']) = $constRepository->getListByLoc($hem, $from, $size);
         $lastPage = ceil($params['total']/$size);
+
+        $params['listOrder'] = $this->container->getParameter('list.const.order');
 
         $params['pagination'] = [
             'first_page' => $firstPage,
