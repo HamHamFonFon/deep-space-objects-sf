@@ -109,7 +109,7 @@ class DsoController extends Controller
 
         $data['catalog'] = $catalog;
         if (DsoRepository::DEFAULT_SORT !== $sort) {
-            $data['order'] = $sort;
+            $data['sort'] = $sort;
         }
 
         $params['pagination'] = [
