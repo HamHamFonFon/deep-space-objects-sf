@@ -46,7 +46,7 @@ class HomeController extends Controller
         $astrobinWs = $this->container->get('astrobin.webservice.gettodayimage');
         /** @var Today $imageOfTheDay */
         for ($i = 1; $i <= 3; $i++) {
-//            $params['images_day'][] = $astrobinWs->getDayImage($i);
+            $params['images_day'][] = $astrobinWs->getDayImage($i);
         }
 
         // Form search

@@ -2,7 +2,22 @@
 
 {% block content %}
 
-  <h1>{{ const.alt }}</h1>
+  <div class="container">
+    <input type="hidden" id="kuzzle-id" value="{{ const.kuzzleId }}">
+    {% block breadcrumb %}{{ wo_render_breadcrumbs() }}{% endblock %}
 
-  <img src="{{ asset('img/const_id/'~ const.id|upper ~'.gif') }}" alt="">
+    <h1>{{ const.alt }}</h1>
+
+    <img src="{{ asset('img/const_id/'~ const.id|upper ~'.gif') }}" alt="">
+
+
+    {% if listDso is defined and 0 < listDso|length %}
+      <h3>{{ 'constImgGall'|trans }} :</h3>
+      <div class="row">
+        {% for dso in listDso %}
+          {% include ':includes/dso:block.html.twig' with {dso: dso} %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
 {% endblock %}

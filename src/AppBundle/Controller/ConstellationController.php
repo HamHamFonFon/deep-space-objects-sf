@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Dso;
 use AppBundle\Repository\ConstellationRepository;
 use AppBundle\Repository\DsoRepository;
 use AppBundle\Repository\SearchRepository;
@@ -77,8 +78,11 @@ class ConstellationController extends Controller
 
 
     /**
-     * @param $request
+     * @param Request $request
      * @param $id
+     * @return Response
+     * @throws \Astrobin\Exceptions\WsException
+     * @throws \ReflectionException
      * @Route(
      *  "/{_locale}/constellation/{id}",
      *  name="constellation_full",
@@ -88,22 +92,33 @@ class ConstellationController extends Controller
      *  }
      * )
      *
-     * @return Response
      */
     public function fullAction(Request $request, $id)
     {
-        $params = [];
+        $params = $listKuzzleId = [];
 
         /** @var ConstellationRepository $constRepository */
         $constRepository = $this->container->get('app.repository.constellation');
         $constellation = $constRepository->getObjectById($id);
-        dump($constellation);
         $params['const'] = $constellation;
+
+        /** @var DsoRepository $dsoRepository */
+        $dsoRepository = $this->container->get('app.repository.dso');
+        $params['listDso'] = $dsoRepository->getObjectsByConst(strtolower($constellation->getId()), null, 20, 1);
+        $listKuzzleId = array_map(function(Dso $dso) {
+            return $dso->getKuzzleId();
+        }, $params['listDso']);
+
+        array_unshift($listKuzzleId, $constellation->getKuzzleId());
 
         $response = new Response();
         $response->setPublic();
         $response->setSharedMaxAge(
             $this->container->getParameter('http_ttl')
+        );
+
+        $response->headers->set(
+            'X-Kuzzle-Id', implode(' ', $listKuzzleId)
         );
 
         return $this->render(':pages:constellation.html.twig', $params, $response);
