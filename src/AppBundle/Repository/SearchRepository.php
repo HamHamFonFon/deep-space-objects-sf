@@ -77,8 +77,7 @@ class SearchRepository
 
             $typeSearch = 'should';
             $typeQuery = 'prefix';
-
-            if ('en' != $this->locale) {
+            if ('en' !== $this->locale) {
                 array_push(self::$listFields[$collection], 'data.alt.alt_' . $this->locale);
                 $fieldAlt = 'alt_' . $this->locale;
             }
@@ -102,7 +101,6 @@ class SearchRepository
                     ]
                 ];
             }
-
             $query = $this->buildQuery($searchTerms, self::$listFields[$collection]);
             $searchResult = $kuzzleCollection->search(
                 $this->kuzzleHelper->buildQuery($typeSearch, $typeQuery, $query, [], ['order' => 'asc', 'data.mag' => 'asc'], $aggregates, self::SEARCH_FROM, self::SEARCH_SIZE)

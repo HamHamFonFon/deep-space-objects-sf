@@ -21,31 +21,9 @@ use WhiteOctober\BreadcrumbsBundle\Model\Breadcrumbs;
 class DsoController extends Controller
 {
 
-    /**
-     * @route("/catalog",
-     *     name="catalog_search"
-     * )
-     * @param Request $request
-     * @return Response
-     */
-    public function catalogAction(Request $request)
-    {
-        $params = [];
-
-
-
-        $response = new Response();
-        $response->setPublic();
-        $response->setSharedMaxAge(
-            $this->container->getParameter('http_ttl')
-        );
-
-        return $this->render('', $params, $response);
-    }
-
 
     /**
-     * @Route("/catalog/{catalog}",
+     * @Route("/{_locale}/catalog/{catalog}",
      *     options={"expose"=true},
      *     name="catalog_list",
      *     requirements={"catalog"="\w+"}
@@ -131,7 +109,7 @@ class DsoController extends Controller
 
 
     /**
-     * @Route("/catalog/{catalog}/{objectId}",
+     * @Route("/{_locale}/catalog/{catalog}/{objectId}",
      *     options={"expose"=true},
      *     name="dso_full",
      *     requirements={

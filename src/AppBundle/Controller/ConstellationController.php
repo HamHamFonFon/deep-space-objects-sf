@@ -20,7 +20,7 @@ class ConstellationController extends Controller
 
     /**
      * @Route(
-     *     "/Constellations/{hem}",
+     *     "/{_locale}/constellations/{hem}",
      *  name="constellations_list_hem",
      *  requirements={
      *      "hem"="zodiac|north|south"
@@ -80,7 +80,7 @@ class ConstellationController extends Controller
      * @param $request
      * @param $id
      * @Route(
-     *  "/Constellation/{id}",
+     *  "/{_locale}/constellation/{id}",
      *  name="constellation_full",
      *  options={"expose"=true},
      *  requirements={

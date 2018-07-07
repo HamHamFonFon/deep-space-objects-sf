@@ -16998,14 +16998,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scripts_init_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scripts_init_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_search_autocomplete_js__ = __webpack_require__(/*! ./scripts/search_autocomplete.js */ "./src/AppBundle/Resources/public/js/scripts/search_autocomplete.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_search_autocomplete_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__scripts_search_autocomplete_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_switchLang_js__ = __webpack_require__(/*! ./scripts/switchLang.js */ "./src/AppBundle/Resources/public/js/scripts/switchLang.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_switchLang_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__scripts_switchLang_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js__ = __webpack_require__(/*! ./scripts/cookieLang.js */ "./src/AppBundle/Resources/public/js/scripts/cookieLang.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scripts_cookieLang_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js__ = __webpack_require__(/*! ./scripts/sortList.js */ "./src/AppBundle/Resources/public/js/scripts/sortList.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scripts_sortList_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_notationDso_js__ = __webpack_require__(/*! ./scripts/notationDso.js */ "./src/AppBundle/Resources/public/js/scripts/notationDso.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__scripts_notationDso_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__scripts_notationDso_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_cookieLang_js__ = __webpack_require__(/*! ./scripts/cookieLang.js */ "./src/AppBundle/Resources/public/js/scripts/cookieLang.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_cookieLang_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__scripts_cookieLang_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_sortList_js__ = __webpack_require__(/*! ./scripts/sortList.js */ "./src/AppBundle/Resources/public/js/scripts/sortList.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__scripts_sortList_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__scripts_sortList_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_notationDso_js__ = __webpack_require__(/*! ./scripts/notationDso.js */ "./src/AppBundle/Resources/public/js/scripts/notationDso.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__scripts_notationDso_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__scripts_notationDso_js__);
 // ==================================================
 // Import JS libraries files and project files here
 // ==================================================
@@ -17019,7 +17017,7 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 // import "./scripts/routing.js"
 
 
-
+// import "./scripts/switchLang.js"
 
 
 // import "./scripts/galleryCarousel.js"
@@ -17040,7 +17038,7 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
  */
 DSO.cookieLang = function ($, ns, r) {
 
-  ns.listLanguages = ['en', 'fr'];
+  ns.listLanguages = ['en', 'fr', 'pt', 'de', 'es'];
 
   ns.maxDays = 3;
 
@@ -17049,8 +17047,8 @@ DSO.cookieLang = function ($, ns, r) {
   ns.init = function () {
     var selectedLang = ns.checkCookie();
     if (-1 !== ns.listLanguages.indexOf(selectedLang) && selectedLang !== ns.currentLang) {
-      var routeSwitch = r.generate('switchlang', { 'language': selectedLang });
-      window.location.assign(routeSwitch);
+      // let routeSwitch = r.generate('switchlang', {'language': selectedLang});
+      // window.location.assign(routeSwitch);
     }
   };
 
@@ -17317,46 +17315,6 @@ DSO.sortList = function ($, ns) {
 
   return ns;
 }(jQuery, {});
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
-/***/ "./src/AppBundle/Resources/public/js/scripts/switchLang.js":
-/*!*****************************************************************!*\
-  !*** ./src/AppBundle/Resources/public/js/scripts/switchLang.js ***!
-  \*****************************************************************/
-/*! dynamic exports provided */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(jQuery) {window.DSO = window.DSO || {};
-
-DSO.switchLang = function ($, ns, r) {
-
-  ns.linkLang = 'li > a.lang-lbl-full';
-
-  ns.init = function () {
-    if (0 < $(ns.linkLang).length) {
-      ns.switchLang();
-    }
-  };
-
-  ns.switchLang = function () {
-    $(ns.linkLang).on('click', function () {
-
-      var $this = $(this);
-      var selectedLang = $this.attr('lang');
-      var currentLang = $('main').data('lang');
-
-      if (currentLang !== selectedLang && selectedLang !== undefined) {
-        DSO.cookieLang.setCookie(selectedLang, 3);
-        // let routeSwitch = r.generate('switchlang', {'language': selectedLang});
-        // window.location.assign(routeSwitch);
-      }
-    });
-  };
-
-  return ns;
-}(jQuery, {}, Routing);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),

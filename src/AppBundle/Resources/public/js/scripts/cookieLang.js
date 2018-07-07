@@ -4,7 +4,7 @@ window.DSO = window.DSO || {};
  */
 DSO.cookieLang = (function($, ns, r) {
 
-  ns.listLanguages = ['en', 'fr'];
+  ns.listLanguages = ['en', 'fr', 'pt', 'de', 'es'];
 
   ns.maxDays = 3;
 
@@ -13,8 +13,8 @@ DSO.cookieLang = (function($, ns, r) {
   ns.init = function() {
     let selectedLang = ns.checkCookie();
     if (-1 !== ns.listLanguages.indexOf(selectedLang) && selectedLang !== ns.currentLang) {
-      let routeSwitch = r.generate('switchlang', {'language': selectedLang});
-      window.location.assign(routeSwitch);
+      // let routeSwitch = r.generate('switchlang', {'language': selectedLang});
+      // window.location.assign(routeSwitch);
     }
   };
 

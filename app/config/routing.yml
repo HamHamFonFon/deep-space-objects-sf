@@ -1,9 +1,5 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
-    prefix: /{_locale}
-    requirements:
-      _locale: en|fr|de|pt|es
-    defaults: {_locale: en}
 fos_js_routing:
   resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

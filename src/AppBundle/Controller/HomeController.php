@@ -27,6 +27,7 @@ class HomeController extends Controller
 
     /**
      * @Route("/", name="homepage")
+     * @Route("/{_locale}", name="homepage_localised")
      * @param Request $request
      * @return Response
      *

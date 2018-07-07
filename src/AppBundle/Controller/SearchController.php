@@ -18,7 +18,7 @@ class SearchController extends Controller
 {
 
     /**
-     * @Route("/_autocomplete",
+     * @Route("/{_locale}/_autocomplete",
      *     options={"expose"=true},
      *     name="search_autocomplete")
      * @param Request $request
