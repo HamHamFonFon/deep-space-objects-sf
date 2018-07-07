@@ -137,7 +137,6 @@ class DsoController extends Controller
         if (is_null($params['dso'])) {
             throw new NotFoundHttpException();
         }
-
         // Get objects from same constellation
         if (!is_null($dso->getConstId())) {
             $params['dsos_const'] = $dsoRepository->getObjectsByConst(strtolower($dso->getConstId()), $dso->getId(), 3, 1);
