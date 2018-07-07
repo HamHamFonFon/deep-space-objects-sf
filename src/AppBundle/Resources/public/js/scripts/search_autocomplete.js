@@ -49,21 +49,21 @@ DSO.Search = (function($, ns, r) {
             }
           }
         },
-        "Catalog": {
-          ajax: {
-            type: "POST",
-            url: r.generate('search_autocomplete'),
-            path: "data.astronomy.catalog",
-            data: {
-              search: '{{query}}'
-            }
-          }
-        },
         "Constellations": {
           ajax: {
             type: "POST",
             url: r.generate('search_autocomplete'),
             path: "data.astronomy.constellations",
+            data: {
+              search: '{{query}}'
+            }
+          }
+        },
+        "Catalog": {
+          ajax: {
+            type: "POST",
+            url: r.generate('search_autocomplete'),
+            path: "data.astronomy.catalog",
             data: {
               search: '{{query}}'
             }

@@ -19,8 +19,8 @@ DSO.switchLang = (function($, ns, r) {
 
       if (currentLang !== selectedLang && selectedLang !== undefined) {
         DSO.cookieLang.setCookie(selectedLang, 3);
-        let routeSwitch = r.generate('switchlang', {'language': selectedLang});
-        window.location.assign(routeSwitch);
+        // let routeSwitch = r.generate('switchlang', {'language': selectedLang});
+        // window.location.assign(routeSwitch);
       }
     });
   };

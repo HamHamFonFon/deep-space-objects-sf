@@ -17249,21 +17249,21 @@ DSO.Search = function ($, ns, r) {
             }
           }
         },
-        "Catalog": {
-          ajax: {
-            type: "POST",
-            url: r.generate('search_autocomplete'),
-            path: "data.astronomy.catalog",
-            data: {
-              search: '{{query}}'
-            }
-          }
-        },
         "Constellations": {
           ajax: {
             type: "POST",
             url: r.generate('search_autocomplete'),
             path: "data.astronomy.constellations",
+            data: {
+              search: '{{query}}'
+            }
+          }
+        },
+        "Catalog": {
+          ajax: {
+            type: "POST",
+            url: r.generate('search_autocomplete'),
+            path: "data.astronomy.catalog",
             data: {
               search: '{{query}}'
             }
@@ -17349,8 +17349,8 @@ DSO.switchLang = function ($, ns, r) {
 
       if (currentLang !== selectedLang && selectedLang !== undefined) {
         DSO.cookieLang.setCookie(selectedLang, 3);
-        var routeSwitch = r.generate('switchlang', { 'language': selectedLang });
-        window.location.assign(routeSwitch);
+        // let routeSwitch = r.generate('switchlang', {'language': selectedLang});
+        // window.location.assign(routeSwitch);
       }
     });
   };

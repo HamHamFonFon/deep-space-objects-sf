@@ -28,47 +28,28 @@ class LayoutController extends Controller
      */
     public function switchLanguageAction(Request $request, $language)
     {
+        /** @var Router $router */
+        $router = $this->container->get('router');
+
         if (!is_null($language)) {
             $this->get('session')->set('_locale', $language);
         }
 
         // Previous URL
-        $url = $request->headers->get('referer');
+//        $url = $request->headers->get('referer');
 
-        if (empty($url)) {
-            /** @var Router $router */
-            $router = $this->container->get('router');
+//        if (empty($url)) {
+//            $redirectUrl = $router->generate('homepage');
+//        } else {
+            $routeName = $request->get('_route');
+            $routeParams = $request->get('_route_params');
 
-            $url = $router->generate('homepage');
-        }
+            dump($routeName, $routeParams);
 
-        return new RedirectResponse($url);
+//        }
+        die();
+//        die($redirectUrl);
+
+        return new RedirectResponse($redirectUrl);
     }
-
-
-    /**
-     * @param Request $request
-     * @return Response
-     */
-    public function breadcrumbsAction(Request $request)
-    {
-        /** @var Router $router */
-        $router = $this->container->get('router');
-
-        $params['breadcrumb'][] = [
-            'label' => 'menu.homepage',
-            'full_url' => $router->generate('homepage')
-        ];
-
-        dump($request);
-
-        $response = new Response();
-        $response->setPublic();
-        $response->setSharedMaxAge(
-            $this->container->getParameter('http_ttl')
-        );
-
-        return $this->render('includes/layout/breadcrumbs.html.twig', $params, $response);
-    }
-
 }

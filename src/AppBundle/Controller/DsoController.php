@@ -22,7 +22,7 @@ class DsoController extends Controller
 {
 
     /**
-     * @route("/Catalog",
+     * @route("/catalog",
      *     name="catalog_search"
      * )
      * @param Request $request
@@ -45,7 +45,7 @@ class DsoController extends Controller
 
 
     /**
-     * @Route("/Catalog/{catalog}",
+     * @Route("/catalog/{catalog}",
      *     options={"expose"=true},
      *     name="catalog_list",
      *     requirements={"catalog"="\w+"}
@@ -131,7 +131,7 @@ class DsoController extends Controller
 
 
     /**
-     * @Route("/Catalog/{catalog}/{objectId}",
+     * @Route("/catalog/{catalog}/{objectId}",
      *     options={"expose"=true},
      *     name="dso_full",
      *     requirements={

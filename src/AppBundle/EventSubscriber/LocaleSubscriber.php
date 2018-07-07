@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: stephane
- * Date: 21/04/18
- * Time: 20:12
- */
 
 namespace AppBundle\EventSubscriber;
-
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
@@ -19,9 +12,14 @@ use Symfony\Component\HttpKernel\KernelEvents;
  */
 class LocaleSubscriber implements EventSubscriberInterface
 {
-
+    /**
+     * @var string
+     */
     private $defaultLocale;
 
+    /**
+     * @var
+     */
     protected $locale;
 
     /**
@@ -45,9 +43,9 @@ class LocaleSubscriber implements EventSubscriberInterface
         }
 
         if ($locale = $request->attributes->get('_locale')) {
-            $this->locale = $request->getSession()->set('_locale', $locale);
+            $request->getSession()->set('_locale', $locale);
         } else {
-            $this->locale = $request->setLocale($request->getSession()->get('_locale', $this->defaultLocale));
+            $request->setLocale($request->getSession()->get('_locale', $this->defaultLocale));
         }
     }
 

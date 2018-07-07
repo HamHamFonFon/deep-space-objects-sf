@@ -29,6 +29,7 @@ class HomeController extends Controller
      * @Route("/", name="homepage")
      * @param Request $request
      * @return Response
+     *
      * @throws \Astrobin\Exceptions\WsException
      * @throws \Astrobin\Exceptions\WsResponseException
      * @throws \ReflectionException
@@ -44,7 +45,7 @@ class HomeController extends Controller
         $astrobinWs = $this->container->get('astrobin.webservice.gettodayimage');
         /** @var Today $imageOfTheDay */
         for ($i = 1; $i <= 3; $i++) {
-            $params['images_day'][] = $astrobinWs->getDayImage($i);
+//            $params['images_day'][] = $astrobinWs->getDayImage($i);
         }
 
         // Form search

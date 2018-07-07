@@ -3,7 +3,14 @@ services:
   app.eventsubscriber.localesubscriber:
     class: AppBundle\EventSubscriber\LocaleSubscriber
     arguments: ['%kernel.default_locale%']
-    tags: [kernel.event_subscriber]
+    tags:
+      - { name: kernel.event_subscriber }
+
+#  app.eventlistener.localeinparam:
+#    class: AppBundle\EventListener\LocaleInParamListener
+#    arguments: ['@router', '%kernel.default_locale%', '%list_locale%']
+#    tags:
+#      - { name: kernel.event_subscriber}
 
   app.eventlistener.exceptionlistener:
     class: AppBundle\EventListener\ExceptionListener
