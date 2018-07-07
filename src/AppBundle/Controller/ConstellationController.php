@@ -10,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use WhiteOctober\BreadcrumbsBundle\Model\Breadcrumbs;
 
 
 /**
@@ -97,6 +98,7 @@ class ConstellationController extends Controller
     {
         $params = $listKuzzleId = [];
 
+
         /** @var ConstellationRepository $constRepository */
         $constRepository = $this->container->get('app.repository.constellation');
         $constellation = $constRepository->getObjectById($id);
@@ -111,6 +113,14 @@ class ConstellationController extends Controller
 
         array_unshift($listKuzzleId, $constellation->getKuzzleId());
 
+        /** @var Breadcrumbs $breadcrumbs */
+        $breadcrumbs = $this->container->get('white_october_breadcrumbs');
+        // Breadcrumbs
+        $breadcrumbs->addItem('menu.homepage', $this->get('router')->generate('homepage'));
+        $breadcrumbs->addItem('const_id', $this->get('router')->generate('constellations_list_hem', ['hem' => $constellation->getLoc()]));
+        $breadcrumbs->addItem($constellation->getAlt(), $this->get('router')->generate('constellation_full', ['id' => $constellation->getId()]));
+
+        /** @var Response $response */
         $response = new Response();
         $response->setPublic();
         $response->setSharedMaxAge(

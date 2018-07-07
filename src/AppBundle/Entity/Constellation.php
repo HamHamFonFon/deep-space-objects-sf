@@ -14,7 +14,7 @@ class Constellation extends AbstractKuzzleDocumentEntity
     protected $gen;
     protected $rank;
     protected $alt;
-    protected $hem;
+    protected $loc;
     protected $geometry;
 
     /**
@@ -106,17 +106,17 @@ class Constellation extends AbstractKuzzleDocumentEntity
     /**
      * @return mixed
      */
-    public function getHem()
+    public function getLoc()
     {
-        return $this->hem;
+        return $this->loc;
     }
 
     /**
-     * @param mixed $hem
+     * @param mixed $loc
      */
-    public function setHem($hem)
+    public function setLoc($loc)
     {
-        $this->hem = $hem;
+        $this->loc = $loc;
     }
 
     /**
