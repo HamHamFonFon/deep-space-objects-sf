@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new FOS\HttpCacheBundle\FOSHttpCacheBundle(),
             new \WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
+            new \KleeGroup\GoogleReCaptchaBundle\GoogleReCaptchaBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

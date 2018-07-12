@@ -85,6 +85,12 @@ services:
     arguments: ['%list.dso.type%', '%list.dso.catalog%', '%list.dso.const_id%']
     tags:
         - { name: form.type, alias: 'form_dso' }
+  app.form.contact:
+    class: AppBundle\Form\ContactFormType
+    arguments: ["@=service('request_stack').getCurrentRequest().getLocale()"]
+    tags:
+      - { name: form.type, alias: 'form_contact' }
+
   # Helper
   app.helper.urlgenerator:
     class: AppBundle\Helper\GenerateUrlHelper

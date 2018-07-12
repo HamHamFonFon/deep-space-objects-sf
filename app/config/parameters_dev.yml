@@ -147,3 +147,5 @@ parameters:
         vir: const_id.vir
         vol: const_id.vol
         vul: const_id.vul
+    google.recaptcha.site: 6Lc95mMUAAAAANBLOasTFlBJaQIAaTrRI8D4AL6a
+    google.recaptcha.secret: 6Lc95mMUAAAAACDlTdvk_DCvijJN0z-fYDNmCbMP

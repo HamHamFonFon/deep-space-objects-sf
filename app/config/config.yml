@@ -50,6 +50,11 @@ twig:
       defaultTitle: "dso"
       listLocale: "%list_locale%"
 
+google_re_captcha:
+  site_key: '%google.recaptcha.site%'
+  secret_key: '%google.recaptcha.secret%'
+  enabled: true
+
 # Doctrine Configuration
 #doctrine:
 #    dbal:
