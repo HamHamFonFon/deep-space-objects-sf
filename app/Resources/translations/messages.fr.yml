@@ -225,3 +225,12 @@ select:
   order:
     label: Trier par
     placeholder: Sélectionnez votre option
+# Form contact
+contact.form.firstname: "Prénom (*)"
+contact.placeholder.firstname: "Veuillez renseignez votre prénom"
+contact.form.lastname: "Nom (*)"
+contact.placeholder.lastname: "Veuillez renseignez votre nom"
+contact.form.email: "Adresse email (*)"
+contact.placeholder.email: "Veuillez renseignez votre email (ex: email@email.com)"
+contact.form.country: "Pays (*)"
+contact.form.message: "Message (*)"

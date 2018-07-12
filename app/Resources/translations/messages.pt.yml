@@ -221,3 +221,12 @@ select:
   order:
     label: Ordenar por
     placeholder: Escolha sua opção
+# Form contact
+contact.form.firstname: Prénom (*)
+contact.placeholder.firstname: Veuillez renseignez votre prénom
+contact.form.lastname:
+contact.placeholder.lastname:
+contact.form.email:
+contact.placeholder.email:
+contact.form.country:
+contact.form.message:
