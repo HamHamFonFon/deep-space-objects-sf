@@ -147,10 +147,11 @@ class DsoController extends Controller
 
         array_unshift($listKuzzleId, $dso->getKuzzleId());
 
+        $bcTitle = (!empty($dso->getAlt())) ? $dso->getAlt() : $dso->getDesig();
         // Breadcrumbs
         $breadcrumbs->addItem('menu.homepage', $this->get('router')->generate('homepage'));
         $breadcrumbs->addItem('catalog.' . $dso->getCatalog(), $this->get('router')->generate('catalog_list', ['catalog' => $dso->getCatalog()]));
-        $breadcrumbs->addItem($dso->getAlt(), $this->get('router')->generate('dso_full', ['catalog' => $dso->getCatalog(), 'objectId' => $dso->getId()]));
+        $breadcrumbs->addItem($bcTitle, $this->get('router')->generate('dso_full', ['catalog' => $dso->getCatalog(), 'objectId' => $dso->getId()]));
 
         /** @var Response $response */
         $response = new Response();
