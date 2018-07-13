@@ -1,8 +1,7 @@
 # This file is auto-generated during the composer install
 parameters:
-    mailer_transport: smtp
-    mailer_host: 127.0.0.1
-    mailer_user: null
+    mailer_transport: gmail
+    mailer_user: deepspaceobject@gmail.com
     mailer_password: null
     secret: 7b207070292a969a62139845127e2f7b01665489
     kuzzle_host: localhost

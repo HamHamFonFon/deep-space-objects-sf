@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Form\ContactFormType;
+use AppBundle\Helper\MailHelper;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -66,6 +67,9 @@ class LayoutController extends Controller
     {
         $params = [];
 
+        /** @var MailHelper $mailHelper */
+        $mailHelper = $this->container->get('app.helper.mailer');
+
         /** @var RouterInterface $router */
         $router = $this->container->get('router');
         $options = [
@@ -78,7 +82,22 @@ class LayoutController extends Controller
 
         if ($form->isSubmitted()) {
             if ($form->isValid()) {
+                $data = $form->getData();
+                $from = $data['email'];
+                $to = $this->container->getParameter('mailer_user');
+                $template = [
+                    'html' => ':includes:mails/contact.html.twig',
+                    'text' => ':includes:mails/contact.text.twig'
+                ];
 
+                // no coercision test becauce swift mail return int and not boolean
+                if (!$sendMail = $mailHelper->sendMail($from, $to, $template, $data)) {
+                    $this->addFlash('form.error', 'form.error.sending');
+                } else {
+                    $this->addFlash('form.ok', 'form.ok.sending');
+                }
+            } else {
+                $this->addFlash('form.error', 'form.error.message');
             }
         }
 

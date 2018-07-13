@@ -1,20 +1,41 @@
 {{ form_start(form) }}
 
   <div class="form-group row">
-    {{ form_row(form.firstname) }}
+    <div class="col">
+      {{ form_row(form.firstname) }}
+    </div>
+    <div class="col">
+      {{ form_row(form.lastname) }}
+    </div>
   </div>
 
   <div class="form-group row">
-    {{ form_row(form.lastname) }}
+    <div class="col">
+      {{ form_row(form.email.first) }}
+    </div>
+    <div class="col">
+      {{ form_row(form.email.second) }}
+    </div>
   </div>
 
-  <div class="form-group row">
-    {{ form_row(form.email) }}
-  </div>
 
   <div class="form-group row">
+    <div class="col">
+      {{ form_row(form.country) }}
+    </div>
+    <div class="col">
+      {{ form_row(form.reasons) }}
+    </div>
+  </div>
+
+  <div class="form-group">
     {{ form_row(form.message) }}
   </div>
 
-  <button type="submit">{{ 'form.contact.submit'|trans }}</button>
+  <div class="form-group">
+    <p>{{ 'contact.mandatory'|trans }}</p>
+    {{ form_row(form.recaptcha) }}
+  </div>
+
+  <button type="submit" class="btn btn-primary">{{ 'contact.form.submit'|trans }}</button>
 {{ form_end(form) }}

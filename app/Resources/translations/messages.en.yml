@@ -226,11 +226,18 @@ select:
     label: Ordering by
     placeholder: Choose your option
 # Form contact
+contact.title: "Contact us"
+form.error.sending: "A problem has occurred, please try later"
+form.ok.sending: "Message sended"
+form.error.message: "Please fix errors below"
 contact.form.firstname: "Firstname (*)"
 contact.placeholder.firstname: "Please enter your firstname"
 contact.form.lastname: "Lastname (*)"
 contact.placeholder.lastname: "Please enter your lastname"
 contact.form.email: "Email (*)"
+contact.form.confirm_email: "Email confirmation (*)"
 contact.placeholder.email: "Please enter your email (e.g: email@email.com)"
 contact.form.country: "Country (*)"
 contact.form.message: "Message (*)"
+contact.form.submit: "Submit"
+contact.mandatory: "(*) All fields are mandatory"

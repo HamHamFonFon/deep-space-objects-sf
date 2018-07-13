@@ -96,6 +96,14 @@ services:
     class: AppBundle\Helper\GenerateUrlHelper
     arguments: ['@router']
 
+  app.helper.mailer:
+    class: AppBundle\Helper\MailHelper
+    arguments:
+      - "@Swift_Mailer"
+      - "@templating"
+      - "@=service('request_stack').getCurrentRequest().getLocale()"
+      - "@logger"
+
   # Twig
 #  app.twig.dso_twig_extension:
 #    class: AppBundle\Twig\DsoTwigExtension

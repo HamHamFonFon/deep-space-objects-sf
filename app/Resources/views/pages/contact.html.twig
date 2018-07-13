@@ -1,7 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-  <h1>contact</h1>
 
-  {% include 'forms/contact.html.twig' %}
+  <div class="container">
+    <h1>{{ 'contact.title'|trans }}</h1>
+
+    {% for message in app.flashes('form.error') %}
+      <div class="alert alert-error">
+        {{ message|trans }}
+      </div>
+    {% endfor %}
+
+
+    {% for message in app.flashes('form.ok') %}
+      <div class="alert alert-ok">
+        {{ message|trans }}
+      </div>
+    {% endfor %}
+
+    {% include 'forms/contact.html.twig' %}
+  </div>
 {% endblock %}

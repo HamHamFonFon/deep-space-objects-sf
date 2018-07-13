@@ -9,6 +9,8 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\LocaleType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -30,7 +32,7 @@ class ContactFormType extends AbstractType
      * ContactFormType constructor.
      * @param $locale
      */
-    public function __construct($locale)
+    public function __construct($locale = 'en')
     {
         $this->locale = $locale;
     }
@@ -41,6 +43,8 @@ class ContactFormType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        dump($this->locale);
+
         $builder->add('firstname', TextType::class, [
             'label' => 'contact.form.firstname',
             'attr' => [
@@ -63,11 +67,21 @@ class ContactFormType extends AbstractType
             ]
         ]);
 
-        $builder->add('email', EmailType::class, [
-            'label' => 'contact.form.email',
-            'attr' => [
-                'placeholder' => 'contact.placeholder.email',
-                'class' => 'form-control'
+        $builder->add('email', RepeatedType::class, [
+            'type' => EmailType::class,
+            'first_options' => [
+                'label' => 'contact.form.email',
+                'attr' => [
+                    'placeholder' => 'contact.placeholder.email',
+                    'class' => 'form-control'
+                ],
+            ],
+            'second_options' => [
+                'label' => 'contact.form.confirm_email',
+                'attr' => [
+                    'placeholder' => 'contact.placeholder.email',
+                    'class' => 'form-control'
+                ],
             ],
             'constraints' => [
                 new Email(['message' => 'contact.err.email'])
@@ -76,19 +90,30 @@ class ContactFormType extends AbstractType
 
         $builder->add('country', CountryType::class, [
             'label' => 'contact.form.country',
-            'required' => false
+            'preferred_choices' => [strtoupper($this->locale)],
+            'required' => false,
+            'attr' => [
+                'placeholder' => 'contact.placeholder.country',
+                'class' => 'form-control'
+            ]
         ]);
 
         $builder->add('reasons', ChoiceType::class, [
+            'label' => 'contact.form.reasons',
+            'choices' => [
 
+            ],
+            'attr' => [
+                'class' => 'form-control'
+            ],
         ]);
 
         $builder->add('message', TextareaType::class, [
             'label' => 'contact.form.message',
             'attr' => [
-                'class' => 'form-control'
+                'class' => 'form-control',
+                'rows' => 8,
             ],
-
         ]);
 
         $builder->add('recaptcha', ReCaptchaType::class, [
