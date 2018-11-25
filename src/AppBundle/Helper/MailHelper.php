@@ -45,7 +45,7 @@ class MailHelper
      * @param $content
      * @return int
      */
-    public function sendMail($from, $to, $subject, $template, $content)
+    public function sendMail($from, $to, $subject, $template, $content): int
     {
         try {
             /** @var \Swift_Message $message */

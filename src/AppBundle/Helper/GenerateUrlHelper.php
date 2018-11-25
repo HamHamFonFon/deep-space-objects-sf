@@ -33,7 +33,7 @@ class GenerateUrlHelper
      * @param $absoluteUrl
      * @return AbstractKuzzleDocumentEntity|Dso|Constellation
      */
-    public function generateUrl($entity, $absoluteUrl = false)
+    public function generateUrl($entity, $absoluteUrl = false): string
     {
         $url = null;
         if ($entity) {

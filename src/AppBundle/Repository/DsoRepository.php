@@ -61,7 +61,7 @@ class DsoRepository extends AbstractKuzzleRepository
      * @throws \Astrobin\Exceptions\WsException
      * @throws \ReflectionException
      */
-    public function getObject($id)
+    public function getObject($id): Dso
     {
         $dso = null;
         if (is_null($id)) {
@@ -86,7 +86,7 @@ class DsoRepository extends AbstractKuzzleRepository
      * @throws \Astrobin\Exceptions\WsException
      * @throws \ReflectionException
      */
-    public function getObjectByKuzzleId($kuzzleId)
+    public function getObjectByKuzzleId($kuzzleId): Dso
     {
         if (is_null($kuzzleId)) {
             return null;
@@ -109,7 +109,7 @@ class DsoRepository extends AbstractKuzzleRepository
      * @throws \Astrobin\Exceptions\WsException
      * @throws \ReflectionException
      */
-    public function getObjectsByConst($constId, $excludedObject, $limit = 10, $limitImages = 1)
+    public function getObjectsByConst($constId, $excludedObject, $limit = 10, $limitImages = 1): array
     {
         $list = [];
         $results = $this->findBy('term', ['data.const_id' => $constId], [], ['data.mag' => 'ASC'],0, $limit);
@@ -163,7 +163,7 @@ class DsoRepository extends AbstractKuzzleRepository
      * @throws \Astrobin\Exceptions\WsException
      * @throws \ReflectionException
      */
-    public function getList($typeCatalog, $filters, $from, $size, $order, $nbImages = 1)
+    public function getList($typeCatalog, $filters, $from, $size, $order, $nbImages = 1): array
     {
         $listDso = [];
         $filters = [
@@ -222,7 +222,7 @@ class DsoRepository extends AbstractKuzzleRepository
      * @throws \Astrobin\Exceptions\WsException
      * @throws \ReflectionException
      */
-    private function buildEntityByDocument(Document $kuzzleDocument, $limitImages = 1)
+    private function buildEntityByDocument(Document $kuzzleDocument, $limitImages = 1): Dso
     {
         // TODO : make a factory pattern
         $kuzzleEntity = $this->getKuzzleEntity();
@@ -267,7 +267,7 @@ class DsoRepository extends AbstractKuzzleRepository
      * @throws \Astrobin\Exceptions\WsException
      * @throws \ReflectionException
      */
-    public function updateVote($kuzzleId, $typeVote)
+    public function updateVote($kuzzleId, $typeVote): Dso
     {
         $valueMapping = [
             'up' => 1,

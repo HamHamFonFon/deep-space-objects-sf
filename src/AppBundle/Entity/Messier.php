@@ -310,6 +310,4 @@ class Messier extends AbstractKuzzleDocumentEntity
     {
         $this->dec = $dec;
     }
-
-
 }

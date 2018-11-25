@@ -26,12 +26,13 @@ class KuzzleHelper
     private $port;
 
     const LIST_ORDER = ['asc', 'desc'];
+
     /**
      * KuzzleService constructor.
      * @param $host
      * @param $index
      */
-    public function __construct($host, $index, $port)
+    public function __construct(string $host, string $index, int $port)
     {
         $this->host = $host;
         $this->index = $index;
@@ -59,7 +60,7 @@ class KuzzleHelper
      * @param int $size
      * @return array|null
      */
-    public function buildQuery($typeSearch = 'must', $typeQuery, $query = [], $filters = [], $qSort = [], $aggregates = [], $from = 0, $size = 20)
+    public function buildQuery($typeSearch = 'must', $typeQuery, $query = [], $filters = [], $qSort = [], $aggregates = [], $from = 0, $size = 20): array 
     {
         if (!in_array($typeSearch, ['must', 'should', 'should_not'])) {
             return null;

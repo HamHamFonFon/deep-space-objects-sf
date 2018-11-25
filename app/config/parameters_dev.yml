@@ -21,10 +21,10 @@ parameters:
         listMagnitudeAsc: mag_asc
         listMagnitudeDesc: mag_desc
     list.const.order:
-      listOrderAsc: order_asc
-      listOrderDesc: order_desc
-      listNameAsc: id_asc
-      listNameDesc: id_desc
+        listOrderAsc: order_asc
+        listOrderDesc: order_desc
+        listNameAsc: id_asc
+        listNameDesc: id_desc
     list.dso.type:
         gg: type.gg
         g: type.g
@@ -148,3 +148,4 @@ parameters:
         vul: const_id.vul
     google.recaptcha.site: 6Lc95mMUAAAAANBLOasTFlBJaQIAaTrRI8D4AL6a
     google.recaptcha.secret: 6Lc95mMUAAAAACDlTdvk_DCvijJN0z-fYDNmCbMP
+    mailer_host: 127.0.0.1

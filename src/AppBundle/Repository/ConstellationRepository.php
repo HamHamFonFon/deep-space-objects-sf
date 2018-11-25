@@ -42,7 +42,7 @@ class ConstellationRepository extends AbstractKuzzleRepository
      * @param $id
      * @return Constellation
      */
-    public function getObjectById($id)
+    public function getObjectById($id): Constellation
     {
         $result = $this->findById($id);
         if (0 < $result->getTotal()) {
@@ -57,7 +57,7 @@ class ConstellationRepository extends AbstractKuzzleRepository
      * @param $size
      * @return array
      */
-    public function getListByLoc($hem, $from, $size)
+    public function getListByLoc($hem, $from, $size): array
     {
         $listConst = [];
         $result = $this->findBy('term', ['data.loc' => $hem], null, 'title_asc', $from, $size, null);
@@ -75,7 +75,7 @@ class ConstellationRepository extends AbstractKuzzleRepository
      * @param $document
      * @return Constellation
      */
-    public function buildEntityByDocument($document)
+    public function buildEntityByDocument($document): Constellation
     {
         $kuzzleEntity = $this->getKuzzleEntity();
         /** @var Constellation $constellation */
@@ -90,7 +90,7 @@ class ConstellationRepository extends AbstractKuzzleRepository
     /**
      * @return Constellation
      */
-    public function getKuzzleEntity()
+    public function getKuzzleEntity(): Constellation
     {
         return 'AppBundle\Entity\Constellation';
     }
