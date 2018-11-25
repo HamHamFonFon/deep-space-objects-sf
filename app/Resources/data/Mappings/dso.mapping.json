@@ -47,7 +47,7 @@
         "data": {
           "properties": {
             "desig": {
-              "type": "text",
+              "type": "array",
               "index": "not_analyzed"
             },
             "alt": {
