@@ -111,6 +111,12 @@
             "dist_al": {
               "type": "float"
             },
+            "discover": {
+              "type": "text"
+            },
+            "discover_year": {
+              "type": "float"
+            },
             "ra": {
               "type": "text"
             },
