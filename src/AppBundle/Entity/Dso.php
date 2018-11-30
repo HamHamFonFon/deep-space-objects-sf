@@ -216,7 +216,6 @@ class Dso extends AbstractKuzzleDocumentEntity
      */
     public function getDistAl()
     {
-        $this->distAl = 1000*$this->distAl;
         return $this->distAl;
     }
 
