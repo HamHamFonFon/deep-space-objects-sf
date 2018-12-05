@@ -1,6 +1,8 @@
 Deep Space Objects
 =====================
 
+DEPRECATED : migration to Symfony 4 / Elastic Search / Vue.js IN PROGRESS 
+
 "Deep space objects" is a Symfony 3.4 project who list messier's objects stored in Kuzzle.
 
 ## Authors

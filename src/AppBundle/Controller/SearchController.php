@@ -59,6 +59,7 @@ class SearchController extends Controller
             ]
         ];
 
+        /** @var JsonResponse $jResponse */
         $jResponse = new JsonResponse();
         $jResponse->setData($data);
 
